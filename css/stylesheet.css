@@ -15,7 +15,11 @@ a {
 }
 
 .content {
-    margin-top: 1em;
+    margin-top: 2em;
+}
+
+.prompt {
+    margin-top: 2em;
 }
 
 select,
