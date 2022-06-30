@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+
+* {
+  font-family: "Raleway", sans-serif;
+}
+
+select,
+button,
+#result {
+  margin-left: 1em;
+}
