@@ -14,7 +14,7 @@ const questElem = {
         "a really cool cloak",
         "information",
         "financial compensation",
-        "two knives"
+        "a really big knife"
     ],
     property: [
         "used to belong to a famous general",
