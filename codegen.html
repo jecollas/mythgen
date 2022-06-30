@@ -14,26 +14,28 @@
                 <div class="navbar">
                     <a href="index.html">HOME</a>
                     <a href="codegen.html">CodeGen</a>
+                    <a href="plot-test.html">Fate Test</a>
                 </div>
             </nav>
         </header>
 
         <div class="codegen">
-            <p>Select a currency type from the dropdown, and then click the "Generate Code" button to get a random five-digit item code.</p>
-            <p>Note: The value in the number input doesn't affect the generated code yet. It's still a work in progress.</p>
-            <p>Price: <input type="number" id="price">
-              <select name="currency-options" id="currencySelect">
-                <option value="copper">Copper</option>
-                <option value="silver">Silver</option>
-                <option value="gold">Gold</option>
-              </select>
-            </p>
-            <button onclick="codeGen(currencyValue())">Generate Code</button>
-            <p id="result">
-              <span id="returnText"></span>
-              <span id="returnValue"></span>
-            </p>
-          </div>
-          <script src="js/codegen.js"></script>
+          <p>Select a currency type from the dropdown, and then click the "Generate Code" button to get a random five-digit item code.</p>
+          <p>Note: The value in the number input doesn't affect the generated code yet. It's still a work in progress.</p>
+          <p>Price: <input type="number" id="price">
+            <select name="currency-options" id="currencySelect">
+              <option value="copper">Copper</option>
+              <option value="silver">Silver</option>
+              <option value="gold">Gold</option>
+            </select>
+          </p>
+          <button onclick="codeGen(currencyValue())">Generate Code</button>
+          <p id="result">
+            <span id="returnText"></span>
+            <span id="returnValue"></span>
+          </p>
+        </div>
+
+        <script src="js/codegen.js"></script>
     </body>
 </html>
