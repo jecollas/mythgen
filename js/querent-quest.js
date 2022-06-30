@@ -1,6 +1,6 @@
 /*
-We are looking for ITEM that PROPERTY because GOAL. 
-One thing we need to know for the journey ahead is that WARNING.
+We are looking for ITEM that PROPERTY. 
+We are looking for this GOAL, but WARNING.
 */
 
 const questElem = {
@@ -24,21 +24,21 @@ const questElem = {
         "played a key role in changing fate",
         "everyone hates",
         "is a vital clue in an ongoing mystery or investigation",
-        "comes from a place of corruption",
+        "has become corrupted",
         "hurts people",
         "taps into a person's abmition and drive them to cruelty"
     ],
     goal: [
-        "we need to settle a grudge",
-        "it will provide us with strength in the coming days",
-        "we are duty-bound to this task",
-        "we need it to take someone down",
-        "it will tip the scales in our favor",
-        "we really want to kick this one person's ass in particular",
-        "of Scooby Doo reasons",
-        "we plan to depose someone who should not be in power",
-        "it's technically our job so we can't really say no",
-        "it will help us achieve our end goal"
+        "so that we can settle a grudge",
+        "because it will provide us with strength in the coming days",
+        "because we are duty-bound to honor an agreement",
+        "so that we can take down one of our enemies",
+        "to tip the scales in our favor and gain the upper hand",
+        "so that we can kick someone's ass",
+        "for Scooby Doo reasons",
+        "as a means to depose someone in power",
+        "because it's technically our job",
+        "it will help us achieve one of our goals"
     ],
     warning: [
         "this is the perfect opportunity to take vengeance",

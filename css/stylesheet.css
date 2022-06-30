@@ -4,6 +4,20 @@
   font-family: "Raleway", sans-serif;
 }
 
+body {
+    padding: 1em;
+    padding-top: 0;
+}
+
+a {
+    text-decoration: none;
+    margin-right: 1em;
+}
+
+.content {
+    margin-top: 1em;
+}
+
 select,
 button,
 #result {
