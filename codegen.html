@@ -9,31 +9,37 @@
     </head>
     <body>
         <header>
-            <h1>Myth Generators</h1>
+            <h1><a href="index.html">Myth Generators</a></h1>
             <nav>
                 <div class="navbar">
-                    <a href="index.html">HOME</a>
                     <a href="codegen.html">CodeGen</a>
                     <a href="plot-test.html">Plot Test</a>
+                    <a href="querent-quest.html">Querent's Quest</a>
                 </div>
             </nav>
         </header>
 
-        <div class="codegen">
-          <p>Select a currency type from the dropdown, and then click the "Generate Code" button to get a random five-digit item code.</p>
-          <p>Note: The value in the number input doesn't affect the generated code yet. It's still a work in progress.</p>
-          <p>Price: <input type="number" id="price">
-            <select name="currency-options" id="currencySelect">
-              <option value="copper">Copper</option>
-              <option value="silver">Silver</option>
-              <option value="gold">Gold</option>
-            </select>
-          </p>
-          <button onclick="codeGen(currencyValue())">Generate Code</button>
-          <p id="result">
-            <span id="returnText"></span>
-            <span id="returnValue"></span>
-          </p>
+        <div class="content">
+            <p>Select a currency type from the dropdown, and then click the "Generate Code" button to get a random five-digit item code.</p>
+
+            <p><strong>A value put in the number input will not affect the generated code. It's still a work in progress.</strong></p>
+
+            <div class="prompt">
+                <p>Price: <input type="number" id="price" value="0" disabled>
+                    <select name="currency-options" id="currencySelect">
+                        <option value="copper">Copper</option>
+                        <option value="silver">Silver</option>
+                        <option value="gold">Gold</option>
+                    </select>
+                </p>
+
+                <button onclick="codeGen(currencyValue())">Generate Code</button>
+
+                <p id="result">
+                    <span id="returnText"></span>
+                    <span id="returnValue"></span>
+                </p>
+            </div>
         </div>
 
         <script src="js/codegen.js"></script>

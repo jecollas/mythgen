@@ -9,23 +9,27 @@
     </head>
     <body>
         <header>
-            <h1>Myth Generators</h1>
+            <h1><a href="index.html">Myth Generators</a></h1>
             <nav>
                 <div class="navbar">
-                    <a href="index.html">HOME</a>
                     <a href="codegen.html">CodeGen</a>
                     <a href="plot-test.html">Plot Test</a>
+                    <a href="querent-quest.html">Querent's Quest</a>
                 </div>
             </nav>
         </header>
 
-        <div>
-            <p>Gimme a thing!</p>
-            <p>
-                This plot is a <span id="toneVar">[tone]</span> <span id="genreVar">[genre]</span> <span id="typeVar">[type]</span>.
-            </p>
-            <button onclick="plotGen()">Gimme a Thing</button>
+        <div class="content">
+            <p>Basic generator that draws from a list of plot types, genres, and scene tones.</p>
+            <div class="prompt">
+                <p>
+                    This <strong><span id="typeVar">TYPE</span></strong> is going to be a <strong><span id="toneVar">TONE</span></strong> <strong><span id="genreVar">GENRE</span></strong> plot.
+                </p>
+                
+                <button onclick="plotGen()">Gimme a Thing</button>
+            </div>
         </div>
+
         <script src="js/plot-test.js"></script>
     </body>
 </html>
