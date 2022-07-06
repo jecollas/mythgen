@@ -8,7 +8,7 @@ const plotElements = {
         "divergence",
         "swansong",
         "module",
-        "recurring"
+        "recurrence"
     ],
     genre: [
         "action",
@@ -21,7 +21,7 @@ const plotElements = {
         "horror",
         "instructional",
         "investigation",
-        "mind-Bender",
+        "mind-bender",
         "mission",
         "musical",
         "mystery",
