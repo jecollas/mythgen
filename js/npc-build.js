@@ -261,7 +261,7 @@ const npcElements = {
         "has a cool hat",
         "lies about their age",
         "needs therapy",
-        "got their ears pierced by Claire's",
+        "got their ears pierced at Claire's",
         "wants to go to Applebee's",
         "is banned from Applebee's",
         "is so hungover",
@@ -278,7 +278,9 @@ const npcElements = {
         "has blue hair and pronouns",
         "won't shut up about their kids",
         "drives a minivan",
-        "has got it going on"
+        "has got it going on",
+        "is really good at not throwing up",
+        "who remembers the 21st night of September"
     ]
 }
 
