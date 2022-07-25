@@ -173,9 +173,17 @@ function randomString(arr) {
 }
 
 function npcGen() {
-    const character = randomString(npcElements.charType);
-    const trait = randomString(npcElements.trait);
+    const charA = randomString(npcElements.charType);
+    const traitA = randomString(npcElements.trait);
+    const charB = randomString(npcElements.charType);
+    const traitB = randomString(npcElements.trait);
+    const charC = randomString(npcElements.charType);
+    const traitC = randomString(npcElements.trait);
 
-    document.getElementById("charVar").innerHTML = character;
-    document.getElementById("traitVar").innerHTML = trait;
+    document.getElementById("charVarA").innerHTML = charA;
+    document.getElementById("traitVarA").innerHTML = traitA;
+    document.getElementById("charVarB").innerHTML = charB;
+    document.getElementById("traitVarB").innerHTML = traitB;
+    document.getElementById("charVarC").innerHTML = charC;
+    document.getElementById("traitVarC").innerHTML = traitC;
 }
