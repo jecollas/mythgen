@@ -784,29 +784,53 @@ const rumors = [
     "rumor 4"
 ];
 
-// Rumors
+const person = [
+    "player character",
+    "face role",
+    "fake role"
+];
+
 let rumor_select = "";
+let person_select = "";
+
+// Rumors
 function rumorGen() {
     rumor_select = randomString(rumors);
-    
-    const rumor_source = randomString(source);
+    person_select = randomString(person);
+
     const rumor_character = randomString(characters.players);
     const rumor_face_role = randomString(characters.face_roles);
-    const rumor_npc_first = randomString(characters.fake_first);
-    const rumor_npc_last = randomString(characters.fake_last);
+    const rumor_fake_first = randomString(characters.fake_first);
+    const rumor_fake_last = randomString(characters.fake_last);
+    
+    let rumor_person = "";
+    
+    const rumor_source = randomString(source);
     const rumor_item = randomString(item);
     const rumor_property = randomString(property);
     const rumor_monsters = randomString(monsters);
 
+    switch (person_select) {
+        case "player character":
+            rumor_person = "<b>" + rumor_character + "</b>";
+        break;
+        case "face role":
+            rumor_person = "<b>" + rumor_face_role + "</b>";
+        break;
+        case "fake role":
+            rumor_person = "someone named <b>" + rumor_fake_first + " " + rumor_fake_last + "</b>";
+        break;
+    }
+
     switch (rumor_select) {
         case "rumor 1":
-            document.getElementById("rm-rumor").innerHTML = rumor_source + " someone named <b>" + rumor_npc_first + " " + rumor_npc_last + "</b> has <b>" + rumor_item + "</b> that <b>" + rumor_property + ".</b>";
+            document.getElementById("rm-rumor").innerHTML = rumor_source + " " + rumor_person + " has <b>" + rumor_item + "</b> that <b>" + rumor_property + ".</b>";
         break;
         case "rumor 2":
-            document.getElementById("rm-rumor").innerHTML = rumor_source + " <b>" + rumor_character + "</b> was seen sneaking suspiciously into a building here in town.";
+            document.getElementById("rm-rumor").innerHTML = rumor_source + " " + rumor_person + " was seen sneaking suspiciously into a building here in town.";
         break;
         case "rumor 3":
-            document.getElementById("rm-rumor").innerHTML = rumor_source + " <b>" + rumor_face_role + "</b> is looking for some help with something.";
+            document.getElementById("rm-rumor").innerHTML = rumor_source + " " + rumor_person + " is looking for some help with something.";
         break;
         case "rumor 4":
             document.getElementById("rm-rumor").innerHTML = rumor_source + " they may be upping woodland patrols due to a rise in the number of <b>" + rumor_monsters + ".</b>"
