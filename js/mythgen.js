@@ -777,33 +777,39 @@ function npcGen() {
     document.getElementById("npc-trait-3").innerHTML = trait_three;
 }
 
+const rumors = [
+    "rumor 1",
+    "rumor 2",
+    "rumor 3",
+    "rumor 4"
+];
+
 // Rumors
+let rumor_select = "";
 function rumorGen() {
-    const rumor_item = randomString(item);
-    // const rumor_chara = randomString(chara);
-    const rumor_property = randomString(property);
-    const rumor_monsters = randomString(monsters);
-    const rumor_source_one = randomString(source);
-    const rumor_source_two = randomString(source);
-    const rumor_source_three = randomString(source);
-    const rumor_source_four = randomString(source);
-
+    rumor_select = randomString(rumors);
+    
+    const rumor_source = randomString(source);
     const rumor_character = randomString(characters.players);
-    const rumor_real_npc = randomString(characters.face_roles);
-
+    const rumor_face_role = randomString(characters.face_roles);
     const rumor_npc_first = randomString(characters.fake_first);
     const rumor_npc_last = randomString(characters.fake_last);
+    const rumor_item = randomString(item);
+    const rumor_property = randomString(property);
+    const rumor_monsters = randomString(monsters);
 
-    document.getElementById("rm-item").innerHTML = rumor_item;
-    // document.getElementById("rm-chara").innerHTML = rumor_chara;
-    document.getElementById("rm-property").innerHTML = rumor_property;
-    document.getElementById("rm-monsters").innerHTML = rumor_monsters;
-    document.getElementById("rm-source-1").innerHTML = rumor_source_one;
-    document.getElementById("rm-source-2").innerHTML = rumor_source_two;
-    document.getElementById("rm-source-3").innerHTML = rumor_source_three;
-    document.getElementById("rm-source-4").innerHTML = rumor_source_four;
-    
-    document.getElementById("rm-player").innerHTML = rumor_character;
-    document.getElementById("rm-face-role").innerHTML = rumor_real_npc;
-    document.getElementById("rm-fake-role").innerHTML = rumor_npc_first + " " + rumor_npc_last;
+    switch (rumor_select) {
+        case "rumor 1":
+            document.getElementById("rm-rumor").innerHTML = rumor_source + " someone named <b>" + rumor_npc_first + " " + rumor_npc_last + "</b> has <b>" + rumor_item + "</b> that <b>" + rumor_property + ".</b>";
+        break;
+        case "rumor 2":
+            document.getElementById("rm-rumor").innerHTML = rumor_source + " <b>" + rumor_character + "</b> was seen sneaking suspiciously into a building here in town.";
+        break;
+        case "rumor 3":
+            document.getElementById("rm-rumor").innerHTML = rumor_source + " <b>" + rumor_face_role + "</b> is looking for some help with something.";
+        break;
+        case "rumor 4":
+            document.getElementById("rm-rumor").innerHTML = rumor_source + " they may be upping woodland patrols due to a rise in the number of <b>" + rumor_monsters + ".</b>"
+        break;
+    }
 }
