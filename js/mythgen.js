@@ -337,7 +337,9 @@ const chara = [
     "an entire circus of clowns",
     "three possums in a trench coat",
     "a doctor",
-    "a lawyer"
+    "a lawyer",
+    "a con artist",
+    "a grifter"
 ];
 
 // NPC Builder
@@ -425,6 +427,7 @@ const trait = [
     "is divorced",
     "is bisexual",
     "is goth",
+    "is literally neurodivergent and a minor",
     "is a creature",
     "is a war criminal",
     "is a time traveler",
@@ -433,12 +436,13 @@ const trait = [
     "is a conspiracy theorist",
     "is a flat earther",
     "is a flat earther to be a dick",
+    "is a bit of a daredevil",
+    "is an adrenaline junkie",
     "is an arsonist",
     "is an absentee father",
     "is an alcoholic",
     "is so hungover",
     "is so close to snapping",
-    "is really good at not throwing up",
     "is terrified of ducks",
     "is really up their own ass about poetry",
     "is currently facing a lawsuit",
@@ -500,13 +504,15 @@ const trait = [
     "lies about their age",
     "lies through the newspaper",
     "faked their death",
-    "denies any and all responsibility for..the incident",
+    "denies any and all responsibility for... the incident",
     "woke up and chose violence",
     "vapes",
     "fucks",
     "can be real dick",
     "naps in weird places",
-    "got their ears pierced at Claire's"
+    "got their ears pierced at Claire's",
+    "moonlights as a Little League coach for their local community",
+    "wears way too much eyeliner"
 ];
 
 // random string for all the generators
