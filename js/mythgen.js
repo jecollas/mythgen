@@ -56,7 +56,7 @@ const plot_genre = [
     "thriller"      
 ];
 
-// Fetch Quest
+// Fetch Quest, Rumors
 const item = [
     // Ace-10 of spades from MHoF
     "a sword",
@@ -85,10 +85,11 @@ const item = [
     "a hot girl",
     "a hot guy",
     "a malewife",
-    "a pair of scissors"
+    "a pair of scissors",
+    "a magic item"
 ];
 
-// Fetch Quest
+// Fetch Quest, Rumors
 const property = [
     // Ace-10 of spades from MHoF
     "used to belong to a famous general",
@@ -114,7 +115,8 @@ const property = [
     "looks like a goose",
     "someone left on a boat",
     "was lost at sea",
-    "will fix my marriage"
+    "will fix my marriage",
+    "can heal any wound"
 ];
 
 // Fetch Quest
@@ -515,6 +517,133 @@ const trait = [
     "wears way too much eyeliner"
 ];
 
+// Rumors
+const players = [
+    "Karlaen Sin'del",
+    "Lord Swift Fingers",
+    "Delawyn Liamour",
+    "Ursa Oak",
+    "Elias Athear",
+    "Agon Caradin of Canton, Raven Company", 
+    "Jaxx Malendarr",
+    "Alwin Malendarr",
+    "Verdic Bin Corsica il-Pachero os-Farwhen",
+    "Baratraxar Hopsworth Greynettle",
+    "Isla Marillon Shallowcove",
+    "Cerradus",
+    "Tallian Gratz",
+    "Waylund",
+    "Kilgor",
+    "Leisa Vadi",
+    "Tacitus Jules Hooker",
+    "Sigmund Bjorvika",
+    "Relldar Delandrielle",
+    "Elen",
+    "Remi Dubois",
+    "Grylis Sharptongue",
+    "Azalea Briarwood",
+    "Knox",
+    "Norain Wulf",
+    "Wren",
+    "Arl",
+    "Ankh Nym'dul",
+    "Brandan Von Naegling",
+    "Calus Varin",
+    "Alyssandra Lamoran",
+    "Myrtle Muckandmire",
+    "Gregnobulous Frogmagourke",
+    "Rina Duskwalker",
+    "Crittamon Luckstryder",
+    "Whisper",
+    "Artharias",
+    "Theran Slate",
+    "Brigid",
+    "Cayn",
+    "Ekyo",
+    "Meeps Swag McMuffin",
+    "Clay",
+    "Fenrisse Starling",
+    "Balthazar",
+    "Koth Stalgrim",
+    "Hilde",
+    "Zumlar Mystralith",
+    "Cotter Cornwall",
+    "Gizzet Moonbright (Giz'Ora)",
+    "Yinren Valgon",
+    "Alistair Caliban",
+    "Willow",
+    "Grimstone",
+    "Pappa Varnak",
+    "Caleb Urtgard",
+    "Zav",
+    "Minyo Hasselblöd",
+    "Mallazyr 'Dexter' Teken'Tlar",
+    "Munta Theynore",
+    "Esther Melea Artemis Glade",
+    "Esperanza Ta Zata",
+    "Riddle",
+    "Lorik Ovgar",
+    "Thordric Magestone",
+    "Hedrin Longfellow",
+    "Taliesin Finch",
+    "Seraphina Mehri",
+    "Sueb Dew",
+    "Maurmagil",
+    "Ezra",
+    "Nakoa",
+    "Eitri Hawthorne of the Storm's Mistress",
+    "Lucius Grell",
+    "Mayax",
+    "Matias Elson",
+    "Ven",
+    "Trisrora",
+    "Hart",
+    "Catanya",
+    "Xanthion Stonebreaker",
+    "Saige",
+    "Vendal Sihde",
+    "Chessaul Nymval",
+    "Lady Indy L'Rhine",
+    "Vitae Silias",
+    "Ajax Ardak",
+    "Wenek",
+    "Magnus Stillmyst",
+    "Mathers",
+    "Marlonious Finch",
+    "Owen Anderson",
+    "Aishin Stormcloud",
+    "Alansar Trignot",
+    "Victus Krane",
+    "Tass",
+    "Opulus",
+    "Grom",
+    "Geillia Mabrik",
+    "Amuck Ambrosius",
+    "Traveler"
+];
+
+// Rumors
+const face_roles = [
+    "Lord-Proctor",
+    "Farmer Grey",
+    "Octavious",
+    "Dennis"
+];
+
+// Rumors
+const fake_roles = [
+    "Billy",
+    "Bobby",
+    "Mary"
+];
+
+// Rumors
+const monsters = [
+    "Boguns",
+    "Gnolls",
+    "Banshees"
+];
+
 // random string for all the generators
 function randomString(arr) {
     const randomIndex = Math.floor(Math.random() * arr.length);
@@ -561,4 +690,21 @@ function npcGen() {
     document.getElementById("npc-trait-2").innerHTML = trait_two;
     document.getElementById("npc-chara-3").innerHTML = chara_three;
     document.getElementById("npc-trait-3").innerHTML = trait_three;
+}
+
+// Rumors
+function rumorGen() {
+    const rumor_item = randomString(item);
+    const rumor_property = randomString(property);
+    const rumor_character = randomString(players);
+    const rumor_real_npc = randomString(face_roles);
+    const rumor_fake_npc = randomString(fake_roles);
+    const rumor_monsters = randomString(monsters);
+
+    document.getElementById("rm-fake-role").innerHTML = rumor_fake_npc;
+    document.getElementById("rm-item").innerHTML = rumor_item;
+    document.getElementById("rm-property").innerHTML = rumor_property;
+    document.getElementById("rm-player").innerHTML = rumor_character;
+    document.getElementById("rm-face-role").innerHTML = rumor_real_npc;
+    document.getElementById("rm-monsters").innerHTML = rumor_monsters;
 }

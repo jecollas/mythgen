@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <title>Myth Generators</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Jackie Collas">
+        <link rel="stylesheet" href="css/stylesheet.css">
+    </head>
+    <body>
+        <header>
+            <h1><a href="index.html">Myth Generators</a></h1>
+            <nav>
+                <div class="navbar">
+                    <a href="codegen.html">CodeGen</a>
+                    <a href="plot-test.html">Plot Type</a>
+                    <a href="querent-quest.html">Fetch Quest</a>
+                    <a href="npc-build.html">NPC Builder</a>
+                    <a href="rumors.html">Rumors</a>
+                </div>
+            </nav>
+        </header>
+
+        <div class="content">
+            <p>Rumor Generator based on <a href="https://docs.google.com/spreadsheets/d/1RdHh02oIDYTNn1EfKeqVYAiwShdV1Ijxp-4k6MXGcGY/edit?usp=sharing" target="_blank" title="Rumor Maker">Rumor Maker</a> by Andrew Warzocha.</p>
+            <div class="prompt">
+                <p>
+                    My cousin’s friend told him that someone named <strong><span id="rm-fake-role">FAKE NPC</span></strong> has <strong><span id="rm-item">ITEM</strong> that <strong><span id="rm-property">PROPERTY</span>.</strong>
+                </p>
+                <p>
+                    My cousin told me they saw <strong><span id="rm-player">CHARACTER</span></strong> sneaking suspiciously into a building here in town.
+                </p>
+                <p>
+                    My friend overhead some patrons at the tavern talking about <strong><span id="rm-face-role">NPC</span>.</strong> They say he is looking for some help with something.
+                </p>
+                <p>
+                    I accidentally overheard one of the town guard saying they may be upping woodland patrols due to a rise in the number of <strong><span id="rm-monsters">MONSTERS</span>.</strong>
+                </p>
+                
+                <button onclick="rumorGen()">Rumor Has It</button>
+            </div>
+        </div>
+
+        <script src="js/mythgen.js"></script>
+    </body>
+</html>
