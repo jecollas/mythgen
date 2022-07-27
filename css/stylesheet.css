@@ -19,7 +19,7 @@ body {
 
 header {
     background-color: #3A004D;
-    padding: 1em 2em;
+    padding: 1em 2em 0em;
 }
 
 header a {
@@ -55,6 +55,7 @@ a {
 
 .navbar li {
     float: left;
+    padding-bottom: 1em;
 }
 
 .content {

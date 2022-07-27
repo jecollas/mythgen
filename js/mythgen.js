@@ -96,7 +96,6 @@ const property = [
     "is a vital clue in an ongoing mystery or investigation",
     "has become corrupted",
     "hurts people",
-    "taps into a person's ambition and drives them to cruelty",
 
     // from the Meme Machine
     "contains ancient secrets",
