@@ -506,7 +506,7 @@ const trait = [
     "fucks",
     "can be real dick",
     "naps in weird places",
-    "got their ears pierced at Claire's",
+    "got their ears pierced at Claire's"
 ];
 
 // random string for all the generators
@@ -529,15 +529,15 @@ function plotGen() {
 
 // Querent's Quest
 function questGen() {
-    const item = randomString(item);
-    const property = randomString(property);
-    const goal = randomString(goal);
-    const twist = randomString(twist);
+    const quest_item = randomString(item);
+    const quest_property = randomString(property);
+    const quest_goal = randomString(goal);
+    const quest_twist = randomString(twist);
 
-    document.getElementById("qq-item").innerHTML = item;
-    document.getElementById("qq-property").innerHTML = property;
-    document.getElementById("qq-goal").innerHTML = goal;
-    document.getElementById("qq-twist").innerHTML = twist;
+    document.getElementById("qq-item").innerHTML = quest_item;
+    document.getElementById("qq-property").innerHTML = quest_property;
+    document.getElementById("qq-goal").innerHTML = quest_goal;
+    document.getElementById("qq-twist").innerHTML = quest_twist;
 }
 
 // NPC Builder
