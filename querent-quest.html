@@ -12,22 +12,25 @@
             <h1><a href="index.html">Myth Generators</a></h1>
             <nav>
                 <div class="navbar">
-                    <a href="codegen.html">CodeGen</a>
-                    <a href="plot-test.html">Plot Type</a>
-                    <a href="querent-quest.html">Fetch Quest</a>
-                    <a href="npc-build.html">NPC Builder</a>
-                    <a href="rumors.html">Rumors</a>
+                    <ul>
+                        <li><a href="codegen.html">CodeGen</a></li>
+                        <li><a href="plot-test.html">Plot Type</a></li>
+                        <li><a href="querent-quest.html">Fetch Quest</a></li>
+                        <li><a href="npc-build.html">NPC Builder</a></li>
+                        <li><a href="rumors.html">Rumors</a></li>
+                    </ul>  
                 </div>
             </nav>
         </header>
 
         <div class="content">
-            <p>Adapted from a spread for the Magician's Hand of Fate (used to generate the basic plot for a oneshot or find-me quest).</p>
+            <p>Adapted from the Querent's Quest spread from the <a href="https://docs.google.com/spreadsheets/d/11EPCm7Y1JkJE5KiE4GFmvRg2WCJSXt7QJaGUtM-MOLQ/edit?usp=sharing" target="_blank" title="Magician's Hand of Fate">Magician's Hand of Fate</a>, which is another one of my ongoing projects. The Querent's Quest is a seven-card spread that is used to generate the basic outline of a oneshot or fetch quest.</p>
 
             <div class="prompt">
-                <p>We are looking for <strong><span id="qq-item">ITEM</span></strong> that <strong><span id="qq-property">PROPERTY</span></strong>. We are looking for this <strong><span id="qq-goal">GOAL</span></strong>, but <strong><span id="qq-twist">TWIST</span>.</strong></p>
-
                 <button onclick="questGen()">Gimme a Thing</button>
+                <p>
+                    We are looking for <strong><span id="qq-item">ITEM</span></strong> that <strong><span id="qq-property">PROPERTY</span></strong>. We are looking for this <strong><span id="qq-goal">GOAL</span></strong>, but the thing is that <strong><span id="qq-twist">TWIST</span>.</strong>
+                </p>
             </div>
         </div>
 

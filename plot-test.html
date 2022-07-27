@@ -12,11 +12,13 @@
             <h1><a href="index.html">Myth Generators</a></h1>
             <nav>
                 <div class="navbar">
-                    <a href="codegen.html">CodeGen</a>
-                    <a href="plot-test.html">Plot Type</a>
-                    <a href="querent-quest.html">Fetch Quest</a>
-                    <a href="npc-build.html">NPC Builder</a>
-                    <a href="rumors.html">Rumors</a>
+                    <ul>
+                        <li><a href="codegen.html">CodeGen</a></li>
+                        <li><a href="plot-test.html">Plot Type</a></li>
+                        <li><a href="querent-quest.html">Fetch Quest</a></li>
+                        <li><a href="npc-build.html">NPC Builder</a></li>
+                        <li><a href="rumors.html">Rumors</a></li>
+                    </ul>  
                 </div>
             </nav>
         </header>
@@ -24,11 +26,10 @@
         <div class="content">
             <p>Basic generator that draws from a list of plot types, genres, and scene tones.</p>
             <div class="prompt">
-                <p>
-                    This <strong><span id="pt-type">TYPE</span></strong> is going to be a(n) <strong><span id="pt-tone">TONE</span></strong> <strong><span id="pt-genre">GENRE</span></strong> plot.
-                </p>
-                
                 <button onclick="plotGen()">Gimme a Thing</button>
+                <p>
+                    This plot is going to be <strong><span id="pt-tone">TONE</span></strong> <strong><span id="pt-genre">GENRE</span></strong> <strong><span id="pt-type">TYPE</span>.</strong>
+                </p>
             </div>
         </div>
 

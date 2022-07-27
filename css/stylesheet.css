@@ -1,3 +1,10 @@
+/* COLOR PALETTE
+header background: #3A004D;
+body background: #F6F8FA;
+title/active nav links: #FFFFFF;
+nav links: #EFE5F2;
+*/
+
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
 
 * {
@@ -5,28 +12,60 @@
 }
 
 body {
-    padding: 1em;
-    padding-top: 0;
+    background-color: #F6F8FA;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #3A004D;
+    padding: 1em 2em;
+}
+
+header a {
+    color: #EFE5F2;
+}
+
+header h1 a,
+header a:active {
+    color: #FFFFFF;
 }
 
 a {
     text-decoration: none;
 }
 
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .navbar a {
-  margin-right: 1em;
+    padding-right: 1.5em;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding-bottom: 0.5em;
+    padding-left: 0;
+}
+
+.navbar li {
+    float: left;
 }
 
 .content {
-    margin-top: 2em;
+    padding: 1em 2em;
+    max-width: 95%;
 }
 
 .prompt {
-    margin-top: 2em;
+    margin-top: 1.5em;
 }
 
-select,
-button,
-#result {
+select {
   margin-left: 1em;
 }

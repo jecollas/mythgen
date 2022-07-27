@@ -15,18 +15,18 @@ const plot_type = [
 
 // Plot Type
 const plot_tone = [
-    "aggressive",
-    "goofy",
-    "grim",
-    "happy",
-    "ironic/satire",
-    "opportunist",
-    "philanthropic",
-    "sad",
-    "serious",
-    "tragic",
-    "whimsical",
-    "witty"
+    "an aggressive",
+    "a goofy",
+    "a grim",
+    "a happy",
+    "an ironic/satiric",
+    "an opportunist",
+    "a philanthropic",
+    "a sad",
+    "a serious",
+    "a tragic",
+    "a whimsical",
+    "a witty"
 ];
 
 // Plot Type
@@ -81,10 +81,6 @@ const item = [
     "a small horse",
     "court summons",
     "a spyglass",
-    "a little lad in a fancy suit",
-    "a hot girl",
-    "a hot guy",
-    "a malewife",
     "a pair of scissors",
     "a magic item"
 ];
@@ -131,7 +127,7 @@ const goal = [
     "for Scooby Doo reasons",
     "as a means to depose someone in power",
     "because it's technically our job",
-    "it will help us achieve one of our goals",
+    "because it will help us achieve one of our goals",
 
     // from the Meme Machine
     "so that we can return it before anyone notices that it's gone",
@@ -147,7 +143,7 @@ const goal = [
     "so we can get out of community service",
     "because we are hiding from several ghosts",
     "for comedy purposes",
-    "so someone can get laid",
+    "so that someone can get laid",
     "because we need to make a little lad dance for us and he won't do it without the proper incentive",
     "so that we won't be executed by royalty",
     "because we need angsty backstory motivation",
@@ -174,10 +170,11 @@ const twist = [
     "hey, it might be fun anyways",
     "surely nothing could possibly go wrong :)",
     "we're not the only ones looking for it",
-    "surely it can't get any worse than this! (It can)",
+    "surely things can't get any worse than this! Spoiler alert: they can",
     "wait! There's more",
     "this might get us executed by royalty",
     "it gets worse",
+    "this might be funny",
 
     // fantasy generator - note
     "someone involved has long longed for something more",
@@ -199,11 +196,10 @@ const twist = [
     "someone involved will harbor a hidden agenda the entire time",
     "the old are not wise in this story",
     "someone involved is still haunted by a past mistake",
-    "there have been whispers for a while that something is not right about the royal family",
-    "the ancient sword discovered will turn out to be junk",
+    "there have been whispers for a while that something is not right with the royal family",
+    "the ancient sword we discovered will turn out to be junk",
     "an important prophecy will be delivered by a seer with a reputation for exaggeration",
     "someone involved has a lot of hard lessons to learn",
-    "society is still recovering from a crippling plague",
     "the gods cannot be trusted",
 
     // fantasy generator - twist
@@ -219,58 +215,87 @@ const twist = [
 // NPC Builder
 const chara = [
     "a peasant girl",
-    "a warrior",
-    "a mage",
+    "a peasant boy",
+    "a young boy",
+    "a young girl",
     "a lad",
+    "a lass",
     "a fruit-seller",
+    "a gem merchant",
     "a sellsword",
     "a nomad",
-    "a lord",
     "a knight",
     "an assassin",
     "a gentleman thief",
+    "a gentlewoman thief",
     "a soldier",
-    "an empress",
     "a monk",
-    "a ranger",
-    "a rogue",
-    "a ruffian",
     "a sorceror",
+    "an enchanter",
     "a witch",
+    "a warlock",
+    "a warrior",
+    "a mage",
     "an outlaw",
+    "a ruffian",
+    "a brigand",
+    "a pickpocket",
+    "a thief",
     "a woodsman",
     "a warlord",
+    "a page",
+    "a squire",
+    "a troubadour",
+    "an empress",
+    "an emperor",
     "a noblewoman",
+    "a nobleman",
+    "a lord",
+    "a lady",
+    "a prince",
+    "a princess",
+    "a diplomat",
     "a monsterologist",
-    "a gentlewoman thief",
-    "a druid",
-    "a bard",
-    "a young boy",
     "a swordmaster",
     "an apprentice",
     "an assassin-in-training",
-    "a page",
-    "a troubadour",
     "an enchantress-in-training",
-    "an ogre",
     "a summoner-in-training",
-    "a brigand",
-    "a sorceror",
-    "a dragon",
-    "an elven prince",
     "a witch-in-training",
-    "a centaur",
-    "a charlatan",
     "a necromancer-in-training",
-    "an enchanter",
-    "a goblin",
-    "a vampire",
-    "a genie",
-    "a shaman",
     "a prophet-in-training",
     "a sorceror-in-training",
+    "an ogre",
+    "a dragon",
+    "a centaur",
+    "a charlatan",
+    "a vampire",
+    "a genie",
     "a troll",
-    "a pickpocket",
+
+    // races from the myth book
+    "a dale elf",
+    "a deep elf",
+    "a dwarf",
+    "a goblin",
+    "a half elf",
+    "a high elf",
+    "a human",
+    "a suhk",
+    "a wildren",
+
+    // classes from the myth book
+    "an alchemist",
+    "an artificer",
+    "a bard",
+    "a cleric",
+    "a druid",
+    "a fighter",
+    "a paladin",
+    "a ranger",
+    "a rogue",
+    "a runesmith",
+    "a wizard",
 
     // professions from the myth book
     "a coalescer",
@@ -328,6 +353,7 @@ const chara = [
     "a celebrity chef",
     "the village idiot",
     "some old guy",
+    "some old lady",
     "a tax-evader",
     "a draft dodger",
     "a pyrotechnician",
@@ -341,7 +367,39 @@ const chara = [
     "a doctor",
     "a lawyer",
     "a con artist",
-    "a grifter"
+    "a grifter",
+    "a little lad in a fancy suit",
+    "a hot girl",
+    "a hot guy",
+    "a hot person",
+    "a malewife",
+    "an entity",
+    "an absent father",
+    "a war criminal",
+    "a shitty wizard",
+    "a conspiracy theorist",
+    "an adrenaline junkie",
+    "a time traveler",
+    "an Italian",
+    "an asshole",
+    "a deadbeat dad",
+    "a deadbeat mom",
+    "a deadbeat parent",
+    "a Little League coach",
+    "a mobster",
+    "a grad student",
+    "a librarian",
+    "a researcher",
+    "a research assistant",
+    "an entomologist",
+    "a butch lesbian",
+    "a dancer",
+    "a singer",
+    "a musician",
+    "a historian",
+    "a private investigator",
+    "a detective",
+    "a comedian"
 ];
 
 // NPC Builder
@@ -423,7 +481,6 @@ const trait = [
     
     // from the Meme Machine
     "was found by the side of the road",
-    "is Italian",
     "is haunted",
     "is hot",
     "is divorced",
@@ -431,23 +488,17 @@ const trait = [
     "is goth",
     "is literally neurodivergent and a minor",
     "is a creature",
-    "is a war criminal",
-    "is a time traveler",
-    "is a shitty time traveler",
-    "is a shitty wizard",
-    "is a conspiracy theorist",
     "is a flat earther",
     "is a flat earther to be a dick",
     "is a bit of a daredevil",
-    "is an adrenaline junkie",
     "is an arsonist",
-    "is an absentee father",
     "is an alcoholic",
     "is so hungover",
     "is so close to snapping",
     "is terrified of ducks",
     "is really up their own ass about poetry",
     "is currently facing a lawsuit",
+    "is currently running a scam",
     "is banned from Applebee's",
     "is plagued by visions",
     "is blue for no reason",
@@ -455,6 +506,8 @@ const trait = [
     "is unreasonably horny",
     "is from hell",
     "is from the LARP equivalent of Texas",
+    "is afraid of the dark",
+    "is a competitive little shit",
     "has a headache",
     "has a fat ass",
     "has a cool hat",
@@ -470,9 +523,11 @@ const trait = [
     "has killed before and will kill again",
     "has got it going on",
     "has human eyes",
+    "does not have human eyes",
     "has interesting feelings about spiders",
     "has three weed-smoking girlfriends",
     "has blue hair and pronouns",
+    "has an ongoing feud with the local mage's guild (don't ask)",
     "only has one outfit",
     "thinks they're a goose",
     "thinks they're hot shit",
@@ -481,12 +536,12 @@ const trait = [
     "thinks your parent of unspecified gender is hot",
     "thinks the earth is shaped like a donut because it's funny",
     "thinks the earth is shaped like a donut because they're kind of hungry right now",
-    "doesn't have human eyes",
     "doesn't talk to their parents",
     "doesn't believe in hell",
     "doesn't think the sun is real",
     "needs therapy",
     "needs a nap",
+    "needs to get laid",
     "eats glue",
     "eats magic items",
     "smokes way too much weed",
@@ -495,11 +550,13 @@ const trait = [
     "will die on any hill",
     "won't shut up about their kids",
     "would survive a Saw trap",
+    "loves arguing",
+    "loves puppets",
     "loves their wife",
     "likes to break the fourth wall",
     "really likes dragons",
     "hates children",
-    "talks like an anime character",
+    "acts like an anime character",
     "solves all of their problems with card games",     
     "regularly commits tax fraud",
     "used to be a war criminal and has since been pardoned",
@@ -513,8 +570,12 @@ const trait = [
     "can be real dick",
     "naps in weird places",
     "got their ears pierced at Claire's",
-    "moonlights as a Little League coach for their local community",
-    "wears way too much eyeliner"
+    "wears way too much eyeliner",
+    "went out for a pack of smokes and never returned",
+    "took one philosophy class in university and won't shut up about it",
+    "solves mysteries on the side",
+    "is really passionate about saving the bees",
+    "has their own fan club"
 ];
 
 // Rumors
@@ -630,12 +691,14 @@ const characters = {
         "Zephyr Zax",
         "Druidkeeper Hesperides Crimsonvine",
         "Dr. Emmet Calhoun",
-        "Dr. Arianaya Bell-Dreveaux"
+        "Dr. Arianaya Bell-Dreveaux",
+        "Euclid, the Bawdy Bard"
     ],
     fake_roles: [
         "Billy",
         "Bobby",
-        "Mary"
+        "Mary",
+        "Steven"
     ]
 };
 
@@ -701,15 +764,15 @@ function npcGen() {
 function rumorGen() {
     const rumor_item = randomString(item);
     const rumor_property = randomString(property);
+    const rumor_monsters = randomString(monsters);
     const rumor_character = randomString(characters.players);
     const rumor_real_npc = randomString(characters.face_roles);
     const rumor_fake_npc = randomString(characters.fake_roles);
-    const rumor_monsters = randomString(monsters);
 
-    document.getElementById("rm-fake-role").innerHTML = rumor_fake_npc;
     document.getElementById("rm-item").innerHTML = rumor_item;
     document.getElementById("rm-property").innerHTML = rumor_property;
+    document.getElementById("rm-monsters").innerHTML = rumor_monsters;
     document.getElementById("rm-player").innerHTML = rumor_character;
     document.getElementById("rm-face-role").innerHTML = rumor_real_npc;
-    document.getElementById("rm-monsters").innerHTML = rumor_monsters;
+    document.getElementById("rm-fake-role").innerHTML = rumor_fake_npc;
 }

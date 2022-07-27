@@ -12,23 +12,24 @@
             <h1><a href="index.html">Myth Generators</a></h1>
             <nav>
                 <div class="navbar">
-                    <a href="codegen.html">CodeGen</a>
-                    <a href="plot-test.html">Plot Type</a>
-                    <a href="querent-quest.html">Fetch Quest</a>
-                    <a href="npc-build.html">NPC Builder</a>
-                    <a href="rumors.html">Rumors</a>
+                    <ul>
+                        <li><a href="codegen.html">CodeGen</a></li>
+                        <li><a href="plot-test.html">Plot Type</a></li>
+                        <li><a href="querent-quest.html">Fetch Quest</a></li>
+                        <li><a href="npc-build.html">NPC Builder</a></li>
+                        <li><a href="rumors.html">Rumors</a></li>
+                    </ul>  
                 </div>
             </nav>
         </header>
 
         <div class="content">
-            <p>Basic NPC generator.</p>
+            <p>Based on Reedsy's <a href="https://blog.reedsy.com/plot-generator/fantasy/" target="_blank" title="Fantasy Plot Generator">Fantasy Plot Generator</a>.</p>
             <div class="prompt">
+                <button onclick="npcGen()">Build-a-Boy</button>
                 <p>
                     Our party includes <strong><span id="npc-chara-1">CHARACTER</span></strong> who <strong><span id="npc-trait-1">TRAIT</span></strong>, <strong><span id="npc-chara-2">CHARACTER</span></strong> who <strong><span id="npc-trait-2">TRAIT</span></strong>, and <strong><span id="npc-chara-3">CHARACTER</span></strong> who <strong><span id="npc-trait-3">TRAIT</span>.</strong>
-                </p>
-                
-                <button onclick="npcGen()">Build-a-Boy</button>
+                </p>     
             </div>
         </div>
 
