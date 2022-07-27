@@ -63,8 +63,8 @@ const item = [
     "a shield",
     "a bottle of alcohol",
     "a knife",
-    "someone's dog",
-    "a fight",
+    "a dog",
+    // "a fight",
     "a really cool cloak",
     "information",
     "financial compensation",
@@ -73,10 +73,8 @@ const item = [
 
     // from the Meme Machine
     "a really tiny knife",
-    "a local tavern",
-    "a jar of dirt",
+    "a jar",
     "a steamy adult romance novel",
-    "gold",
     "a cursed magical item",
     "a small horse",
     "court summons",
@@ -105,12 +103,17 @@ const property = [
     "is deeply and incredibly cursed",
     "used to be green",
     "has eyes",
-    "does not have eyes",
     "looks like a goose",
     "someone left on a boat",
     "was lost at sea",
     "will fix my marriage",
-    "can heal any wound"
+    "can heal any wound",
+    "is made of gold",
+    "went missing years ago",
+    "is hot to the touch",
+    "is cold to the touch",
+    "was stolen by bandits",
+    "was created as a result of a fae deal gone wrong"
 ];
 
 // Fetch Quest
@@ -577,6 +580,25 @@ const trait = [
     "has their own fan club"
 ];
 
+const source = [
+    "My cousin's friend told him that",
+    "My cousin's friend told her that",
+    "My cousin told me that",
+    "My friend overheard some patrons at the tavern talking about how",
+    "I overheard one of the town guard saying that",
+    "My friend heard that",
+    "I overheard someone saying that",
+    "A buddy of mine said that",
+    "You didn't hear this from me, but",
+    "Rumor has it that",
+    "Don't quote me on this, but I heard that",
+    "I don't know if this is true or not, but I heard that",
+    "I heard through the grapevine that",
+    "So get this — apparently",
+    "A friend of mine was telling me the other day that",
+    "A friend of a friend said that"
+];
+
 // Rumors
 const characters = {
     players: [
@@ -585,7 +607,7 @@ const characters = {
         "Delawyn Liamour",
         "Ursa Oak",
         "Elias Athear",
-        "Agon Caradin of Canton, Raven Company", 
+        "Agon Caradin of Canton", 
         "Jaxx Malendarr",
         "Alwin Malendarr",
         "Verdic Bin Corsica il-Pachero os-Farwhen",
@@ -694,7 +716,7 @@ const characters = {
         "Euclid, the Bawdy Bard"
     ],
     fake_first:["Billy","Bobby","Mary","Barry","Steven","Marlon","Rachel","Shelby","Eliza","Elizabeth","Joseph","Andy","Arietta","Morgan","Taylor","Tristan","Kai","Anabelle","Duke","Esteban","Antonio","Anthony","Tony","Jackie","John","Mike","Michael","Chev","Mandy","Sully","Joel","Roger","Peter","Connor","Brian","Brendan","Emmy","Isaac","Melissa","Jaime","Jesse","Dakota","Jackson","Sawyer","Xavier","Ester","Tien","Logan","James","Mason","Jason","Calvin"],
-    fake_last: ["Venitzo","Nightlocke","Shelley","Brando","Grey","Stevenson","Andrews","McGrath","Wheeler","Taylor","Brodey","Lee","Han","Collins","LeBeau","Blackwood","Jackson","Stratman","Smith","Filli","Miller","Merlino","Fox","Waldron","Rogers","Adams","de la Cruz","Santiago","Lessio","Belen","Rodriguez","Connors","Parker","Barnes","Price","Sawyer","Wolfe","Mayer","Howlett","Freyason","Foster","Reynolds","Thorne","Owens"]
+    fake_last: ["Venitzo","Nightlocke","Shelley","Brando","Grey","Stevenson","Andrews","McGrath","Wheeler","Taylor","Brodey","Lee","Han","Collins","LeBeau","Blackwood","Jackson","Stratman","Smith","Filli","Miller","Merlino","Fox","Waldron","Rogers","Adams","de la Cruz","Santiago","Lessio","Belen","Rodriguez","Connors","Parker","Barnes","Price","Sawyer","Wolfe","Mayer","Howlett","Freyason","Foster","Reynolds","Thorne","Owens","Doe"]
 };
 
 // Rumors
@@ -761,6 +783,10 @@ function rumorGen() {
     // const rumor_chara = randomString(chara);
     const rumor_property = randomString(property);
     const rumor_monsters = randomString(monsters);
+    const rumor_source_one = randomString(source);
+    const rumor_source_two = randomString(source);
+    const rumor_source_three = randomString(source);
+    const rumor_source_four = randomString(source);
 
     const rumor_character = randomString(characters.players);
     const rumor_real_npc = randomString(characters.face_roles);
@@ -772,7 +798,11 @@ function rumorGen() {
     // document.getElementById("rm-chara").innerHTML = rumor_chara;
     document.getElementById("rm-property").innerHTML = rumor_property;
     document.getElementById("rm-monsters").innerHTML = rumor_monsters;
-
+    document.getElementById("rm-source-1").innerHTML = rumor_source_one;
+    document.getElementById("rm-source-2").innerHTML = rumor_source_two;
+    document.getElementById("rm-source-3").innerHTML = rumor_source_three;
+    document.getElementById("rm-source-4").innerHTML = rumor_source_four;
+    
     document.getElementById("rm-player").innerHTML = rumor_character;
     document.getElementById("rm-face-role").innerHTML = rumor_real_npc;
     document.getElementById("rm-fake-role").innerHTML = rumor_npc_first + " " + rumor_npc_last;
