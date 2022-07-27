@@ -398,7 +398,8 @@ const chara = [
     "a historian",
     "a private investigator",
     "a detective",
-    "a comedian"
+    "a comedian",
+    "someone"
 ];
 
 // NPC Builder
@@ -758,6 +759,7 @@ function npcGen() {
 // Rumors
 function rumorGen() {
     const rumor_item = randomString(item);
+    // const rumor_chara = randomString(chara);
     const rumor_property = randomString(property);
     const rumor_monsters = randomString(monsters);
 
@@ -768,6 +770,7 @@ function rumorGen() {
     const rumor_npc_last = randomString(characters.fake_last);
 
     document.getElementById("rm-item").innerHTML = rumor_item;
+    // document.getElementById("rm-chara").innerHTML = rumor_chara;
     document.getElementById("rm-property").innerHTML = rumor_property;
     document.getElementById("rm-monsters").innerHTML = rumor_monsters;
 
