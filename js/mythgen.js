@@ -73,7 +73,7 @@ const item = [
 
     // from the Meme Machine
     "a really tiny knife",
-    "the local tavern",
+    "a local tavern",
     "a jar of dirt",
     "a steamy adult romance novel",
     "gold",
@@ -90,7 +90,6 @@ const property = [
     // Ace-10 of spades from MHoF
     "used to belong to a famous general",
     "was blessed by the gods",
-    "will help heal someone who's been injured",
     "was used to kill someone important",
     "played a key role in changing fate",
     "everyone hates",
@@ -694,12 +693,8 @@ const characters = {
         "Dr. Arianaya Bell-Dreveaux",
         "Euclid, the Bawdy Bard"
     ],
-    fake_roles: [
-        "Billy",
-        "Bobby",
-        "Mary",
-        "Steven"
-    ]
+    fake_first:["Billy","Bobby","Mary","Barry","Steven","Marlon","Rachel","Shelby","Eliza","Elizabeth","Joseph","Andy","Arietta","Morgan","Taylor","Tristan","Kai","Anabelle","Duke","Esteban","Antonio","Anthony","Tony","Jackie","John","Mike","Michael","Chev","Mandy","Sully","Joel","Roger","Peter","Connor","Brian","Brendan","Emmy","Isaac","Melissa","Jaime","Jesse","Dakota","Jackson","Sawyer","Xavier","Ester","Tien","Logan","James","Mason","Jason","Calvin"],
+    fake_last: ["Venitzo","Nightlocke","Shelley","Brando","Grey","Stevenson","Andrews","McGrath","Wheeler","Taylor","Brodey","Lee","Han","Collins","LeBeau","Blackwood","Jackson","Stratman","Smith","Filli","Miller","Merlino","Fox","Waldron","Rogers","Adams","de la Cruz","Santiago","Lessio","Belen","Rodriguez","Connors","Parker","Barnes","Price","Sawyer","Wolfe","Mayer","Howlett","Freyason","Foster","Reynolds","Thorne","Owens"]
 };
 
 // Rumors
@@ -765,14 +760,18 @@ function rumorGen() {
     const rumor_item = randomString(item);
     const rumor_property = randomString(property);
     const rumor_monsters = randomString(monsters);
+
     const rumor_character = randomString(characters.players);
     const rumor_real_npc = randomString(characters.face_roles);
-    const rumor_fake_npc = randomString(characters.fake_roles);
+
+    const rumor_npc_first = randomString(characters.fake_first);
+    const rumor_npc_last = randomString(characters.fake_last);
 
     document.getElementById("rm-item").innerHTML = rumor_item;
     document.getElementById("rm-property").innerHTML = rumor_property;
     document.getElementById("rm-monsters").innerHTML = rumor_monsters;
+
     document.getElementById("rm-player").innerHTML = rumor_character;
     document.getElementById("rm-face-role").innerHTML = rumor_real_npc;
-    document.getElementById("rm-fake-role").innerHTML = rumor_fake_npc;
+    document.getElementById("rm-fake-role").innerHTML = rumor_npc_first + " " + rumor_npc_last;
 }
