@@ -77,7 +77,6 @@ const item = [
     "a steamy adult romance novel",
     "a cursed magical item",
     "a small horse",
-    "court summons",
     "a spyglass",
     "a pair of scissors",
     "a magic item"
@@ -611,7 +610,7 @@ const source = [
     "Someone gave me a heads up that",
     "The spirits revealed to me that",
     "Just trust me on this one, but",
-    "The town busybody said",
+    "The town busybody said that",
     "This might just be me being nosy, but",
     "I'm usually one to mind my own business, but I heard that"
 ];
@@ -649,12 +648,13 @@ const accuse = [
     "being awful to the police",
     "pulling a dragon's tail",
     "vandalizing the local tavern",
-    "getting involved with illicit underground unicorn fights",
+    "getting involved with an illicit underground unicorn fight club",
     "playing Yu-Gi-Oh",
     "undermining the government at every turn",
     "falling on their ass",
     "eating shit and falling off their horse",
-    "riding topless"
+    "riding topless",
+    "stealing from the church"
 ];
 
 // Rumors
@@ -823,15 +823,19 @@ function questGen() {
 function npcGen() {
     const chara_one = randomString(chara);
     const trait_one = randomString(trait);
+
     const chara_two = randomString(chara);
     const trait_two = randomString(trait);
+    
     const chara_three = randomString(chara);
     const trait_three = randomString(trait);
 
     document.getElementById("npc-chara-1").innerHTML = chara_one;
     document.getElementById("npc-trait-1").innerHTML = trait_one;
+    
     document.getElementById("npc-chara-2").innerHTML = chara_two;
     document.getElementById("npc-trait-2").innerHTML = trait_two;
+    
     document.getElementById("npc-chara-3").innerHTML = chara_three;
     document.getElementById("npc-trait-3").innerHTML = trait_three;
 }
@@ -845,7 +849,9 @@ const rumors = [
     "rumor 6",
     "rumor 7",
     "rumor 8",
-    "rumor 9"
+    "rumor 9",
+    "rumor 10",
+    "rumor 11"
 ];
 
 const person = [
@@ -855,22 +861,34 @@ const person = [
     "fake role 2"
 ];
 
+const person_alt = [
+    "player character",
+    "face role",
+    "fake role"
+];
+
 let rumor_select = "";
 let person_select = "";
+let person_select_alt = "";
 
 // Rumors
 function rumorGen() {
     rumor_select = randomString(rumors);
     person_select = randomString(person);
+    person_select_alt = randomString(person_alt);
 
     const rumor_character = randomString(characters.players);
     const rumor_face_role = randomString(characters.face_roles);
     const rumor_fake_first = randomString(characters.fake_first);
     const rumor_fake_last = randomString(characters.fake_last);
-    const rumor_chara = randomString(chara);
-    const rumor_chara_alt = randomString(chara);
-    
+
+    const rumor_character_alt = randomString(characters.players);
+    const rumor_face_role_alt = randomString(characters.face_roles);
+    const rumor_fake_first_alt = randomString(characters.fake_first);
+    const rumor_fake_last_alt = randomString(characters.fake_last);
+
     let rumor_person = "";
+    let rumor_person_alt = "";
     
     const rumor_source = randomString(source);
     const rumor_item = randomString(item);
@@ -878,6 +896,9 @@ function rumorGen() {
     const rumor_monsters = randomString(monsters);
     const rumor_trait = randomString(trait);
     const rumor_accuse = randomString(accuse);
+
+    const rumor_chara = randomString(chara);
+    const rumor_chara_alt = randomString(chara);
 
     switch (person_select) {
         case "player character":
@@ -894,33 +915,51 @@ function rumorGen() {
         break;
     }
 
+    switch (person_select_alt) {
+        case "player character":
+            rumor_person_alt = "<b>" + rumor_character_alt + "</b>";
+        break;
+        case "face role":
+            rumor_person_alt = "<b>" + rumor_face_role_alt + "</b>";
+        break;
+        case "fake role":
+            rumor_person_alt = "someone named <b>" + rumor_fake_first_alt + " " + rumor_fake_last_alt + "</b>";
+        break;
+    }
+
     switch (rumor_select) {
         case "rumor 1":
             document.getElementById("rm-rumor").innerHTML = rumor_source + " " + rumor_person + " has <b>" + rumor_item + "</b> that <b>" + rumor_property + ".</b>";
         break;
         case "rumor 2":
-            document.getElementById("rm-rumor").innerHTML = rumor_source + " " + rumor_person + " was seen sneaking suspiciously into a building here in town.";
+            document.getElementById("rm-rumor").innerHTML = rumor_source + " " +  rumor_person + " was seen <b>" + rumor_accuse + ".</b>";
         break;
         case "rumor 3":
             document.getElementById("rm-rumor").innerHTML = rumor_source + " " + rumor_person + " is looking for some help with something.";
         break;
         case "rumor 4":
-            document.getElementById("rm-rumor").innerHTML = rumor_source + " " + rumor_person + " is looking for <b>" + rumor_item + "</b> that <b>" + rumor_property + ".</b>";
+            document.getElementById("rm-rumor").innerHTML = rumor_source + " " + rumor_person + " is looking for <b>" + rumor_item + ".</b>";
         break;
         case "rumor 5":
-            document.getElementById("rm-rumor").innerHTML = rumor_source + " they may be upping woodland patrols due to a rise in the number of <b>" + rumor_monsters + ".</b>";
+            document.getElementById("rm-rumor").innerHTML = rumor_source + " " + rumor_person + " is looking for <b>" + rumor_item + "</b> that <b>" + rumor_property + ".</b>";
         break;
         case "rumor 6":
-            document.getElementById("rm-rumor").innerHTML = rumor_source + " " + rumor_person + " was asking around for someone who <b>" + rumor_trait + ".</b>";
+            document.getElementById("rm-rumor").innerHTML = rumor_source + " they may be upping woodland patrols due to a rise in the number of <b>" + rumor_monsters + ".</b>";
         break;
         case "rumor 7":
-            document.getElementById("rm-rumor").innerHTML = rumor_source + " " +  rumor_person + " was seen " + rumor_accuse + ".</b>";
+            document.getElementById("rm-rumor").innerHTML = rumor_source + " " + rumor_person + " was asking around for <b>" + rumor_chara_alt + ".</b>";
         break;
         case "rumor 8":
-            document.getElementById("rm-rumor").innerHTML = rumor_source + " " +  rumor_person + " <b>" + rumor_trait + ".</b>";
+            document.getElementById("rm-rumor").innerHTML = rumor_source + " " + rumor_person + " was asking around for someone who <b>" + rumor_trait + ".</b>";
         break;
         case "rumor 9":
-            document.getElementById("rm-rumor").innerHTML = rumor_source + " " +  rumor_person + " is <b>" + rumor_chara_alt + ".</b>";
+            document.getElementById("rm-rumor").innerHTML = rumor_source + " " +  rumor_person + " <b>" + rumor_trait + ".</b>";
+        break;
+        case "rumor 10":
+            document.getElementById("rm-rumor").innerHTML = rumor_source + " " +  rumor_person_alt + " is <b>" + rumor_chara + ".</b>";
+        break;
+        case "rumor 11":
+            document.getElementById("rm-rumor").innerHTML = rumor_source + " " +  rumor_person_alt + " was asking around for <b>" + rumor_person + ".</b>";
         break;
     }
 }
