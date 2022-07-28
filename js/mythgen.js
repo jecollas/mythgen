@@ -844,7 +844,8 @@ const rumors = [
     "rumor 5",
     "rumor 6",
     "rumor 7",
-    "rumor 8"
+    "rumor 8",
+    "rumor 9"
 ];
 
 const person = [
@@ -867,6 +868,7 @@ function rumorGen() {
     const rumor_fake_first = randomString(characters.fake_first);
     const rumor_fake_last = randomString(characters.fake_last);
     const rumor_chara = randomString(chara);
+    const rumor_chara_alt = randomString(chara);
     
     let rumor_person = "";
     
@@ -916,6 +918,9 @@ function rumorGen() {
         break;
         case "rumor 8":
             document.getElementById("rm-rumor").innerHTML = rumor_source + " " +  rumor_person + " <b>" + rumor_trait + ".</b>";
+        break;
+        case "rumor 9":
+            document.getElementById("rm-rumor").innerHTML = rumor_source + " " +  rumor_person + " is <b>" + rumor_chara_alt + ".</b>";
         break;
     }
 }
