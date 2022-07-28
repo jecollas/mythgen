@@ -902,7 +902,7 @@ function rumorGen() {
 
     switch (person_select) {
         case "player character":
-            rumor_person = "<b>" + rumor_character + "</b>";
+            rumor_person = "<b>" + rumor_character + "</b> here in town";
         break;
         case "face role":
             rumor_person = "<b>" + rumor_face_role + "</b>";
@@ -917,7 +917,7 @@ function rumorGen() {
 
     switch (person_select_alt) {
         case "player character":
-            rumor_person_alt = "<b>" + rumor_character_alt + "</b>";
+            rumor_person_alt = "<b>" + rumor_character_alt + "</b> here in town";
         break;
         case "face role":
             rumor_person_alt = "<b>" + rumor_face_role_alt + "</b>";
