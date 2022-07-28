@@ -902,7 +902,7 @@ function rumorGen() {
 
     switch (person_select) {
         case "player character":
-            rumor_person = "<b>" + rumor_character + "</b> here in town";
+            rumor_person = "<b>" + rumor_character + "</b>";
         break;
         case "face role":
             rumor_person = "<b>" + rumor_face_role + "</b>";
