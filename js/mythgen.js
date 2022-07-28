@@ -604,7 +604,16 @@ const source = [
     "I heard through the grapevine that",
     "So get this — apparently",
     "A friend of mine was telling me the other day that",
-    "A friend of a friend said that"
+    "A friend of a friend said that",
+    "I read in the newspaper that",
+    "The bartender slipped me a note that said that",
+    "The bartender gave me a heads up that",
+    "Someone gave me a heads up that",
+    "The spirits revealed to me that",
+    "Just trust me on this one, but",
+    "The town busybody said",
+    "This might just be me being nosy, but",
+    "I'm usually one to mind my own business, but I heard that"
 ];
 
 const accuse = [
@@ -640,11 +649,12 @@ const accuse = [
     "being awful to the police",
     "pulling a dragon's tail",
     "vandalizing the local tavern",
-    "geting involved with illicit underground unicorn fights",
+    "getting involved with illicit underground unicorn fights",
     "playing Yu-Gi-Oh",
     "undermining the government at every turn",
     "falling on their ass",
-    "eating shit and falling off their horse"
+    "eating shit and falling off their horse",
+    "riding topless"
 ];
 
 // Rumors
@@ -764,7 +774,7 @@ const characters = {
         "Euclid, the Bawdy Bard",
         "Ser Amaris"
     ],
-    fake_first:["Billy","Bobby","Mary","Barry","Steven","Marlon","Rachel","Shelby","Eliza","Elizabeth","Joseph","Andy","Arietta","Morgan","Taylor","Tristan","Kai","Anabelle","Duke","Esteban","Antonio","Anthony","Tony","Jackie","John","Mike","Michael","Chev","Mandy","Sully","Joel","Roger","Peter","Connor","Brian","Brendan","Emmy","Isaac","Melissa","Jaime","Jesse","Dakota","Jackson","Sawyer","Xavier","Ester","Tien","Logan","James","Mason","Jason","Calvin","Caleb","Ada","Clay","Gerard","Amy","Lydia","Eugenia","Rose","Jade","Jane","Roxy","Dave","David","Alexis","Jake","Dirk","Sarah","Raleight","Nikolai","Laila","Emerald","Marcus","Marc","Mark","Caroline","Katie","Kaitlin","Bridget","Haley","Jack","Lauren","Reya","Letitia","Axle","Alex","Rae","Fae","Danny","Dani","Hugo","Juan","Johnny","Paul","Dominic","Mia","Michelle","Dwayne","Chris","Antigone","Maria","Mehak","Vishali","Iris","Shane","Sam","Jimmy","Isabella","Wendy","Thomas","Dan","Daniel","Elias","Cris","Norbert"],
+    fake_first:["Billy","Bobby","Mary","Barry","Steven","Marlon","Rachel","Shelby","Eliza","Elizabeth","Joseph","Andy","Arietta","Morgan","Taylor","Tristan","Kai","Anabelle","Duke","Esteban","Antonio","Anthony","Tony","Jackie","John","Mike","Michael","Chev","Mandy","Sully","Joel","Roger","Peter","Connor","Brian","Brendan","Emmy","Isaac","Melissa","Jaime","Jesse","Dakota","Jackson","Sawyer","Xavier","Ester","Tien","Logan","James","Mason","Jason","Calvin","Caleb","Ada","Clay","Gerard","Amy","Lydia","Eugenia","Rose","Jade","Jane","Roxy","Dave","David","Alexis","Jake","Dirk","Sarah","Raleigh","Nikolai","Laila","Emerald","Marcus","Marc","Mark","Caroline","Katie","Kaitlin","Bridget","Haley","Jack","Lauren","Reya","Letitia","Axle","Alex","Rae","Fae","Danny","Dani","Hugo","Juan","Johnny","Paul","Dominic","Mia","Michelle","Dwayne","Chris","Antigone","Maria","Mehak","Vishali","Iris","Shane","Sam","Jimmy","Isabella","Wendy","Thomas","Dan","Daniel","Elias","Cris","Norbert"],
     fake_last: ["Venitzo","Nightlocke","Shelley","Brando","Grey","Stevenson","Andrews","McGrath","Wheeler","Taylor","Brodey","Lee","Han","Collins","LeBeau","Blackwood","Jackson","Stratman","Smith","Filli","Miller","Merlino","Fox","Waldron","Rogers","Adams","de la Cruz","Santiago","Lessio","Belen","Rodriguez","Connors","Parker","Barnes","Price","Sawyer","Wolfe","Mayer","Howlett","Freyason","Foster","Reynolds","Thorne","Owens","Doe","Morse","Paura","Walters","Ivanofski","St. Claire","Shaughnessy","Carson","Fianna","Delarose","Darwin","Red","Green","Perez","Runner","Walker","Toretto","DiArcangelo","Desantos","Tavares","Diamond","Wu","Demehri","Cahill","Brown","Fenton","Rienton"]
 };
 
@@ -833,7 +843,8 @@ const rumors = [
     "rumor 4",
     "rumor 5",
     "rumor 6",
-    "rumor 7"
+    "rumor 7",
+    "rumor 8"
 ];
 
 const person = [
@@ -901,7 +912,10 @@ function rumorGen() {
             document.getElementById("rm-rumor").innerHTML = rumor_source + " " + rumor_person + " was asking around for someone who <b>" + rumor_trait + ".</b>";
         break;
         case "rumor 7":
-            document.getElementById("rm-rumor").innerHTML = rumor_source + " " +  rumor_person + " was seen " + rumor_accuse + ".</b>"
+            document.getElementById("rm-rumor").innerHTML = rumor_source + " " +  rumor_person + " was seen " + rumor_accuse + ".</b>";
+        break;
+        case "rumor 8":
+            document.getElementById("rm-rumor").innerHTML = rumor_source + " " +  rumor_person + " <b>" + rumor_trait + ".</b>";
         break;
     }
 }
