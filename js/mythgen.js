@@ -401,7 +401,9 @@ const chara = [
     "a private investigator",
     "a detective",
     "a comedian",
-    "someone"
+    "someone",
+    "a pro-wrestler",
+    "a furry"
 ];
 
 // NPC Builder
@@ -488,8 +490,11 @@ const trait = [
     "is divorced",
     "is bisexual",
     "is goth",
+    "is evil",
+    "is stinky",
+    "is nonbinary",
     "is literally neurodivergent and a minor",
-    "is a creature",
+    "is a furry",
     "is a flat earther",
     "is a flat earther to be a dick",
     "is a bit of a daredevil",
@@ -554,6 +559,7 @@ const trait = [
     "would survive a Saw trap",
     "loves arguing",
     "loves puppets",
+    "loves soup",
     "loves their wife",
     "likes to break the fourth wall",
     "really likes dragons",
@@ -713,10 +719,11 @@ const characters = {
         "Druidkeeper Hesperides Crimsonvine",
         "Dr. Emmet Calhoun",
         "Dr. Arianaya Bell-Dreveaux",
-        "Euclid, the Bawdy Bard"
+        "Euclid, the Bawdy Bard",
+        "Ser Amaris"
     ],
-    fake_first:["Billy","Bobby","Mary","Barry","Steven","Marlon","Rachel","Shelby","Eliza","Elizabeth","Joseph","Andy","Arietta","Morgan","Taylor","Tristan","Kai","Anabelle","Duke","Esteban","Antonio","Anthony","Tony","Jackie","John","Mike","Michael","Chev","Mandy","Sully","Joel","Roger","Peter","Connor","Brian","Brendan","Emmy","Isaac","Melissa","Jaime","Jesse","Dakota","Jackson","Sawyer","Xavier","Ester","Tien","Logan","James","Mason","Jason","Calvin"],
-    fake_last: ["Venitzo","Nightlocke","Shelley","Brando","Grey","Stevenson","Andrews","McGrath","Wheeler","Taylor","Brodey","Lee","Han","Collins","LeBeau","Blackwood","Jackson","Stratman","Smith","Filli","Miller","Merlino","Fox","Waldron","Rogers","Adams","de la Cruz","Santiago","Lessio","Belen","Rodriguez","Connors","Parker","Barnes","Price","Sawyer","Wolfe","Mayer","Howlett","Freyason","Foster","Reynolds","Thorne","Owens","Doe"]
+    fake_first:["Billy","Bobby","Mary","Barry","Steven","Marlon","Rachel","Shelby","Eliza","Elizabeth","Joseph","Andy","Arietta","Morgan","Taylor","Tristan","Kai","Anabelle","Duke","Esteban","Antonio","Anthony","Tony","Jackie","John","Mike","Michael","Chev","Mandy","Sully","Joel","Roger","Peter","Connor","Brian","Brendan","Emmy","Isaac","Melissa","Jaime","Jesse","Dakota","Jackson","Sawyer","Xavier","Ester","Tien","Logan","James","Mason","Jason","Calvin","Caleb","Ada","Clay","Gerard","Amy","Lydia","Eugenia","Rose","Jade","Jane","Roxy","Dave","David","Alexis","Jake","Dirk","Sarah","Raleight","Nikolai","Laila","Emerald","Marcus","Marc","Mark","Caroline","Katie","Kaitlin","Bridget","Haley","Jack","Lauren","Reya","Letitia","Axle","Alex","Rae","Fae","Danny","Dani","Hugo","Juan","Johnny","Paul","Dominic","Mia","Michelle","Dwayne","Chris","Antigone","Maria","Mehak","Vishali","Iris","Shane","Sam","Jimmy","Isabella","Wendy","Thomas","Dan","Daniel","Elias"],
+    fake_last: ["Venitzo","Nightlocke","Shelley","Brando","Grey","Stevenson","Andrews","McGrath","Wheeler","Taylor","Brodey","Lee","Han","Collins","LeBeau","Blackwood","Jackson","Stratman","Smith","Filli","Miller","Merlino","Fox","Waldron","Rogers","Adams","de la Cruz","Santiago","Lessio","Belen","Rodriguez","Connors","Parker","Barnes","Price","Sawyer","Wolfe","Mayer","Howlett","Freyason","Foster","Reynolds","Thorne","Owens","Doe","Morse","Paura","Walters","Ivanofski","St. Claire","Shaughnessy","Carson","Fianna","Delarose","Darwin","Red","Green","Perez","Runner","Walker","Toretto","DiArcangelo","Desantos","Tavares","Diamond","Wu","Demehri","Cahill","Brown","Fenton"]
 };
 
 // Rumors
@@ -781,13 +788,16 @@ const rumors = [
     "rumor 1",
     "rumor 2",
     "rumor 3",
-    "rumor 4"
+    "rumor 4",
+    "rumor 5",
+    "rumor 6"
 ];
 
 const person = [
     "player character",
     "face role",
-    "fake role"
+    "fake role 1",
+    "fake role 2"
 ];
 
 let rumor_select = "";
@@ -802,6 +812,7 @@ function rumorGen() {
     const rumor_face_role = randomString(characters.face_roles);
     const rumor_fake_first = randomString(characters.fake_first);
     const rumor_fake_last = randomString(characters.fake_last);
+    const rumor_chara = randomString(chara);
     
     let rumor_person = "";
     
@@ -809,6 +820,7 @@ function rumorGen() {
     const rumor_item = randomString(item);
     const rumor_property = randomString(property);
     const rumor_monsters = randomString(monsters);
+    const rumor_trait = randomString(trait);
 
     switch (person_select) {
         case "player character":
@@ -817,8 +829,11 @@ function rumorGen() {
         case "face role":
             rumor_person = "<b>" + rumor_face_role + "</b>";
         break;
-        case "fake role":
+        case "fake role 1":
             rumor_person = "someone named <b>" + rumor_fake_first + " " + rumor_fake_last + "</b>";
+        break;
+        case "fake role 2":
+            rumor_person = "<b>" + rumor_chara + "</b> named <b>" + rumor_fake_first + " " + rumor_fake_last + "</b>";
         break;
     }
 
@@ -833,7 +848,13 @@ function rumorGen() {
             document.getElementById("rm-rumor").innerHTML = rumor_source + " " + rumor_person + " is looking for some help with something.";
         break;
         case "rumor 4":
-            document.getElementById("rm-rumor").innerHTML = rumor_source + " they may be upping woodland patrols due to a rise in the number of <b>" + rumor_monsters + ".</b>"
+            document.getElementById("rm-rumor").innerHTML = rumor_source + " " + rumor_person + " is looking for <b>" + rumor_item + "</b> that <b>" + rumor_property + ".</b>";
+        break;
+        case "rumor 5":
+            document.getElementById("rm-rumor").innerHTML = rumor_source + " they may be upping woodland patrols due to a rise in the number of <b>" + rumor_monsters + ".</b>";
+        break;
+        case "rumor 6":
+            document.getElementById("rm-rumor").innerHTML = rumor_source + " " + rumor_person + " was asking around for someone who <b>" + rumor_trait + "</b>.";
         break;
     }
 }
