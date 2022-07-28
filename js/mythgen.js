@@ -543,6 +543,7 @@ const trait = [
     "thinks your parent of unspecified gender is hot",
     "thinks the earth is shaped like a donut because it's funny",
     "thinks the earth is shaped like a donut because they're kind of hungry right now",
+    "believes all rumors to be true",
     "doesn't talk to their parents",
     "doesn't believe in hell",
     "doesn't think the sun is real",
@@ -583,7 +584,8 @@ const trait = [
     "took one philosophy class in university and won't shut up about it",
     "solves mysteries on the side",
     "is really passionate about saving the bees",
-    "has their own fan club"
+    "has their own fan club",
+    "plays the violin"
 ];
 
 const source = [
@@ -603,6 +605,46 @@ const source = [
     "So get this — apparently",
     "A friend of mine was telling me the other day that",
     "A friend of a friend said that"
+];
+
+const accuse = [
+    "having sex",
+    "dabbing",
+    "daydreaming",
+    "being a little bitch",
+    "lying to a person of authority",
+    "faking their death",
+    "being gay and doing crimes",
+    "transing their gender",
+    "kidnapping someone's beloved pet",
+    "eating literal garbage",
+    "unhinging their jaw like a snake",
+    "sneaking suspiciously into a building here in town",
+    "coercing people into giving them their teeth",
+    "getting their teeth stolen",
+    "planning to commit treason",
+    "getting absolutely wasted",
+    "making a deal with the fae",
+    "tilting at windmills",
+    "catfishing the constable with pictures of the queen",
+    "catfishing the mayor with pictures of the queen",
+    "catfishing the queen with pictures of snakes",
+    "eating a big pile of spaghetti and not sharing any of it",
+    "threatening to kill somebody",
+    "killing somebody",
+    "hiding a body",
+    "pickpocketing their best friend",
+    "kissing the homies goodnight",
+    "t-posing for dominance",
+    "being a fucking narc",
+    "being awful to the police",
+    "pulling a dragon's tail",
+    "vandalizing the local tavern",
+    "geting involved with illicit underground unicorn fights",
+    "playing Yu-Gi-Oh",
+    "undermining the government at every turn",
+    "falling on their ass",
+    "eating shit and falling off their horse"
 ];
 
 // Rumors
@@ -722,8 +764,8 @@ const characters = {
         "Euclid, the Bawdy Bard",
         "Ser Amaris"
     ],
-    fake_first:["Billy","Bobby","Mary","Barry","Steven","Marlon","Rachel","Shelby","Eliza","Elizabeth","Joseph","Andy","Arietta","Morgan","Taylor","Tristan","Kai","Anabelle","Duke","Esteban","Antonio","Anthony","Tony","Jackie","John","Mike","Michael","Chev","Mandy","Sully","Joel","Roger","Peter","Connor","Brian","Brendan","Emmy","Isaac","Melissa","Jaime","Jesse","Dakota","Jackson","Sawyer","Xavier","Ester","Tien","Logan","James","Mason","Jason","Calvin","Caleb","Ada","Clay","Gerard","Amy","Lydia","Eugenia","Rose","Jade","Jane","Roxy","Dave","David","Alexis","Jake","Dirk","Sarah","Raleight","Nikolai","Laila","Emerald","Marcus","Marc","Mark","Caroline","Katie","Kaitlin","Bridget","Haley","Jack","Lauren","Reya","Letitia","Axle","Alex","Rae","Fae","Danny","Dani","Hugo","Juan","Johnny","Paul","Dominic","Mia","Michelle","Dwayne","Chris","Antigone","Maria","Mehak","Vishali","Iris","Shane","Sam","Jimmy","Isabella","Wendy","Thomas","Dan","Daniel","Elias"],
-    fake_last: ["Venitzo","Nightlocke","Shelley","Brando","Grey","Stevenson","Andrews","McGrath","Wheeler","Taylor","Brodey","Lee","Han","Collins","LeBeau","Blackwood","Jackson","Stratman","Smith","Filli","Miller","Merlino","Fox","Waldron","Rogers","Adams","de la Cruz","Santiago","Lessio","Belen","Rodriguez","Connors","Parker","Barnes","Price","Sawyer","Wolfe","Mayer","Howlett","Freyason","Foster","Reynolds","Thorne","Owens","Doe","Morse","Paura","Walters","Ivanofski","St. Claire","Shaughnessy","Carson","Fianna","Delarose","Darwin","Red","Green","Perez","Runner","Walker","Toretto","DiArcangelo","Desantos","Tavares","Diamond","Wu","Demehri","Cahill","Brown","Fenton"]
+    fake_first:["Billy","Bobby","Mary","Barry","Steven","Marlon","Rachel","Shelby","Eliza","Elizabeth","Joseph","Andy","Arietta","Morgan","Taylor","Tristan","Kai","Anabelle","Duke","Esteban","Antonio","Anthony","Tony","Jackie","John","Mike","Michael","Chev","Mandy","Sully","Joel","Roger","Peter","Connor","Brian","Brendan","Emmy","Isaac","Melissa","Jaime","Jesse","Dakota","Jackson","Sawyer","Xavier","Ester","Tien","Logan","James","Mason","Jason","Calvin","Caleb","Ada","Clay","Gerard","Amy","Lydia","Eugenia","Rose","Jade","Jane","Roxy","Dave","David","Alexis","Jake","Dirk","Sarah","Raleight","Nikolai","Laila","Emerald","Marcus","Marc","Mark","Caroline","Katie","Kaitlin","Bridget","Haley","Jack","Lauren","Reya","Letitia","Axle","Alex","Rae","Fae","Danny","Dani","Hugo","Juan","Johnny","Paul","Dominic","Mia","Michelle","Dwayne","Chris","Antigone","Maria","Mehak","Vishali","Iris","Shane","Sam","Jimmy","Isabella","Wendy","Thomas","Dan","Daniel","Elias","Cris","Norbert"],
+    fake_last: ["Venitzo","Nightlocke","Shelley","Brando","Grey","Stevenson","Andrews","McGrath","Wheeler","Taylor","Brodey","Lee","Han","Collins","LeBeau","Blackwood","Jackson","Stratman","Smith","Filli","Miller","Merlino","Fox","Waldron","Rogers","Adams","de la Cruz","Santiago","Lessio","Belen","Rodriguez","Connors","Parker","Barnes","Price","Sawyer","Wolfe","Mayer","Howlett","Freyason","Foster","Reynolds","Thorne","Owens","Doe","Morse","Paura","Walters","Ivanofski","St. Claire","Shaughnessy","Carson","Fianna","Delarose","Darwin","Red","Green","Perez","Runner","Walker","Toretto","DiArcangelo","Desantos","Tavares","Diamond","Wu","Demehri","Cahill","Brown","Fenton","Rienton"]
 };
 
 // Rumors
@@ -790,7 +832,8 @@ const rumors = [
     "rumor 3",
     "rumor 4",
     "rumor 5",
-    "rumor 6"
+    "rumor 6",
+    "rumor 7"
 ];
 
 const person = [
@@ -821,6 +864,7 @@ function rumorGen() {
     const rumor_property = randomString(property);
     const rumor_monsters = randomString(monsters);
     const rumor_trait = randomString(trait);
+    const rumor_accuse = randomString(accuse);
 
     switch (person_select) {
         case "player character":
@@ -854,7 +898,10 @@ function rumorGen() {
             document.getElementById("rm-rumor").innerHTML = rumor_source + " they may be upping woodland patrols due to a rise in the number of <b>" + rumor_monsters + ".</b>";
         break;
         case "rumor 6":
-            document.getElementById("rm-rumor").innerHTML = rumor_source + " " + rumor_person + " was asking around for someone who <b>" + rumor_trait + "</b>.";
+            document.getElementById("rm-rumor").innerHTML = rumor_source + " " + rumor_person + " was asking around for someone who <b>" + rumor_trait + ".</b>";
+        break;
+        case "rumor 7":
+            document.getElementById("rm-rumor").innerHTML = rumor_source + " " +  rumor_person + " was seen " + rumor_accuse + ".</b>"
         break;
     }
 }
