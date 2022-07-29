@@ -878,8 +878,8 @@ function npcGen() {
         break;
         case "party 3":
             document.getElementById("npc-party").innerHTML = " <b>" + chara_one + "</b> named <b>" + fake_role_one + "</b> who <b>" + trait_one + ".</b>";
+        break;
     }
-
 }
 
 const rumors = [
