@@ -763,7 +763,7 @@ const characters = {
         "Traveler"
     ],
     face_roles: [
-        "the Lord-Proctor",
+        "Lord Proctor Behran",
         "Farmer Grey",
         "Octavious",
         "Dennis",
@@ -772,7 +772,25 @@ const characters = {
         "Dr. Emmet Calhoun",
         "Dr. Arianaya Bell-Dreveaux",
         "Euclid, the Bawdy Bard",
-        "Ser Amaris"
+        "Ser Amaris",
+        "Fable",
+        "Xavier Denerethion",
+        "Baron Dworrin Stonethrust",
+        "Ali from Owlstone Keep",
+        "Paradiddle the Odditites Merchant",
+        "Nalfor Morehammer",
+        "Norrin Radd",
+        "Duke Geralt Marielle",
+        "Lord Auranos Ashbridge",
+        "Getorix Wahl",
+        "Oleg Hammersong",
+        "Roark Galt",
+        "Johann Becket",
+        "Bellator Zhao",
+        "Mythria Diamantis",
+        "Count Amedeo",
+        "Master Trapmaker Dom Sourfang",
+        "Joff Godley"
     ],
     fake_first:["Billy","Bobby","Mary","Barry","Steven","Marlon","Rachel","Shelby","Eliza","Elizabeth","Joseph","Andy","Arietta","Morgan","Taylor","Tristan","Kai","Anabelle","Duke","Esteban","Antonio","Anthony","Tony","Jackie","John","Mike","Michael","Chev","Mandy","Sully","Joel","Roger","Peter","Connor","Brian","Brendan","Emmy","Isaac","Melissa","Jaime","Jesse","Dakota","Jackson","Sawyer","Xavier","Ester","Tien","Logan","James","Mason","Jason","Calvin","Caleb","Ada","Clay","Gerard","Amy","Lydia","Eugenia","Rose","Jade","Jane","Roxy","Dave","David","Alexis","Jake","Dirk","Sarah","Raleigh","Nikolai","Laila","Emerald","Marcus","Marc","Mark","Caroline","Katie","Kaitlin","Bridget","Haley","Jack","Lauren","Reya","Letitia","Axle","Alex","Rae","Fae","Danny","Dani","Hugo","Juan","Johnny","Paul","Dominic","Mia","Michelle","Dwayne","Chris","Antigone","Maria","Mehak","Vishali","Iris","Shane","Sam","Jimmy","Isabella","Wendy","Thomas","Dan","Daniel","Elias","Cris","Norbert"],
     fake_last: ["Venitzo","Nightlocke","Shelley","Brando","Grey","Stevenson","Andrews","McGrath","Wheeler","Taylor","Brodey","Lee","Han","Collins","LeBeau","Blackwood","Jackson","Stratman","Smith","Filli","Miller","Merlino","Fox","Waldron","Rogers","Adams","de la Cruz","Santiago","Lessio","Belen","Rodriguez","Connors","Parker","Barnes","Price","Sawyer","Wolfe","Mayer","Howlett","Freyason","Foster","Reynolds","Thorne","Owens","Doe","Morse","Paura","Walters","Ivanofski","St. Claire","Shaughnessy","Carson","Fianna","Delarose","Darwin","Red","Green","Perez","Runner","Walker","Toretto","DiArcangelo","Desantos","Tavares","Diamond","Wu","Demehri","Cahill","Brown","Fenton","Rienton"]
@@ -819,25 +837,49 @@ function questGen() {
     document.getElementById("qq-twist").innerHTML = quest_twist;
 }
 
+const npc_party = [
+    "party 1",
+    "party 2",
+    "party 3"
+];
+
+let party_select = "";
+
 // NPC Builder
 function npcGen() {
+    party_select = randomString(npc_party);
+
     const chara_one = randomString(chara);
     const trait_one = randomString(trait);
+    const fake_first_one = randomString(characters.fake_first);
+    const fake_last_one = randomString(characters.fake_last);
+    const fake_role_one = fake_first_one + " " + fake_last_one;
 
     const chara_two = randomString(chara);
     const trait_two = randomString(trait);
+    const fake_first_two = randomString(characters.fake_first);
+    const fake_last_two = randomString(characters.fake_last);
+    // const fake_role_two = fake_first_two + " " + fake_last_two;
+
     
     const chara_three = randomString(chara);
     const trait_three = randomString(trait);
+    const fake_first_three = randomString(characters.fake_first);
+    const fake_last_three = randomString(characters.fake_last);
+    // const fake_role_three = fake_first_three + " " + fake_last_three;
 
-    document.getElementById("npc-chara-1").innerHTML = chara_one;
-    document.getElementById("npc-trait-1").innerHTML = trait_one;
-    
-    document.getElementById("npc-chara-2").innerHTML = chara_two;
-    document.getElementById("npc-trait-2").innerHTML = trait_two;
-    
-    document.getElementById("npc-chara-3").innerHTML = chara_three;
-    document.getElementById("npc-trait-3").innerHTML = trait_three;
+
+    switch(party_select) {
+        case "party 1":
+            document.getElementById("npc-party").innerHTML = " <b>" + chara_one + "</b> who <b>" + trait_one + ", " + chara_two + "</b> who <b>" + trait_two + ",</b> and <b>" + chara_three + "</b> who <b>" + trait_three + ".</b>";
+        break;
+        case "party 2":
+            document.getElementById("npc-party").innerHTML = " <b>" + chara_one + "</b> who <b>" + trait_one + ",</b> and <b>" + chara_two + "</b> who <b>" + trait_two + ".</b>";
+        break;
+        case "party 3":
+            document.getElementById("npc-party").innerHTML = " <b>" + chara_one + "</b> named <b>" + fake_role_one + "</b> who <b>" + trait_one + ".</b>";
+    }
+
 }
 
 const rumors = [
@@ -851,7 +893,8 @@ const rumors = [
     "rumor 8",
     "rumor 9",
     "rumor 10",
-    "rumor 11"
+    "rumor 11",
+    "rumor 12"
 ];
 
 const person = [
@@ -960,6 +1003,9 @@ function rumorGen() {
         break;
         case "rumor 11":
             document.getElementById("rm-rumor").innerHTML = rumor_source + " " +  rumor_person_alt + " was asking around for <b>" + rumor_person + ".</b>";
+        break;
+        case "rumor 12":
+            document.getElementById("rm-rumor").innerHTML = rumor_source + " " +  rumor_person + " was seen <b>" + rumor_accuse + "</b> with " + rumor_person_alt + ".";
         break;
     }
 }
