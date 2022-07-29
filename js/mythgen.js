@@ -584,7 +584,10 @@ const trait = [
     "solves mysteries on the side",
     "is really passionate about saving the bees",
     "has their own fan club",
-    "plays the violin"
+    "plays the violin",
+    "plays the piano",
+    "minds their own business",
+    "loves to gossip"
 ];
 
 const source = [
