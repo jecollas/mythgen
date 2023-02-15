@@ -822,9 +822,7 @@ function plotGen() {
     const tone = randomString(plot_tone);
     const genre = randomString(plot_genre);
 
-    document.getElementById("pt-type").innerHTML = type;
-    document.getElementById("pt-tone").innerHTML = tone;
-    document.getElementById("pt-genre").innerHTML = genre;
+    document.getElementById("pt-plot").innerHTML = "This plot is going to be <b>" + tone + " " + genre + " " + type + ".</b>"
 }
 
 // Querent's Quest
@@ -834,10 +832,7 @@ function questGen() {
     const quest_goal = randomString(goal);
     const quest_twist = randomString(twist);
 
-    document.getElementById("qq-item").innerHTML = quest_item;
-    document.getElementById("qq-property").innerHTML = quest_property;
-    document.getElementById("qq-goal").innerHTML = quest_goal;
-    document.getElementById("qq-twist").innerHTML = quest_twist;
+    document.getElementById("qq-quest").innerHTML = "We are looking for <b>" + quest_item + "</b> that <b>" + quest_property + ".</b> We are looking for this <b>" + quest_goal + ",</b> but the thing is that <b>" + quest_twist + ".</b>";
 }
 
 const npc_party = [
@@ -863,14 +858,12 @@ function npcGen() {
     const fake_first_two = randomString(characters.fake_first);
     const fake_last_two = randomString(characters.fake_last);
     // const fake_role_two = fake_first_two + " " + fake_last_two;
-
     
     const chara_three = randomString(chara);
     const trait_three = randomString(trait);
     const fake_first_three = randomString(characters.fake_first);
     const fake_last_three = randomString(characters.fake_last);
     // const fake_role_three = fake_first_three + " " + fake_last_three;
-
 
     switch(party_select) {
         case "party 1":
