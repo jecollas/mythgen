@@ -867,13 +867,13 @@ function npcGen() {
 
     switch(party_select) {
         case "party 1":
-            document.getElementById("npc-party").innerHTML = " <b>" + chara_one + "</b> who <b>" + trait_one + ", " + chara_two + "</b> who <b>" + trait_two + ",</b> and <b>" + chara_three + "</b> who <b>" + trait_three + ".</b>";
+            document.getElementById("npc-party").innerHTML = "Our party includes <b>" + chara_one + "</b> who <b>" + trait_one + ", " + chara_two + "</b> who <b>" + trait_two + ",</b> and <b>" + chara_three + "</b> who <b>" + trait_three + ".</b>";
         break;
         case "party 2":
-            document.getElementById("npc-party").innerHTML = " <b>" + chara_one + "</b> who <b>" + trait_one + ",</b> and <b>" + chara_two + "</b> who <b>" + trait_two + ".</b>";
+            document.getElementById("npc-party").innerHTML = "Our party includes <b>" + chara_one + "</b> who <b>" + trait_one + ",</b> and <b>" + chara_two + "</b> who <b>" + trait_two + ".</b>";
         break;
         case "party 3":
-            document.getElementById("npc-party").innerHTML = " <b>" + chara_one + "</b> named <b>" + fake_role_one + "</b> who <b>" + trait_one + ".</b>";
+            document.getElementById("npc-party").innerHTML = "Our party includes <b>" + chara_one + "</b> named <b>" + fake_role_one + "</b> who <b>" + trait_one + ".</b>";
         break;
     }
 }

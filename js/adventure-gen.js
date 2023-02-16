@@ -1122,5 +1122,5 @@ function adventureGen() {
     const motivation = randomString(adventureElem.motivation);
     const complication = randomString(adventureElem.complication);
 
-    document.getElementById("ag-adventure").innerHTML = "In this story, " + condition + " " + group + " of " + members + " " + action + " " + location  + ". Their goal is " + goal + " " + means + " " + motivation + ". What they don't know is that " + complication + ".";
+    document.getElementById("ag-adventure").innerHTML = "In this story, <b>" + condition + " " + group + "</b> of <b>" + members + " " + action + " " + location  + ".</b> Their goal is <b>" + goal + " " + means + " " + motivation + ".</b> What they don't know is that <b>" + complication + ".</b>";
 }

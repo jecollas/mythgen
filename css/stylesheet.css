@@ -35,6 +35,10 @@ a {
     text-decoration: none;
 }
 
+button {
+    margin-top: 1.5em;
+}
+
 .navbar {
     position: relative;
     display: flex;
@@ -65,6 +69,14 @@ a {
 
 .prompt {
     margin-top: 1.5em;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 6px;
+}
+
+.output p {
+    margin: 1.25em;
+    height: 6em;
 }
 
 select {
