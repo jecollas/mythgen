@@ -72,11 +72,12 @@ button {
     border-style: solid;
     border-width: thin;
     border-radius: 6px;
+    max-width: 80%;
 }
 
 .output p {
     margin: 1.25em;
-    height: 6em;
+    min-height: 6em;
 }
 
 select {
