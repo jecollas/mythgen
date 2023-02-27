@@ -119,7 +119,7 @@ const adventureElem = {
         "an underappreciated",
         "a kindly",
         "a unique"
-    ],
+    ], // added to const condition
     group: [
         "order",
         "horde",
@@ -208,7 +208,7 @@ const adventureElem = {
         "doomsday cult",
         "union",
         "collective"
-    ],
+    ], // added to const group
     members: [
         "squires",
         "adventurers",
@@ -357,7 +357,7 @@ const adventureElem = {
         "mages",
         "hags",
         "violent vigilantes"
-    ],
+    ], // added to const members
     action: [
         "is declaring war on",
         "is recruiting new members",
@@ -446,8 +446,8 @@ const adventureElem = {
         "is 'culling the herd'",
         "plans to estalish an illegal gambling ring",
         "intents to kidnap children from their parents"
-    ],
-    actionSingle: [
+    ], // added to const action
+    actionSingle: [ // separate this one out to the specifics like, [person/group of people], [location place], etc
         "is dying",
         "is killing",
         "is bribing",
@@ -602,7 +602,7 @@ const adventureElem = {
         "by any means necessary",
         "with lurid colors",
         "with deceptive documents"
-    ],
+    ], // added to const means
     location: [
         "on the border",
         "atop a mesa of volcanic glass",
@@ -734,7 +734,7 @@ const adventureElem = {
         "on the highways",
         "in the prison",
         "in the dungeons"
-    ],
+    ], // added to const location
     goal: [
         "to assume control",
         "to become immortal",
@@ -864,7 +864,7 @@ const adventureElem = {
         "to save the animals",
         "to bring low the mighty",
         "to fulfill the prophecy"
-    ],
+    ], //added to const goal
     motivation: [
         "because they are poor",
         "because they want to gain respect",
@@ -994,7 +994,7 @@ const adventureElem = {
         "because it would fulfill part of the prophecy",
         "because the process stated it must be done",
         "because they want to be different than the rest"
-    ],
+    ], //added to const motivation
     complication: [
         "they botched the formula",
         "they have been lied to",
@@ -1102,7 +1102,7 @@ const adventureElem = {
         "they are foiled by their own pride",
         "everyone likes the new state of affairs better",
         "someone is suspiscious of the head elder"
-    ]
+    ] //added to const twist
 }
 
 function randomString(arr) {
