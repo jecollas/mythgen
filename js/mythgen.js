@@ -2893,7 +2893,8 @@ const adventureType = [
 ];
 
 const subjectType = [
-    "singular",
+    "singular 1",
+    "singular 2",
     "plural"
 ]
 
@@ -2922,7 +2923,9 @@ function adventureGen() {
     actionSelect = randomString(actionType);
     methodSelect = randomString(methodType);
 
-    const agChara = randomString(chara.noun);
+    const agChara = randomString(chara.chara);
+    const agCharTrait = randomString(chara.trait);
+    const agCharNoun = randomString(chara.noun);
     const agAdjective = randomString(chara.adjective);
     const agGroup = randomString(chara.group);
     const agMembers = randomString(chara.members);
@@ -2931,9 +2934,6 @@ function adventureGen() {
     const agPlace = randomString(quest.place);
     const agMotive = randomString(quest.motivation);
     const agTwist = randomString(quest.twist);
-
-    // const agPerson = agAdjective + " " + agChara;
-    // const agPeople = agAdjective + " " + agGroup + "</b> of <b>" + agMembers;
 
     let agSubject = "";
     let agAction = "";
@@ -2952,8 +2952,11 @@ function adventureGen() {
     const agContGer = randomString(verbs.contGer);
 
     switch (subjectSelect) {
-        case "singular":
-            agSubject = agAdjective + " " + agChara + "</b> is";
+        case "singular 1":
+            agSubject = agChara + "</b> who <b>" + agCharTrait + "</b> is";
+        break;
+        case "singular 2":
+            agSubject = agAdjective + " " + agCharNoun + "</b> is";
         break;
         case "plural":
             agSubject = agAdjective + " " + agGroup + "</b> of <b>" + agMembers + "</b> are";
