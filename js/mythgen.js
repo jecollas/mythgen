@@ -253,7 +253,8 @@ const quest = {
         "because they thought it was easy and needed the money",
         "because it would fulfill part of the prophecy",
         "because the process stated it must be done",
-        "because they want to be different than the rest"
+        "because they want to be different than the rest",
+        "because they are under a powerful geas spell from an evil wizard",
     ],
     twist: [
         // Ace-10 of spades from MHoF
@@ -445,7 +446,6 @@ const quest = {
         "on top of a mountain",
         "at the top of a waterfall",
         "at the bottom of a waterfall",
-        "because they are under a powerful geas spell from an evil wizard",
         "at a bridge",
         "at the dragon's lair",
         "at the ruins of a village that was fine the last time you saw it",
@@ -2254,7 +2254,6 @@ const nouns = [
     "a demon",
     "the walls separating reality",
     "a lost loved one",
-    "domination to their race",
     "peace",
     "a haven",
     "everything",
@@ -2262,7 +2261,6 @@ const nouns = [
     "history",
     "their names",
     "a nation",
-    "others to their way of thinking",
     "a legacy",
     "a new divinity",
     "a powerful magic item",
@@ -2369,7 +2367,7 @@ const nouns = [
     "misdirection",
     "pure wits",
     "a diadem of control",
-    "a wand of magic missiles",
+    "a powerful magic wand",
     "forged documents",
     "flows of gold",
     "a plague of locusts",
@@ -2380,7 +2378,6 @@ const nouns = [
     "extreme discretion",
     "an enchanted quill",
     "a key",
-    "a rope of braided bloody boar hair",
     "forbidden tomes",
     "powerful friends",
     "information from a contact person",
@@ -2391,7 +2388,6 @@ const nouns = [
     "a recently found artifact",
     "the power vested in them by law",
     "an army of undead",
-    "the claims that an old testament gives them the right",
     "the skull of a long dead necromancer",
     "a god's blessing",
     "a laissez-faire attitude",
@@ -2434,7 +2430,7 @@ const nouns = [
     "a cursed armor",
     "the queen's blessing",
     "little resources left",
-    "the embalmed corpses of twin babies",
+    "embalmed corpses",
     "a soulstone",
     "an elf's life essence",
     "an army",
@@ -2889,7 +2885,8 @@ function questGen() {
 const adventureType = [
     "adventure 1",
     "adventure 2",
-    // "adventure 3"
+    // "adventure 3",
+    // "adventure 4"
 ];
 
 const subjectType = [
@@ -3008,8 +3005,7 @@ function adventureGen() {
             document.getElementById("ag-adventure").innerHTML = "<p>This story takes place <b>" + agPlace +",</b> where <b>" + agPerson + ".</b> Their goal is to <b>" + agGoal + " " + agMethod + ".</b></p>" + 
             "<p>They are doing this <b>" + agMotive + ",</b> but <b>" + agTwist + ".</b></p>";
         break;
-        // This one's just for workshopping stuff
-        case "adventure 3": 
+        case "adventure 3": // This one's just for workshopping stuff
             document.getElementById("ag-adventure").innerHTML = "<p>This story takes place <b>" + agPlace +",</b> where <b>" + agPerson + " " + agMethod + ".</b></p>";
         break;
     }
