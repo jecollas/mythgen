@@ -56,32 +56,6 @@ const plotElem = {
 }
 
 // Fetch Quest, Rumors
-const item = [
-    // Ace-10 of spades from MHoF
-    "a sword",
-    "a shield",
-    "a bottle of alcohol",
-    "a knife",
-    "a dog",
-    // "a fight",
-    "a really cool cloak",
-    "information",
-    "financial compensation",
-    "a really big knife",
-    "a potion",
-
-    // from the Meme Machine
-    "a really tiny knife",
-    "a jar",
-    "a steamy adult romance novel",
-    "a cursed magical item",
-    "a small horse",
-    "a spyglass",
-    "a pair of scissors",
-    "a magic item"
-];
-
-// Fetch Quest, Rumors
 const property = [
     // Ace-10 of spades from MHoF
     "used to belong to a famous general",
@@ -116,137 +90,6 @@ const property = [
 
 // Fetch Quest, Adventure Generator
 const quest = {
-    goal: [
-        // adventure seed generator
-        "assume control",
-        "become immortal",
-        "become king",
-        "become martyrs",
-        "become rich",
-        "betray their country for personal gain",
-        "bind a demon",
-        "break the walls separating reality",
-        "bring back a lost one to live",
-        "bring domination to their race",
-        "bring peace",
-        "build a haven",
-        "burn everything",
-        "catch the notice of a god",
-        "change history",
-        "clear their names",
-        "conquer a nation",
-        "convert others to their way of thinking",
-        "create a legacy",
-        "create a new divinity",
-        "create a powerful magic item",
-        "cure their insanity",
-        "defeat a cleric",
-        "defeat an army",
-        "delay a wedding",
-        "destroy",
-        "destroy a divinity",
-        "destroy a rival",
-        "destroy a village",
-        "destroy magic",
-        "die",
-        "discover a villain's weakness",
-        "discover who they really are",
-        "earn fame and prestige",
-        "eliminate their rival",
-        "embarrass a local noble",
-        "end a rivalry",
-        "end a war",
-        "enslave their targets",
-        "erase their past",
-        "escape punishment",
-        "expand their domains",
-        "expose the court",
-        "extinguish a race",
-        "fight against a rival",
-        "finally rest",
-        "find the real answers",
-        "form a cult",
-        "form a new society",
-        "found a new community",
-        "free the princess",
-        "free their people",
-        "get revenge",
-        "heal a great wound upon the land/people",
-        "hide",
-        "hide their treasure",
-        "hold a coup",
-        "hunt a vampire",
-        "implode the court",
-        "join the court",
-        "keep their godess happy",
-        "kill a colony of humanoids",
-        "kill a king",
-        "locate a tome of unspeakable truths",
-        "make fun of",
-        "make substantial profits",
-        "negotiate a truce",
-        "negotiate an agreement with the arch enemy",
-        "open a magical gate",
-        "open a portal to another dimension",
-        "overthrow the empress",
-        "plan for the next season",
-        "prove their bravery",
-        "recruit followers",
-        "reset time",
-        "return the ancients",
-        "revive a forgotten god",
-        "save themselves",
-        "shame a knight",
-        "slaughter a group of people",
-        "start a civil war",
-        "start a new world order",
-        "start a war",
-        "stick it to 'the man'",
-        "summon a monster",
-        "turn back time",
-        "undo reality",
-        "unite the lands",
-        "unleash unspeakable evil",
-        "worship a forgotten divinity",
-        "turn people undead",
-        "ally themselves with a vampire lord",
-        "awake thousands of ghosts",
-        "find a werewolf lair",
-        "pay their debts",
-        "appease a demoness",
-        "avert unnatural disaster",
-        "avert disaster",
-        "topple the kingdom",
-        "earn respect",
-        "fulfill a prophecy",
-        "avert a prophecy's fulfillment",
-        "cheat destiny",
-        "save their children",
-        "free hostages",
-        "acquire hostages",
-        "invoke the Serpent God",
-        "banish a demon",
-        "restore their reputation",
-        "incite a riot",
-        "sow disorder",
-        "expose treachery",
-        "gain hostages",
-        "gain leverage",
-        "make a menagerie of creatures",
-        "complete their collections",
-        "shake the government",
-        "avert doomsday",
-        "show the inferiority of their successors",
-        "cause their rival disgrace",
-        "secure their place in history",
-        "crash the economy",
-        "corner the market",
-        "renegotiate an agreement",
-        "save the kingdom",
-        "save the animals",
-        "bring low the mighty",
-        "fulfill the prophecy"
-    ],
     motivation: [
         // Ace-10 of spades from MHoF
         "so that they can settle a grudge",
@@ -358,7 +201,7 @@ const quest = {
         "because magic warped them to do evil",
         "because they want to find kidnapped royalty",
         "because they need to escape oppression",
-        "they gave a promise to a dying mentor",
+        "because they gave a promise to a dying mentor",
         "because they want to get revenge",
         "because they were ordered to",
         "because they are secretly part of 'the first'; the first group of humanoid to exist",
@@ -405,7 +248,7 @@ const quest = {
         "mostly because they can",
         "so as to soothe their guilty conscience",
         "because they are dissatisfied with current trends",
-        "because he is jealous of success",
+        "because they are jealous of their rivals' success",
         "because they are afraid to be forgotten",
         "because they thought it was easy and needed the money",
         "because it would fulfill part of the prophecy",
@@ -414,21 +257,21 @@ const quest = {
     ],
     twist: [
         // Ace-10 of spades from MHoF
-        "this is the perfect opportunity to take vengeance",
+        "this is the perfect opportunity for one of them to take vengeance",
         "the upcoming choices should not be made by one person alone",
         "victory will come at great cost and sacrifice",
-        "we don't have all of the information",
-        "there's a good chance that we will be attacked by a werewolf",
-        "we need to be careful not to piss anybody off otherwise we WILL be having an afternoon tea party with the Barristers (aka die horribly)",
-        "we are liable for our own actions and have no one to blame for the consequences but ourselves",
-        "however bad we think this adventure is going to be, it is going to be WAY worseLike way worse. Oh my god",
-        "while we may accomplish our goals, there is a good chance that we will lose sight of what is most important in the process",
+        "they don't have all of the information",
+        "there's a good chance that they will be attacked by a werewolf",
+        "they need to be careful not to piss anybody off otherwise they WILL be having an afternoon tea party with the Barristers (aka die horribly)",
+        "they are liable for their own actions and have no one to blame for the consequences but theirselves",
+        "however bad they think this adventure is going to be, it is going to be WAY worse. Like way worse. Oh my god",
+        "while they may accomplish their goals, there is a good chance that they will lose sight of what is most important in the process",
     
         // from the Meme Machine
-        "the real treasure will NOT be the friends that we made along the way",
+        "the real treasure will NOT be the friends that they made along the way",
         "hey, it might be fun anyways",
         "surely nothing could possibly go wrong :)",
-        "we're not the only ones looking for it",
+        "they're not the only ones looking for it",
         "surely things can't get any worse than this! Spoiler alert: they can",
         "wait! There's more",
         "this might get us executed by royalty",
@@ -456,7 +299,7 @@ const quest = {
         "the old are not wise in this story",
         "someone involved is still haunted by a past mistake",
         "there have been whispers for a while that something is not right with the royal family",
-        "the ancient sword we discovered will turn out to be junk",
+        "the ancient sword they discovered will turn out to be junk",
         "an important prophecy will be delivered by a seer with a reputation for exaggeration",
         "someone involved has a lot of hard lessons to learn",
         "the gods cannot be trusted",
@@ -512,13 +355,13 @@ const quest = {
         "they don't know they are sleeper agents, about to activate",
         "they have not gathered all the necessary pieces",
         "they don't know they have already been compromised",
-        "have based their plans on erroneous information",
+        "they have based their plans on erroneous information",
         "a god opposes them",
         "they have been ambushed twice already",
         "they are underestimating their oppposition",
         "they have to face another, more powerful enemy after conquering the first",
         "they find out that their victory would cause harm to innocents",
-        "must form an uneasy alliance with the enemy to be able to face a new adversary",
+        "they must form an uneasy alliance with the enemy to be able to face a new adversary",
         "they are too cautious, taking twice as long to make a move than necessary",
         "they got squeamish",
         "they discover that their old mentor has turned against them - and for all the right reasons",
@@ -557,12 +400,12 @@ const quest = {
         "the key is lost",
         "they are losing support",
         "the most unexpected source has just brought them the missing component",
-        "are offered a bribe for abandoning their plans",
+        "they are offered a bribe for abandoning their plans",
         "a surprise visitor changes the situation",
         "they start to believe that they have lost some of their sanity",
-        "understand that they no longer can trust their senses",
-        "believe too soon that they have succeeded",
-        "are flanked on all sides",
+        "they understand that they no longer can trust their senses",
+        "they believe too soon that they have succeeded",
+        "they are flanked on all sides",
         "a natural disaster is coming",
         "an enemy horde is rushing in",
         "the public opinion is against them",
@@ -600,8 +443,9 @@ const quest = {
         "in a druid's grove",
         "near a magical spring",
         "on top of a mountain",
-        "at the top or bottom of a waterfall",
-        "because they are under a powerful geas spell from an evil wizard.",
+        "at the top of a waterfall",
+        "at the bottom of a waterfall",
+        "because they are under a powerful geas spell from an evil wizard",
         "at a bridge",
         "at the dragon's lair",
         "at the ruins of a village that was fine the last time you saw it",
@@ -714,7 +558,7 @@ const quest = {
 }
 
 // NPC Builder, Rumors, Adventure Generator
-const charaDesc = {
+const chara = {
     chara: [
         "a peasant girl",
         "a peasant boy",
@@ -906,7 +750,7 @@ const charaDesc = {
         "a pro-wrestler",
         "a furry"
     ],
-    condition: [
+    adjective: [
         "a peasant",
         "a young",
         "a young",
@@ -938,7 +782,7 @@ const charaDesc = {
         "the village idiot",
         "some old",
         "a tax-evading",
-        "a draft dodging",
+        "a draft-dodging",
         "a professional",
         "a retired",
         "a goth",        
@@ -946,7 +790,7 @@ const charaDesc = {
         "a hot",
         "an absent",
         "a shitty",        
-        "a time traveling",
+        "a time-traveling",
         "an Italian",
         "an asshole",
         "a deadbeat",        
@@ -1412,6 +1256,246 @@ const charaDesc = {
         "plays the piano",
         "minds their own business",
         "loves to gossip"
+    ],
+    group: [
+        // adventure seed generator
+        "order",
+        "horde",
+        "clique",
+        "gaggle",
+        "mob",
+        "collegium ",
+        "armed group",
+        "squad",
+        "cadre",
+        "trio",
+        "duo",
+        "quintet",
+        "pack",
+        "wandering troupe",
+        "crime ring",
+        "group",
+        "cabal",
+        "coven",
+        "gang",
+        "bunch",
+        "fellowship",
+        "posse",
+        "school class",
+        "syndicate",
+        "delegation",
+        "secret society",
+        "guild",
+        "extended family",
+        "noble house",
+        "platoon",
+        "caravan",
+        "sisterhood",
+        "work team",
+        "team",
+        "association",
+        "cartel",
+        "club",
+        "congregation",
+        "gentlemen's club",
+        "faction",
+        "crew",
+        "hidden society",
+        "league",
+        "converstation club",
+        "religious sect",
+        "tribe",
+        "elite squad",
+        "brotherhood",
+        "charity organization",
+        "support staff",
+        "entourage",
+        "assembly",
+        "noble family",
+        "governing body",
+        "ensemble",
+        "conclave",
+        "coterie",
+        "organization",
+        "citizens",
+        "circle",
+        "partnership",
+        "society",
+        "party",
+        "cult",
+        "group",
+        "troop",
+        "army",
+        "mass",
+        "gathering",
+        "political faction",
+        "inbred family",
+        "choir",
+        "crowd",
+        "splinter faction",
+        "band",
+        "conspiracy",
+        "cult",
+        "clan",
+        "collegium",
+        "patchwork",
+        "network",
+        "cell",
+        "panel",
+        "doomsday cult",
+        "union",
+        "collective",
+        "circus"
+    ],
+    members: [
+        // adventure seed generator
+        "squires",
+        "adventurers",
+        "assassins",
+        "fish people",
+        "drunken farmers",
+        "illusionists",
+        "settlers",
+        "werewolves",
+        "raiders",
+        "industrialists",
+        "acolytes",
+        "vampires",
+        "collectors",
+        "animals",
+        "land surveyors",
+        "rogues",
+        "elementals",
+        "goblin hunters",
+        "lowlives",
+        "knights",
+        "mercenaries",
+        "bardic actors",
+        "plants",
+        "nobles and their retinue",
+        "royalty",
+        "lepers",
+        "kobold trapsmiths",
+        "wizards",
+        "ancients",
+        "bandits",
+        "mendicant monks",
+        "giants",
+        "prisoners",
+        "dwarven archaeologists",
+        "con artists",
+        "alchemists",
+        "thieving travelers",
+        "villians",
+        "slaves",
+        "diplomats",
+        "doppelgangers",
+        "temple monks",
+        "rebels",
+        "runaways",
+        "psychics",
+        "tinkers",
+        "local spirits",
+        "masterless golems",
+        "druids",
+        "kings",
+        "diviners",
+        "travelling merchants",
+        "mysterious cloaked men",
+        "liches",
+        "sprites",
+        "traitors",
+        "monitors",
+        "scholars",
+        "guards",
+        "ousted monarchs",
+        "ghosts",
+        "militia members",
+        "children",
+        "orphan children",
+        "fairies",
+        "holy inquisitors",
+        "singers",
+        "enchanters",
+        "enchantresses",
+        "merchants",
+        "cavaliers",
+        "religious zealots",
+        "mummers",
+        "bards",
+        "orcs",
+        "dragons",
+        "otherwordly beings",
+        "dukes",
+        "duchesses",
+        "undead",
+        "slavers",
+        "escaped slaves",
+        "witches",
+        "planar travelers",
+        "charity mission workers",
+        "chaos worshippers",
+        "monks",
+        "priests",
+        "pesants",
+        "common folk",
+        "terrorists",
+        "defectors",
+        "pageboys",
+        "spies",
+        "foreign diplomats",
+        "nuns",
+        "nomads",
+        "plant creatures",
+        "philosophers",
+        "sea creatures",
+        "pirates",
+        "barons",
+        "ladies",
+        "teenagers",
+        "unemployed tradespeople",
+        "peasants",
+        "aristocrats",
+        "royals",
+        "scientists",
+        "necromancers",
+        "gnomes",
+        "masons",
+        "painters",
+        "senior villagers",
+        "housebreakers",
+        "fishermen",
+        "vintners",
+        "leatherworkers",
+        "intelligentsia",
+        "craftspersons",
+        "convicts",
+        "felons",
+        "smiths",
+        "homunculi",
+        "golems",
+        "bodysnatchers",
+        "vivisectionists",
+        "ax murderers",
+        "tulip growers",
+        "fey creatures",
+        "barbarians",
+        "scribes",
+        "crime bosses",
+        "drug lords",
+        "brothel keepers",
+        "veterans",
+        "draftees",
+        "deserters",
+        "masters",
+        "journeymen",
+        "home owners",
+        "shopkeepers",
+        "smugglers",
+        "corrupt politicians",
+        "mages",
+        "hags",
+        "violent vigilantes"
     ]
 }
 
@@ -1487,7 +1571,7 @@ const rumors = {
     ]
 };
 
-// Rumors
+// NPC Builder, Rumors
 const characters = {
     players: [
         "Karlaen Sin'del",
@@ -1592,7 +1676,7 @@ const characters = {
         "Amuck Ambrosius",
         "Traveler"
     ],
-    face_roles: [
+    faceRoles: [
         "Lord Proctor Behran",
         "Farmer Grey",
         "Octavious",
@@ -1622,8 +1706,8 @@ const characters = {
         "Master Trapmaker Dom Sourfang",
         "Joff Godley"
     ],
-    fake_first:["Billy","Bobby","Mary","Barry","Steven","Marlon","Rachel","Shelby","Eliza","Elizabeth","Joseph","Andy","Arietta","Morgan","Taylor","Tristan","Kai","Anabelle","Duke","Esteban","Antonio","Anthony","Tony","Jackie","John","Mike","Michael","Chev","Mandy","Sully","Joel","Roger","Peter","Connor","Brian","Brendan","Emmy","Isaac","Melissa","Jaime","Jesse","Dakota","Jackson","Sawyer","Xavier","Ester","Tien","Logan","James","Mason","Jason","Calvin","Caleb","Ada","Clay","Gerard","Amy","Lydia","Eugenia","Rose","Jade","Jane","Roxy","Dave","David","Alexis","Jake","Dirk","Sarah","Raleigh","Nikolai","Laila","Emerald","Marcus","Marc","Mark","Caroline","Katie","Kaitlin","Bridget","Haley","Jack","Lauren","Reya","Letitia","Axle","Alex","Rae","Fae","Danny","Dani","Hugo","Juan","Johnny","Paul","Dominic","Mia","Michelle","Dwayne","Chris","Antigone","Maria","Mehak","Vishali","Iris","Shane","Sam","Jimmy","Isabella","Wendy","Thomas","Dan","Daniel","Elias","Cris","Norbert"],
-    fake_last: ["Venitzo","Nightlocke","Shelley","Brando","Grey","Stevenson","Andrews","McGrath","Wheeler","Taylor","Brodey","Lee","Han","Collins","LeBeau","Blackwood","Jackson","Stratman","Smith","Filli","Miller","Merlino","Fox","Waldron","Rogers","Adams","de la Cruz","Santiago","Lessio","Belen","Rodriguez","Connors","Parker","Barnes","Price","Sawyer","Wolfe","Mayer","Howlett","Freyason","Foster","Reynolds","Thorne","Owens","Doe","Morse","Paura","Walters","Ivanofski","St. Claire","Shaughnessy","Carson","Fianna","Delarose","Darwin","Red","Green","Perez","Runner","Walker","Toretto","DiArcangelo","Desantos","Tavares","Diamond","Wu","Demehri","Cahill","Brown","Fenton","Rienton"]
+    fakeFirst:["Billy","Bobby","Mary","Barry","Steven","Marlon","Rachel","Shelby","Eliza","Elizabeth","Joseph","Andy","Arietta","Morgan","Taylor","Tristan","Kai","Anabelle","Duke","Esteban","Antonio","Anthony","Tony","Jackie","John","Mike","Michael","Chev","Mandy","Sully","Joel","Roger","Peter","Connor","Brian","Brendan","Emmy","Isaac","Melissa","Jaime","Jesse","Dakota","Jackson","Sawyer","Xavier","Ester","Tien","Logan","James","Mason","Jason","Calvin","Caleb","Ada","Clay","Gerard","Amy","Lydia","Eugenia","Rose","Jade","Jane","Roxy","Dave","David","Alexis","Jake","Dirk","Sarah","Raleigh","Nikolai","Laila","Emerald","Marcus","Marc","Mark","Caroline","Katie","Kaitlin","Bridget","Haley","Jack","Lauren","Reya","Letitia","Axle","Alex","Rae","Fae","Danny","Dani","Hugo","Juan","Johnny","Paul","Dominic","Mia","Michelle","Dwayne","Chris","Antigone","Maria","Mehak","Vishali","Iris","Shane","Sam","Jimmy","Isabella","Wendy","Thomas","Dan","Daniel","Elias","Cris","Norbert"],
+    fakeLast: ["Venitzo","Nightlocke","Shelley","Brando","Grey","Stevenson","Andrews","McGrath","Wheeler","Taylor","Brodey","Lee","Han","Collins","LeBeau","Blackwood","Jackson","Stratman","Smith","Filli","Miller","Merlino","Fox","Waldron","Rogers","Adams","de la Cruz","Santiago","Lessio","Belen","Rodriguez","Connors","Parker","Barnes","Price","Sawyer","Wolfe","Mayer","Howlett","Freyason","Foster","Reynolds","Thorne","Owens","Doe","Morse","Paura","Walters","Ivanofski","St. Claire","Shaughnessy","Carson","Fianna","Delarose","Darwin","Red","Green","Perez","Runner","Walker","Toretto","DiArcangelo","Desantos","Tavares","Diamond","Wu","Demehri","Cahill","Brown","Fenton","Rienton"]
 };
 
 // Rumors
@@ -1637,449 +1721,1124 @@ const monsters = [
 ];
 
 // Adventure Generator
-const group = [
-    // adventure seed generator
-    "order",
-    "horde",
-    "clique",
-    "gaggle",
-    "mob",
-    "collegium ",
-    "armed group",
-    "squad",
-    "cadre",
-    "trio",
-    "duo",
-    "quintet",
-    "pack",
-    "wandering troupe",
-    "crime ring",
-    "group",
-    "cabal",
-    "coven",
-    "gang",
-    "bunch",
-    "fellowship",
-    "posse",
-    "school class",
-    "syndicate",
-    "delegation",
-    "secret society",
-    "guild",
-    "extended family",
-    "noble house",
-    "platoon",
-    "caravan",
-    "sisterhood",
-    "work team",
-    "team",
-    "association",
-    "cartel",
-    "club",
-    "congregation",
-    "individual",
-    "gentlemen's club",
-    "faction",
-    "crew",
-    "hidden society",
-    "league",
-    "converstation club",
-    "religious sect",
-    "tribe",
-    "elite squad",
-    "brotherhood",
-    "charity organization",
-    "support staff",
-    "entourage",
-    "assembly",
-    "noble family",
-    "governing body",
-    "ensemble",
-    "conclave",
-    "coterie",
-    "organization",
-    "citizens",
-    "circle",
-    "partnership",
-    "society",
-    "party",
-    "cult",
-    "group",
-    "troop",
-    "army",
-    "mass",
-    "gathering",
-    "political faction",
-    "inbred family",
-    "choir",
-    "crowd",
-    "splinter faction",
-    "band",
-    "conspiracy",
-    "cult",
-    "clan",
-    "collegium",
-    "patchwork",
-    "network",
-    "cell",
-    "panel",
-    "doomsday cult",
-    "union",
-    "collective",
-    "circus"
-];
+const verbs = {    
+    present: [
+        "kill",
+        "bribe",
+        "explore",
+        "summon",
+        "transport",
+        "steal",
+        "hunt",
+        "torture",
+        "gather",
+        "curse",
+        "enchant",
+        "disable",
+        "create",
+        "attack",
+        "write",
+        "assassinate",
+        "kidnap",
+        "sabotage",
+        "dishonor",
+        "marry",
+        "travel",
+        "sneak",
+        "unleash",
+        "escort",
+        "dig",
+        "protect",
+        "blackmail",
+        "rob",
+        "nap",
+        "disfigure",
+        "forage",
+        "impersonate",
+        "hide",
+        "destroy",
+        "search for",
+        "seek",
+        "flee",
+        "trick",
+        "manipulate",
+        "rest",
+        "blockade",
+        "discover",
+        "invade",
+        "embarrass",
+        "look for",
+        "camp",
+        "recruit",
+        "terrorize",
+        "invest in",
+        "invest suspiciously heavily in",
+        "dupe",
+        "abuse",
+        "tax",
+        "spread",
+        "make",
+        "organize",
+        "request",
+        "challenge",
+        "cause",
+        "raise",
+        "sail",
+        "raze",
+        "build",
+        "look for",
+        "glean",
+        "paint",
+        "excavate",
+        "impede",
+        "perform",
+        "keep",
+        "control",
+        "capture",
+        "sacrifice",
+        "reconnaissance for",
+        "prey",
+        "cheat",
+        "shirk",
+        "stir",
+        "incite",
+        "deflect",
+        "quest for",
+        "invoke",
+        "propagate",
+        "sell",
+        "wage war on",
+        "build up",
+        "hinder",
+        "secure",
+        "deny",
+        "resurrect",
+        "picket",
+        "drown",
+        "vandalize",
+        "claim",
+        "take",
+        "stifle",
+        "over-run",
+        "starve",
+        "defile",
+        "cull",
+        "establish",
+        "proselytize",
+        "pass",
+        "slow",
+        "disguise",
+        "restore",
+        "get",
+        "murder",
+        "declare war on",
+        "daydream about",
+        "lie to",
+        "fake",
+        "eat",
+        "coerce",
+        "catfish",
+        "get involved with",
+        "play with",
+        "become",
+        "betray",
+        "bind",
+        "break",
+        "bring back",
+        "bring",
+        "burn",
+        "catch",
+        "change",
+        "clear",
+        "conquer",
+        "convert",
+        "cure",
+        "defeat",
+        "delay",
+        "earn",
+        "eliminate",
+        "end",
+        "enslave",
+        "erase",
+        "escape",
+        "expand",
+        "expose",
+        "extinguish",
+        "fight against",
+        "find",
+        "form",
+        "found",
+        "free",
+        "heal",
+        "hold",
+        "implode",
+        "join",
+        "locate",
+        "make fun of",
+        "make substantial profits on",
+        "negotiate",
+        "open",
+        "overthrow",
+        "plan for",
+        "prove",
+        "reset",
+        "return",
+        "revive",
+        "save",
+        "shame",
+        "slaughter",
+        "start",
+        "stick it to",
+        "turn back",
+        "undo",
+        "unite",
+        "worship",
+        "ally themselves with",
+        "awaken",
+        "pay",
+        "appease",
+        "avert",
+        "topple",
+        "fulfill",
+        "acquire",
+        "banish",
+        "sow",
+        "gain",
+        "complete",
+        "shake",
+        "show the inferiority of",
+        "crash",
+        "corner the market in",
+        "renegotiate",
+        "bring low"
+    ],
+    gerund: [
+        "killing",
+        "bribing",
+        "exploring",
+        "summoning",
+        "transporting",
+        "stealing",
+        "hunting",
+        "torturing",
+        "gathering",
+        "cursing",
+        "enchanting",
+        "disabling",
+        "creating",
+        "attacking",
+        "writing",
+        "assassinating",
+        "kidnapping",
+        "sabotaging",
+        "dishonoring",
+        "marrying",
+        "traveling",
+        "sneaking",
+        "unleashing",
+        "escorting",
+        "digging",
+        "protecting",
+        "blackmailing",
+        "robbing",
+        "napping",
+        "disfiguring",
+        "foraging",
+        "impersonating",
+        "hiding",
+        "destroying",
+        "searching for",
+        "seeking",
+        "fleeing",
+        "tricking",
+        "manipulating",
+        "resting",
+        "blockading",
+        "discovering",
+        "invading",
+        "embarrassing",
+        "looking",
+        "camping",
+        "recruiting",
+        "terrorizing",
+        "investing in",
+        "investing suspiciously heavily in",
+        "duping",
+        "abusing",
+        "taxing",
+        "spreading",
+        "making",
+        "organizing",
+        "requesting",
+        "challenging",
+        "causing",
+        "raising",
+        "sailing",
+        "razing",
+        "building",
+        "looking for",
+        "gleaning",
+        "painting",
+        "excavating",
+        "impeding",
+        "performing",
+        "keeping",
+        "controlling",
+        "capturing",
+        "sacrificing",
+        "reconnaissancing for",
+        "preying",
+        "cheating",
+        "shirking",
+        "stirring",
+        "inciting",
+        "deflecting",
+        "questing for",
+        "searching for",
+        "invoking",
+        "propagating",
+        "selling",
+        "waging war on",
+        "building up",
+        "hindering",
+        "securing",
+        "denying",
+        "resurrecting",
+        "picketing",
+        "drowning",
+        "vandalizing",
+        "claiming",
+        "taking",
+        "stifling",
+        "over-running",
+        "starving",
+        "defiling",
+        "culling",
+        "establishing",
+        "proselytizing",
+        "passing",
+        "slowing",
+        "disguising",
+        "restoring",
+        "getting",
+        "murdering",
+        "declaring war on",
+        "daydreaming about",
+        "lying to",
+        "faking",
+        "eating",
+        "coercing",
+        "catfishing",
+        "getting involved with",
+        "playing with",
+        "becoming",
+        "betraying",
+        "binding",
+        "breaking",
+        "bringing back",
+        "bringing",
+        "burning",
+        "catching",
+        "changing",
+        "clearing",
+        "conquering",
+        "converting",
+        "curing",
+        "defeating",
+        "delaying",
+        "earning",
+        "eliminating",
+        "ending",
+        "enslaving",
+        "erasing",
+        "escaping",
+        "expanding",
+        "exposing",
+        "extinguishing",
+        "fighting against",
+        "finding",
+        "forming",
+        "founding",
+        "freeing",
+        "healing",
+        "holding",
+        "imploding",
+        "joining",
+        "locating",
+        "making fun of",
+        "making substantial profits on",
+        "negotiating",
+        "opening",
+        "overthrowing",
+        "planning for",
+        "proving",
+        "reseting",
+        "returning",
+        "reviving",
+        "saving",
+        "shaming",
+        "slaughtering",
+        "starting",
+        "sticking it to",
+        "turning back",
+        "undoing",
+        "uniting",
+        "worshipping",
+        "allying themselves with",
+        "awakening",
+        "paying",
+        "appeasing",
+        "averting",
+        "toppling",
+        "fulfilling",
+        "acquiring",
+        "banishing",
+        "sowing",
+        "gaining",
+        "completing",
+        "shaking",
+        "showing the inferiority of",
+        "crashing",
+        "cornering the market in",
+        "renegotiating",
+        "bringing low"
+    ],
+    contPres: [
+        "try to", //verb goal noun
+        "attempt to",
+        "pretend to",
+        "plan to",
+        "intend to",
+        "want to",
+        "need to",
+        "threaten to"
+    ],
+    contGer: [
+        "trying to", //verb goal noun
+        "attempting to",
+        "pretending to",
+        "planning to",
+        "threatening to"
+    ],
+    continuousOther: [
+        "finally"
+    ]
+}
 
-// Adventure Generator
-const members = [
-    // adventure seed generator
-    "squires",
-    "adventurers",
-    "assassins",
-    "fish people",
-    "drunken farmers",
-    "illusionists",
-    "settlers",
-    "werewolves",
-    "raiders",
-    "industrialists",
-    "acolytes",
-    "vampires",
-    "collectors",
-    "animals",
-    "land surveyors",
-    "rogues",
-    "elementals",
-    "goblin hunters",
-    "lowlives",
-    "knights",
-    "mercenaries",
-    "bardic actors",
-    "plants",
-    "nobles and their retinue",
-    "royalty",
-    "lepers",
-    "kobold trapsmiths",
-    "wizards",
-    "ancients",
-    "bandits",
-    "mendicant monks",
-    "giants",
-    "prisoners",
-    "dwarven archaeologists",
-    "con artists",
-    "alchemists",
-    "thieving travelers",
-    "villians",
-    "slaves",
-    "diplomats",
-    "doppelgangers",
-    "temple monks",
-    "rebels",
-    "runaways",
-    "psychics",
-    "tinkers",
-    "local spirits",
-    "masterless golems",
-    "druids",
-    "kings",
-    "diviners",
-    "travelling merchants",
-    "mysterious cloaked men",
-    "liches",
-    "sprites",
-    "traitors",
-    "monitors",
-    "scholars",
-    "guards",
-    "ousted monarchs",
-    "ghosts",
-    "militia members",
-    "children",
-    "orphan children",
-    "fairies",
-    "holy inquisitors",
-    "singers",
-    "enchanters",
-    "enchantresses",
-    "merchants",
-    "cavaliers",
-    "religious zealots",
-    "mummers",
-    "bards",
-    "orcs",
-    "dragons",
-    "otherwordly beings",
-    "dukes",
-    "duchesses",
-    "undead",
-    "slavers",
-    "escaped slaves",
-    "witches",
-    "planar travelers",
-    "charity mission workers",
-    "chaos worshippers",
-    "monks",
-    "priests",
-    "pesants",
-    "common folk",
-    "terrorists",
-    "defectors",
-    "pageboys",
-    "spies",
-    "foreign diplomats",
-    "nuns",
-    "nomads",
-    "plant creatures",
-    "philosophers",
-    "sea creatures",
-    "pirates",
-    "barons",
-    "ladies",
-    "teenagers",
-    "unemployed tradespeople",
+// Fetch Quest, Rumors, Adventure Generator
+const nouns = [
+    // Ace-10 of spades from MHoF
+    "a sword",
+    "a shield",
+    "a bottle of alcohol",
+    "a knife",
+    "a dog",
+    // "a fight",
+    "a really cool cloak",
+    "information",
+    "financial compensation",
+    "a really big knife",
+    "a potion",
+
+    // from the Meme Machine
+    "a really tiny knife",
+    "a jar",
+    "a steamy adult romance novel",
+    "a cursed magical item",
+    "a small horse",
+    "a spyglass",
+    "a pair of scissors",
+    "a magic item",
+
+    // Adventure Generator
+    "new members",
+    "travelers",
+    "officials",
+    "power",
+    "followers of another group",
+    "the seas",
+    "enourmous amount of gold",
+    "the king",
+    "diseased blankets",
+    "a plague's progression",
+    "public speeches",
     "peasants",
-    "aristocrats",
-    "royals",
-    "scientists",
-    "necromancers",
-    "gnomes",
-    "masons",
-    "painter",
-    "senior villagers",
-    "housebreakers",
-    "fishermen",
-    "vintners",
-    "leatherworkers",
-    "intelligentsia",
-    "craftspersons",
-    "convicts",
-    "felons",
-    "smiths",
-    "homunculi",
-    "golems",
-    "bodysnatchers",
-    "vivisectionists",
-    "ax murderers",
-    "tulip growers",
-    "fey creatures",
-    "barbarians",
-    "scribes",
-    "crime bosses",
-    "drug lords",
-    "brothel keepers",
-    "veterans",
-    "draftees",
-    "deserters",
-    "masters",
-    "journeymen",
-    "home owners",
-    "shopkeepers",
-    "smugglers",
-    "corrupt politicians",
+    "a divine audience",
+    "people to a duel",
+    "chaos",
+    "the dead",
+    "away",
+    "their lost honor",
+    "a city",
+    "a fortress",
+    "another group",
+    "approval",
+    "the chosen one",
+    "the law",
+    "murder",
+    "alliances",
+    "information",
+    "arcane murals",
+    "an ancient song",
+    "a fleet of warships",
+    "sensitive divinations",
+    "a low profile",
+    "a settlement",
+    "the militia",
+    "citizens",
+    "unstable individuals",
+    "themselves",
+    "a weak spot",
+    "a cure",
+    "children",
+    "the elderly",
+    "the aristocracy",
+    "clerics",
     "mages",
-    "hags",
-    "violent vigilantes"
+    "duty",
+    "interest",
+    "rebellion",
+    "violence",
+    "blame",
+    "a magical formula",
+    "an Archwizard's legendary lost spellbook",
+    "privileges",
+    "a new ethic",
+    "a plague",
+    "false hope",
+    "a new powerful magic book",
+    "rumors",
+    "a trade war",
+    "a trade monopoly",
+    "trade",
+    "prices",
+    "resources",
+    "long-extinct creatures",
+    "honest shopkeepers",
+    "kittens",
+    "creature hybrids",
+    "a building site",
+    "a rival's masterwork",
+    "younger citizens",
+    "responsibility",
+    "the blame",
+    "opposition",
+    "the masses",
+    "shrines",
+    "the herd",
+    "an illegal gambling ring",
+    "a little bitch",
+    "a person of authority",
+    "someone's death",
+    "someone's beloved pet",
+    "literal garbage",
+    "a building here in town",
+    "stolen teeth",
+    "a deal with the fae",
+    "the constable",
+    "the mayor",
+    "snakes",
+    "a big pile of spaghetti",
+    "somebody",
+    "a body",
+    "someone's best friend",
+    "the homies",
+    "the local tavern",
+    "an illicit underground unicorn fight club",
+    "the government",
+    "the church",
+    "control",
+    "martyrs",
+    "the rich",
+    "their country for personal gain",
+    "a demon",
+    "the walls separating reality",
+    "a lost loved one",
+    "domination to their race",
+    "peace",
+    "a haven",
+    "everything",
+    "the notice of a god",
+    "history",
+    "their names",
+    "a nation",
+    "others to their way of thinking",
+    "a legacy",
+    "a new divinity",
+    "a powerful magic item",
+    "their insanity",
+    "a cleric",
+    "an army",
+    "a wedding",
+    "a divinity",
+    "a rival",
+    "a village",
+    "magic",
+    "a villain's weakness",
+    "who they really are",
+    "fame and prestige",
+    "their rival",
+    "a local noble",
+    "a rivalry",
+    "a war",
+    "their targets",
+    "their past",
+    "punishment",
+    "their domains",
+    "the court",
+    "a race",
+    "against a rival",
+    "rest",
+    "the real answers",
+    "a cult",
+    "a new society",
+    "a new community",
+    "the princess",
+    "their people",
+    "revenge",
+    "a great wound upon the land",
+    "a great wound upon the people",
+    "their treasure",
+    "a coup",
+    "a vampire",
+    "their goddess",
+    "colony of humanoids",
+    "a king",
+    "a tome of unspeakable truths",
+    "a truce",
+    "an agreement with the archenemy",
+    "a magical gate",
+    "a portal to another dimension",
+    "the empress",
+    "the next season",
+    "their bravery",
+    "followers",
+    "time",
+    "the ancients",
+    "a forgotten god",
+    "a knight",
+    "a group of people",
+    "a civil war",
+    "a new world order",
+    "'the man'",
+    "a monster",
+    "reality",
+    "the lands",
+    "unspeakable evil",
+    "a forgotten divinity",
+    "a vampire lord",
+    "thousands of ghosts",
+    "a werewolf lair",
+    "their debts",
+    "a demoness",
+    "unnatural disaster",
+    "disaster",
+    "the kingdom",
+    "respect",
+    "a prophecy",
+    "a prophecy's fulfillment",
+    "destiny",
+    "their children",
+    "hostages",
+    "the Serpent God",
+    "their reputation",
+    "a riot",
+    "disorder",
+    "treachery",
+    "leverage",
+    "a menagerie of creatures",
+    "their collections",
+    "doomsday",
+    "their successors",
+    "their rival's disgrace",
+    "their place in history",
+    "the economy",
+    "the market",
+    "an agreement",
+    "the animals",
+    "the mighty",
+    "the prophecy",
+    
+    //means 
+    "fake identities",
+    "an old rusty chain",
+    "a dragon's support",
+    "magical man-catchers",
+    "a family heirloom weapon",
+    "threats and intimidation",
+    "misdirection",
+    "pure wits",
+    "a diadem of control",
+    "a wand of magic missiles",
+    "forged documents",
+    "flows of gold",
+    "a plague of locusts",
+    "the iron hand of the tyrant",
+    "extortion",
+    "deception",
+    "a strange music box",
+    "extreme discretion",
+    "an enchanted quill",
+    "a key",
+    "a rope of braided bloody boar hair",
+    "forbidden tomes",
+    "powerful friends",
+    "information from a contact person",
+    "deep pockets",
+    "their dormant magical talent",
+    "an ancient holy symbol",
+    "secret documents",
+    "a recently found artifact",
+    "the power vested in them by law",
+    "an army of undead",
+    "the claims that an old testament gives them the right",
+    "the skull of a long dead necromancer",
+    "a god's blessing",
+    "a laissez-faire attitude",
+    "a cursed weapon",
+    "the king's orders in hand",
+    "a magical army",
+    "the power of prayer",
+    "a slayer",
+    "divine blessings",
+    "a band of mercenaries",
+    "a con artists glib",
+    "the heart of a tree of life",
+    "the support of the church",
+    "a very intricate and detailed masterplan",
+    "a thousand tortured souls",
+    "an astrolabe",
+    "the bones of an ancient mage",
+    "the support of a mob",
+    "the help of bribed bureaucrats",
+    "blackmail",
+    "a god's finger",
+    "an insatiable hunger",
+    "false promises",
+    "blatant lies",
+    "the blood of the innocent",
+    "contracts for the gullible",
+    "the might of the kingdom's military",
+    "the support of the noble court",
+    "a dragon's hoard",
+    "bribed officials",
+    "a stolen artifact",
+    "an ancient arrowhead",
+    "frenzied devotion",
+    "a merfolk bridal veil",
+    "a game that is also a test",
+    "mass hypnosis",
+    "iron will and determination",
+    "divine regalia",
+    "the hopes of the whole village",
+    "a cursed armor",
+    "the queen's blessing",
+    "little resources left",
+    "the embalmed corpses of twin babies",
+    "a soulstone",
+    "an elf's life essence",
+    "an army",
+    "a dragon",
+    "public officials and decrees",
+    "a civil war",
+    "sabotage",
+    "espionage",
+    "drugs",
+    "a puppet organization",
+    "bribery",
+    "alcohol",
+    "slaves",
+    "contracts",
+    "demonic help",
+    "the local authority",
+    "the local crime underground",
+    "market manipulations",
+    "cloning",
+    "the power of the Ooze",
+    "any means necessary",
+    "lurid colors",
+    "deceptive documents"
 ];
 
 // Adventure Generator
-const action = [
-    // adventure seed generator
-    "is declaring war on",
-    "is recruiting new members",
-    "is terrorizing travelers",
-    "is investing suspiciously heavily",
-    "is attempting to proselytize",
-    "is duping officials",
-    "is trying to pass a bribe",
-    "is abusing power",
-    "is attacking followers of another group",
-    "is exploring the seas",
-    "is taxing enourmous amount of gold",
-    "is manipulating the king",
-    "is spreading diseased blankets",
-    "is trying to slow a plague's progression",
-    "is making public speeches",
-    "is organizing peasants",
-    "is requesting a divine audience",
-    "is in disguise",
-    "is challenging people to a duel",
-    "is causing chaos",
-    "is raising the dead",
-    "is sailing away",
-    "is attempting to restore their lost honor",
-    "is razing a city",
-    "is building a fortress",
-    "is conspiring with another group",
-    "is trying to get aproval",
-    "is on official business",
-    "is looking for the chosen one",
-    "is abusing the law",
-    "is being framed for murder",
-    "is sabotaging alliances",
-    "is gleaning information",
-    "is painting arcane murals",
-    "is excavating an ancient song",
-    "is building a fleet of warships",
-    "is impeding travellers",
-    "is performing sensitive divinations",
-    "is on a pilgramage",
-    "is keeping a low profile",
-    "is building a settlement",
-    "is controlling the militia",
-    "is capturing citizens",
-    "is looking for unstable individuals",
-    "are sacrificing themselves",
-    "is reconnaissancing for a weak spot",
-    "is seeking a cure",
-    "is preying on children",
-    "is cheating the elderly",
-    "is duping the aristocracy",
-    "is robbing clerics",
-    "is terrorizing mages",
-    "is shirking duty",
-    "is pretending interest",
-    "is stirring rebellion",
-    "is inciting violence",
-    "is deflecting blame",
-    "is questing for a magical formula",
-    "is searching for an Archwizard's legendary lost spellbook",
-    "is invoking privileges",
-    "is propagating a new ethic",
-    "is spreading a plague",
-    "is selling false hope",
-    "is writing a new powerful magic book",
-    "is spreading rumors",
-    "is waging a trade war",
-    "is building up a trade monopoly",
-    "is hindering trade",
-    "is manipulating prices",
-    "is securing resources",
-    "is denying resources",
-    "is resurrecting long extinct creatures",
-    "is picketing honest shopkeepers",
-    "is drowning kittens",
-    "is creating creature hybrids",
-    "is sabotaging a building site",
-    "vandalizes a rival's masterwork",
-    "is trying to trick younger citizens",
-    "is claiming responsibility",
-    "is taking the blame",
-    "is stifling opposition",
-    "is over-running resources",
-    "is starving the masses",
-    "is defiling shrines",
-    "is 'culling the herd'",
-    "plans to estalish an illegal gambling ring",
-    "intents to kidnap children from their parents"
-];
+// where fragments go to die after I tear them apart like confetti
+const fragments = {
+    goal: [
+        // adventure seed generator
+        "assume control",
+        "become immortal",
+        "become king",
+        "become martyrs",
+        "become rich",
+        "betray their country for personal gain",
+        "bind a demon",
+        "break the walls separating reality",
+        "bring a lost loved one back to life",
+        "bring domination to their race",
+        "bring peace",
+        "build a haven",
+        "burn everything",
+        "catch the notice of a god",
+        "change history",
+        "clear their names",
+        "conquer a nation",
+        "convert others to their way of thinking",
+        "create a legacy",
+        "create a new divinity",
+        "create a powerful magic item",
+        "cure their insanity",
+        "defeat a cleric",
+        "defeat an army",
+        "delay a wedding",
+        "destroy",
+        "destroy a divinity",
+        "destroy a rival",
+        "destroy a village",
+        "destroy magic",
+        "die",
+        "discover a villain's weakness",
+        "discover who they really are",
+        "earn fame and prestige",
+        "eliminate their rival",
+        "embarrass a local noble",
+        "end a rivalry",
+        "end a war",
+        "enslave their targets",
+        "erase their past",
+        "escape punishment",
+        "expand their domains",
+        "expose the court",
+        "extinguish a race",
+        "fight against a rival",
+        "finally rest",
+        "find the real answers",
+        "form a cult",
+        "form a new society",
+        "found a new community",
+        "free the princess",
+        "free their people",
+        "get revenge",
+        "heal a great wound upon the land/people",
+        "hide",
+        "hide their treasure",
+        "hold a coup",
+        "hunt a vampire",
+        "implode the court",
+        "join the court",
+        "keep their godess happy",
+        "kill a colony of humanoids",
+        "kill a king",
+        "locate a tome of unspeakable truths",
+        "make fun of",
+        "make substantial profits",
+        "negotiate a truce",
+        "negotiate an agreement with the arch enemy",
+        "open a magical gate",
+        "open a portal to another dimension",
+        "overthrow the empress",
+        "plan for the next season",
+        "prove their bravery",
+        "recruit followers",
+        "reset time",
+        "return the ancients",
+        "revive a forgotten god",
+        "save themselves",
+        "shame a knight",
+        "slaughter a group of people",
+        "start a civil war",
+        "start a new world order",
+        "start a war",
+        "stick it to 'the man'",
+        "summon a monster",
+        "turn back time",
+        "undo reality",
+        "unite the lands",
+        "unleash unspeakable evil",
+        "worship a forgotten divinity",
+        "turn people undead",
+        "ally themselves with a vampire lord",
+        "awake thousands of ghosts",
+        "find a werewolf lair",
+        "pay their debts",
+        "appease a demoness",
+        "avert unnatural disaster",
+        "avert disaster",
+        "topple the kingdom",
+        "earn respect",
+        "fulfill a prophecy",
+        "avert a prophecy's fulfillment",
+        "cheat destiny",
+        "save their children",
+        "free hostages",
+        "acquire hostages",
+        "invoke the Serpent God",
+        "banish a demon",
+        "restore their reputation",
+        "incite a riot",
+        "sow disorder",
+        "expose treachery",
+        "gain hostages",
+        "gain leverage",
+        "make a menagerie of creatures",
+        "complete their collections",
+        "shake the government",
+        "avert doomsday",
+        "show the inferiority of their successors",
+        "cause their rival disgrace",
+        "secure their place in history",
+        "crash the economy",
+        "corner the market",
+        "renegotiate an agreement",
+        "save the kingdom",
+        "save the animals",
+        "bring low the mighty",
+        "fulfill the prophecy"
+    ],
+    action: [
+        // adventure seed generator
+        "declaring war on",
+        "recruiting new members",
+        "terrorizing travelers",
+        "investing suspiciously heavily in",
+        "attempting to proselytize",
+        "duping officials",
+        "trying to pass a bribe",
+        "abusing power",
+        "attacking followers of another group",
+        "exploring the seas",
+        "taxing enourmous amount of gold",
+        "manipulating the king",
+        "spreading diseased blankets",
+        "trying to slow a plague's progression",
+        "making public speeches",
+        "organizing peasants",
+        "requesting a divine audience",
+        "in disguise",
+        "challenging people to a duel",
+        "causing chaos",
+        "raising the dead",
+        "sailing away",
+        "attempting to restore their lost honor",
+        "razing a city",
+        "building a fortress",
+        "conspiring with another group",
+        "trying to get approval",
+        "on official business",
+        "looking for the chosen one",
+        "abusing the law",
+        "being framed for murder",
+        "sabotaging alliances",
+        "gleaning information",
+        "painting arcane murals",
+        "excavating an ancient song",
+        "building a fleet of warships",
+        "impeding travellers",
+        "performing sensitive divinations",
+        "on a pilgramage",
+        "keeping a low profile",
+        "building a settlement",
+        "controlling the militia",
+        "capturing citizens",
+        "looking for unstable individuals",
+        "sacrificing themselves",
+        "reconnaissancing for a weak spot",
+        "seeking a cure",
+        "preying on children",
+        "cheating the elderly",
+        "duping the aristocracy",
+        "robbing clerics",
+        "terrorizing mages",
+        "shirking duty",
+        "pretending interest",
+        "stirring rebellion",
+        "inciting violence",
+        "deflecting blame",
+        "questing for a magical formula",
+        "searching for an Archwizard's legendary lost spellbook",
+        "invoking privileges",
+        "propagating a new ethic",
+        "spreading a plague",
+        "selling false hope",
+        "writing a new powerful magic book",
+        "spreading rumors",
+        "waging a trade war",
+        "building up a trade monopoly",
+        "hindering trade",
+        "manipulating prices",
+        "securing resources",
+        "denying resources",
+        "resurrecting long extinct creatures",
+        "picketing honest shopkeepers",
+        "drowning kittens",
+        "creating creature hybrids",
+        "sabotaging a building site",
+        "vandalizes a rival's masterwork",
+        "trying to trick younger citizens",
+        "claiming responsibility",
+        "taking the blame",
+        "stifling opposition",
+        "over-running resources",
+        "starving the masses",
+        "defiling shrines",
+        "'culling the herd'",
+        "planning to estalish an illegal gambling ring",
+        "intending to kidnap children from their parents",
 
-// Adventure Generator
-const means = [
-    // adventure seed generator
-    "with fake identities",
-    "with an old rusty chain",
-    "with a dragon's support",
-    "with magical man-catchers",
-    "with a family heirloom weapon",
-    "with threats and intimidation",
-    "with misdirection",
-    "by pure wits",
-    "with a diadem of control",
-    "with a wand of magic missiles",
-    "with forged documents",
-    "with flows of gold",
-    "with a plague of locusts",
-    "with the iron hand of the tyrant",
-    "by extorting the king",
-    "with deception",
-    "using a strange music box",
-    "with extreme discretion",
-    "with an enchanted quill",
-    "by deception",
-    "with a key",
-    "with a rope of braided blood boar hair",
-    "with forbidden tomes",
-    "with powerful friends",
-    "by applying information from a contact person",
-    "with deep pockets",
-    "by impersonating",
-    "by summoning a demon",
-    "by applying their dormant magical talent",
-    "with an ancient holy symbol",
-    "using secrets documents",
-    "with a recently found artifact",
-    "by the power vested to them by law",
-    "with an army of undead",
-    "claiming an old testament gives them the right",
-    "with the skull of a long dead necromancer",
-    "with a god's blessing",
-    "with a laissez faire attitude",
-    "with a cursed weapon",
-    "with the king's orders in hand",
-    "with a magical army",
-    "using the power of prayer",
-    "with a slayer",
-    "with divine blessings",
-    "with a band of mercenaries",
-    "with a con artists glib",
-    "with the heart of a tree of life",
-    "with the support of the church",
-    "applying a very intricate and detailed masterplan",
-    "with a thousand tortured souls",
-    "with an astrolabe",
-    "with the bones of an ancient mage",
-    "with the support of a mob",
-    "with the help of bribed bureaucrats",
-    "with blackmail",
-    "with a god's finger",
-    "with an insatiable hunger",
-    "with false promises",
-    "telling blatant lies",
-    "by disguising as someone else",
-    "by destroying a village",
-    "with the blood of the innocent",
-    "with contracts for the gullible",
-    "with the might of the kingdom's military",
-    "with the support of the noble court",
-    "with a dragon's hoard",
-    "with bribes to officials",
-    "with a stolen artifact",
-    "with an ancient arrowhead",
-    "with frenzied devotion",
-    "with a merfolk bridal veil",
-    "by a game that is also a test",
-    "with mass hypnosis",
-    "with iron will and determination",
-    "with divine regalia",
-    "with the hopes of the whole village",
-    "with a cursed armor",
-    "with the queen's blessing",
-    "with little resources left",
-    "with the embalmed corpses of twin babies",
-    "with a soulstone",
-    "with an elf's life essence",
-    "with an army",
-    "with a dragon",
-    "through public officials and decrees",
-    "through a civil war",
-    "through sabotage",
-    "through espionage",
-    "with drugs",
-    "by controlling a puppet organization",
-    "by bribery",
-    "with alcohol",
-    "with slaves",
-    "by contracts",
-    "with demonic help",
-    "with the local authority",
-    "with the local cirme underground",
-    "with market manipulations",
-    "via cloning",
-    "by the power of the Ooze",
-    "by any means necessary",
-    "with lurid colors",
-    "with deceptive documents"
-];
+        // rumor accuse
+        "daydreaming",
+        "being a little bitch",
+        "lying to a person of authority",
+        "faking their death",
+        "being gay and doing crimes",
+        "transing their gender",
+        "kidnapping someone's beloved pet",
+        "eating literal garbage",
+        "unhinging their jaw like a snake",
+        "sneaking suspiciously into a building here in town",
+        "coercing people into giving them their teeth",
+        "getting their teeth stolen",
+        "planning to commit treason",
+        "getting absolutely wasted",
+        "making a deal with the fae",
+        "tilting at windmills",
+        "catfishing the constable with pictures of the queen",
+        "catfishing the mayor with pictures of the queen",
+        "catfishing the queen with pictures of snakes",
+        "eating a big pile of spaghetti and not sharing any of it",
+        "threatening to kill somebody",
+        "killing somebody",
+        "hiding a body",
+        "pickpocketing their best friend",
+        "kissing the homies goodnight",
+        "t-posing for dominance",
+        "being a fucking narc",
+        "being awful to the police",
+        "pulling a dragon's tail",
+        "vandalizing the local tavern",
+        "getting involved with an illicit underground unicorn fight club",
+        "playing Yu-Gi-Oh",
+        "undermining the government at every turn",
+        "falling on their ass",
+        "eating shit and falling off their horse",
+        "riding topless",
+        "stealing from the church"
+    ],
+    means: [
+        // adventure seed generator
+        "with fake identities",
+        "with an old rusty chain",
+        "with a dragon's support",
+        "with magical man-catchers",
+        "with a family heirloom weapon",
+        "with threats and intimidation",
+        "with misdirection",
+        "by pure wits",
+        "with a diadem of control",
+        "with a wand of magic missiles",
+        "with forged documents",
+        "with flows of gold",
+        "with a plague of locusts",
+        "with the iron hand of the tyrant",
+        "by extorting the king",
+        "with deception",
+        "using a strange music box",
+        "with extreme discretion",
+        "with an enchanted quill",
+        "by deception",
+        "with a key",
+        "with a rope of braided blood boar hair",
+        "with forbidden tomes",
+        "with powerful friends",
+        "by applying information from a contact person",
+        "with deep pockets",
+        "by impersonating",
+        "by summoning a demon",
+        "by applying their dormant magical talent",
+        "with an ancient holy symbol",
+        "using secrets documents",
+        "with a recently found artifact",
+        "by the power vested to them by law",
+        "with an army of undead",
+        "claiming an old testament gives them the right",
+        "with the skull of a long dead necromancer",
+        "with a god's blessing",
+        "with a laissez faire attitude",
+        "with a cursed weapon",
+        "with the king's orders in hand",
+        "with a magical army",
+        "using the power of prayer",
+        "with a slayer",
+        "with divine blessings",
+        "with a band of mercenaries",
+        "with a con artists glib",
+        "with the heart of a tree of life",
+        "with the support of the church",
+        "applying a very intricate and detailed masterplan",
+        "with a thousand tortured souls",
+        "with an astrolabe",
+        "with the bones of an ancient mage",
+        "with the support of a mob",
+        "with the help of bribed bureaucrats",
+        "with blackmail",
+        "with a god's finger",
+        "with an insatiable hunger",
+        "with false promises",
+        "telling blatant lies",
+        "by disguising as someone else",
+        "by destroying a village",
+        "with the blood of the innocent",
+        "with contracts for the gullible",
+        "with the might of the kingdom's military",
+        "with the support of the noble court",
+        "with a dragon's hoard",
+        "with bribes to officials",
+        "with a stolen artifact",
+        "with an ancient arrowhead",
+        "with frenzied devotion",
+        "with a merfolk bridal veil",
+        "by a game that is also a test",
+        "with mass hypnosis",
+        "with iron will and determination",
+        "with divine regalia",
+        "with the hopes of the whole village",
+        "with a cursed armor",
+        "with the queen's blessing",
+        "with little resources left",
+        "with the embalmed corpses of twin babies",
+        "with a soulstone",
+        "with an elf's life essence",
+        "with an army",
+        "with a dragon",
+        "through public officials and decrees",
+        "through a civil war",
+        "through sabotage",
+        "through espionage",
+        "with drugs",
+        "by controlling a puppet organization",
+        "by bribery",
+        "with alcohol",
+        "with slaves",
+        "by contracts",
+        "with demonic help",
+        "with the local authority",
+        "with the local crime underground",
+        "with market manipulations",
+        "via cloning",
+        "by the power of the Ooze",
+        "by any means necessary",
+        "with lurid colors",
+        "with deceptive documents"
+    ],
+    secretThirdThing: [
+        "on official business",       
+        "on a pilgramage",        
+        "conspiring with",
+        "intents to kidnap children from their parents", //verb
+        "being framed for", // this also belongs in a separate thing
+        "squatting",
+        "in disguise",
+    ]
+}
 // VARIABLES END
 
 // FUNCTIONS START
@@ -2096,53 +2855,165 @@ function plotGen() {
     const tone = randomString(plotElem.tone);
     const genre = randomString(plotElem.genre);
 
-    document.getElementById("pt-plot").innerHTML = "This plot is going to be <b>" + tone + " " + genre + " " + type + ".</b>"
+    document.getElementById("pt-plot").innerHTML = "<p>This plot is going to be <b>" + tone + " " + genre + " " + type + ".</b></p>"
 }
 
 // Fetch Quest
-const qq_quest = [
+const qQuest = [
     "quest 1",
     "quest 2"
 ];
 
-let quest_select = "";
+let questSelect = "";
 
 function questGen() {
-    quest_select = randomString(qq_quest);
+    questSelect = randomString(qQuest);
 
-    const quest_item = randomString(item);
-    const quest_property = randomString(property);
-    const quest_goal = randomString(quest.goal);
-    const quest_motive = randomString(quest.motivation);
-    const quest_twist = randomString(quest.twist);
+    const qItem = randomString(nouns);
+    const qProperty = randomString(property);
+    const qGoal = randomString(fragments.goal);
+    const qMotive = randomString(quest.motivation);
+    const qTwist = randomString(quest.twist);
 
-    switch(quest_select) {
+    switch(questSelect) {
         case "quest 1":
-            document.getElementById("qq-quest").innerHTML = "The party is looking for <b>" + quest_item + "</b> that <b>" + quest_property + ".</b> They are looking for this <b>" + quest_motive + ",</b> but the thing is that <b>" + quest_twist + ".</b>";
+            document.getElementById("qq-quest").innerHTML = "<p>The party is looking for <b>" + qItem + "</b> that <b>" + qProperty + ".</b> They are looking for this <b>" + qMotive + ",</b> but the thing is that <b>" + qTwist + ".</b></p>";
         break;
         case "quest 2":
-            document.getElementById("qq-quest").innerHTML = "The party is looking for <b>" + quest_item + "</b> that <b>" + quest_property + "</b> in order to <b>" + quest_goal + ".</b> They want this <b>" + quest_motive + ",</b> but what they haven't realized yet is that <b>" + quest_twist + ".</b>";
+            document.getElementById("qq-quest").innerHTML = "<p>The party is looking for <b>" + qItem + "</b> that <b>" + qProperty + "</b> in order to <b>" + qGoal + ".</b> They want this <b>" + qMotive + ",</b> but what they haven't realized yet is that <b>" + qTwist + ".</b></p>";
         break;
     }
 }
 
 // Adventure Generator
-function adventureGen() {
-    const adventure_condition = randomString(charaDesc.condition);
-    const adventure_group = randomString(group);
-    const adventure_members = randomString(members);
-    const adventure_action = randomString(action);
-    const adventure_means = randomString(means);
-    const adventure_place = randomString(quest.place);
-    const adventure_goal = randomString(quest.goal);
-    const adventure_motive = randomString(quest.motivation);
-    const adventure_twist = randomString(quest.twist);
+const adventureType = [
+    "adventure 1",
+    "adventure 2",
+    // "adventure 3"
+];
 
-    document.getElementById("ag-adventure").innerHTML = "In this story, <b>" + adventure_condition + " " + adventure_group + "</b> of <b>" + adventure_members + " " + adventure_action + " " + adventure_place  + ".</b> Their goal is <b>" + adventure_goal + " " + adventure_means + " " + adventure_motive + ".</b> What they don't know is that <b>" + adventure_twist + ".</b>";
+const subjectType = [
+    "singular",
+    "plural"
+]
+
+const actionType = [ 
+    "action 1",
+    "action 2",
+    "action 3",
+    "action 4"
+];
+
+const methodType = [
+    "method 1",
+    "method 2",
+    "method 3",
+    "method 4"
+];
+
+let adventureSelect = "";
+let subjectSelect = "";
+let actionSelect = "";
+let methodSelect = "";
+
+function adventureGen() {
+    adventureSelect = randomString(adventureType);
+    subjectSelect = randomString(subjectType);
+    actionSelect = randomString(actionType);
+    methodSelect = randomString(methodType);
+
+    const agChara = randomString(chara.noun);
+    const agAdjective = randomString(chara.adjective);
+    const agGroup = randomString(chara.group);
+    const agMembers = randomString(chara.members);
+
+    const agGoal = randomString(fragments.goal);
+    const agPlace = randomString(quest.place);
+    const agMotive = randomString(quest.motivation);
+    const agTwist = randomString(quest.twist);
+
+    // const agPerson = agAdjective + " " + agChara;
+    // const agPeople = agAdjective + " " + agGroup + "</b> of <b>" + agMembers;
+
+    let agSubject = "";
+    let agAction = "";
+    let agMethod = "";
+
+    const agActionFrag = randomString(fragments.action);
+    const agMethodFrag = randomString(fragments.means);
+    const agMethodNoun = randomString(nouns);
+
+    const agNounOne = randomString(nouns);
+    const agNounTwo = randomString(nouns);
+
+    const agPresent = randomString(verbs.present)
+    const agGerund = randomString(verbs.gerund);
+    // const agContPres = randomString(verbs.contPres); //[try] to [verb] [noun]
+    const agContGer = randomString(verbs.contGer);
+
+    switch (subjectSelect) {
+        case "singular":
+            agSubject = agAdjective + " " + agChara + "</b> is";
+        break;
+        case "plural":
+            agSubject = agAdjective + " " + agGroup + "</b> of <b>" + agMembers + "</b> are";
+        break;
+    }
+
+    switch (actionSelect) {
+        case "action 1": //action fragment
+            agAction = "<b>" + agActionFrag;
+        break;
+        case "action 2": //are [verb]ing [noun]
+            agAction = "<b>" + agGerund + " " + agNounOne;
+        break;
+        case "action 3": //[trying] to [verb] [noun]
+            agAction = "<b>" + agContGer + " " + agPresent + " " + agNounOne;
+        break;
+        case "action 4": //try to [verb] [noun]
+            agAction = "trying to <b>" + agPresent + " " + agNounOne;
+        break;
+        // case "action 5": //[try] to [verb] [noun] //*sigh*, maybe later
+        //     agAction = "<b>" + agContPres + " " + agPresent + " " + agNounOne + "</b>";
+        // break;
+    }
+
+    const agPerson = agSubject + " " + agAction;
+
+    switch (methodSelect) {
+        case "method 1":
+            agMethod = "<b>" + agMethodFrag;
+        break;
+        case "method 2":
+            agMethod = "</b>using <b>" + agMethodNoun;
+        break;
+        case "method 3":
+            agMethod = "</b>with the help of <b>" + agMethodNoun;
+        break;
+        case "method 4": //[action] by [gerund] [noun]
+            agMethod = "</b>by <b>" + agGerund + " " + agNounTwo;
+        break;
+    }
+
+    switch (adventureSelect) {
+        // multiple lines
+        case "adventure 1":
+            document.getElementById("ag-adventure").innerHTML = "<p>In this story, <b>" + agPerson + " " + agPlace  + ".</b></p>" + 
+            "<p>Their goal is to <b>" + agGoal + " " + agMethod + " " + agMotive + ",</b> but <b>" + agTwist + ".</b></p>";
+        break;
+        case "adventure 2":
+            document.getElementById("ag-adventure").innerHTML = "<p>This story takes place <b>" + agPlace +",</b> where <b>" + agPerson + ".</b> Their goal is to <b>" + agGoal + " " + agMethod + ".</b></p>" + 
+            "<p>They are doing this <b>" + agMotive + ",</b> but <b>" + agTwist + ".</b></p>";
+        break;
+        // This one's just for workshopping stuff
+        case "adventure 3": 
+            document.getElementById("ag-adventure").innerHTML = "<p>This story takes place <b>" + agPlace +",</b> where <b>" + agPerson + " " + agMethod + ".</b></p>";
+        break;
+    }
 }
 
 // NPC Builder
-const npc_party = [
+const npcParty = [
     "party 1",
     "party 2",
     "party 3",
@@ -2152,63 +3023,63 @@ const npc_party = [
     "party 7"
 ];
 
-let party_select = "";
+let partySelect = "";
 
 function npcGen() {
-    party_select = randomString(npc_party);
+    partySelect = randomString(npcParty);
 
-    const chara_one = randomString(charaDesc.chara);
-    const trait_one = randomString(charaDesc.trait);
+    const charaOne = randomString(chara.chara);
+    const traitOne = randomString(chara.trait);
 
-    const chara_two = randomString(charaDesc.chara);
-    const trait_two = randomString(charaDesc.trait);
+    const charaTwo = randomString(chara.chara);
+    const traitTwo = randomString(chara.trait);
     
-    const chara_three = randomString(charaDesc.chara);
-    const trait_three = randomString(charaDesc.trait);
+    const charaThree = randomString(chara.chara);
+    const traitThree = randomString(chara.trait);
 
-    const fake_first_one = randomString(characters.fake_first);
-    const fake_last_one = randomString(characters.fake_last);
-    const fake_role_one = fake_first_one + " " + fake_last_one;
+    const fakeFirst = randomString(characters.fakeFirst);
+    const fakeLast = randomString(characters.fakeLast);
+    const fakeRole = fakeFirst + " " + fakeLast;
 
-    const condition_one = randomString(charaDesc.condition);
-    const noun_one = randomString(charaDesc.noun);
-    const chara_concat_one = condition_one + " " + noun_one;
+    const adjectiveOne = randomString(chara.adjective);
+    const nounOne = randomString(chara.noun);
+    const charaConcatOne = adjectiveOne + " " + nounOne;
 
-    const condition_two = randomString(charaDesc.condition);
-    const noun_two = randomString(charaDesc.noun);
-    const chara_concat_two = condition_two + " " + noun_two;
+    const adjectiveTwo = randomString(chara.adjective);
+    const nounTwo = randomString(chara.noun);
+    const charaConcatTwo = adjectiveTwo + " " + nounTwo;
 
-    const condition_three = randomString(charaDesc.condition);
-    const noun_three = randomString(charaDesc.noun);
-    const chara_concat_three = condition_three + " " + noun_three;
+    const adjectiveThree = randomString(chara.adjective);
+    const nounThree = randomString(chara.noun);
+    const charaConcatThree = adjectiveThree + " " + nounThree;
 
-    switch(party_select) {
+    switch(partySelect) {
         case "party 1":
-            document.getElementById("npc-party").innerHTML = "Our party includes <b>" + chara_one + "</b> who <b>" + trait_one + ".</b>";
+            document.getElementById("npc-party").innerHTML = "<p>Our party includes <b>" + charaOne + "</b> who <b>" + traitOne + ".</b></p>";
         break;
         case "party 2":
-            document.getElementById("npc-party").innerHTML = "Our party includes <b>" + chara_one + "</b> who <b>" + trait_one + ",</b> and <b>" + chara_two + "</b> who <b>" + trait_two + ".</b>";
+            document.getElementById("npc-party").innerHTML = "<p>Our party includes <b>" + charaOne + "</b> who <b>" + traitOne + ",</b> and <b>" + charaTwo + "</b> who <b>" + traitTwo + ".</b></p>";
         break;
         case "party 3":
-            document.getElementById("npc-party").innerHTML = "Our party includes <b>" + chara_one + "</b> who <b>" + trait_one + ", " + chara_two + "</b> who <b>" + trait_two + ",</b> and <b>" + chara_three + "</b> who <b>" + trait_three + ".</b>";
+            document.getElementById("npc-party").innerHTML = "<p>Our party includes <b>" + charaOne + "</b> who <b>" + traitOne + ", " + charaTwo + "</b> who <b>" + traitTwo + ",</b> and <b>" + charaThree + "</b> who <b>" + traitThree + ".</b></p>";
         break;
         case "party 4":
-            document.getElementById("npc-party").innerHTML = "Our party includes <b>" + chara_one + "</b> named <b>" + fake_role_one + "</b> who <b>" + trait_one + ".</b>";
+            document.getElementById("npc-party").innerHTML = "<p>Our party includes <b>" + charaOne + "</b> named <b>" + fakeRole + "</b> who <b>" + traitOne + ".</b></p>";
         break;
         case "party 5":
-            document.getElementById("npc-party").innerHTML = "Our party includes <b>" + chara_concat_one + "</b> who <b>" + trait_one + ".</b>";
+            document.getElementById("npc-party").innerHTML = "<p>Our party includes <b>" + charaConcatOne + "</b> who <b>" + traitOne + ".</b></p>";
         break;
         case "party 6":
-            document.getElementById("npc-party").innerHTML = "Our party includes <b>" + chara_concat_one + "</b> who <b>" + trait_one + ",</b> and <b>" + chara_concat_two + "</b> who <b>" + trait_two + ".</b>";
+            document.getElementById("npc-party").innerHTML = "<p>Our party includes <b>" + charaConcatOne + "</b> who <b>" + traitOne + ",</b> and <b>" + charaConcatTwo + "</b> who <b>" + traitTwo + ".</b></p>";
         break;
         case "party 7":
-            document.getElementById("npc-party").innerHTML = "Our party includes <b>" + chara_concat_one + ", " + chara_concat_two + ",</b> and <b>" + chara_concat_three + ".</b>";
+            document.getElementById("npc-party").innerHTML = "<p>Our party includes <b>" + charaConcatOne + ", " + charaConcatTwo + ",</b> and <b>" + charaConcatThree + ".</b></p>";
         break;
     }
 }
 
 // Rumors
-const rm_rumors = [
+const rRumors = [
     "rumor 1",
     "rumor 2",
     "rumor 3",
@@ -2223,52 +3094,52 @@ const rm_rumors = [
     "rumor 12"
 ];
 
-const person = [
+const personOne = [
     "player character",
     "face role",
     "fake role 1",
     "fake role 2"
 ];
 
-const person_alt = [
+const personTwo = [
     "player character",
     "face role",
     "fake role"
 ];
 
-let rumor_select = "";
-let person_select = "";
-let person_select_alt = "";
+let rumorSelect = "";
+let personSelect = "";
+let personSelectAlt = "";
 
 function rumorGen() {
-    rumor_select = randomString(rm_rumors);
-    person_select = randomString(person);
-    person_select_alt = randomString(person_alt);
+    rumorSelect = randomString(rRumors);
+    personSelect = randomString(personOne);
+    personSelectAlt = randomString(personTwo);
 
     const rumor_character = randomString(characters.players);
-    const rumor_face_role = randomString(characters.face_roles);
-    const rumor_fake_first = randomString(characters.fake_first);
-    const rumor_fake_last = randomString(characters.fake_last);
+    const rumor_face_role = randomString(characters.faceRoles);
+    const rumor_fake_first = randomString(characters.fakeFirst);
+    const rumor_fake_last = randomString(characters.fakeLast);
 
     const rumor_character_alt = randomString(characters.players);
-    const rumor_face_role_alt = randomString(characters.face_roles);
-    const rumor_fake_first_alt = randomString(characters.fake_first);
-    const rumor_fake_last_alt = randomString(characters.fake_last);
+    const rumor_face_role_alt = randomString(characters.faceRoles);
+    const rumor_fake_first_alt = randomString(characters.fakeFirst);
+    const rumor_fake_last_alt = randomString(characters.fakeLast);
 
     let rumor_person = "";
     let rumor_person_alt = "";
     
     const rumor_source = randomString(rumors.source);
-    const rumor_item = randomString(item);
+    const rumor_item = randomString(nouns);
     const rumor_property = randomString(property);
     const rumor_monsters = randomString(monsters);
-    const rumor_trait = randomString(charaDesc.trait);
+    const rumor_trait = randomString(chara.trait);
     const rumor_accuse = randomString(rumors.accuse);
 
-    const rumor_chara = randomString(charaDesc.chara);
-    const rumor_chara_alt = randomString(charaDesc.chara);
+    const rumor_chara = randomString(chara.chara);
+    const rumor_chara_alt = randomString(chara.chara);
 
-    switch (person_select) {
+    switch (personSelect) {
         case "player character":
             rumor_person = "<b>" + rumor_character + "</b>";
         break;
@@ -2283,7 +3154,7 @@ function rumorGen() {
         break;
     }
 
-    switch (person_select_alt) {
+    switch (personSelectAlt) {
         case "player character":
             rumor_person_alt = "<b>" + rumor_character_alt + "</b>";
         break;
@@ -2295,42 +3166,42 @@ function rumorGen() {
         break;
     }
 
-    switch (rumor_select) {
+    switch (rumorSelect) {
         case "rumor 1":
-            document.getElementById("rm-rumor").innerHTML = rumor_source + " " + rumor_person + " has <b>" + rumor_item + "</b> that <b>" + rumor_property + ".</b>";
+            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " + rumor_person + " has <b>" + rumor_item + "</b> that <b>" + rumor_property + ".</b></p>";
         break;
         case "rumor 2":
-            document.getElementById("rm-rumor").innerHTML = rumor_source + " " +  rumor_person + " was seen <b>" + rumor_accuse + ".</b>";
+            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " +  rumor_person + " was seen <b>" + rumor_accuse + ".</b></p>";
         break;
         case "rumor 3":
-            document.getElementById("rm-rumor").innerHTML = rumor_source + " " + rumor_person + " is looking for some help with something.";
+            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " + rumor_person + " is looking for some help with something.</p>";
         break;
         case "rumor 4":
-            document.getElementById("rm-rumor").innerHTML = rumor_source + " " + rumor_person + " is looking for <b>" + rumor_item + ".</b>";
+            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " + rumor_person + " is looking for <b>" + rumor_item + ".</b></p>";
         break;
         case "rumor 5":
-            document.getElementById("rm-rumor").innerHTML = rumor_source + " " + rumor_person + " is looking for <b>" + rumor_item + "</b> that <b>" + rumor_property + ".</b>";
+            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " + rumor_person + " is looking for <b>" + rumor_item + "</b> that <b>" + rumor_property + ".</b></p>";
         break;
         case "rumor 6":
-            document.getElementById("rm-rumor").innerHTML = rumor_source + " they may be upping woodland patrols due to a rise in the number of <b>" + rumor_monsters + ".</b>";
+            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " they may be upping woodland patrols due to a rise in the number of <b>" + rumor_monsters + ".</b></p>";
         break;
         case "rumor 7":
-            document.getElementById("rm-rumor").innerHTML = rumor_source + " " + rumor_person + " was asking around for <b>" + rumor_chara_alt + ".</b>";
+            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " + rumor_person + " was asking around for <b>" + rumor_chara_alt + ".</b></p>";
         break;
         case "rumor 8":
-            document.getElementById("rm-rumor").innerHTML = rumor_source + " " + rumor_person + " was asking around for someone who <b>" + rumor_trait + ".</b>";
+            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " + rumor_person + " was asking around for someone who <b>" + rumor_trait + ".</b></p>";
         break;
         case "rumor 9":
-            document.getElementById("rm-rumor").innerHTML = rumor_source + " " +  rumor_person + " <b>" + rumor_trait + ".</b>";
+            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " +  rumor_person + " <b>" + rumor_trait + ".</b></p>";
         break;
         case "rumor 10":
-            document.getElementById("rm-rumor").innerHTML = rumor_source + " " +  rumor_person_alt + " is <b>" + rumor_chara + ".</b>";
+            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " +  rumor_person_alt + " is <b>" + rumor_chara + ".</b></p>";
         break;
         case "rumor 11":
-            document.getElementById("rm-rumor").innerHTML = rumor_source + " " +  rumor_person_alt + " was asking around for <b>" + rumor_person + ".</b>";
+            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " +  rumor_person_alt + " was asking around for <b>" + rumor_person + ".</b></p>";
         break;
         case "rumor 12":
-            document.getElementById("rm-rumor").innerHTML = rumor_source + " " +  rumor_person + " was seen <b>" + rumor_accuse + "</b> with " + rumor_person_alt + ".";
+            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " +  rumor_person + " was seen <b>" + rumor_accuse + "</b> with <b>" + rumor_person_alt + ".</b></p>";
         break;
     }
 }

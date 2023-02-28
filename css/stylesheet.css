@@ -37,6 +37,8 @@ a {
 
 button {
     margin-top: 1.5em;
+    font-size: 1em;
+    height: 2em;
 }
 
 .navbar {
@@ -73,11 +75,11 @@ button {
     border-width: thin;
     border-radius: 6px;
     max-width: 80%;
+    min-height: 6em;
 }
 
 .output p {
     margin: 1.25em;
-    min-height: 6em;
 }
 
 select {
