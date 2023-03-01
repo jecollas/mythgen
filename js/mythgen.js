@@ -1944,7 +1944,6 @@ const verbs = {
         "napping",
         "disfiguring",
         "foraging",
-        "impersonating",
         "hiding",
         "destroying",
         "searching for",
@@ -2093,7 +2092,6 @@ const verbs = {
         "fulfilling",
         "acquiring",
         "banishing",
-        "sowing",
         "gaining",
         "completing",
         "shaking",
@@ -2885,8 +2883,8 @@ function questGen() {
 const adventureType = [
     "adventure 1",
     "adventure 2",
-    // "adventure 3",
-    // "adventure 4"
+    "adventure 3",
+    "adventure 4"
 ];
 
 const subjectType = [
@@ -2927,12 +2925,12 @@ function adventureGen() {
     const agGroup = randomString(chara.group);
     const agMembers = randomString(chara.members);
 
-    const agGoal = randomString(fragments.goal);
+    const agGoal = randomString(fragments.goal); 
     const agPlace = randomString(quest.place);
-    const agMotive = randomString(quest.motivation);
+    const agMotive = randomString(quest.motivation); // the "because" bullshit
     const agTwist = randomString(quest.twist);
 
-    let agSubject = "";
+    let agPerson = "";
     let agAction = "";
     let agMethod = "";
 
@@ -2944,19 +2942,20 @@ function adventureGen() {
     const agNounTwo = randomString(nouns);
 
     const agPresent = randomString(verbs.present)
-    const agGerund = randomString(verbs.gerund);
+    const agGerundOne = randomString(verbs.gerund);
+    const agGerundTwo = randomString(verbs.gerund);
     // const agContPres = randomString(verbs.contPres); //[try] to [verb] [noun]
     const agContGer = randomString(verbs.contGer);
 
     switch (subjectSelect) {
         case "singular 1":
-            agSubject = agChara + "</b> who <b>" + agCharTrait + "</b> is";
+            agPerson = agChara + "</b> who <b>" + agCharTrait + "</b> is";
         break;
         case "singular 2":
-            agSubject = agAdjective + " " + agCharNoun + "</b> is";
+            agPerson = agAdjective + " " + agCharNoun + "</b> is";
         break;
         case "plural":
-            agSubject = agAdjective + " " + agGroup + "</b> of <b>" + agMembers + "</b> are";
+            agPerson = agAdjective + " " + agGroup + "</b> of <b>" + agMembers + "</b> are";
         break;
     }
 
@@ -2965,7 +2964,7 @@ function adventureGen() {
             agAction = "<b>" + agActionFrag;
         break;
         case "action 2": //are [verb]ing [noun]
-            agAction = "<b>" + agGerund + " " + agNounOne;
+            agAction = "<b>" + agGerundOne + " " + agNounOne;
         break;
         case "action 3": //[trying] to [verb] [noun]
             agAction = "<b>" + agContGer + " " + agPresent + " " + agNounOne;
@@ -2978,7 +2977,7 @@ function adventureGen() {
         // break;
     }
 
-    const agPerson = agSubject + " " + agAction;
+    const agSubject = agPerson + " " + agAction;
 
     switch (methodSelect) {
         case "method 1":
@@ -2991,23 +2990,31 @@ function adventureGen() {
             agMethod = "</b>with the help of <b>" + agMethodNoun;
         break;
         case "method 4": //[action] by [gerund] [noun]
-            agMethod = "</b>by <b>" + agGerund + " " + agNounTwo;
+            agMethod = "</b>by <b>" + agGerundTwo + " " + agNounTwo;
         break;
     }
 
     switch (adventureSelect) {
         // multiple lines
         case "adventure 1":
-            document.getElementById("ag-adventure").innerHTML = "<p>In this story, <b>" + agPerson + " " + agPlace  + ".</b></p>" + 
+            document.getElementById("ag-adventure").innerHTML = "<p>In this story, <b>" + agSubject + " " + agPlace  + ".</b></p>" + 
             "<p>Their goal is to <b>" + agGoal + " " + agMethod + " " + agMotive + ",</b> but <b>" + agTwist + ".</b></p>";
         break;
         case "adventure 2":
-            document.getElementById("ag-adventure").innerHTML = "<p>This story takes place <b>" + agPlace +",</b> where <b>" + agPerson + ".</b> Their goal is to <b>" + agGoal + " " + agMethod + ".</b></p>" + 
+            document.getElementById("ag-adventure").innerHTML = "<p>This story takes place <b>" + agPlace +",</b> where <b>" + agSubject + ".</b> Their goal is to <b>" + agGoal + " " + agMethod + ".</b></p>" + 
             "<p>They are doing this <b>" + agMotive + ",</b> but <b>" + agTwist + ".</b></p>";
         break;
-        case "adventure 3": // This one's just for workshopping stuff
-            document.getElementById("ag-adventure").innerHTML = "<p>This story takes place <b>" + agPlace +",</b> where <b>" + agPerson + " " + agMethod + ".</b></p>";
+        case "adventure 3":
+            document.getElementById("ag-adventure").innerHTML = "<p>In this story, <b>" + agSubject + "</b> in order to <b>" + agGoal + ".</b></p>";
         break;
+        case "adventure 4":
+            document.getElementById("ag-adventure").innerHTML = "<p>In this story, <b>" + agSubject + ".</b> They are doing this <b> " + agMotive + ".</b></p>";
+        break;
+        // Add Next: trying to [action thing] to [other people]
+        // This one's just for workshopping stuff
+        // case "adventure X":
+        //     document.getElementById("ag-adventure").innerHTML = "<p>This story takes place <b>" + agPlace +",</b> where <b>" + agSubject + " " + agMethod + ".</b></p>";
+        // break;
     }
 }
 
