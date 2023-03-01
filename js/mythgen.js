@@ -2,7 +2,7 @@
 
 // VARIABLES START
 // Plot Type
-const plotElem = {
+const plots = {
     type: [
         "one-shot",
         "vignette",
@@ -15,18 +15,19 @@ const plotElem = {
         "recurrence"
     ],
     tone: [
-        "an aggressive",
-        "a goofy",
-        "a grim",
-        "a happy",
-        "an ironic/satiric",
-        "an opportunist",
-        "a philanthropic",
-        "a sad",
-        "a serious",
-        "a tragic",
-        "a whimsical",
-        "a witty"
+        "aggressive",
+        "goofy",
+        "grim",
+        "happy",
+        "ironic",
+        "satiric",
+        "opportunist",
+        "philanthropic",
+        "sad",
+        "serious",
+        "tragic",
+        "whimsical",
+        "witty"
     ],
     genre: [
         "action",
@@ -1437,7 +1438,7 @@ const chara = {
         "chaos worshippers",
         "monks",
         "priests",
-        "pesants",
+        "peasants",
         "common folk",
         "terrorists",
         "defectors",
@@ -1454,7 +1455,6 @@ const chara = {
         "ladies",
         "teenagers",
         "unemployed tradespeople",
-        "peasants",
         "aristocrats",
         "royals",
         "scientists",
@@ -2210,6 +2210,7 @@ const verbs = {
             "perform for",
             "sabotage",
             "look for",
+            "abuse",
 
         ],
         gerund: [
@@ -2290,6 +2291,7 @@ const verbs = {
             "performing for",
             "sabotaging",
             "looking for",
+            "abusing",
 
         ]
     },
@@ -2910,7 +2912,6 @@ const verbsYoink = {
         "rest",
         "blockade",
         "discover",
-        "abuse",
         "raise",
         "glean",
         "impede",
@@ -2970,7 +2971,6 @@ const verbsYoink = {
         "resting",
         "blockading",
         "discovering",
-        "abusing",
         "raising",
         "gleaning",
         "impeding",
@@ -4495,11 +4495,11 @@ function wordPrep(word){
 // GENERATOR FUNCTIONS
 // Plot Test
 function plotGen() {
-    const type = randomString(plotElem.type);
-    const tone = randomString(plotElem.tone);
-    const genre = randomString(plotElem.genre);
+    const type = randomString(plots.type);
+    const tone = randomString(plots.tone);
+    const genre = randomString(plots.genre);
 
-    document.getElementById("pt-plot").innerHTML = "<p>This plot is going to be <b>" + tone + " " + genre + " " + type + ".</b></p>"
+    document.getElementById("pt-plot").innerHTML = "<p>This plot is going to be <b>" + wordPrep(tone) + " " + tone + " " + genre + " " + type + ".</b></p>"
 }
 
 // Big Boy Plot Maker
@@ -4509,7 +4509,8 @@ const plotType = [
     "plot 3",
     "plot 4",
     "plot 5",
-    "plot 6"
+    "plot 6",
+    "plot 7"
 ];
 
 const plotSubjType = [
@@ -4530,7 +4531,8 @@ const plotMeanType = [
     "method 1",
     "method 2",
     "method 3",
-    "method 4"
+    "method 4",
+    "method 5"
 ];
 
 let plotSelect = "";
@@ -4572,7 +4574,11 @@ function plotCreate() {
     const verbGerOne = randomString(plotVerbs.gerund);
     const verbGerTwo = randomString(plotVerbs.gerund);
     const verbPres = randomString(plotVerbs.present)
-    const verbCont = randomString(oldVerbs.contGer);    
+    const verbCont = randomString(oldVerbs.contGer);  
+    
+    const type = randomString(plots.type);
+    const tone = randomString(plots.tone);
+    const genre = randomString(plots.genre);
 
     // singular and plural subjects
     switch (plotSubjSelect) {
@@ -4617,9 +4623,12 @@ function plotCreate() {
             plotMethod = "</b>" + "using <b>" + nounTwo;
         break;
         case "method 3":
+            plotMethod = "</b>" + "with <b>" + nounTwo;
+        break;
+        case "method 4":
             plotMethod = "</b>" + "with the help of <b>" + nounTwo;
         break;
-        case "method 4": //[action] by [gerund] [noun]
+        case "method 5": //[action] by [gerund] [noun]
             plotMethod = "</b>" + "by <b>" + verbGerTwo + " " + nounTwo;
         break;
     }
@@ -4648,6 +4657,10 @@ function plotCreate() {
         case "plot 6":
             document.getElementById("pb-plot").innerHTML = "<p>In this story, <b>" + plotSubject + ".</b> They are doing this <b> " + motive + ".</b></p>";
         break;
+        // "<p>This is going to be <b>" + tone + " " + genre + " " + type + ".</b></p>"
+        case "plot 7":
+            document.getElementById("pb-plot").innerHTML = "<p>This is <b>" + wordPrep(tone) + " " + tone + " " + genre + "</b> story in which <b>" + plotSubject + " " + plotMethod + "</b> in order to <b>" + goal + ".</b> The twist is that <b>" + twist + ".</b></p>";
+        break;           
     }
 }
 
