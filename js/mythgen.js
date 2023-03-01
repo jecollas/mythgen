@@ -1071,8 +1071,8 @@ const chara = {
         "private investigator",
         "detective",
         "comedian",
-        "a pro-wrestler",
-        "a furry"
+        "pro-wrestler",
+        "furry"
     ],
     trait: [
         "can be restless",
@@ -1495,7 +1495,8 @@ const chara = {
         "corrupt politicians",
         "mages",
         "hags",
-        "violent vigilantes"
+        "violent vigilantes",
+        "three possums in a trench coat"
     ]
 }
 
@@ -2113,14 +2114,16 @@ const oldVerbs = {
         "intend to",
         "want to",
         "need to",
-        "threaten to"
+        "threaten to",
+        "start to"
     ],
     contGer: [
         "trying to", //verb goal noun
         "attempting to",
         "pretending to",
         "planning to",
-        "threatening to"
+        "threatening to",
+        "starting to"
     ],
     continuousOther: [
         "finally"
@@ -3041,6 +3044,360 @@ const verbsYoink = {
     ]
 }
 
+const charWords = {
+    chara: [
+        "peasant girl",
+        "peasant boy",
+        "young boy",
+        "young girl",
+        "lad",
+        "lass",
+        "fruit-seller",
+        "gem merchant",
+        "sellsword",
+        "nomad",
+        "knight",
+        "assassin",
+        "gentleman thief",
+        "gentlewoman thief",
+        "soldier",
+        "monk",
+        "sorceror",
+        "enchanter",
+        "witch",
+        "warlock",
+        "warrior",
+        "mage",
+        "outlaw",
+        "ruffian",
+        "brigand",
+        "pickpocket",
+        "thief",
+        "woodsman",
+        "warlord",
+        "page",
+        "squire",
+        "troubadour",
+        "empress",
+        "emperor",
+        "noblewoman",
+        "nobleman",
+        "lord",
+        "lady",
+        "prince",
+        "princess",
+        "diplomat",
+        "monsterologist",
+        "swordmaster",
+        "apprentice",
+        "assassin-in-training",
+        "enchantress-in-training",
+        "summoner-in-training",
+        "witch-in-training",
+        "necromancer-in-training",
+        "prophet-in-training",
+        "sorceror-in-training",
+        "ogre",
+        "dragon",
+        "centaur",
+        "charlatan",
+        "vampire",
+        "genie",
+        "troll",
+        "dale elf",
+        "deep elf",
+        "dwarf",
+        "goblin",
+        "half elf",
+        "high elf",
+        "human",
+        "suhk",
+        "wildren",
+        "alchemist",
+        "artificer",
+        "bard",
+        "cleric",
+        "druid",
+        "fighter",
+        "paladin",
+        "ranger",
+        "rogue",
+        "runesmith",
+        "wizard",
+        "coalescer",
+        "excavator",
+        "harvester",
+        "logger",
+        "skinner",
+        "farmer",
+        "hunter",
+        "lumberjack",
+        "miner",
+        "panner",
+        "butcher",
+        "carpenter",
+        "gemcutter",
+        "glassmaker",
+        "papermaker",
+        "smelter",
+        "tanner",
+        "weaver",
+        "architect",
+        "blacksmith",
+        "brewer",
+        "chef",
+        "glassblower",
+        "lapidary",
+        "leatherworker",
+        "tailor",
+        "trapmaker",
+        "woodworker",
+        "appraiser",
+        "laborer",
+        "mender",
+        "eccentric candyman",
+        "retail employee",
+        "werewolf",
+        "feral child",
+        "snake-oil salesman",
+        "influencer",
+        "cowboy",
+        "pirate",
+        "rat",
+        "child psychologist",
+        "ghost hunter",
+        "archivist",
+        "creature",
+        "demolitions expert",
+        "goose",
+        "duelist",
+        "dog",
+        "construct",
+        "landlord",
+        "celebrity chef",
+        "village idiot",
+        "old guy",
+        "old lady",
+        "tax-evader",
+        "draft dodger",
+        "pyrotechnician",
+        "arsonist",
+        "professional arsonist",
+        "retired assassin",
+        "goth",
+        "clown",
+        "entire circus of clowns",
+        "doctor",
+        "lawyer",
+        "con artist",
+        "grifter",
+        "lad in a fancy suit",
+        "hot girl",
+        "hot guy",
+        "hot person",
+        "malewife",
+        "entity",
+        "absent father",
+        "war criminal",
+        "shitty wizard",
+        "conspiracy theorist",
+        "adrenaline junkie",
+        "time traveler",
+        "Italian",
+        "asshole",
+        "deadbeat dad",
+        "deadbeat mom",
+        "deadbeat parent",
+        "Little League coach",
+        "mobster",
+        "grad student",
+        "librarian",
+        "researcher",
+        "research assistant",
+        "entomologist",
+        "butch lesbian",
+        "dancer",
+        "singer",
+        "musician",
+        "historian",
+        "private investigator",
+        "detective",
+        "comedian",
+        "person",
+        "pro-wrestler",
+        "furry",
+        "girl",
+        "boy",
+        "candyman",
+        "a retail employee",
+        "child",
+        "psychologist",
+        "guy",
+        "lad in a fancy suit",
+        "father",
+        "mother",
+        "dad",
+        "mom",
+        "parent",
+        "lesbian",
+        "idiot",
+    ],
+    adjective: [
+        "peasant",
+        "young",
+        "fruit-selling",
+        "gentleman",
+        "gentlewoman",
+        "apprentice",
+        "charlatan",
+        "vampire",
+        "dale elf",
+        "deep elf",
+        "dwarf",
+        "goblin",
+        "half elf",
+        "high elf",
+        "human",
+        "suhk",
+        "wildren",
+        "eccentric",
+        "werewolf",
+        "feral",
+        "influencer",
+        "child",
+        "celebrity",
+        "old",
+        "tax-evading",
+        "draft-dodging",
+        "professional",
+        "retired",
+        "goth",
+        "little",
+        "hot",
+        "absent",
+        "shitty",
+        "time-traveling",
+        "Italian",
+        "asshole",
+        "deadbeat",
+        "butch",
+        "dancing",
+        "singing",
+        "paramilitary",
+        "military",
+        "search",
+        "suicidal",
+        "fleeing",
+        "organized",
+        "insatiable",
+        "sickened",
+        "lusty",
+        "maniacal",
+        "unorganized",
+        "pugilistic",
+        "busybody",
+        "evil",
+        "sociopathic",
+        "underground",
+        "dying",
+        "benevolent",
+        "arsonistic",
+        "disorganized",
+        "convicted",
+        "noble",
+        "liar",
+        "chaotic",
+        "malicious",
+        "murderous",
+        "pugnacious",
+        "secret",
+        "elderly",
+        "violent",
+        "unharmonious",
+        "devious",
+        "surreptitious",
+        "quarelling",
+        "ideologically split",
+        "ragged",
+        "cursed",
+        "good",
+        "enlightened",
+        "zealous",
+        "heroic",
+        "amnesiac",
+        "resurrected",
+        "fey-touched",
+        "elite",
+        "lycanthropic",
+        "escaped",
+        "injured",
+        "commissioned",
+        "official",
+        "random",
+        "self-pitying",
+        "well-dressed",
+        "xenophobic",
+        "superstitious",
+        "drunk",
+        "depressive",
+        "morbid",
+        "mortally wounded",
+        "diseased",
+        "contrite",
+        "hateful",
+        "alcoholic",
+        "drug-addicted",
+        "fanatical",
+        "homeless",
+        "confused",
+        "artistic",
+        "desperate",
+        "suspicious",
+        "unaccountable",
+        "exhausted",
+        "vocal",
+        "undead",
+        "shady",
+        "righteous",
+        "plaintive",
+        "cowardly",
+        "insane",
+        "unscrupulous",
+        "oppressed",
+        "conned",
+        "fallen",
+        "undercover",
+        "reluctant",
+        "bloodthirsty",
+        "otherworldly",
+        "celestial",
+        "outsider",
+        "insectoid",
+        "brilliant",
+        "greedy",
+        "materialistic",
+        "unholy",
+        "ancient",
+        "obsessive",
+        "sole",
+        "outgrown",
+        "renowned",
+        "rich",
+        "poor",
+        "reformed",
+        "secretive",
+        "paranoid",
+        "compulsive",
+        "perverse",
+        "iconoclastic",
+        "nihilistic",
+        "former",
+        "underappreciated",
+        "kindly",
+        "unique",
+    ]
+}
+
 // Fetch Quest, Rumors, Adventure Generator, Plot Creator
 const nouns = {
     person: [
@@ -3734,8 +4091,8 @@ const nouns = {
     ]
 }
 
-// Adventure Generator
 // where fragments go to die after I tear them apart like confetti
+// Adventure Generator
 const fragments = {
     goal: [
         // adventure seed generator
@@ -4115,7 +4472,7 @@ const fragments = {
 }
 // VARIABLES END
 
-// FUNCTIONS START
+// NON-GENERATOR FUNCTIONS
 // random string for all generators
 function randomString(arr) {
     const randomIndex = Math.floor(Math.random() * arr.length);
@@ -4123,6 +4480,19 @@ function randomString(arr) {
     return item;
 }
 
+// adds "a" or "an" to the front of a thing
+function wordPrep(word){
+    if(word == "unique") {
+        prep = "a"
+    } else if (["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"].some((e) => word.startsWith(e))) {
+        prep = "an";
+    } else {
+        prep = "a";
+    }
+    return prep;
+}
+
+// GENERATOR FUNCTIONS
 // Plot Test
 function plotGen() {
     const type = randomString(plotElem.type);
@@ -4133,7 +4503,7 @@ function plotGen() {
 }
 
 // Big Boy Plot Maker
-const pbPlotType = [
+const plotType = [
     "plot 1",
     "plot 2",
     "plot 3",
@@ -4142,138 +4512,141 @@ const pbPlotType = [
     "plot 6"
 ];
 
-const pbSubjectType = [
+const plotSubjType = [
     "singular 1",
     "singular 2",
-    "plural"
+    "plural 1",
+    "plural 2"
 ]
 
-const pbActionType = [ 
+const plotActType = [ 
     "action 1",
     "action 2",
     "action 3",
     "action 4"
 ];
 
-const pbMethodType = [
+const plotMeanType = [
     "method 1",
     "method 2",
     "method 3",
     "method 4"
 ];
 
-let pbPlotSelect = "";
-let pbSubjectSelect = "";
-let pbActionSelect = "";
-let pbMethodSelect = "";
+let plotSelect = "";
+let plotSubjSelect = "";
+let plotActSelect = "";
+let plotMeanSelect = "";
 
 function plotCreate() {
-    pbPlotSelect = randomString(pbPlotType);
-    pbSubjectSelect = randomString(pbSubjectType);
-    pbActionSelect = randomString(pbActionType);
-    pbMethodSelect = randomString(pbMethodType);
-
-    // fetch quest
-    const plotNounOne = randomString(nouns.all);
-    const plotNounTwo = randomString(nouns.all);
-
-    const plotProperty = randomString(property);
-    
-    const plotGoal = randomString(fragments.goal);
-    const plotMotive = randomString(quest.motivation); // the "because" bullshit
-    const plotTwist = randomString(quest.twist);
-
-    // adventure generator
-    const agChara = randomString(chara.chara);
-    const agCharTrait = randomString(chara.trait);
-    const agCharNoun = randomString(chara.noun);
-    const agAdjective = randomString(chara.adjective);
-    const agGroup = randomString(chara.group);
-    const agMembers = randomString(chara.members);
-
-    const agPlace = randomString(quest.place);
-
-    let agPerson = "";
-    let agAction = "";
-    let agMethod = "";
-
-    const agActionFrag = randomString(fragments.action);
-    const agMethodFrag = randomString(fragments.means);
-    const agMethodNoun = randomString(nouns.all);
+    plotSelect = randomString(plotType);
+    plotSubjSelect = randomString(plotSubjType);
+    plotActSelect = randomString(plotActType);
+    plotMeanSelect = randomString(plotMeanType);
+ 
+    let plotPerson = "";
+    let plotAction = "";
+    let plotMethod = "";
 
     var plotVerbs = verbs.all;
-    const agPresent = randomString(plotVerbs.present)
-    const agGerundOne = randomString(plotVerbs.gerund);
-    const agGerundTwo = randomString(plotVerbs.gerund);
+ 
+    const goal = randomString(fragments.goal);
+    const motive = randomString(quest.motivation); // the reason why
+    const twist = randomString(quest.twist);
+    const location = randomString(quest.place);
 
-    const agContGer = randomString(oldVerbs.contGer);
+    const group = randomString(chara.group);
+    const members = randomString(chara.members);
+    const condition = randomString(property);    
 
-    switch (pbSubjectSelect) {
+    const actionFrag = randomString(fragments.action);
+    const meansFrag = randomString(fragments.means);
+
+    const charTrait = randomString(chara.trait);
+    const charAdj = randomString(charWords.adjective);
+    const charNoun = randomString(charWords.chara);
+
+    const nounOne = randomString(nouns.all);
+    const nounTwo = randomString(nouns.all);
+ 
+    const verbGerOne = randomString(plotVerbs.gerund);
+    const verbGerTwo = randomString(plotVerbs.gerund);
+    const verbPres = randomString(plotVerbs.present)
+    const verbCont = randomString(oldVerbs.contGer);    
+
+    // singular and plural subjects
+    switch (plotSubjSelect) {
         case "singular 1":
-            agPerson = agChara + "</b> who <b>" + agCharTrait + "</b> is";
+            plotPerson = wordPrep(charNoun) + " " + charNoun + "</b> who <b>" + charTrait + "</b> is";
         break;
         case "singular 2":
-            agPerson = agAdjective + " " + agCharNoun + "</b> is";
+            plotPerson = wordPrep(charAdj) + " " + charAdj + " " + charNoun + "</b> is";
         break;
-        case "plural":
-            agPerson = agAdjective + " " + agGroup + "</b> of <b>" + agMembers + "</b> are";
+        case "plural 1":
+            plotPerson = wordPrep(group) + " " + group + "</b> of <b>" + members + "</b> are";
         break;
-    }
-
-    switch (pbActionSelect) {
-        case "action 1": //action fragment
-            agAction = "<b>" + agActionFrag;
-        break;
-        case "action 2": //are [verb]ing [noun]
-            agAction = "<b>" + agGerundOne + " " + plotNounOne;
-        break;
-        case "action 3": //[trying] to [verb] [noun]
-            agAction = "<b>" + agContGer + " " + agPresent + " " + plotNounOne;
-        break;
-        case "action 4": //try to [verb] [noun]
-            agAction = "trying to <b>" + agPresent + " " + plotNounOne;
+        case "plural 2":
+            plotPerson = wordPrep(charAdj) + " " + charAdj + " " + group + "</b> of <b>" + members + "</b> are";
         break;
     }
 
-    const agSubject = agPerson + " " + agAction;
+    // different kinds of actions
+    switch (plotActSelect) {
+        case "action 1": //pre-existing action
+            plotAction = "<b>" + actionFrag;
+        break;
+        case "action 2": //[verb]ing [noun]
+            plotAction = "<b>" + verbGerOne + " " + nounOne;
+        break;
+        case "action 3": //[continuous] to [verb] [noun]
+            plotAction = "<b>" + verbCont + " " + verbPres + " " + nounOne;
+        break;
+        case "action 4": //trying to [verb] [noun]
+            plotAction = "trying to <b>" + verbPres + " " + nounOne;
+        break;
+    }
 
-    switch (pbMethodSelect) {
+    const plotSubject = plotPerson + " " + plotAction;
+
+    // options for the means
+    switch (plotMeanSelect) {
         case "method 1":
-            agMethod = "<b>" + agMethodFrag;
+            plotMethod = meansFrag;
         break;
         case "method 2":
-            agMethod = "</b>using <b>" + agMethodNoun;
+            plotMethod = "</b>" + "using <b>" + nounTwo;
         break;
         case "method 3":
-            agMethod = "</b>with the help of <b>" + agMethodNoun;
+            plotMethod = "</b>" + "with the help of <b>" + nounTwo;
         break;
         case "method 4": //[action] by [gerund] [noun]
-            agMethod = "</b>by <b>" + agGerundTwo + " " + plotNounTwo;
+            plotMethod = "</b>" + "by <b>" + verbGerTwo + " " + nounTwo;
         break;
     }
 
-    switch(pbPlotSelect) {
+    switch(plotSelect) {
         case "plot 1":
-            document.getElementById("pb-plot").innerHTML = "<p>The party is looking for <b>" + plotNounOne + "</b> that <b>" + plotProperty + ".</b> They are looking for this <b>" + plotMotive + ",</b> but the thing is that <b>" + plotTwist + ".</b></p>";
+            document.getElementById("pb-plot").innerHTML = "<p>The party is looking for <b>" + nounOne + "</b> that <b>" + condition + ".</b> They are looking for this <b>" + motive + ",</b> but the thing is that <b>" + twist + ".</b></p>";
         break;
         case "plot 2":
-            document.getElementById("pb-plot").innerHTML = "<p>The party is looking for <b>" + plotNounOne + "</b> that <b>" + plotProperty + "</b> in order to <b>" + plotGoal + ".</b> They want this <b>" + plotMotive + ",</b> but what they haven't realized yet is that <b>" + plotTwist + ".</b></p>";
+            document.getElementById("pb-plot").innerHTML = "<p>The party is looking for <b>" + nounOne + "</b> that <b>" + condition + "</b> in order to <b>" + goal + ".</b></p>" + 
+            "<p>They want this <b>" + motive + ",</b> but what they haven't realized yet is that <b>" + twist + ".</b></p>";
         break;
 
         // adventure generator
         case "plot 3":
-            document.getElementById("pb-plot").innerHTML = "<p>In this story, <b>" + agSubject + " " + agPlace  + ".</b></p>" + 
-            "<p>Their goal is to <b>" + plotGoal + " " + agMethod + " " + plotMotive + ",</b> but <b>" + plotTwist + ".</b></p>";
+            document.getElementById("pb-plot").innerHTML = "<p>In this story, <b>" + plotSubject + " " + location  + ".</b></p>" + 
+            "<p>Their goal is to <b>" + goal + " " + plotMethod + " " + motive + ",</b> but <b>" + twist + ".</b></p>";
         break;
         case "plot 4":
-            document.getElementById("pb-plot").innerHTML = "<p>This story takes place <b>" + agPlace +",</b> where <b>" + agSubject + ".</b> Their goal is to <b>" + plotGoal + " " + agMethod + ".</b></p>" + 
-            "<p>They are doing this <b>" + plotMotive + ",</b> but <b>" + plotTwist + ".</b></p>";
+            document.getElementById("pb-plot").innerHTML = "<p>This story takes place <b>" + location +",</b> where <b>" + plotSubject + ".</b> Their goal is to <b>" + goal + " " + plotMethod + ".</b></p>" + 
+            "<p>They are doing this <b>" + motive + ",</b> but <b>" + twist + ".</b></p>";
         break;
         case "plot 5":
-            document.getElementById("pb-plot").innerHTML = "<p>In this story, <b>" + agSubject + "</b> in order to <b>" + plotGoal + ".</b></p>";
+            document.getElementById("pb-plot").innerHTML = "<p>In this story, <b>" + plotSubject + "</b> in order to <b>" + goal + ".</b></p>";
         break;
         case "plot 6":
-            document.getElementById("pb-plot").innerHTML = "<p>In this story, <b>" + agSubject + ".</b> They are doing this <b> " + plotMotive + ".</b></p>";
+            document.getElementById("pb-plot").innerHTML = "<p>In this story, <b>" + plotSubject + ".</b> They are doing this <b> " + motive + ".</b></p>";
         break;
     }
 }
@@ -4344,10 +4717,11 @@ function adventureGen() {
     actionSelect = randomString(actionType);
     methodSelect = randomString(methodType);
 
-    const agChara = randomString(chara.chara);
+    const agChara = randomString(charWords.chara);
+    const agCharNoun = randomString(charWords.chara);
+    const agAdjective = randomString(charWords.adjective);
+
     const agCharTrait = randomString(chara.trait);
-    const agCharNoun = randomString(chara.noun);
-    const agAdjective = randomString(chara.adjective);
     const agGroup = randomString(chara.group);
     const agMembers = randomString(chara.members);
 
@@ -4368,20 +4742,20 @@ function adventureGen() {
     const agNounTwo = randomString(nouns.all);
 
     const agPresent = randomString(oldVerbs.present)
-    const agGerundOne = randomString(oldVerbs.gerund);
+    const agverbGerOne = randomString(oldVerbs.gerund);
     const agGerundTwo = randomString(oldVerbs.gerund);
     // const agContPres = randomString(oldVerbs.contPres); //[try] to [verb] [noun]
     const agContGer = randomString(oldVerbs.contGer);
 
     switch (subjectSelect) {
         case "singular 1":
-            agPerson = agChara + "</b> who <b>" + agCharTrait + "</b> is";
+            agPerson = wordPrep(agChara) + " " + agChara + "</b> who <b>" + agCharTrait + "</b> is";
         break;
         case "singular 2":
-            agPerson = agAdjective + " " + agCharNoun + "</b> is";
+            agPerson = wordPrep(agAdjective) + " " + agAdjective + " " + agCharNoun + "</b> is";
         break;
         case "plural":
-            agPerson = agAdjective + " " + agGroup + "</b> of <b>" + agMembers + "</b> are";
+            agPerson = wordPrep(agAdjective) + " " + agAdjective + " " + agGroup + "</b> of <b>" + agMembers + "</b> are";
         break;
     }
 
@@ -4390,7 +4764,7 @@ function adventureGen() {
             agAction = "<b>" + agActionFrag;
         break;
         case "action 2": //are [verb]ing [noun]
-            agAction = "<b>" + agGerundOne + " " + agNounOne;
+            agAction = "<b>" + agverbGerOne + " " + agNounOne;
         break;
         case "action 3": //[trying] to [verb] [noun]
             agAction = "<b>" + agContGer + " " + agPresent + " " + agNounOne;
@@ -4460,52 +4834,49 @@ let partySelect = "";
 function npcGen() {
     partySelect = randomString(npcParty);
 
-    const charaOne = randomString(chara.chara);
+    const charaOne = randomString(charWords.chara);
+    const adjOne = randomString(charWords.adjective);
     const traitOne = randomString(chara.trait);
+    const charaPrepOne = wordPrep(charaOne) + " " + charaOne;
+    const charaCatOne = wordPrep(adjOne) + " " + adjOne + " " + charaOne;
 
-    const charaTwo = randomString(chara.chara);
+    const charaTwo = randomString(charWords.chara);
+    const adjTwo = randomString(charWords.adjective)
     const traitTwo = randomString(chara.trait);
+    const charaPrepTwo = wordPrep(charaTwo) + " " + charaTwo;
+    const charaCatTwo = wordPrep(adjTwo) + " " + adjTwo + " " + charaTwo;
     
-    const charaThree = randomString(chara.chara);
+    const charaThree = randomString(charWords.chara);
+    const adjThree = randomString(charWords.adjective)
     const traitThree = randomString(chara.trait);
+    const charaPrepThree = wordPrep(charaThree) + " " + charaThree;
+    const charaCatThree = wordPrep(adjThree) + " " + adjThree + " " + charaThree;
 
     const fakeFirst = randomString(characters.fakeFirst);
     const fakeLast = randomString(characters.fakeLast);
     const fakeRole = fakeFirst + " " + fakeLast;
 
-    const adjectiveOne = randomString(chara.adjective);
-    const nounOne = randomString(chara.noun);
-    const charaConcatOne = adjectiveOne + " " + nounOne;
-
-    const adjectiveTwo = randomString(chara.adjective);
-    const nounTwo = randomString(chara.noun);
-    const charaConcatTwo = adjectiveTwo + " " + nounTwo;
-
-    const adjectiveThree = randomString(chara.adjective);
-    const nounThree = randomString(chara.noun);
-    const charaConcatThree = adjectiveThree + " " + nounThree;
-
     switch(partySelect) {
         case "party 1":
-            document.getElementById("npc-party").innerHTML = "<p>Our party includes <b>" + charaOne + "</b> who <b>" + traitOne + ".</b></p>";
+            document.getElementById("npc-party").innerHTML = "<p>Our party includes <b>" + charaPrepOne + "</b> who <b>" + traitOne + ".</b></p>";
         break;
         case "party 2":
-            document.getElementById("npc-party").innerHTML = "<p>Our party includes <b>" + charaOne + "</b> who <b>" + traitOne + ",</b> and <b>" + charaTwo + "</b> who <b>" + traitTwo + ".</b></p>";
+            document.getElementById("npc-party").innerHTML = "<p>Our party includes <b>" + charaPrepOne + "</b> who <b>" + traitOne + ",</b> and <b>" + charaPrepTwo + "</b> who <b>" + traitTwo + ".</b></p>";
         break;
         case "party 3":
-            document.getElementById("npc-party").innerHTML = "<p>Our party includes <b>" + charaOne + "</b> who <b>" + traitOne + ", " + charaTwo + "</b> who <b>" + traitTwo + ",</b> and <b>" + charaThree + "</b> who <b>" + traitThree + ".</b></p>";
+            document.getElementById("npc-party").innerHTML = "<p>Our party includes <b>" + charaPrepOne + "</b> who <b>" + traitOne + ", " + charaPrepTwo + "</b> who <b>" + traitTwo + ",</b> and <b>" + charaPrepThree + "</b> who <b>" + traitThree + ".</b></p>";
         break;
         case "party 4":
-            document.getElementById("npc-party").innerHTML = "<p>Our party includes <b>" + charaOne + "</b> named <b>" + fakeRole + "</b> who <b>" + traitOne + ".</b></p>";
+            document.getElementById("npc-party").innerHTML = "<p>Our party includes <b>" + charaPrepOne + "</b> named <b>" + fakeRole + "</b> who <b>" + traitOne + ".</b></p>";
         break;
         case "party 5":
-            document.getElementById("npc-party").innerHTML = "<p>Our party includes <b>" + charaConcatOne + "</b> who <b>" + traitOne + ".</b></p>";
+            document.getElementById("npc-party").innerHTML = "<p>Our party includes <b>" + charaCatOne + "</b> who <b>" + traitOne + ".</b></p>";
         break;
         case "party 6":
-            document.getElementById("npc-party").innerHTML = "<p>Our party includes <b>" + charaConcatOne + "</b> who <b>" + traitOne + ",</b> and <b>" + charaConcatTwo + "</b> who <b>" + traitTwo + ".</b></p>";
+            document.getElementById("npc-party").innerHTML = "<p>Our party includes <b>" + charaCatOne + "</b> who <b>" + traitOne + ",</b> and <b>" + charaCatTwo + "</b> who <b>" + traitTwo + ".</b></p>";
         break;
         case "party 7":
-            document.getElementById("npc-party").innerHTML = "<p>Our party includes <b>" + charaConcatOne + ", " + charaConcatTwo + ",</b> and <b>" + charaConcatThree + ".</b></p>";
+            document.getElementById("npc-party").innerHTML = "<p>Our party includes <b>" + charaCatOne + ", " + charaCatTwo + ",</b> and <b>" + charaCatThree + ".</b></p>";
         break;
     }
 }
@@ -4568,8 +4939,10 @@ function rumorGen() {
     const rumor_trait = randomString(chara.trait);
     const rumor_accuse = randomString(rumors.accuse);
 
-    const rumor_chara = randomString(chara.chara);
-    const rumor_chara_alt = randomString(chara.chara);
+    const charOne = randomString(charWords.chara);
+    const rumor_chara = wordPrep(charOne) + " " + charOne;
+    const charTwo = randomString(charWords.chara);
+    const rumor_chara_alt = wordPrep(charTwo) + " " + charTwo;
 
     switch (personSelect) {
         case "player character":
