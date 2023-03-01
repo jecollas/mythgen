@@ -2900,6 +2900,7 @@ const verbs = {
     }
 }
 
+// verbs that need to be sorted
 const verbsYoink = {    
     present: [    
         "disfigure",
@@ -4470,7 +4471,6 @@ const fragments = {
         "in disguise",
     ]
 }
-// VARIABLES END
 
 // NON-GENERATOR FUNCTIONS
 // random string for all generators
@@ -4484,7 +4484,7 @@ function randomString(arr) {
 function wordPrep(word){
     if(word == "unique") {
         prep = "a"
-    } else if (["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"].some((e) => word.startsWith(e))) {
+    } else if (["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"].some((elem) => word.startsWith(elem))) {
         prep = "an";
     } else {
         prep = "a";
