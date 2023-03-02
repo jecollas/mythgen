@@ -4763,9 +4763,7 @@ function randomString(arr) {
 
 // adds "a" or "an" to the front of a thing
 function wordPrep(word){
-    if(word == "unique") {
-        prep = "a"
-    } else if (["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"].some((elem) => word.startsWith(elem))) {
+    if (["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"].some((elem) => word.startsWith(elem)) && word != "unique") {
         prep = "an";
     } else {
         prep = "a";
