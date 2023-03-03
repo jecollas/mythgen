@@ -1306,7 +1306,7 @@ const chara = {
         "collective",
         "circus"
     ],
-    members: [
+    members: [//added to nouns.person.plural
         // adventure seed generator
         "squires",
         "adventurers",
@@ -2092,7 +2092,8 @@ const oldVerbs = {
     ]
 }
 
-const verbs = {
+// REMEMBER! {object}, [array]
+const verbs = { // ... maybe this would make more sense organized by tense first then by person/place/thing? nah who cares this is my house and i want to do it this way. 
     person: {
         present: [
             "kill",
@@ -2559,7 +2560,6 @@ const verbs = {
     thing: {
         present: [
             "kill",
-            "bribe",
             "summon",
             "transport",
             "steal",
@@ -2575,7 +2575,6 @@ const verbs = {
             "destroy",
             "escort",
             "search for",
-            "manipulate",
             "earn",
             "corner the market in",
             "acquire",
@@ -2644,7 +2643,6 @@ const verbs = {
             "daydream about",
             "get involved with",
             "betray",
-            "bind",
             "bring back",
             "bring",
             "burn",
@@ -2674,7 +2672,6 @@ const verbs = {
         ],
         gerund: [
             "killing",
-            "bribing",
             "summoning",
             "transporting",
             "stealing",
@@ -2689,7 +2686,6 @@ const verbs = {
             "destroying",
             "escorting",
             "searching for",
-            "manipulating",
             "earning",
             "cornering the market in",
             "acquiring",
@@ -2759,7 +2755,6 @@ const verbs = {
             "daydreaming about",
             "getting involved with",
             "betraying",
-            "binding",
             "bringing back",
             "bringing",
             "burning",
@@ -2912,6 +2907,28 @@ const verbs = {
             "gaining",
             "showing the inferiority of",
             "crashing",
+        ]
+    },
+    continuous: {
+        present: [
+            "try to", //verb goal noun
+            "attempt to",
+            "pretend to",
+            "plan to",
+            "intend to",
+            "want to",
+            "need to",
+            "threaten to"
+        ],
+        gerund: [
+            "trying to", //verb goal noun
+            "attempting to",
+            "pretending to",
+            "planning to",
+            "threatening to"
+        ],
+        other: [
+            "finally"
         ]
     },
     all: {
@@ -3301,32 +3318,8 @@ const verbs = {
     }
 }
 
-// verbs that need to be sorted
-const verbsYoink = {    
-    contPres: [
-        "try to", //verb goal noun
-        "attempt to",
-        "pretend to",
-        "plan to",
-        "intend to",
-        "want to",
-        "need to",
-        "threaten to"
-    ],
-    contGer: [
-        "trying to", //verb goal noun
-        "attempting to",
-        "pretending to",
-        "planning to",
-        "threatening to"
-    ],
-    continuousOther: [
-        "finally"
-    ]
-}
-
 const charWords = {
-    chara: [
+    chara: [// added to nouns.person.singular
         "peasant girl",
         "peasant boy",
         "young boy",
@@ -3510,7 +3503,7 @@ const charWords = {
         "girl",
         "boy",
         "candyman",
-        "a retail employee",
+        "retail employee",
         "child",
         "psychologist",
         "guy",
@@ -3708,7 +3701,202 @@ const nouns = {
             "vampire lord",
             "demoness",
             "slayer",
-            "dragon"
+            "dragon",
+            "peasant girl",
+            "peasant boy",
+            "young boy",
+            "young girl",
+            "lad",
+            "lass",
+            "fruit-seller",
+            "gem merchant",
+            "sellsword",
+            "nomad",
+            "knight",
+            "assassin",
+            "gentleman thief",
+            "gentlewoman thief",
+            "soldier",
+            "monk",
+            "sorceror",
+            "enchanter",
+            "witch",
+            "warlock",
+            "warrior",
+            "mage",
+            "outlaw",
+            "ruffian",
+            "brigand",
+            "pickpocket",
+            "thief",
+            "woodsman",
+            "warlord",
+            "page",
+            "squire",
+            "troubadour",
+            "empress",
+            "emperor",
+            "noblewoman",
+            "nobleman",
+            "lord",
+            "lady",
+            "prince",
+            "princess",
+            "diplomat",
+            "monsterologist",
+            "swordmaster",
+            "apprentice",
+            "assassin-in-training",
+            "enchantress-in-training",
+            "summoner-in-training",
+            "witch-in-training",
+            "necromancer-in-training",
+            "prophet-in-training",
+            "sorceror-in-training",
+            "ogre",
+            "dragon",
+            "centaur",
+            "charlatan",
+            "vampire",
+            "genie",
+            "troll",
+            "dale elf",
+            "deep elf",
+            "dwarf",
+            "goblin",
+            "half elf",
+            "high elf",
+            "human",
+            "suhk",
+            "wildren",
+            "alchemist",
+            "artificer",
+            "bard",
+            "cleric",
+            "druid",
+            "fighter",
+            "paladin",
+            "ranger",
+            "rogue",
+            "runesmith",
+            "wizard",
+            "coalescer",
+            "excavator",
+            "harvester",
+            "logger",
+            "skinner",
+            "farmer",
+            "hunter",
+            "lumberjack",
+            "miner",
+            "panner",
+            "butcher",
+            "carpenter",
+            "gemcutter",
+            "glassmaker",
+            "papermaker",
+            "smelter",
+            "tanner",
+            "weaver",
+            "architect",
+            "blacksmith",
+            "brewer",
+            "chef",
+            "glassblower",
+            "lapidary",
+            "leatherworker",
+            "tailor",
+            "trapmaker",
+            "woodworker",
+            "appraiser",
+            "laborer",
+            "mender",
+            "eccentric candyman",
+            "retail employee",
+            "werewolf",
+            "feral child",
+            "snake-oil salesman",
+            "influencer",
+            "cowboy",
+            "pirate",
+            "rat",
+            "child psychologist",
+            "ghost hunter",
+            "archivist",
+            "creature",
+            "demolitions expert",
+            "goose",
+            "duelist",
+            "dog",
+            "construct",
+            "landlord",
+            "celebrity chef",
+            "village idiot",
+            "old guy",
+            "old lady",
+            "tax-evader",
+            "draft dodger",
+            "pyrotechnician",
+            "arsonist",
+            "professional arsonist",
+            "retired assassin",
+            "goth",
+            "clown",
+            "entire circus of clowns",
+            "doctor",
+            "lawyer",
+            "con artist",
+            "grifter",
+            "lad in a fancy suit",
+            "hot girl",
+            "hot guy",
+            "hot person",
+            "malewife",
+            "entity",
+            "absent father",
+            "war criminal",
+            "shitty wizard",
+            "conspiracy theorist",
+            "adrenaline junkie",
+            "time traveler",
+            "Italian",
+            "asshole",
+            "deadbeat dad",
+            "deadbeat mom",
+            "deadbeat parent",
+            "Little League coach",
+            "mobster",
+            "grad student",
+            "librarian",
+            "researcher",
+            "research assistant",
+            "entomologist",
+            "butch lesbian",
+            "dancer",
+            "singer",
+            "musician",
+            "historian",
+            "private investigator",
+            "detective",
+            "comedian",
+            "person",
+            "pro-wrestler",
+            "furry",
+            "girl",
+            "boy",
+            "candyman",
+            "retail employee",
+            "child",
+            "psychologist",
+            "guy",
+            "lad in a fancy suit",
+            "father",
+            "mother",
+            "dad",
+            "mom",
+            "parent",
+            "lesbian",
+            "idiot"
         ],
         plural: [
             "travelers",
@@ -3745,7 +3933,154 @@ const nouns = {
             "army of undead",
             "magical army",
             "band of mercenaries",
-            "thousand tortured souls"
+            "thousand tortured souls",
+            "squires",
+            "adventurers",
+            "assassins",
+            "fish people",
+            "drunken farmers",
+            "illusionists",
+            "settlers",
+            "werewolves",
+            "raiders",
+            "industrialists",
+            "acolytes",
+            "vampires",
+            "collectors",
+            "animals",
+            "land surveyors",
+            "rogues",
+            "elementals",
+            "goblin hunters",
+            "lowlives",
+            "knights",
+            "mercenaries",
+            "bardic actors",
+            "plants",
+            "nobles and their retinue",
+            "royalty",
+            "lepers",
+            "kobold trapsmiths",
+            "wizards",
+            "ancients",
+            "bandits",
+            "mendicant monks",
+            "giants",
+            "prisoners",
+            "dwarven archaeologists",
+            "con artists",
+            "alchemists",
+            "thieving travelers",
+            "villians",
+            "slaves",
+            "diplomats",
+            "doppelgangers",
+            "temple monks",
+            "rebels",
+            "runaways",
+            "psychics",
+            "tinkers",
+            "local spirits",
+            "masterless golems",
+            "druids",
+            "kings",
+            "diviners",
+            "travelling merchants",
+            "mysterious cloaked men",
+            "liches",
+            "sprites",
+            "traitors",
+            "monitors",
+            "scholars",
+            "guards",
+            "ousted monarchs",
+            "ghosts",
+            "militia members",
+            "children",
+            "orphan children",
+            "fairies",
+            "holy inquisitors",
+            "singers",
+            "enchanters",
+            "enchantresses",
+            "merchants",
+            "cavaliers",
+            "religious zealots",
+            "mummers",
+            "bards",
+            "orcs",
+            "dragons",
+            "otherwordly beings",
+            "dukes",
+            "duchesses",
+            "undead",
+            "slavers",
+            "escaped slaves",
+            "witches",
+            "planar travelers",
+            "charity mission workers",
+            "chaos worshippers",
+            "monks",
+            "priests",
+            "peasants",
+            "common folk",
+            "terrorists",
+            "defectors",
+            "pageboys",
+            "spies",
+            "foreign diplomats",
+            "nuns",
+            "nomads",
+            "plant creatures",
+            "philosophers",
+            "sea creatures",
+            "pirates",
+            "barons",
+            "ladies",
+            "teenagers",
+            "unemployed tradespeople",
+            "aristocrats",
+            "royals",
+            "scientists",
+            "necromancers",
+            "gnomes",
+            "masons",
+            "painters",
+            "senior villagers",
+            "housebreakers",
+            "fishermen",
+            "vintners",
+            "leatherworkers",
+            "intelligentsia",
+            "craftspersons",
+            "convicts",
+            "felons",
+            "smiths",
+            "homunculi",
+            "golems",
+            "bodysnatchers",
+            "vivisectionists",
+            "ax murderers",
+            "tulip growers",
+            "fey creatures",
+            "barbarians",
+            "scribes",
+            "crime bosses",
+            "drug lords",
+            "brothel keepers",
+            "veterans",
+            "draftees",
+            "deserters",
+            "masters",
+            "journeymen",
+            "home owners",
+            "shopkeepers",
+            "smugglers",
+            "corrupt politicians",
+            "mages",
+            "hags",
+            "violent vigilantes",
+            "three possums in a trench coat"
         ],
         titles: [
             "the homies",
@@ -4771,6 +5106,39 @@ function wordPrep(word){
     return prep;
 }
 
+// literally I don't need this but w/e
+function wordPrepThe(){
+    prep = "the";
+    return prep;
+}
+
+// adds singular possessive 's to the end of a noun
+// this should do a thing where the possessive changes if singular or plural
+function wordPoss(word){
+    word += "'s";
+    return word;
+}
+
+// what do I need this to do?
+// need this function to pair up verbs and nouns based on type (person, place, thing), tense (present, gerund), and number (singular, plural)
+function sentences(){
+    // cry a million times
+    // 1. select verb first
+        // plays into switch case with the vars used (verbGerOne, verbPres)
+        // maybe add a boolean to declare if the verb being used is going to be a gerund or not?
+            // in that case verbs definitely need to be rearranged to be tense first and then type (ugh)
+        // if gerund = true, grab from this list. if gerund = false, grab from this list    
+            // could probably use the verb arrays for that if I don't want to reorganize 
+    // 2. add noun second
+        // depends on the verb type
+        // if the verb is a person, use a person noun
+        // i'm not sure if it makes more sense to do verb first and then noun, or noun first and then verb
+    // 3. singular or plural after noun
+        // add wordPrep and wordPoss functions here
+
+    // i already have my verb consts. is there a way i can work off of that? have the const call the function ? that might be easier to pull off
+}
+
 // GENERATOR FUNCTIONS
 // Plot Test
 function plotGen() {
@@ -4824,66 +5192,100 @@ function plotCreate() {
     plotSubjSelect = randomString(plotSubjType);
     plotActSelect = randomString(plotActType);
     plotMeanSelect = randomString(plotMeanType);
- 
+
     let plotPerson = "";
     let plotAction = "";
     let plotMethod = "";
 
+    // note: this stuff HAS to be in a function bc it won't generate new stuff otherwise
+    var nounPerson = nouns.person;
+    var nounPlace = nouns.place;
+    var nounThing = nouns.thing;
+
+    // random singular or plural noun
+    const nounSingular = [nounPerson.singular, nounPlace.singular, nounThing.singular]
+    const nounPlural = [nounPerson.plural, nounPlace.plural, nounThing.plural];
+
+    const nounArray = [nounSingular, nounPlural];
+
+    const nounType = randomString(nounArray);
+    const nounSubtype = randomString(nounType);
+    const nounSelect = randomString(nounSubtype);
+
+    var verbPerson = verbs.person;
+    var verbPlace = verbs.place;
+    var verbThing = verbs.thing;
+    var verbCont = verbs.continuous;
+
     var plotVerbs = verbs.all;
- 
+
+    const verbPresent = [verbPerson.present, verbPlace.present, verbThing.present, verbCont.present];
+    const verbGerund = [verbPerson.gerund, verbPlace.gerund, verbThing.gerund, verbCont.gerund];
+
+    const verbArray = [verbPresent, verbGerund];
+
+    const verbType = randomString(verbArray); // picks a verb tense
+    const verbSubtype = randomString(verbType); // picks a verb type
+    const verbSelect = randomString(verbSubtype); // picks a verb
+    // BS ends here (kinda)
+
     const goal = randomString(fragments.goal);
     const motive = randomString(quest.motivation); // the reason why
     const twist = randomString(quest.twist);
     const location = randomString(quest.place);
 
     const group = randomString(chara.group);
-    const members = randomString(chara.members);
-    const condition = randomString(property);    
+    const members = randomString(nounPerson.plural);
+    const condition = randomString(property); // do something here so that it uses "is" or "are" depending on if the noun is singular or plural
 
     const actionFrag = randomString(fragments.action);
     const meansFrag = randomString(fragments.means);
 
     const charTrait = randomString(chara.trait);
     const charAdj = randomString(charWords.adjective);
-    const charNoun = randomString(charWords.chara);
+    const charNoun = randomString(nounPerson.singular);
 
+    // these don't have wordPrep applied to them yet
     const nounOne = randomString(nouns.all);
     const nounTwo = randomString(nouns.all);
  
     const verbGerOne = randomString(plotVerbs.gerund);
     const verbGerTwo = randomString(plotVerbs.gerund);
     const verbPres = randomString(plotVerbs.present)
-    const verbCont = randomString(oldVerbs.contGer);  
+    const verbConty = randomString(verbCont.gerund);  
     
     const type = randomString(plots.type);
     const tone = randomString(plots.tone);
     const genre = randomString(plots.genre);
 
+    // BS starts back up again here
     // mari is a genius real pog not clickbait >:D
-    var verbPerson = verbs.person;
-    var verbPlace = verbs.place;
-    var verbThing = verbs.thing;
-
-    const verbArray = [verbPerson, verbPlace, verbThing];
-
-    const randomVerb = randomString(verbArray);
-    const verbSelect = randomString(randomVerb.gerund);
-
-    var nounPerson = nouns.person;
-    var nounPlace = nouns.place;
-    var nounThing = nouns.thing;
-
     let combo = "";
     let randomNoun = "";
-    if (randomVerb == verbPerson) {
+    if (verbSubtype == verbPerson.gerund) {
         randomNoun = randomString(nounPerson.singular)
-    } else if (randomVerb == verbPlace) {
+    } else if (verbSubtype == verbPlace.gerund) {
         randomNoun = randomString(nounPlace.singular)
-    } else if (randomVerb == verbThing) {
+    } else if (verbSubtype == verbThing.gerund) {
         randomNoun = randomString(nounThing.singular)
     }
     combo = verbSelect + " " + wordPrep(randomNoun) + " " + randomNoun;
-    console.log(combo);
+    // console.log(combo);
+
+    let nouny = "";
+    if (nounType == nounSingular) {
+        nouny = wordPrep(nounSelect) + " " + nounSelect;
+    } else {
+        nouny = wordPrepThe(nounSelect) + " " + nounSelect;
+    }
+    // console.log(nouny);
+
+    var nounx = wordPoss(nouny);
+    // console.log(nounx);
+    // this is getting way too silly and it needs to be its own function
+
+    let verby = false; // true if gerund, false if present or actionfrag
+    // what am i gonna do about the action frags?
 
     // singular and plural subjects
     switch (plotSubjSelect) {
@@ -4905,15 +5307,19 @@ function plotCreate() {
     switch (plotActSelect) {
         case "action 1": //pre-existing action
             plotAction = "<b>" + actionFrag;
+            verby = false;
         break;
         case "action 2": //[verb]ing [noun]
             plotAction = "<b>" + verbGerOne + " " + nounOne;
+            verby = true;
         break;
         case "action 3": //[continuous] to [verb] [noun]
-            plotAction = "<b>" + verbCont + " " + verbPres + " " + nounOne;
+            plotAction = "<b>" + verbConty + " " + verbPres + " " + nounOne;
+            verby = false;
         break;
         case "action 4": //trying to [verb] [noun]
             plotAction = "trying to <b>" + verbPres + " " + nounOne;
+            verby = false;
         break;
     }
 
@@ -4935,8 +5341,11 @@ function plotCreate() {
         break;
         case "method 5": //[action] by [gerund] [noun]
             plotMethod = "</b>" + "by <b>" + verbGerTwo + " " + nounTwo;
+            verby = true;
         break;
     }
+
+    console.log(verby);
 
     switch(plotSelect) {
         case "plot 1":
