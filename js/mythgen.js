@@ -4256,30 +4256,30 @@ const nouns = {
             "iron will and determination",
             "demonic help",
             // stuff that starts with a(n)
-            "a divine audience",
-            "a low profile",
-            "a plague",
-            "a new ethic",
-            "a deal with the fae",
-            "a legacy",
-            "a rivalry",
-            "a war",
-            "a race",
-            "a new society",
-            "a new community",
-            "a great wound upon the land",
-            "a great wound upon the people",
-            "a coup",
-            "a truce",
-            "an agreement with the archenemy",
-            "a civil war",
-            "a new world order",
-            "an agreement",
-            "a prophecy",
-            "a riot",
-            "a laissez-faire attitude",
-            "an insatiable hunger",
-            "a game that is also a test",
+            "divine audience",
+            "low profile",
+            "plague",
+            "new ethic",
+            "deal with the fae",
+            "legacy",
+            "rivalry",
+            "war",
+            "race",
+            "new society",
+            "new community",
+            "great wound upon the land",
+            "great wound upon the people",
+            "coup",
+            "truce",
+            "agreement with the archenemy",
+            "civil war",
+            "new world order",
+            "agreement",
+            "prophecy",
+            "riot",
+            "laissez-faire attitude",
+            "insatiable hunger",
+            "game that is also a test",
             "the blame",
             "the power of the Ooze",
             "the notice of a god",
@@ -5092,6 +5092,7 @@ function randomString(arr) {
 }
 
 // adds "a" or "an" to the front of a thing
+// DO SOMETHING ABT THE 'THE'S
 function wordPrep(word){
     if (["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"].some((elem) => word.startsWith(elem)) && word != "unique") {
         prep = "an";
@@ -5172,6 +5173,19 @@ function plotCreate() {
     let plotAction = "";
     let plotMethod = "";
 
+    // noun vars
+    var nounPerson = nouns.person;
+    var nounPlace = nouns.place;
+    var nounThing = nouns.thing;
+    var nounConcept = nouns.concept;
+
+    // verb vars
+    var verbPresent = verbs.present;
+    var verbGerund = verbs.gerund;
+    var verbCont = verbs.continuous;
+
+    const verbConty = randomString(verbCont.gerund);
+
     // NON NOUN/VERB NONSENSE
     const goal = randomString(fragments.goal);
     const motive = randomString(quest.motivation); // the reason why
@@ -5192,19 +5206,6 @@ function plotCreate() {
     const type = randomString(plots.type);
     const tone = randomString(plots.tone);
     const genre = randomString(plots.genre);
-
-    // noun vars
-    var nounPerson = nouns.person;
-    var nounPlace = nouns.place;
-    var nounThing = nouns.thing;
-    var nounConcept = nouns.concept;
-
-    // verb vars
-    var verbPresent = verbs.present;
-    var verbGerund = verbs.gerund;
-    var verbCont = verbs.continuous;
-    
-    const verbConty = randomString(verbCont.gerund);
 
     var verbGerOne;
     var verbGerTwo;
