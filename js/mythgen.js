@@ -15,7 +15,7 @@ const plots = {
 }
 
 // Fetch Quest, Rumors
-const property = [
+const property = [//singular or plural,,,
     // Ace-10 of spades from MHoF
     "used to belong to a famous general",
     "was blessed by the gods",
@@ -518,1144 +518,6 @@ const quest = {
 
 // NPC Builder, Rumors, Adventure Generator
 const chara = {
-    chara: [
-        "a peasant girl",
-        "a peasant boy",
-        "a young boy",
-        "a young girl",
-        "a lad",
-        "a lass",
-        "a fruit-seller",
-        "a gem merchant",
-        "a sellsword",
-        "a nomad",
-        "a knight",
-        "an assassin",
-        "a gentleman thief",
-        "a gentlewoman thief",
-        "a soldier",
-        "a monk",
-        "a sorceror",
-        "an enchanter",
-        "a witch",
-        "a warlock",
-        "a warrior",
-        "a mage",
-        "an outlaw",
-        "a ruffian",
-        "a brigand",
-        "a pickpocket",
-        "a thief",
-        "a woodsman",
-        "a warlord",
-        "a page",
-        "a squire",
-        "a troubadour",
-        "an empress",
-        "an emperor",
-        "a noblewoman",
-        "a nobleman",
-        "a lord",
-        "a lady",
-        "a prince",
-        "a princess",
-        "a diplomat",
-        "a monsterologist",
-        "a swordmaster",
-        "an apprentice",
-        "an assassin-in-training",
-        "an enchantress-in-training",
-        "a summoner-in-training",
-        "a witch-in-training",
-        "a necromancer-in-training",
-        "a prophet-in-training",
-        "a sorceror-in-training",
-        "an ogre",
-        "a dragon",
-        "a centaur",
-        "a charlatan",
-        "a vampire",
-        "a genie",
-        "a troll",
-    
-        // races from the myth book
-        "a dale elf",
-        "a deep elf",
-        "a dwarf",
-        "a goblin",
-        "a half elf",
-        "a high elf",
-        "a human",
-        "a suhk",
-        "a wildren",
-    
-        // classes from the myth book
-        "an alchemist",
-        "an artificer",
-        "a bard",
-        "a cleric",
-        "a druid",
-        "a fighter",
-        "a paladin",
-        "a ranger",
-        "a rogue",
-        "a runesmith",
-        "a wizard",
-    
-        // professions from the myth book
-        "a coalescer",
-        "an excavator",
-        "a harvester",
-        "a logger",
-        "a skinner",
-        "a farmer",
-        "a hunter",
-        "a lumberjack",
-        "a miner",
-        "a panner",
-        "a butcher",
-        "a carpenter",
-        "a gemcutter",
-        "a glassmaker",
-        "a papermaker",
-        "a smelter",
-        "a tanner",
-        "a weaver",
-        "an architect",
-        "a blacksmith",
-        "a brewer",
-        "a chef",
-        "a glassblower",
-        "a lapidary",
-        "a leatherworker",
-        "a tailor",
-        "a trapmaker",
-        "a woodworker",
-        "an appraiser",
-        "a laborer",
-        "a mender",
-    
-        // from the Meme Machine
-        "an eccentric candyman",
-        "a retail employee",
-        "a werewolf",
-        "a feral child",
-        "a snake-oil salesman",
-        "an influencer",
-        "a cowboy",
-        "a pirate",
-        "a rat",
-        "a child psychologist",
-        "a ghost-hunter",
-        "an archivist",
-        "a creature",
-        "a demolitions expert",
-        "a goose",
-        "a duelist",
-        "a dog",
-        "a construct",
-        "a landlord",
-        "a celebrity chef",
-        "the village idiot",
-        "some old guy",
-        "some old lady",
-        "a tax-evader",
-        "a draft dodger",
-        "a pyrotechnician",
-        "an arsonist",
-        "a professional arsonist",
-        "a retired assassin",
-        "a goth",
-        "a clown",
-        "an entire circus of clowns",
-        "three possums in a trench coat",
-        "a doctor",
-        "a lawyer",
-        "a con artist",
-        "a grifter",
-        "a little lad in a fancy suit",
-        "a hot girl",
-        "a hot guy",
-        "a hot person",
-        "a malewife",
-        "an entity",
-        "an absent father",
-        "a war criminal",
-        "a shitty wizard",
-        "a conspiracy theorist",
-        "an adrenaline junkie",
-        "a time traveler",
-        "an Italian",
-        "an asshole",
-        "a deadbeat dad",
-        "a deadbeat mom",
-        "a deadbeat parent",
-        "a Little League coach",
-        "a mobster",
-        "a grad student",
-        "a librarian",
-        "a researcher",
-        "a research assistant",
-        "an entomologist",
-        "a butch lesbian",
-        "a dancer",
-        "a singer",
-        "a musician",
-        "a historian",
-        "a private investigator",
-        "a detective",
-        "a comedian",
-        "someone",
-        "a pro-wrestler",
-        "a furry"
-    ],
-    adjective: [
-        "a peasant",
-        "a young",
-        "a young",
-        "a fruit-selling",        
-        "a gentleman",
-        "a gentlewoman",
-        "an apprentice",
-        "a charlatan",
-        "a vampire",
-
-        // races from the myth book
-        "a dale elf",
-        "a deep elf",
-        "a dwarf",
-        "a goblin",
-        "a half elf",
-        "a high elf",
-        "a human",
-        "a suhk",
-        "a wildren",
-    
-        // from the Meme Machine
-        "an eccentric",
-        "a werewolf",
-        "a feral",        
-        "an influencer",
-        "a child",
-        "a celebrity",
-        "the village idiot",
-        "some old",
-        "a tax-evading",
-        "a draft-dodging",
-        "a professional",
-        "a retired",
-        "a goth",        
-        "a little",
-        "a hot",
-        "an absent",
-        "a shitty",        
-        "a time-traveling",
-        "an Italian",
-        "an asshole",
-        "a deadbeat",        
-        "a butch",
-        "a dancing",
-        "a singing",
-
-        // adventure seed generator
-        "a paramilitary",
-        "a military",
-        "a search",
-        "a suicidal",
-        "a fleeing",
-        "an organized",
-        "an insatiable",
-        "a sickened",
-        "a lusty",
-        "a maniacal",
-        "an unorganized",
-        "a pugilistic",
-        "a busybody",
-        "an evil",
-        "a sociopathic",
-        "an underground",
-        "a dying",
-        "a benevolent",
-        "an arsonistic",
-        "a disorganized",
-        "a convicted",
-        "a noble",
-        "a liar",
-        "a chaotic",
-        "a malicious",
-        "a murderous",
-        "a pugnacious",
-        "a secret",
-        "an elderly",
-        "a violent",
-        "an unharmonious",
-        "a devious",
-        "a young",
-        "a surreptitious",
-        "a quarelling",
-        "an ideologically split",
-        "a ragged",
-        "a cursed",
-        "a good",
-        "an enlightened",
-        "a zealous",
-        "a heroic",
-        "an amnesiac",
-        "a resurrected",
-        "a fey-touched",
-        "an elite",
-        "a lycanthropic",
-        "an escaped",
-        "an injured",
-        "a commissioned",
-        "an official",
-        "a random",
-        "a self-pitying",
-        "a well-dressed",
-        "a xenophobic",
-        "a superstitious",
-        "a drunk",
-        "a depressive",
-        "a morbid",
-        "a mortally wounded",
-        "a diseased",
-        "a contrite",
-        "a hateful",
-        "an alcoholic",
-        "a drug-addicted",
-        "a fanatical",
-        "a homeless",
-        "a confused",
-        "an artistic",
-        "a desperate",
-        "a suspicious",
-        "an unaccountable",
-        "an exhausted",
-        "a vocal",
-        "an undead",
-        "a shady",
-        "a righteous",
-        "a plaintive",
-        "a cowardly",
-        "an insane",
-        "an unscrupulous",
-        "an oppressed",
-        "a conned",
-        "a fallen",
-        "an undercover",
-        "a reluctant",
-        "a bloodthirsty",
-        "an otherworldly",
-        "a celestial",
-        "an outsider",
-        "an insectoid",
-        "a brilliant",
-        "a greedy",
-        "a materialistic",
-        "an unholy",
-        "an ancient",
-        "an obsessive",
-        "an old",
-        "a sole",
-        "an outgrown",
-        "a renowned",
-        "a rich",
-        "a poor",
-        "a reformed",
-        "a secretive",
-        "a paranoid",
-        "a compulsive",
-        "a perverse",
-        "an iconoclastic",
-        "a nihilistic",
-        "a former",
-        "an underappreciated",
-        "a kindly",
-        "a unique"
-    ],
-    noun: [
-        "girl",
-        "boy",
-        "lad",
-        "lass",
-        "fruit-seller",
-        "gem merchant",
-        "sellsword",
-        "nomad",
-        "knight",
-        "assassin",
-        "thief",
-        "soldier",
-        "monk",
-        "sorceror",
-        "enchanter",
-        "witch",
-        "warlock",
-        "warrior",
-        "mage",
-        "outlaw",
-        "ruffian",
-        "brigand",
-        "pickpocket",
-        "woodsman",
-        "warlord",
-        "page",
-        "squire",
-        "troubadour",
-        "empress",
-        "emperor",
-        "noblewoman",
-        "nobleman",
-        "lord",
-        "lady",
-        "prince",
-        "princess",
-        "diplomat",
-        "monsterologist",
-        "swordmaster",
-        "apprentice",
-        "assassin-in-training",
-        "enchantress-in-training",
-        "summoner-in-training",
-        "witch-in-training",
-        "necromancer-in-training",
-        "prophet-in-training",
-        "sorceror-in-training",
-        "ogre",
-        "dragon",
-        "centaur",
-        "vampire",
-        "genie",
-        "troll",
-        
-        // classes from the myth book
-        "alchemist",
-        "artificer",
-        "bard",
-        "cleric",
-        "druid",
-        "fighter",
-        "paladin",
-        "ranger",
-        "rogue",
-        "runesmith",
-        "wizard",
-
-        // professions from the myth book
-        "coalescer",
-        "excavator",
-        "harvester",
-        "logger",
-        "skinner",
-        "farmer",
-        "hunter",
-        "lumberjack",
-        "miner",
-        "panner",
-        "butcher",
-        "carpenter",
-        "gemcutter",
-        "glassmaker",
-        "papermaker",
-        "smelter",
-        "tanner",
-        "weaver",
-        "architect",
-        "blacksmith",
-        "brewer",
-        "chef",
-        "glassblower",
-        "lapidary",
-        "leatherworker",
-        "tailor",
-        "trapmaker",
-        "woodworker",
-        "appraiser",
-        "laborer",
-        "mender",
-
-        // from the Meme Machine
-        "candyman",
-        "a retail employee",
-        "child",
-        "snake-oil salesman",
-        "cowboy",
-        "pirate",
-        "rat",
-        "psychologist",
-        "ghost-hunter",
-        "archivist",
-        "creature",
-        "demolitions expert",
-        "goose",
-        "duelist",
-        "dog",
-        "construct",
-        "landlord",
-        "guy",
-        "pyrotechnician",
-        "arsonist",
-        "assassin",
-        "clown",
-        "doctor",
-        "lawyer",
-        "con artist",
-        "grifter",
-        "lad in a fancy suit",
-        "person",
-        "malewife",
-        "entity",
-        "father",
-        "mother",
-        "war criminal",
-        "conspiracy theorist",
-        "adrenaline junkie",
-        "time traveler",
-        "asshole",
-        "dad",
-        "mom",
-        "parent",
-        "Little League coach",
-        "mobster",
-        "grad student",
-        "librarian",
-        "researcher",
-        "research assistant",
-        "entomologist",
-        "lesbian",
-        "dancer",
-        "singer",
-        "musician",
-        "historian",
-        "private investigator",
-        "detective",
-        "comedian",
-        "pro-wrestler",
-        "furry"
-    ],
-    trait: [
-        "can be restless",
-        "can be ambitious",
-        "is kind",
-        "used to be idealistic",
-        "is past prime",
-        "can be brusque",
-        "is stubborn to a fault",
-        "has not laughed in a long time",
-        "lies more often than not",
-        "is surprisingly gentle",
-        "once was hopeful",
-        "can be independently-minded",
-        "can be selfish",
-        "can be sharp",
-        "can be over-critical",
-        "tends to be reckless",
-        "is abrasive",
-        "has become aimless",
-        "has a lot of defense mechanisms",
-        "can be cold",
-        "has a tendency to be cowardly",
-        "is destructive",
-        "can be detached",
-        "can be judgemental",
-        "has a sense of humor",
-        "has a reputation for being melodramatic",
-        "has burnt every bridge",
-        "can be vain",
-        "has become withdrawn",
-        "is taciturn",
-        "can be stoic",
-        "is suave",
-        "is quick-witted",
-        "no longer has any loyalties",
-        "has a strong moral compass",
-        "has 99 problems, and a sidekick is one of them",
-        "is a crank",
-        "has a reputation for being eccentric",
-        "is misunderstood",
-        "is a worrywart",
-        "is innocent",
-        "is rather unpredictable",
-        "is unexpectedly charismatic",
-        "has a poker face",
-        "is soft-hearted",
-        "can be independently-minded",
-        "used to be selfish",
-        "has many controversial opinions",
-        "is deadpan",
-        "can be pretentious",
-        "is prim",
-        "is puritanical",
-        "can be tactless",
-        "tends to attract trouble",
-        "is blind",
-        "thrives on drama",
-        "can be forgetful",
-        "is a drifter",
-        "is a chatterbox",
-        "is spineless",
-        "is rather incompetent",
-        "is bright",
-        "is sensible to a fault",
-        "is a forgiving soul",
-        "is braver than most",
-        "has no moral code",
-        "has run away",
-        "is affable",
-        "is taciturn",
-        "is overly polite",
-        "can be naïve",
-        "can be overly pompous",
-        "is overly adventurous",
-        "is a lover of books",
-        
-        // from the Meme Machine
-        "was found by the side of the road",
-        "is haunted",
-        "is hot",
-        "is divorced",
-        "is bisexual",
-        "is goth",
-        "is evil",
-        "is stinky",
-        "is nonbinary",
-        "is literally neurodivergent and a minor",
-        "is a furry",
-        "is a flat earther",
-        "is a flat earther to be a dick",
-        "is a bit of a daredevil",
-        "is an arsonist",
-        "is an alcoholic",
-        "is so hungover",
-        "is so close to snapping",
-        "is terrified of ducks",
-        "is really up their own ass about poetry",
-        "is currently facing a lawsuit",
-        "is currently running a scam",
-        "is banned from Applebee's",
-        "is plagued by visions",
-        "is blue for no reason",
-        "is reasonably horny",
-        "is unreasonably horny",
-        "is from hell",
-        "is from the LARP equivalent of Texas",
-        "is afraid of the dark",
-        "is a competitive little shit",
-        "has a headache",
-        "has a fat ass",
-        "has a cool hat",
-        "has a child nemesis",
-        "has a tiny creature for a sidekick",
-        "has a penchant for truly terrible wordplay",
-        "has no idea whats going on",
-        "has not been around civilization for some time",
-        "has not bathed in three weeks",
-        "has the attention span of a goldfish",
-        "has had their medical license revoked",
-        "has already snapped",
-        "has killed before and will kill again",
-        "has got it going on",
-        "has human eyes",
-        "does not have human eyes",
-        "has interesting feelings about spiders",
-        "has three weed-smoking girlfriends",
-        "has blue hair and pronouns",
-        "has an ongoing feud with the local mage's guild (don't ask)",
-        "only has one outfit",
-        "thinks they're a goose",
-        "thinks they're hot shit",
-        "thinks your mom is hot",
-        "thinks your dad is hot",
-        "thinks your parent of unspecified gender is hot",
-        "thinks the earth is shaped like a donut because it's funny",
-        "thinks the earth is shaped like a donut because they're kind of hungry right now",
-        "believes all rumors to be true",
-        "doesn't talk to their parents",
-        "doesn't believe in hell",
-        "doesn't think the sun is real",
-        "needs therapy",
-        "needs a nap",
-        "needs to get laid",
-        "eats glue",
-        "eats magic items",
-        "smokes way too much weed",
-        "smokes a regular amount of weed",
-        "considers themself to be morally grey but has committed several murders",
-        "will die on any hill",
-        "won't shut up about their kids",
-        "would survive a Saw trap",
-        "loves arguing",
-        "loves puppets",
-        "loves soup",
-        "loves their wife",
-        "likes to break the fourth wall",
-        "really likes dragons",
-        "hates children",
-        "acts like an anime character",
-        "solves all of their problems with card games",     
-        "regularly commits tax fraud",
-        "used to be a war criminal and has since been pardoned",
-        "lies about their age",
-        "lies through the newspaper",
-        "faked their death",
-        "denies any and all responsibility for... the incident",
-        "woke up and chose violence",
-        "vapes",
-        "fucks",
-        "can be real dick",
-        "naps in weird places",
-        "got their ears pierced at Claire's",
-        "wears way too much eyeliner",
-        "went out for a pack of smokes and never returned",
-        "took one philosophy class in university and won't shut up about it",
-        "solves mysteries on the side",
-        "is really passionate about saving the bees",
-        "has their own fan club",
-        "plays the violin",
-        "plays the piano",
-        "minds their own business",
-        "loves to gossip"
-    ],
-    group: [
-        // adventure seed generator
-        "order",
-        "horde",
-        "clique",
-        "gaggle",
-        "mob",
-        "collegium ",
-        "armed group",
-        "squad",
-        "cadre",
-        "trio",
-        "duo",
-        "quintet",
-        "pack",
-        "wandering troupe",
-        "crime ring",
-        "group",
-        "cabal",
-        "coven",
-        "gang",
-        "bunch",
-        "fellowship",
-        "posse",
-        "school class",
-        "syndicate",
-        "delegation",
-        "secret society",
-        "guild",
-        "extended family",
-        "noble house",
-        "platoon",
-        "caravan",
-        "sisterhood",
-        "work team",
-        "team",
-        "association",
-        "cartel",
-        "club",
-        "congregation",
-        "gentlemen's club",
-        "faction",
-        "crew",
-        "hidden society",
-        "league",
-        "converstation club",
-        "religious sect",
-        "tribe",
-        "elite squad",
-        "brotherhood",
-        "charity organization",
-        "support staff",
-        "entourage",
-        "assembly",
-        "noble family",
-        "governing body",
-        "ensemble",
-        "conclave",
-        "coterie",
-        "organization",
-        "citizens",
-        "circle",
-        "partnership",
-        "society",
-        "party",
-        "cult",
-        "group",
-        "troop",
-        "army",
-        "mass",
-        "gathering",
-        "political faction",
-        "inbred family",
-        "choir",
-        "crowd",
-        "splinter faction",
-        "band",
-        "conspiracy",
-        "cult",
-        "clan",
-        "collegium",
-        "patchwork",
-        "network",
-        "cell",
-        "panel",
-        "doomsday cult",
-        "union",
-        "collective",
-        "circus"
-    ],
-    members: [//added to nouns.person.plural
-        // adventure seed generator
-        "squires",
-        "adventurers",
-        "assassins",
-        "fish people",
-        "drunken farmers",
-        "illusionists",
-        "settlers",
-        "werewolves",
-        "raiders",
-        "industrialists",
-        "acolytes",
-        "vampires",
-        "collectors",
-        "animals",
-        "land surveyors",
-        "rogues",
-        "elementals",
-        "goblin hunters",
-        "lowlives",
-        "knights",
-        "mercenaries",
-        "bardic actors",
-        "plants",
-        "nobles and their retinue",
-        "royalty",
-        "lepers",
-        "kobold trapsmiths",
-        "wizards",
-        "ancients",
-        "bandits",
-        "mendicant monks",
-        "giants",
-        "prisoners",
-        "dwarven archaeologists",
-        "con artists",
-        "alchemists",
-        "thieving travelers",
-        "villians",
-        "slaves",
-        "diplomats",
-        "doppelgangers",
-        "temple monks",
-        "rebels",
-        "runaways",
-        "psychics",
-        "tinkers",
-        "local spirits",
-        "masterless golems",
-        "druids",
-        "kings",
-        "diviners",
-        "travelling merchants",
-        "mysterious cloaked men",
-        "liches",
-        "sprites",
-        "traitors",
-        "monitors",
-        "scholars",
-        "guards",
-        "ousted monarchs",
-        "ghosts",
-        "militia members",
-        "children",
-        "orphan children",
-        "fairies",
-        "holy inquisitors",
-        "singers",
-        "enchanters",
-        "enchantresses",
-        "merchants",
-        "cavaliers",
-        "religious zealots",
-        "mummers",
-        "bards",
-        "orcs",
-        "dragons",
-        "otherwordly beings",
-        "dukes",
-        "duchesses",
-        "undead",
-        "slavers",
-        "escaped slaves",
-        "witches",
-        "planar travelers",
-        "charity mission workers",
-        "chaos worshippers",
-        "monks",
-        "priests",
-        "peasants",
-        "common folk",
-        "terrorists",
-        "defectors",
-        "pageboys",
-        "spies",
-        "foreign diplomats",
-        "nuns",
-        "nomads",
-        "plant creatures",
-        "philosophers",
-        "sea creatures",
-        "pirates",
-        "barons",
-        "ladies",
-        "teenagers",
-        "unemployed tradespeople",
-        "aristocrats",
-        "royals",
-        "scientists",
-        "necromancers",
-        "gnomes",
-        "masons",
-        "painters",
-        "senior villagers",
-        "housebreakers",
-        "fishermen",
-        "vintners",
-        "leatherworkers",
-        "intelligentsia",
-        "craftspersons",
-        "convicts",
-        "felons",
-        "smiths",
-        "homunculi",
-        "golems",
-        "bodysnatchers",
-        "vivisectionists",
-        "ax murderers",
-        "tulip growers",
-        "fey creatures",
-        "barbarians",
-        "scribes",
-        "crime bosses",
-        "drug lords",
-        "brothel keepers",
-        "veterans",
-        "draftees",
-        "deserters",
-        "masters",
-        "journeymen",
-        "home owners",
-        "shopkeepers",
-        "smugglers",
-        "corrupt politicians",
-        "mages",
-        "hags",
-        "violent vigilantes",
-        "three possums in a trench coat"
-    ]
-}
-
-const charWords = {
-    chara: [// added to nouns.person.singular
-        "peasant girl",
-        "peasant boy",
-        "young boy",
-        "young girl",
-        "lad",
-        "lass",
-        "fruit-seller",
-        "gem merchant",
-        "sellsword",
-        "nomad",
-        "knight",
-        "assassin",
-        "gentleman thief",
-        "gentlewoman thief",
-        "soldier",
-        "monk",
-        "sorceror",
-        "enchanter",
-        "witch",
-        "warlock",
-        "warrior",
-        "mage",
-        "outlaw",
-        "ruffian",
-        "brigand",
-        "pickpocket",
-        "thief",
-        "woodsman",
-        "warlord",
-        "page",
-        "squire",
-        "troubadour",
-        "empress",
-        "emperor",
-        "noblewoman",
-        "nobleman",
-        "lord",
-        "lady",
-        "prince",
-        "princess",
-        "diplomat",
-        "monsterologist",
-        "swordmaster",
-        "apprentice",
-        "assassin-in-training",
-        "enchantress-in-training",
-        "summoner-in-training",
-        "witch-in-training",
-        "necromancer-in-training",
-        "prophet-in-training",
-        "sorceror-in-training",
-        "ogre",
-        "dragon",
-        "centaur",
-        "charlatan",
-        "vampire",
-        "genie",
-        "troll",
-        "dale elf",
-        "deep elf",
-        "dwarf",
-        "goblin",
-        "half elf",
-        "high elf",
-        "human",
-        "suhk",
-        "wildren",
-        "alchemist",
-        "artificer",
-        "bard",
-        "cleric",
-        "druid",
-        "fighter",
-        "paladin",
-        "ranger",
-        "rogue",
-        "runesmith",
-        "wizard",
-        "coalescer",
-        "excavator",
-        "harvester",
-        "logger",
-        "skinner",
-        "farmer",
-        "hunter",
-        "lumberjack",
-        "miner",
-        "panner",
-        "butcher",
-        "carpenter",
-        "gemcutter",
-        "glassmaker",
-        "papermaker",
-        "smelter",
-        "tanner",
-        "weaver",
-        "architect",
-        "blacksmith",
-        "brewer",
-        "chef",
-        "glassblower",
-        "lapidary",
-        "leatherworker",
-        "tailor",
-        "trapmaker",
-        "woodworker",
-        "appraiser",
-        "laborer",
-        "mender",
-        "eccentric candyman",
-        "retail employee",
-        "werewolf",
-        "feral child",
-        "snake-oil salesman",
-        "influencer",
-        "cowboy",
-        "pirate",
-        "rat",
-        "child psychologist",
-        "ghost hunter",
-        "archivist",
-        "creature",
-        "demolitions expert",
-        "goose",
-        "duelist",
-        "dog",
-        "construct",
-        "landlord",
-        "celebrity chef",
-        "village idiot",
-        "old guy",
-        "old lady",
-        "tax-evader",
-        "draft dodger",
-        "pyrotechnician",
-        "arsonist",
-        "professional arsonist",
-        "retired assassin",
-        "goth",
-        "clown",
-        "entire circus of clowns",
-        "doctor",
-        "lawyer",
-        "con artist",
-        "grifter",
-        "lad in a fancy suit",
-        "hot girl",
-        "hot guy",
-        "hot person",
-        "malewife",
-        "entity",
-        "absent father",
-        "war criminal",
-        "shitty wizard",
-        "conspiracy theorist",
-        "adrenaline junkie",
-        "time traveler",
-        "Italian",
-        "asshole",
-        "deadbeat dad",
-        "deadbeat mom",
-        "deadbeat parent",
-        "Little League coach",
-        "mobster",
-        "grad student",
-        "librarian",
-        "researcher",
-        "research assistant",
-        "entomologist",
-        "butch lesbian",
-        "dancer",
-        "singer",
-        "musician",
-        "historian",
-        "private investigator",
-        "detective",
-        "comedian",
-        "person",
-        "pro-wrestler",
-        "furry",
-        "girl",
-        "boy",
-        "candyman",
-        "retail employee",
-        "child",
-        "psychologist",
-        "guy",
-        "lad in a fancy suit",
-        "father",
-        "mother",
-        "dad",
-        "mom",
-        "parent",
-        "lesbian",
-        "idiot",
-    ],
     adjective: [
         "peasant",
         "young",
@@ -1809,6 +671,294 @@ const charWords = {
         "underappreciated",
         "kindly",
         "unique",
+        "teenage",
+        "corny"
+    ],
+    trait: [
+        "can be restless",
+        "can be ambitious",
+        "is kind",
+        "used to be idealistic",
+        "is past prime",
+        "can be brusque",
+        "is stubborn to a fault",
+        "has not laughed in a long time",
+        "lies more often than not",
+        "is surprisingly gentle",
+        "once was hopeful",
+        "can be independently-minded",
+        "can be selfish",
+        "can be sharp",
+        "can be over-critical",
+        "tends to be reckless",
+        "is abrasive",
+        "has become aimless",
+        "has a lot of defense mechanisms",
+        "can be cold",
+        "has a tendency to be cowardly",
+        "is destructive",
+        "can be detached",
+        "can be judgemental",
+        "has a sense of humor",
+        "has a reputation for being melodramatic",
+        "has burnt every bridge",
+        "can be vain",
+        "has become withdrawn",
+        "is taciturn",
+        "can be stoic",
+        "is suave",
+        "is quick-witted",
+        "no longer has any loyalties",
+        "has a strong moral compass",
+        "has 99 problems, and a sidekick is one of them",
+        "is a crank",
+        "has a reputation for being eccentric",
+        "is misunderstood",
+        "is a worrywart",
+        "is innocent",
+        "is rather unpredictable",
+        "is unexpectedly charismatic",
+        "has a poker face",
+        "is soft-hearted",
+        "can be independently-minded",
+        "used to be selfish",
+        "has many controversial opinions",
+        "is deadpan",
+        "can be pretentious",
+        "is prim",
+        "is puritanical",
+        "can be tactless",
+        "tends to attract trouble",
+        "is blind",
+        "thrives on drama",
+        "can be forgetful",
+        "is a drifter",
+        "is a chatterbox",
+        "is spineless",
+        "is rather incompetent",
+        "is bright",
+        "is sensible to a fault",
+        "is a forgiving soul",
+        "is braver than most",
+        "has no moral code",
+        "has run away",
+        "is affable",
+        "is taciturn",
+        "is overly polite",
+        "can be naïve",
+        "can be overly pompous",
+        "is overly adventurous",
+        "is a lover of books",
+        
+        // from the Meme Machine
+        "was found by the side of the road",
+        "is haunted",
+        "is hot",
+        "is divorced",
+        "is bisexual",
+        "is goth",
+        "is evil",
+        "is stinky",
+        "is nonbinary",
+        "is literally neurodivergent and a minor",
+        "is a furry",
+        "is a flat earther",
+        "is a flat earther to be a dick",
+        "is a bit of a daredevil",
+        "is an arsonist",
+        "is an alcoholic",
+        "is so hungover",
+        "is so close to snapping",
+        "is terrified of ducks",
+        "is really up their own ass about poetry",
+        "is currently facing a lawsuit",
+        "is currently running a scam",
+        // "is banned from Applebee's",
+        "is banned from the Dancing Dragonfly",
+        "is plagued by visions",
+        "is blue for no reason",
+        "is reasonably horny",
+        "is unreasonably horny",
+        "is from hell",
+        "is from the LARP equivalent of Texas",
+        "is afraid of the dark",
+        "is a competitive little shit",
+        "has a headache",
+        "has a fat ass",
+        "has a cool hat",
+        "has a child nemesis",
+        "has a tiny creature for a sidekick",
+        "has a penchant for truly terrible wordplay",
+        "has no idea whats going on",
+        "has not been around civilization for some time",
+        "has not bathed in three weeks",
+        "has the attention span of a goldfish",
+        "has had their medical license revoked",
+        "has already snapped",
+        "has killed before and will kill again",
+        "has got it going on",
+        "has human eyes",
+        "does not have human eyes",
+        "has interesting feelings about spiders",
+        "has three weed-smoking girlfriends",
+        "has blue hair and pronouns",
+        "has an ongoing feud with the local mage's guild (don't ask)",
+        "only has one outfit",
+        "thinks they're a goose",
+        "thinks they're hot shit",
+        "thinks your mom is hot",
+        "thinks your dad is hot",
+        "thinks your parent of unspecified gender is hot",
+        "thinks the earth is shaped like a donut because it's funny",
+        "thinks the earth is shaped like a donut because they're kind of hungry right now",
+        "believes all rumors to be true",
+        "doesn't talk to their parents",
+        "doesn't believe in hell",
+        "doesn't think the sun is real",
+        "needs therapy",
+        "needs a nap",
+        "needs to get laid",
+        "eats glue",
+        "eats magic items",
+        "smokes way too much weed",
+        "smokes a regular amount of weed",
+        "considers themself to be morally grey but has committed several murders",
+        "will die on any hill",
+        "won't shut up about their kids",
+        "would survive a Saw trap",
+        "loves arguing",
+        "loves puppets",
+        "loves soup",
+        "loves their wife",
+        "likes to break the fourth wall",
+        "really likes dragons",
+        "hates children",
+        "acts like an anime character",
+        "solves all of their problems with card games",     
+        "regularly commits tax fraud",
+        "used to be a war criminal and has since been pardoned",
+        "lies about their age",
+        "lies through the newspaper",
+        "faked their death",
+        "denies any and all responsibility for... the incident",
+        "woke up and chose violence",
+        "vapes",
+        "fucks",
+        "can be real dick",
+        "naps in weird places",
+        "got their ears pierced at Claire's",
+        "wears way too much eyeliner",
+        "went out for a pack of smokes and never returned",
+        "took one philosophy class in university and won't shut up about it",
+        "solves mysteries on the side",
+        "is really passionate about saving the bees",
+        "has their own fan club",
+        "plays the violin",
+        "plays the piano",
+        "minds their own business",
+        "loves to gossip",
+        "is a raging anti-capitalist",
+        "is a CEO",
+        "is a union-buster",
+        "hates you personally",
+        "is a teenager",
+        "is on holiday",
+        "wants to show you pictures of their vacation",
+        "wants to show you pictures of their kid",
+        "believes they are a gretch (they are not a gretch)",
+        "enjoys antiquities",
+        "delights in awkward situations",
+        "refuses to participate in the economy"
+    ],
+    group: [
+        // adventure seed generator
+        "order",
+        "horde",
+        "clique",
+        "gaggle",
+        "mob",
+        "collegium ",
+        "armed group",
+        "squad",
+        "cadre",
+        "trio",
+        "duo",
+        "quintet",
+        "pack",
+        "wandering troupe",
+        "crime ring",
+        "group",
+        "cabal",
+        "coven",
+        "gang",
+        "bunch",
+        "fellowship",
+        "posse",
+        "school class",
+        "syndicate",
+        "delegation",
+        "secret society",
+        "guild",
+        "extended family",
+        "noble house",
+        "platoon",
+        "caravan",
+        "sisterhood",
+        "work team",
+        "team",
+        "association",
+        "cartel",
+        "club",
+        "congregation",
+        "gentlemen's club",
+        "faction",
+        "crew",
+        "hidden society",
+        "league",
+        "converstation club",
+        "religious sect",
+        "tribe",
+        "elite squad",
+        "brotherhood",
+        "charity organization",
+        "support staff",
+        "entourage",
+        "assembly",
+        "noble family",
+        "governing body",
+        "ensemble",
+        "conclave",
+        "coterie",
+        "organization",
+        "citizens",
+        "circle",
+        "partnership",
+        "society",
+        "party",
+        "cult",
+        "group",
+        "troop",
+        "army",
+        "mass",
+        "gathering",
+        "political faction",
+        "inbred family",
+        "choir",
+        "crowd",
+        "splinter faction",
+        "band",
+        "conspiracy",
+        "cult",
+        "clan",
+        "collegium",
+        "patchwork",
+        "network",
+        "cell",
+        "panel",
+        "doomsday cult",
+        "union",
+        "collective",
+        "circus"
     ]
 }
 
@@ -3671,7 +2821,7 @@ const verbs = {
 // Fetch Quest, Rumors, Adventure Generator, Plot Creator
 const nouns = {
     person: {
-        singular: [ // make a wordPrep function to add "the" to these bitches
+        singular: [
             "king",
             "chosen one",
             "princess",
@@ -3892,7 +3042,12 @@ const nouns = {
             "mom",
             "parent",
             "lesbian",
-            "idiot"
+            "idiot",
+            "raging anti-capitalist",
+            "CEO",
+            "union buster",
+            "dudebro",
+            "pharaoh"
         ],
         plural: [
             "travelers",
@@ -4076,9 +3231,7 @@ const nouns = {
             "mages",
             "hags",
             "violent vigilantes",
-            "three possums in a trench coat"
-        ],
-        titles: [
+            "three possums in a trench coat",
             "the homies",
             "the dead",
             "the law",
@@ -4204,7 +3357,6 @@ const nouns = {
     },
     concept: {
         singular: [ // intangible objects
-            // doesn't start with a(n)
             // one word
             "chaos",
             "power",
@@ -4245,7 +3397,6 @@ const nouns = {
             "cloning",
             "financial compensation",
             "false hope",
-            "fame and prestige",
             "unspeakable evil",
             "unnatural disaster",
             "threats and intimidation",
@@ -4280,15 +3431,15 @@ const nouns = {
             "laissez-faire attitude",
             "insatiable hunger",
             "game that is also a test",
-            // "the blame",
-            // "the power of the Ooze",
-            // "the notice of a god",
-            // "the next season",
-            // "the economy",
-            // "the prophecy",
-            // "the market",
-            // "the power vested in them by law",
-            // "the power of prayer"
+            "the blame",
+            "the power of the Ooze",
+            "the notice of a god",
+            "the next season",
+            "the economy",
+            "the prophecy",
+            "the market",
+            "the power vested in them by law",
+            "the power of prayer"
         ],
         plural: [
             "privileges",
@@ -4308,8 +3459,9 @@ const nouns = {
             "public officials and decrees",
             "market manipulations",
             "lurid colors",
-            // "the hopes of the whole village",
-            // "the real answers",
+            "the hopes of the whole village",
+            "the real answers",
+            "fame and prestige",
         ]
     },
     posessions: [ // literally just nix most of the prepositions here and sort them other places
@@ -4767,7 +3919,7 @@ const fragments = {
         "hunt a vampire",
         "implode the court",
         "join the court",
-        "keep their godess happy",
+        "keep their goddess happy",
         "kill a colony of humanoids",
         "kill a king",
         "locate a tome of unspeakable truths",
@@ -5092,12 +4244,14 @@ function randomString(arr) {
 }
 
 // adds "a" or "an" to the front of a thing
-// DO SOMETHING ABT THE 'THE'S
+// if it sees "the" at the front of a word it leaves it alone
 function wordPrep(word){
-    if (["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"].some((elem) => word.startsWith(elem)) && word != "unique") {
-        prep = "an";
+    if (["the ","another "].some((elem) => word.startsWith(elem))) {
+        prep = "";
+    } else if (["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"].some((elem) => word.startsWith(elem)) && word != "unique") {
+        prep = "an ";
     } else {
-        prep = "a";
+        prep = "a ";
     }
     return prep;
 }
@@ -5200,7 +4354,7 @@ function plotCreate() {
     const meansFrag = randomString(fragments.means);
 
     const charTrait = randomString(chara.trait);
-    const charAdj = randomString(charWords.adjective);
+    const charAdj = randomString(chara.adjective);
     const charNoun = randomString(nounPerson.singular);
     
     const type = randomString(plots.type);
@@ -5223,7 +4377,7 @@ function plotCreate() {
 
     // singular or plural?
     if (nounTypeOne == nounSingular) {
-        nounOne = wordPrep(nounSelectOne) + " " + nounSelectOne;
+        nounOne = wordPrep(nounSelectOne) + nounSelectOne;
     } else if (nounTypeOne == nounPlural) {
         nounOne = nounSelectOne;
     }
@@ -5253,7 +4407,7 @@ function plotCreate() {
 
     // singular or plural?
     if (nounTypeTwo == nounSingular) {
-        nounTwo = wordPrep(nounSelectTwo) + " " + nounSelectTwo;
+        nounTwo = wordPrep(nounSelectTwo) + nounSelectTwo;
     } else if (nounTypeTwo == nounPlural) {
         nounTwo = nounSelectTwo;
     }
@@ -5274,16 +4428,16 @@ function plotCreate() {
     // singular and plural subjects
     switch (plotSubjSelect) {
         case "singular 1":
-            plotPerson = wordPrep(charNoun) + " " + charNoun + "</b> who <b>" + charTrait + "</b> is";
+            plotPerson = wordPrep(charNoun) + charNoun + "</b> who <b>" + charTrait + "</b> is";
         break;
         case "singular 2":
-            plotPerson = wordPrep(charAdj) + " " + charAdj + " " + charNoun + "</b> is";
+            plotPerson = wordPrep(charAdj) + charAdj + " " + charNoun + "</b> is";
         break;
         case "plural 1":
-            plotPerson = wordPrep(group) + " " + group + "</b> of <b>" + members + "</b> are";
+            plotPerson = wordPrep(group) + group + "</b> of <b>" + members + "</b> are";
         break;
         case "plural 2":
-            plotPerson = wordPrep(charAdj) + " " + charAdj + " " + group + "</b> of <b>" + members + "</b> are";
+            plotPerson = wordPrep(charAdj) + charAdj + " " + group + "</b> of <b>" + members + "</b> are";
         break;
     }
 
@@ -5324,37 +4478,38 @@ function plotCreate() {
         break;
     }
 
-    // console.log(verby);
+    let plotStory = "";
 
     switch(plotSelect) {
         case "plot 1":
-            document.getElementById("pb-plot").innerHTML = "<p>The party is looking for <b>" + nounOne + "</b> that <b>" + condition + ".</b> They are looking for this <b>" + motive + ",</b> but the thing is that <b>" + twist + ".</b></p>";
+            plotStory = "<p>The party is looking for <b>" + nounOne + "</b> that <b>" + condition + ".</b> They are looking for this <b>" + motive + ",</b> but the thing is that <b>" + twist + ".</b></p>";
         break;
         case "plot 2":
-            document.getElementById("pb-plot").innerHTML = "<p>The party is looking for <b>" + nounOne + "</b> that <b>" + condition + "</b> in order to <b>" + goal + ".</b></p>" + 
+            plotStory = "<p>The party is looking for <b>" + nounOne + "</b> that <b>" + condition + "</b> in order to <b>" + goal + ".</b></p>" + 
             "<p>They want this <b>" + motive + ",</b> but what they haven't realized yet is that <b>" + twist + ".</b></p>";
         break;
-
-        // adventure generator
         case "plot 3":
-            document.getElementById("pb-plot").innerHTML = "<p>In this story, <b>" + plotSubject + " " + location  + ".</b></p>" + 
+            plotStory = "<p>In this story, <b>" + plotSubject + " " + location  + ".</b></p>" + 
             "<p>Their goal is to <b>" + goal + " " + plotMethod + " " + motive + ",</b> but <b>" + twist + ".</b></p>";
         break;
         case "plot 4":
-            document.getElementById("pb-plot").innerHTML = "<p>This story takes place <b>" + location +",</b> where <b>" + plotSubject + ".</b> Their goal is to <b>" + goal + " " + plotMethod + ".</b></p>" + 
+            plotStory = "<p>This story takes place <b>" + location +",</b> where <b>" + plotSubject + ".</b> Their goal is to <b>" + goal + " " + plotMethod + ".</b></p>" + 
             "<p>They are doing this <b>" + motive + ",</b> but <b>" + twist + ".</b></p>";
         break;
         case "plot 5":
-            document.getElementById("pb-plot").innerHTML = "<p>In this story, <b>" + plotSubject + "</b> in order to <b>" + goal + ".</b></p>";
+            plotStory = "<p>In this story, <b>" + plotSubject + "</b> in order to <b>" + goal + ".</b></p>";
         break;
         case "plot 6":
-            document.getElementById("pb-plot").innerHTML = "<p>In this story, <b>" + plotSubject + ".</b> They are doing this <b> " + motive + ".</b></p>";
+            plotStory = "<p>In this story, <b>" + plotSubject + ".</b> They are doing this <b> " + motive + ".</b></p>";
         break;
         // "<p>This is going to be <b>" + tone + " " + genre + " " + type + ".</b></p>"
         case "plot 7":
-            document.getElementById("pb-plot").innerHTML = "<p>This is <b>" + wordPrep(tone) + " " + tone + " " + genre + "</b> story in which <b>" + plotSubject + " " + plotMethod + "</b> in order to <b>" + goal + ".</b> The twist is that <b>" + twist + ".</b></p>";
+            plotStory = "<p>This is <b>" + wordPrep(tone) + " " + tone + " " + genre + "</b> story in which <b>" + plotSubject + " " + plotMethod + "</b> in order to <b>" + goal + ".</b> The twist is that <b>" + twist + ".</b></p>";
         break;           
     }
+
+    document.getElementById("pb-plot").innerHTML = plotStory;
+
 }
 
 // Fetch Quest
@@ -5423,13 +4578,15 @@ function adventureGen() {
     actionSelect = randomString(actionType);
     methodSelect = randomString(methodType);
 
-    const agChara = randomString(charWords.chara);
-    const agCharNoun = randomString(charWords.chara);
-    const agAdjective = randomString(charWords.adjective);
+    var charNoun = nouns.person;
+
+    const agChara = randomString(charNoun.singular);
+    const agCharNoun = randomString(charNoun.singular);
+    const agAdjective = randomString(chara.adjective);
 
     const agCharTrait = randomString(chara.trait);
     const agGroup = randomString(chara.group);
-    const agMembers = randomString(chara.members);
+    const agMembers = randomString(charNoun.plural);
 
     const agGoal = randomString(fragments.goal); 
     const agPlace = randomString(quest.place);
@@ -5537,52 +4694,56 @@ let partySelect = "";
 
 function npcGen() {
     partySelect = randomString(npcParty);
+    
+    var charNoun = nouns.person;
 
-    const charaOne = randomString(charWords.chara);
-    const adjOne = randomString(charWords.adjective);
+    const charaOne = randomString(charNoun.singular);
+    const adjOne = randomString(chara.adjective);
     const traitOne = randomString(chara.trait);
-    const charaPrepOne = wordPrep(charaOne) + " " + charaOne;
+    const charaPrepOne = wordPrep(charaOne) + charaOne;
     const charaCatOne = wordPrep(adjOne) + " " + adjOne + " " + charaOne;
 
-    const charaTwo = randomString(charWords.chara);
-    const adjTwo = randomString(charWords.adjective)
+    const charaTwo = randomString(charNoun.singular);
+    const adjTwo = randomString(chara.adjective)
     const traitTwo = randomString(chara.trait);
-    const charaPrepTwo = wordPrep(charaTwo) + " " + charaTwo;
-    const charaCatTwo = wordPrep(adjTwo) + " " + adjTwo + " " + charaTwo;
+    const charaPrepTwo = wordPrep(charaTwo) + charaTwo;
+    const charaCatTwo = wordPrep(adjTwo) + adjTwo + " " + charaTwo;
     
-    const charaThree = randomString(charWords.chara);
-    const adjThree = randomString(charWords.adjective)
+    const charaThree = randomString(charNoun.singular);
+    const adjThree = randomString(chara.adjective)
     const traitThree = randomString(chara.trait);
-    const charaPrepThree = wordPrep(charaThree) + " " + charaThree;
-    const charaCatThree = wordPrep(adjThree) + " " + adjThree + " " + charaThree;
+    const charaPrepThree = wordPrep(charaThree) + charaThree;
+    const charaCatThree = wordPrep(adjThree) + adjThree + " " + charaThree;
 
     const fakeFirst = randomString(characters.fakeFirst);
     const fakeLast = randomString(characters.fakeLast);
     const fakeRole = fakeFirst + " " + fakeLast;
 
+    let partyBuild = "";
     switch(partySelect) {
         case "party 1":
-            document.getElementById("npc-party").innerHTML = "<p>Our party includes <b>" + charaPrepOne + "</b> who <b>" + traitOne + ".</b></p>";
+            partyBuild = charaPrepOne + "</b> who <b>" + traitOne + ".</b></p>";
         break;
         case "party 2":
-            document.getElementById("npc-party").innerHTML = "<p>Our party includes <b>" + charaPrepOne + "</b> who <b>" + traitOne + ",</b> and <b>" + charaPrepTwo + "</b> who <b>" + traitTwo + ".</b></p>";
+            partyBuild = charaPrepOne + "</b> who <b>" + traitOne + ",</b> and <b>" + charaPrepTwo + "</b> who <b>" + traitTwo + ".</b></p>";
         break;
         case "party 3":
-            document.getElementById("npc-party").innerHTML = "<p>Our party includes <b>" + charaPrepOne + "</b> who <b>" + traitOne + ", " + charaPrepTwo + "</b> who <b>" + traitTwo + ",</b> and <b>" + charaPrepThree + "</b> who <b>" + traitThree + ".</b></p>";
+            partyBuild = charaPrepOne + "</b> who <b>" + traitOne + ", " + charaPrepTwo + "</b> who <b>" + traitTwo + ",</b> and <b>" + charaPrepThree + "</b> who <b>" + traitThree + ".</b></p>";
         break;
         case "party 4":
-            document.getElementById("npc-party").innerHTML = "<p>Our party includes <b>" + charaPrepOne + "</b> named <b>" + fakeRole + "</b> who <b>" + traitOne + ".</b></p>";
+            partyBuild = charaPrepOne + "</b> named <b>" + fakeRole + "</b> who <b>" + traitOne + ".</b></p>";
         break;
         case "party 5":
-            document.getElementById("npc-party").innerHTML = "<p>Our party includes <b>" + charaCatOne + "</b> who <b>" + traitOne + ".</b></p>";
+            partyBuild = charaCatOne + "</b> who <b>" + traitOne + ".</b></p>";
         break;
         case "party 6":
-            document.getElementById("npc-party").innerHTML = "<p>Our party includes <b>" + charaCatOne + "</b> who <b>" + traitOne + ",</b> and <b>" + charaCatTwo + "</b> who <b>" + traitTwo + ".</b></p>";
+            partyBuild = charaCatOne + "</b> who <b>" + traitOne + ",</b> and <b>" + charaCatTwo + "</b> who <b>" + traitTwo + ".</b></p>";
         break;
         case "party 7":
-            document.getElementById("npc-party").innerHTML = "<p>Our party includes <b>" + charaCatOne + ", " + charaCatTwo + ",</b> and <b>" + charaCatThree + ".</b></p>";
+            partyBuild = charaCatOne + ", " + charaCatTwo + ",</b> and <b>" + charaCatThree + ".</b></p>";
         break;
     }
+    document.getElementById("npc-party").innerHTML = "<p>Our party includes <b>" + partyBuild;
 }
 
 // Rumors
@@ -5601,40 +4762,42 @@ const rRumors = [
     "rumor 12"
 ];
 
-const personOne = [
+const charTypeOne = [
     "player character",
     "face role",
     "fake role 1",
     "fake role 2"
 ];
 
-const personTwo = [
+const charTypeTwo = [
     "player character",
     "face role",
     "fake role"
 ];
 
 let rumorSelect = "";
-let personSelect = "";
-let personSelectAlt = "";
+let personSelectOne = "";
+let personSelectTwo = "";
 
 function rumorGen() {
     rumorSelect = randomString(rRumors);
-    personSelect = randomString(personOne);
-    personSelectAlt = randomString(personTwo);
+    personSelectOne = randomString(charTypeOne);
+    personSelectTwo = randomString(charTypeTwo);
 
-    const rumor_character = randomString(characters.players);
-    const rumor_face_role = randomString(characters.faceRoles);
-    const rumor_fake_first = randomString(characters.fakeFirst);
-    const rumor_fake_last = randomString(characters.fakeLast);
+    var charNoun = nouns.person;
 
-    const rumor_character_alt = randomString(characters.players);
-    const rumor_face_role_alt = randomString(characters.faceRoles);
-    const rumor_fake_first_alt = randomString(characters.fakeFirst);
-    const rumor_fake_last_alt = randomString(characters.fakeLast);
+    const playerOne = randomString(characters.players);
+    const faceOne= randomString(characters.faceRoles);
+    const firstNameOne = randomString(characters.fakeFirst);
+    const lastNameOne = randomString(characters.fakeLast);
 
-    let rumor_person = "";
-    let rumor_person_alt = "";
+    const playerTwo = randomString(characters.players);
+    const faceTwo = randomString(characters.faceRoles);
+    const firstNameTwo = randomString(characters.fakeFirst);
+    const lastNameTwo = randomString(characters.fakeLast);
+
+    let personOne = "";
+    let personTwo = "";
     
     const rumor_source = randomString(rumors.source);
     const rumor_item = randomString(nouns.all);
@@ -5643,74 +4806,77 @@ function rumorGen() {
     const rumor_trait = randomString(chara.trait);
     const rumor_accuse = randomString(rumors.accuse);
 
-    const charOne = randomString(charWords.chara);
-    const rumor_chara = wordPrep(charOne) + " " + charOne;
-    const charTwo = randomString(charWords.chara);
-    const rumor_chara_alt = wordPrep(charTwo) + " " + charTwo;
+    const rumorCharOne = randomString(charNoun.singular);
+    
+    const charOne = wordPrep(rumorCharOne) + " " + rumorCharOne;
 
-    switch (personSelect) {
+    const rumorCharTwo = randomString(charNoun.singular);
+    
+    const charTwo = wordPrep(rumorCharTwo) + " " + rumorCharTwo;
+
+    switch (personSelectOne) {
         case "player character":
-            rumor_person = "<b>" + rumor_character + "</b>";
+            personOne = "<b>" + playerOne + "</b>";
         break;
         case "face role":
-            rumor_person = "<b>" + rumor_face_role + "</b>";
+            personOne = "<b>" + faceOne + "</b>";
         break;
         case "fake role 1":
-            rumor_person = "someone named <b>" + rumor_fake_first + " " + rumor_fake_last + "</b>";
+            personOne = "someone named <b>" + firstNameOne + " " + lastNameOne + "</b>";
         break;
         case "fake role 2":
-            rumor_person = "<b>" + rumor_chara + "</b> named <b>" + rumor_fake_first + " " + rumor_fake_last + "</b>";
+            personOne = "<b>" + charOne + "</b> named <b>" + firstNameOne + " " + lastNameOne + "</b>";
         break;
     }
 
-    switch (personSelectAlt) {
+    switch (personSelectTwo) {
         case "player character":
-            rumor_person_alt = "<b>" + rumor_character_alt + "</b>";
+            personTwo = "<b>" + playerTwo + "</b>";
         break;
         case "face role":
-            rumor_person_alt = "<b>" + rumor_face_role_alt + "</b>";
+            personTwo = "<b>" + faceTwo + "</b>";
         break;
         case "fake role":
-            rumor_person_alt = "someone named <b>" + rumor_fake_first_alt + " " + rumor_fake_last_alt + "</b>";
+            personTwo = "someone named <b>" + firstNameTwo + " " + lastNameTwo + "</b>";
         break;
     }
 
     switch (rumorSelect) {
         case "rumor 1":
-            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " + rumor_person + " has <b>" + rumor_item + "</b> that <b>" + rumor_property + ".</b></p>";
+            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " + personOne + " has <b>" + rumor_item + "</b> that <b>" + rumor_property + ".</b></p>";
         break;
         case "rumor 2":
-            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " +  rumor_person + " was seen <b>" + rumor_accuse + ".</b></p>";
+            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " +  personOne + " was seen <b>" + rumor_accuse + ".</b></p>";
         break;
         case "rumor 3":
-            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " + rumor_person + " is looking for some help with something.</p>";
+            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " + personOne + " is looking for some help with something.</p>";
         break;
         case "rumor 4":
-            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " + rumor_person + " is looking for <b>" + rumor_item + ".</b></p>";
+            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " + personOne + " is looking for <b>" + rumor_item + ".</b></p>";
         break;
         case "rumor 5":
-            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " + rumor_person + " is looking for <b>" + rumor_item + "</b> that <b>" + rumor_property + ".</b></p>";
+            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " + personOne + " is looking for <b>" + rumor_item + "</b> that <b>" + rumor_property + ".</b></p>";
         break;
         case "rumor 6":
             document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " they may be upping woodland patrols due to a rise in the number of <b>" + rumor_monsters + ".</b></p>";
         break;
         case "rumor 7":
-            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " + rumor_person + " was asking around for <b>" + rumor_chara_alt + ".</b></p>";
+            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " + personOne + " was asking around for <b>" + charTwo + ".</b></p>";
         break;
         case "rumor 8":
-            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " + rumor_person + " was asking around for someone who <b>" + rumor_trait + ".</b></p>";
+            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " + personOne + " was asking around for someone who <b>" + rumor_trait + ".</b></p>";
         break;
         case "rumor 9":
-            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " +  rumor_person + " <b>" + rumor_trait + ".</b></p>";
+            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " +  personOne + " <b>" + rumor_trait + ".</b></p>";
         break;
         case "rumor 10":
-            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " +  rumor_person_alt + " is <b>" + rumor_chara + ".</b></p>";
+            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " +  personTwo + " is <b>" + charOne + ".</b></p>";
         break;
         case "rumor 11":
-            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " +  rumor_person_alt + " was asking around for <b>" + rumor_person + ".</b></p>";
+            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " +  personTwo + " was asking around for <b>" + personOne + ".</b></p>";
         break;
         case "rumor 12":
-            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " +  rumor_person + " was seen <b>" + rumor_accuse + "</b> with <b>" + rumor_person_alt + ".</b></p>";
+            document.getElementById("rm-rumor").innerHTML = "<p>" + rumor_source + " " +  personOne + " was seen <b>" + rumor_accuse + "</b> with <b>" + personTwo + ".</b></p>";
         break;
     }
 }
