@@ -4280,15 +4280,15 @@ const nouns = {
             "laissez-faire attitude",
             "insatiable hunger",
             "game that is also a test",
-            "the blame",
-            "the power of the Ooze",
-            "the notice of a god",
-            "the next season",
-            "the economy",
-            "the prophecy",
-            "the market",
-            "the power vested in them by law",
-            "the power of prayer"
+            // "the blame",
+            // "the power of the Ooze",
+            // "the notice of a god",
+            // "the next season",
+            // "the economy",
+            // "the prophecy",
+            // "the market",
+            // "the power vested in them by law",
+            // "the power of prayer"
         ],
         plural: [
             "privileges",
@@ -4308,8 +4308,8 @@ const nouns = {
             "public officials and decrees",
             "market manipulations",
             "lurid colors",
-            "the hopes of the whole village",
-            "the real answers",
+            // "the hopes of the whole village",
+            // "the real answers",
         ]
     },
     posessions: [ // literally just nix most of the prepositions here and sort them other places
