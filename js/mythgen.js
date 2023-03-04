@@ -1148,7 +1148,7 @@ const chara = {
         "has a tiny creature for a sidekick",
         "has a penchant for truly terrible wordplay",
         "has no idea whats going on",
-        "has not been around civilaztion for some time",
+        "has not been around civilization for some time",
         "has not bathed in three weeks",
         "has the attention span of a goldfish",
         "has had their medical license revoked",
@@ -1455,6 +1455,360 @@ const chara = {
         "hags",
         "violent vigilantes",
         "three possums in a trench coat"
+    ]
+}
+
+const charWords = {
+    chara: [// added to nouns.person.singular
+        "peasant girl",
+        "peasant boy",
+        "young boy",
+        "young girl",
+        "lad",
+        "lass",
+        "fruit-seller",
+        "gem merchant",
+        "sellsword",
+        "nomad",
+        "knight",
+        "assassin",
+        "gentleman thief",
+        "gentlewoman thief",
+        "soldier",
+        "monk",
+        "sorceror",
+        "enchanter",
+        "witch",
+        "warlock",
+        "warrior",
+        "mage",
+        "outlaw",
+        "ruffian",
+        "brigand",
+        "pickpocket",
+        "thief",
+        "woodsman",
+        "warlord",
+        "page",
+        "squire",
+        "troubadour",
+        "empress",
+        "emperor",
+        "noblewoman",
+        "nobleman",
+        "lord",
+        "lady",
+        "prince",
+        "princess",
+        "diplomat",
+        "monsterologist",
+        "swordmaster",
+        "apprentice",
+        "assassin-in-training",
+        "enchantress-in-training",
+        "summoner-in-training",
+        "witch-in-training",
+        "necromancer-in-training",
+        "prophet-in-training",
+        "sorceror-in-training",
+        "ogre",
+        "dragon",
+        "centaur",
+        "charlatan",
+        "vampire",
+        "genie",
+        "troll",
+        "dale elf",
+        "deep elf",
+        "dwarf",
+        "goblin",
+        "half elf",
+        "high elf",
+        "human",
+        "suhk",
+        "wildren",
+        "alchemist",
+        "artificer",
+        "bard",
+        "cleric",
+        "druid",
+        "fighter",
+        "paladin",
+        "ranger",
+        "rogue",
+        "runesmith",
+        "wizard",
+        "coalescer",
+        "excavator",
+        "harvester",
+        "logger",
+        "skinner",
+        "farmer",
+        "hunter",
+        "lumberjack",
+        "miner",
+        "panner",
+        "butcher",
+        "carpenter",
+        "gemcutter",
+        "glassmaker",
+        "papermaker",
+        "smelter",
+        "tanner",
+        "weaver",
+        "architect",
+        "blacksmith",
+        "brewer",
+        "chef",
+        "glassblower",
+        "lapidary",
+        "leatherworker",
+        "tailor",
+        "trapmaker",
+        "woodworker",
+        "appraiser",
+        "laborer",
+        "mender",
+        "eccentric candyman",
+        "retail employee",
+        "werewolf",
+        "feral child",
+        "snake-oil salesman",
+        "influencer",
+        "cowboy",
+        "pirate",
+        "rat",
+        "child psychologist",
+        "ghost hunter",
+        "archivist",
+        "creature",
+        "demolitions expert",
+        "goose",
+        "duelist",
+        "dog",
+        "construct",
+        "landlord",
+        "celebrity chef",
+        "village idiot",
+        "old guy",
+        "old lady",
+        "tax-evader",
+        "draft dodger",
+        "pyrotechnician",
+        "arsonist",
+        "professional arsonist",
+        "retired assassin",
+        "goth",
+        "clown",
+        "entire circus of clowns",
+        "doctor",
+        "lawyer",
+        "con artist",
+        "grifter",
+        "lad in a fancy suit",
+        "hot girl",
+        "hot guy",
+        "hot person",
+        "malewife",
+        "entity",
+        "absent father",
+        "war criminal",
+        "shitty wizard",
+        "conspiracy theorist",
+        "adrenaline junkie",
+        "time traveler",
+        "Italian",
+        "asshole",
+        "deadbeat dad",
+        "deadbeat mom",
+        "deadbeat parent",
+        "Little League coach",
+        "mobster",
+        "grad student",
+        "librarian",
+        "researcher",
+        "research assistant",
+        "entomologist",
+        "butch lesbian",
+        "dancer",
+        "singer",
+        "musician",
+        "historian",
+        "private investigator",
+        "detective",
+        "comedian",
+        "person",
+        "pro-wrestler",
+        "furry",
+        "girl",
+        "boy",
+        "candyman",
+        "retail employee",
+        "child",
+        "psychologist",
+        "guy",
+        "lad in a fancy suit",
+        "father",
+        "mother",
+        "dad",
+        "mom",
+        "parent",
+        "lesbian",
+        "idiot",
+    ],
+    adjective: [
+        "peasant",
+        "young",
+        "fruit-selling",
+        "gentleman",
+        "gentlewoman",
+        "apprentice",
+        "charlatan",
+        "vampire",
+        "dale elf",
+        "deep elf",
+        "dwarf",
+        "goblin",
+        "half elf",
+        "high elf",
+        "human",
+        "suhk",
+        "wildren",
+        "eccentric",
+        "werewolf",
+        "feral",
+        "influencer",
+        "child",
+        "celebrity",
+        "old",
+        "tax-evading",
+        "draft-dodging",
+        "professional",
+        "retired",
+        "goth",
+        "little",
+        "hot",
+        "absent",
+        "shitty",
+        "time-traveling",
+        "Italian",
+        "asshole",
+        "deadbeat",
+        "butch",
+        "dancing",
+        "singing",
+        "paramilitary",
+        "military",
+        "search",
+        "suicidal",
+        "fleeing",
+        "organized",
+        "insatiable",
+        "sickened",
+        "lusty",
+        "maniacal",
+        "unorganized",
+        "pugilistic",
+        "busybody",
+        "evil",
+        "sociopathic",
+        "underground",
+        "dying",
+        "benevolent",
+        "arsonistic",
+        "disorganized",
+        "convicted",
+        "noble",
+        "liar",
+        "chaotic",
+        "malicious",
+        "murderous",
+        "pugnacious",
+        "secret",
+        "elderly",
+        "violent",
+        "unharmonious",
+        "devious",
+        "surreptitious",
+        "quarelling",
+        "ideologically split",
+        "ragged",
+        "cursed",
+        "good",
+        "enlightened",
+        "zealous",
+        "heroic",
+        "amnesiac",
+        "resurrected",
+        "fey-touched",
+        "elite",
+        "lycanthropic",
+        "escaped",
+        "injured",
+        "commissioned",
+        "official",
+        "random",
+        "self-pitying",
+        "well-dressed",
+        "xenophobic",
+        "superstitious",
+        "drunk",
+        "depressive",
+        "morbid",
+        "mortally wounded",
+        "diseased",
+        "contrite",
+        "hateful",
+        "alcoholic",
+        "drug-addicted",
+        "fanatical",
+        "homeless",
+        "confused",
+        "artistic",
+        "desperate",
+        "suspicious",
+        "unaccountable",
+        "exhausted",
+        "vocal",
+        "undead",
+        "shady",
+        "righteous",
+        "plaintive",
+        "cowardly",
+        "insane",
+        "unscrupulous",
+        "oppressed",
+        "conned",
+        "fallen",
+        "undercover",
+        "reluctant",
+        "bloodthirsty",
+        "otherworldly",
+        "celestial",
+        "outsider",
+        "insectoid",
+        "brilliant",
+        "greedy",
+        "materialistic",
+        "unholy",
+        "ancient",
+        "obsessive",
+        "sole",
+        "outgrown",
+        "renowned",
+        "rich",
+        "poor",
+        "reformed",
+        "secretive",
+        "paranoid",
+        "compulsive",
+        "perverse",
+        "iconoclastic",
+        "nihilistic",
+        "former",
+        "underappreciated",
+        "kindly",
+        "unique",
     ]
 }
 
@@ -2093,9 +2447,9 @@ const oldVerbs = {
 }
 
 // REMEMBER! {object}, [array]
-const verbs = { // ... maybe this would make more sense organized by tense first then by person/place/thing? nah who cares this is my house and i want to do it this way. 
-    person: {
-        present: [
+const verbs = {
+    present: {
+        person: [
             "kill",
             "bribe",
             "summon",
@@ -2229,9 +2583,277 @@ const verbs = { // ... maybe this would make more sense organized by tense first
             "banish",
             "gain",
             "show the inferiority of",
+            "crash"
+        ],
+        place: [
+            "explore",
+            "curse",
+            "attack",
+            "travel to",
+            "protect",
+            "nap in",
+            "rob",
+            "destroy",
+            "search for",
+            "flee from",
+            "invade",
+            "terrorize",
+            "ally themselves with",
+            "topple",
+            "camp in",
+            "look for",
+            "tax",
+            "raze",
+            "control",
+            "picket",
+            "declare war on",
+            "expand",
+            "found",
+            "open",
+            "join",
+            "establish",
+            "implode",
+            "conquer",
+            "clear",
+            "wage war on",
+            "return to",
+            "sneak around",
+            "organize",
+            "build",
+            "capture",
+            "perform for",
+            "look for",
+            "disfigure",
+            "forage",
+            "hide", // [a] thing
+            "seek",
+            "rest",
+            "blockade",
+            "discover",
+            "raise",
+            "glean",
+            "keep",
+            "sacrifice",
+            "shirk",
+            "stir",
+            "invoke",
+            "build up",
+            "secure",
+            "deny",
+            "resurrect",
+            "over-run",
+            "defile",
+            "slow",
+            "disguise",
+            "restore",
+            "get",
+            "daydream about",
+            "get involved with",
+            "betray",
+            "bind",
+            "bring back",
+            "bring",
+            "burn",
+            "catch",
+            "change",
+            "end",
+            "escape",
+            "expose",
+            "extinguish",
+            "find",
+            "form",
+            "free",
+            "heal",
+            "hold",
+            "locate",
+            "reset",
+            "revive",
+            "save",
+            "shame",
+            "turn back",
+            "unite",
+            "fulfill",
+            "banish",
+            "gain",
+            "show the inferiority of",
+            "crash"
+        ],
+        thing: [
+            "kill",
+            "summon",
+            "transport",
+            "steal",
+            "torture",
+            "hunt",
+            "gather",
+            "curse",
+            "enchant",
+            "disable",
+            "create",
+            "protect",
+            "unleash",
+            "destroy",
+            "escort",
+            "search for",
+            "earn",
+            "corner the market in",
+            "acquire",
+            "pay for",
+            "undo",
+            "complete",
+            "avert",
+            "flee with",
+            "look for",
+            "cause",
+            "sell",
+            "play with",
+            "make fun of",
+            "negotiate for",
+            "renegotiate for",
+            "make substantial profits on",
+            "erase",
+            "fake",
+            "clear",
+            "plan for",
+            "invest in",
+            "invest suspiciously heavily in",
+            "paint",
+            "excavate",
+            "deflect",
+            "quest for",
+            "vandalize",
+            "claim",
+            "make",
+            "take",
+            "break",
+            "eat",
+            "return",
+            "prove",
+            "start",
+            "shake",
+            "organize",
+            "request",
+            "propogate",
+            "look for",
+            "pass on",
+            "disfigure",
+            "forage",
+            "hide", // [a] thing
+            "seek",
+            "rest",
+            "blockade",
+            "discover",
+            "raise",
+            "glean",
+            "keep",
+            "sacrifice",
+            "shirk",
+            "stir",
+            "invoke",
+            "build up",
+            "secure",
+            "deny",
+            "resurrect",
+            "over-run",
+            "defile",
+            "slow",
+            "disguise",
+            "restore",
+            "get",
+            "daydream about",
+            "get involved with",
+            "betray",
+            "bring back",
+            "bring",
+            "burn",
+            "catch",
+            "change",
+            "end",
+            "escape",
+            "expose",
+            "extinguish",
+            "find",
+            "form",
+            "free",
+            "heal",
+            "hold",
+            "locate",
+            "reset",
+            "revive",
+            "save",
+            "shame",
+            "turn back",
+            "unite",
+            "fulfill",
+            "banish",
+            "gain",
+            "show the inferiority of",
             "crash",
         ],
-        gerund: [
+        concept: [
+            "sow",
+            "spread",
+            "delay",
+            "plan for",
+            "impede",
+            "disfigure",
+            "forage",
+            "hide", // [a] thing
+            "seek",
+            "rest",
+            "blockade",
+            "discover",
+            "raise",
+            "glean",
+            "keep",
+            "sacrifice",
+            "shirk",
+            "stir",
+            "invoke",
+            "build up",
+            "secure",
+            "deny",
+            "resurrect",
+            "over-run",
+            "defile",
+            "slow",
+            "disguise",
+            "restore",
+            "get",
+            "daydream about",
+            "get involved with",
+            "betray",
+            "bind",
+            "bring back",
+            "bring",
+            "burn",
+            "catch",
+            "change",
+            "end",
+            "escape",
+            "expose",
+            "extinguish",
+            "find",
+            "form",
+            "free",
+            "heal",
+            "hold",
+            "locate",
+            "reset",
+            "revive",
+            "save",
+            "shame",
+            "turn back",
+            "unite",
+            "fulfill",
+            "banish",
+            "gain",
+            "show the inferiority of",
+            "crash",
+        ]
+    },
+    gerund: {
+        person: [
             "killing",
             "bribing",
             "summoning",
@@ -2367,103 +2989,8 @@ const verbs = { // ... maybe this would make more sense organized by tense first
             "gaining",
             "showing the inferiority of",
             "crashing",
-        ]
-    },
-    place: {
-        present: [
-            "explore",
-            "curse",
-            "attack",
-            "travel to",
-            "protect",
-            "nap in",
-            "rob",
-            "destroy",
-            "search for",
-            "flee from",
-            "invade",
-            "terrorize",
-            "ally themselves with",
-            "topple",
-            "camp in",
-            "look for",
-            "tax",
-            "raze",
-            "control",
-            "picket",
-            "declare war on",
-            "expand",
-            "found",
-            "open",
-            "join",
-            "establish",
-            "implode",
-            "conquer",
-            "clear",
-            "wage war on",
-            "return to",
-            "sneak around",
-            "organize",
-            "build",
-            "capture",
-            "perform for",
-            "look for",
-            "disfigure",
-            "forage",
-            "hide", // [a] thing
-            "seek",
-            "rest",
-            "blockade",
-            "discover",
-            "raise",
-            "glean",
-            "keep",
-            "sacrifice",
-            "shirk",
-            "stir",
-            "invoke",
-            "build up",
-            "secure",
-            "deny",
-            "resurrect",
-            "over-run",
-            "defile",
-            "slow",
-            "disguise",
-            "restore",
-            "get",
-            "daydream about",
-            "get involved with",
-            "betray",
-            "bind",
-            "bring back",
-            "bring",
-            "burn",
-            "catch",
-            "change",
-            "end",
-            "escape",
-            "expose",
-            "extinguish",
-            "find",
-            "form",
-            "free",
-            "heal",
-            "hold",
-            "locate",
-            "reset",
-            "revive",
-            "save",
-            "shame",
-            "turn back",
-            "unite",
-            "fulfill",
-            "banish",
-            "gain",
-            "show the inferiority of",
-            "crash",
         ],
-        gerund: [
+        place: [
             "exploring",
             "cursing",
             "attacking",
@@ -2555,122 +3082,8 @@ const verbs = { // ... maybe this would make more sense organized by tense first
             "gaining",
             "showing the inferiority of",
             "crashing",
-        ]
-    },
-    thing: {
-        present: [
-            "kill",
-            "summon",
-            "transport",
-            "steal",
-            "torture",
-            "hunt",
-            "gather",
-            "curse",
-            "enchant",
-            "disable",
-            "create",
-            "protect",
-            "unleash",
-            "destroy",
-            "escort",
-            "search for",
-            "earn",
-            "corner the market in",
-            "acquire",
-            "pay for",
-            "undo",
-            "complete",
-            "avert",
-            "flee with",
-            "look for",
-            "cause",
-            "sell",
-            "play with",
-            "make fun of",
-            "negotiate for",
-            "renegotiate for",
-            "make substantial profits on",
-            "erase",
-            "fake",
-            "clear",
-            "plan for",
-            "invest in",
-            "invest suspiciously heavily in",
-            "paint",
-            "excavate",
-            "deflect",
-            "quest for",
-            "vandalize",
-            "claim",
-            "make",
-            "take",
-            "break",
-            "eat",
-            "return",
-            "prove",
-            "start",
-            "shake",
-            "organize",
-            "request",
-            "propogate",
-            "look for",
-            "pass on",
-            "disfigure",
-            "forage",
-            "hide", // [a] thing
-            "seek",
-            "rest",
-            "blockade",
-            "discover",
-            "raise",
-            "glean",
-            "keep",
-            "sacrifice",
-            "shirk",
-            "stir",
-            "invoke",
-            "build up",
-            "secure",
-            "deny",
-            "resurrect",
-            "over-run",
-            "defile",
-            "slow",
-            "disguise",
-            "restore",
-            "get",
-            "daydream about",
-            "get involved with",
-            "betray",
-            "bring back",
-            "bring",
-            "burn",
-            "catch",
-            "change",
-            "end",
-            "escape",
-            "expose",
-            "extinguish",
-            "find",
-            "form",
-            "free",
-            "heal",
-            "hold",
-            "locate",
-            "reset",
-            "revive",
-            "save",
-            "shame",
-            "turn back",
-            "unite",
-            "fulfill",
-            "banish",
-            "gain",
-            "show the inferiority of",
-            "crash",
         ],
-        gerund: [
+        thing: [
             "killing",
             "summoning",
             "transporting",
@@ -2781,71 +3194,8 @@ const verbs = { // ... maybe this would make more sense organized by tense first
             "gaining",
             "showing the inferiority of",
             "crashing",
-        ]
-    },
-    concept: {
-        present: [
-            "sow",
-            "spread",
-            "delay",
-            "plan for",
-            "impede",
-            "disfigure",
-            "forage",
-            "hide", // [a] thing
-            "seek",
-            "rest",
-            "blockade",
-            "discover",
-            "raise",
-            "glean",
-            "keep",
-            "sacrifice",
-            "shirk",
-            "stir",
-            "invoke",
-            "build up",
-            "secure",
-            "deny",
-            "resurrect",
-            "over-run",
-            "defile",
-            "slow",
-            "disguise",
-            "restore",
-            "get",
-            "daydream about",
-            "get involved with",
-            "betray",
-            "bind",
-            "bring back",
-            "bring",
-            "burn",
-            "catch",
-            "change",
-            "end",
-            "escape",
-            "expose",
-            "extinguish",
-            "find",
-            "form",
-            "free",
-            "heal",
-            "hold",
-            "locate",
-            "reset",
-            "revive",
-            "save",
-            "shame",
-            "turn back",
-            "unite",
-            "fulfill",
-            "banish",
-            "gain",
-            "show the inferiority of",
-            "crash",
         ],
-        gerund: [
+        concept: [
             "sowing",
             "spreading",
             "delaying",
@@ -3316,360 +3666,6 @@ const verbs = { // ... maybe this would make more sense organized by tense first
             "winning against"
         ]
     }
-}
-
-const charWords = {
-    chara: [// added to nouns.person.singular
-        "peasant girl",
-        "peasant boy",
-        "young boy",
-        "young girl",
-        "lad",
-        "lass",
-        "fruit-seller",
-        "gem merchant",
-        "sellsword",
-        "nomad",
-        "knight",
-        "assassin",
-        "gentleman thief",
-        "gentlewoman thief",
-        "soldier",
-        "monk",
-        "sorceror",
-        "enchanter",
-        "witch",
-        "warlock",
-        "warrior",
-        "mage",
-        "outlaw",
-        "ruffian",
-        "brigand",
-        "pickpocket",
-        "thief",
-        "woodsman",
-        "warlord",
-        "page",
-        "squire",
-        "troubadour",
-        "empress",
-        "emperor",
-        "noblewoman",
-        "nobleman",
-        "lord",
-        "lady",
-        "prince",
-        "princess",
-        "diplomat",
-        "monsterologist",
-        "swordmaster",
-        "apprentice",
-        "assassin-in-training",
-        "enchantress-in-training",
-        "summoner-in-training",
-        "witch-in-training",
-        "necromancer-in-training",
-        "prophet-in-training",
-        "sorceror-in-training",
-        "ogre",
-        "dragon",
-        "centaur",
-        "charlatan",
-        "vampire",
-        "genie",
-        "troll",
-        "dale elf",
-        "deep elf",
-        "dwarf",
-        "goblin",
-        "half elf",
-        "high elf",
-        "human",
-        "suhk",
-        "wildren",
-        "alchemist",
-        "artificer",
-        "bard",
-        "cleric",
-        "druid",
-        "fighter",
-        "paladin",
-        "ranger",
-        "rogue",
-        "runesmith",
-        "wizard",
-        "coalescer",
-        "excavator",
-        "harvester",
-        "logger",
-        "skinner",
-        "farmer",
-        "hunter",
-        "lumberjack",
-        "miner",
-        "panner",
-        "butcher",
-        "carpenter",
-        "gemcutter",
-        "glassmaker",
-        "papermaker",
-        "smelter",
-        "tanner",
-        "weaver",
-        "architect",
-        "blacksmith",
-        "brewer",
-        "chef",
-        "glassblower",
-        "lapidary",
-        "leatherworker",
-        "tailor",
-        "trapmaker",
-        "woodworker",
-        "appraiser",
-        "laborer",
-        "mender",
-        "eccentric candyman",
-        "retail employee",
-        "werewolf",
-        "feral child",
-        "snake-oil salesman",
-        "influencer",
-        "cowboy",
-        "pirate",
-        "rat",
-        "child psychologist",
-        "ghost hunter",
-        "archivist",
-        "creature",
-        "demolitions expert",
-        "goose",
-        "duelist",
-        "dog",
-        "construct",
-        "landlord",
-        "celebrity chef",
-        "village idiot",
-        "old guy",
-        "old lady",
-        "tax-evader",
-        "draft dodger",
-        "pyrotechnician",
-        "arsonist",
-        "professional arsonist",
-        "retired assassin",
-        "goth",
-        "clown",
-        "entire circus of clowns",
-        "doctor",
-        "lawyer",
-        "con artist",
-        "grifter",
-        "lad in a fancy suit",
-        "hot girl",
-        "hot guy",
-        "hot person",
-        "malewife",
-        "entity",
-        "absent father",
-        "war criminal",
-        "shitty wizard",
-        "conspiracy theorist",
-        "adrenaline junkie",
-        "time traveler",
-        "Italian",
-        "asshole",
-        "deadbeat dad",
-        "deadbeat mom",
-        "deadbeat parent",
-        "Little League coach",
-        "mobster",
-        "grad student",
-        "librarian",
-        "researcher",
-        "research assistant",
-        "entomologist",
-        "butch lesbian",
-        "dancer",
-        "singer",
-        "musician",
-        "historian",
-        "private investigator",
-        "detective",
-        "comedian",
-        "person",
-        "pro-wrestler",
-        "furry",
-        "girl",
-        "boy",
-        "candyman",
-        "retail employee",
-        "child",
-        "psychologist",
-        "guy",
-        "lad in a fancy suit",
-        "father",
-        "mother",
-        "dad",
-        "mom",
-        "parent",
-        "lesbian",
-        "idiot",
-    ],
-    adjective: [
-        "peasant",
-        "young",
-        "fruit-selling",
-        "gentleman",
-        "gentlewoman",
-        "apprentice",
-        "charlatan",
-        "vampire",
-        "dale elf",
-        "deep elf",
-        "dwarf",
-        "goblin",
-        "half elf",
-        "high elf",
-        "human",
-        "suhk",
-        "wildren",
-        "eccentric",
-        "werewolf",
-        "feral",
-        "influencer",
-        "child",
-        "celebrity",
-        "old",
-        "tax-evading",
-        "draft-dodging",
-        "professional",
-        "retired",
-        "goth",
-        "little",
-        "hot",
-        "absent",
-        "shitty",
-        "time-traveling",
-        "Italian",
-        "asshole",
-        "deadbeat",
-        "butch",
-        "dancing",
-        "singing",
-        "paramilitary",
-        "military",
-        "search",
-        "suicidal",
-        "fleeing",
-        "organized",
-        "insatiable",
-        "sickened",
-        "lusty",
-        "maniacal",
-        "unorganized",
-        "pugilistic",
-        "busybody",
-        "evil",
-        "sociopathic",
-        "underground",
-        "dying",
-        "benevolent",
-        "arsonistic",
-        "disorganized",
-        "convicted",
-        "noble",
-        "liar",
-        "chaotic",
-        "malicious",
-        "murderous",
-        "pugnacious",
-        "secret",
-        "elderly",
-        "violent",
-        "unharmonious",
-        "devious",
-        "surreptitious",
-        "quarelling",
-        "ideologically split",
-        "ragged",
-        "cursed",
-        "good",
-        "enlightened",
-        "zealous",
-        "heroic",
-        "amnesiac",
-        "resurrected",
-        "fey-touched",
-        "elite",
-        "lycanthropic",
-        "escaped",
-        "injured",
-        "commissioned",
-        "official",
-        "random",
-        "self-pitying",
-        "well-dressed",
-        "xenophobic",
-        "superstitious",
-        "drunk",
-        "depressive",
-        "morbid",
-        "mortally wounded",
-        "diseased",
-        "contrite",
-        "hateful",
-        "alcoholic",
-        "drug-addicted",
-        "fanatical",
-        "homeless",
-        "confused",
-        "artistic",
-        "desperate",
-        "suspicious",
-        "unaccountable",
-        "exhausted",
-        "vocal",
-        "undead",
-        "shady",
-        "righteous",
-        "plaintive",
-        "cowardly",
-        "insane",
-        "unscrupulous",
-        "oppressed",
-        "conned",
-        "fallen",
-        "undercover",
-        "reluctant",
-        "bloodthirsty",
-        "otherworldly",
-        "celestial",
-        "outsider",
-        "insectoid",
-        "brilliant",
-        "greedy",
-        "materialistic",
-        "unholy",
-        "ancient",
-        "obsessive",
-        "sole",
-        "outgrown",
-        "renowned",
-        "rich",
-        "poor",
-        "reformed",
-        "secretive",
-        "paranoid",
-        "compulsive",
-        "perverse",
-        "iconoclastic",
-        "nihilistic",
-        "former",
-        "underappreciated",
-        "kindly",
-        "unique",
-    ]
 }
 
 // Fetch Quest, Rumors, Adventure Generator, Plot Creator
@@ -4206,7 +4202,7 @@ const nouns = {
             "contracts"
         ]
     },
-    concepts: {
+    concept: {
         singular: [ // intangible objects
             // doesn't start with a(n)
             // one word
@@ -4259,7 +4255,6 @@ const nouns = {
             "mass hypnosis",
             "iron will and determination",
             "demonic help",
-
             // stuff that starts with a(n)
             "a divine audience",
             "a low profile",
@@ -4285,7 +4280,6 @@ const nouns = {
             "a laissez-faire attitude",
             "an insatiable hunger",
             "a game that is also a test",
-
             "the blame",
             "the power of the Ooze",
             "the notice of a god",
@@ -5089,6 +5083,7 @@ const fragments = {
 }
 
 // NON-GENERATOR FUNCTIONS
+
 // random string for all generators
 function randomString(arr) {
     const randomIndex = Math.floor(Math.random() * arr.length);
@@ -5117,26 +5112,6 @@ function wordPrepThe(){
 function wordPoss(word){
     word += "'s";
     return word;
-}
-
-// what do I need this to do?
-// need this function to pair up verbs and nouns based on type (person, place, thing), tense (present, gerund), and number (singular, plural)
-function sentences(){
-    // cry a million times
-    // 1. select verb first
-        // plays into switch case with the vars used (verbGerOne, verbPres)
-        // maybe add a boolean to declare if the verb being used is going to be a gerund or not?
-            // in that case verbs definitely need to be rearranged to be tense first and then type (ugh)
-        // if gerund = true, grab from this list. if gerund = false, grab from this list    
-            // could probably use the verb arrays for that if I don't want to reorganize 
-    // 2. add noun second
-        // depends on the verb type
-        // if the verb is a person, use a person noun
-        // i'm not sure if it makes more sense to do verb first and then noun, or noun first and then verb
-    // 3. singular or plural after noun
-        // add wordPrep and wordPoss functions here
-
-    // i already have my verb consts. is there a way i can work off of that? have the const call the function ? that might be easier to pull off
 }
 
 // GENERATOR FUNCTIONS
@@ -5190,45 +5165,14 @@ let plotMeanSelect = "";
 function plotCreate() {
     plotSelect = randomString(plotType);
     plotSubjSelect = randomString(plotSubjType);
-    plotActSelect = randomString(plotActType);
+    plotActSelect = randomString(plotActType); // here
     plotMeanSelect = randomString(plotMeanType);
 
     let plotPerson = "";
     let plotAction = "";
     let plotMethod = "";
 
-    // note: this stuff HAS to be in a function bc it won't generate new stuff otherwise
-    var nounPerson = nouns.person;
-    var nounPlace = nouns.place;
-    var nounThing = nouns.thing;
-
-    // random singular or plural noun
-    const nounSingular = [nounPerson.singular, nounPlace.singular, nounThing.singular]
-    const nounPlural = [nounPerson.plural, nounPlace.plural, nounThing.plural];
-
-    const nounArray = [nounSingular, nounPlural];
-
-    const nounType = randomString(nounArray);
-    const nounSubtype = randomString(nounType);
-    const nounSelect = randomString(nounSubtype);
-
-    var verbPerson = verbs.person;
-    var verbPlace = verbs.place;
-    var verbThing = verbs.thing;
-    var verbCont = verbs.continuous;
-
-    var plotVerbs = verbs.all;
-
-    const verbPresent = [verbPerson.present, verbPlace.present, verbThing.present, verbCont.present];
-    const verbGerund = [verbPerson.gerund, verbPlace.gerund, verbThing.gerund, verbCont.gerund];
-
-    const verbArray = [verbPresent, verbGerund];
-
-    const verbType = randomString(verbArray); // picks a verb tense
-    const verbSubtype = randomString(verbType); // picks a verb type
-    const verbSelect = randomString(verbSubtype); // picks a verb
-    // BS ends here (kinda)
-
+    // NON NOUN/VERB NONSENSE
     const goal = randomString(fragments.goal);
     const motive = randomString(quest.motivation); // the reason why
     const twist = randomString(quest.twist);
@@ -5244,48 +5188,87 @@ function plotCreate() {
     const charTrait = randomString(chara.trait);
     const charAdj = randomString(charWords.adjective);
     const charNoun = randomString(nounPerson.singular);
-
-    // these don't have wordPrep applied to them yet
-    const nounOne = randomString(nouns.all);
-    const nounTwo = randomString(nouns.all);
- 
-    const verbGerOne = randomString(plotVerbs.gerund);
-    const verbGerTwo = randomString(plotVerbs.gerund);
-    const verbPres = randomString(plotVerbs.present)
-    const verbConty = randomString(verbCont.gerund);  
     
     const type = randomString(plots.type);
     const tone = randomString(plots.tone);
     const genre = randomString(plots.genre);
 
-    // BS starts back up again here
-    // mari is a genius real pog not clickbait >:D
-    let combo = "";
-    let randomNoun = "";
-    if (verbSubtype == verbPerson.gerund) {
-        randomNoun = randomString(nounPerson.singular)
-    } else if (verbSubtype == verbPlace.gerund) {
-        randomNoun = randomString(nounPlace.singular)
-    } else if (verbSubtype == verbThing.gerund) {
-        randomNoun = randomString(nounThing.singular)
-    }
-    combo = verbSelect + " " + wordPrep(randomNoun) + " " + randomNoun;
-    // console.log(combo);
+    // noun vars
+    var nounPerson = nouns.person;
+    var nounPlace = nouns.place;
+    var nounThing = nouns.thing;
+    var nounConcept = nouns.concept;
 
-    let nouny = "";
-    if (nounType == nounSingular) {
-        nouny = wordPrep(nounSelect) + " " + nounSelect;
+    // verb vars
+    var verbPresent = verbs.present;
+    var verbGerund = verbs.gerund;
+    var verbCont = verbs.continuous;
+    
+    const verbConty = randomString(verbCont.gerund);
+
+    var verbGerOne;
+    var verbGerTwo;
+    var verbPres;
+
+    // noun horseshit
+    const nounSingular = [nounPerson.singular, nounPlace.singular, nounThing.singular, nounConcept.singular];
+    const nounPlural = [nounPerson.plural, nounPlace.plural, nounThing.plural, nounConcept.plural];
+    const nounArray = [nounSingular, nounPlural];
+
+    // noun one
+    const nounTypeOne = randomString(nounArray);
+    const nounSubOne = randomString(nounTypeOne);
+    const nounSelectOne = randomString(nounSubOne);
+
+    // singular or plural?
+    if (nounTypeOne == nounSingular) {
+        nounOne = wordPrep(nounSelectOne) + " " + nounSelectOne;
+    } else if (nounTypeOne == nounPlural) {
+        nounOne = nounSelectOne;
+    }
+
+    // gerund one and present verb select 
+    if (nounSubOne == nounPerson.singular || nounSubOne == nounPerson.plural) {
+        verbGerOne = randomString(verbGerund.person);
+        verbPres = randomString(verbPresent.person);
+    } else if (nounSubOne == nounPlace.singular || nounSubOne == nounPlace.plural) {
+        verbGerOne = randomString(verbGerund.place);
+        verbPres = randomString(verbPresent.place);
+    } else if (nounSubOne == nounThing.singular || nounSubOne == nounThing.plural) {
+        verbGerOne = randomString(verbGerund.thing);
+        verbPres = randomString(verbPresent.thing);
+    } else if (nounSubOne == nounConcept.singular || nounSubOne == nounConcept.plural) {
+        verbGerOne = randomString(verbGerund.concept);
+        verbPres = randomString(verbPresent.concept);
     } else {
-        nouny = wordPrepThe(nounSelect) + " " + nounSelect;
+        verbGerOne = "yahoo";
+        verbPres = "hooboye";
     }
-    // console.log(nouny);
 
-    var nounx = wordPoss(nouny);
-    // console.log(nounx);
-    // this is getting way too silly and it needs to be its own function
+    // noun two
+    const nounTypeTwo = randomString(nounArray);
+    const nounSubTwo = randomString(nounTypeTwo);
+    const nounSelectTwo = randomString(nounSubTwo);
 
-    let verby = false; // true if gerund, false if present or actionfrag
-    // what am i gonna do about the action frags?
+    // singular or plural?
+    if (nounTypeTwo == nounSingular) {
+        nounTwo = wordPrep(nounSelectTwo) + " " + nounSelectTwo;
+    } else if (nounTypeTwo == nounPlural) {
+        nounTwo = nounSelectTwo;
+    }
+
+    // gerund two select
+    if (nounSubTwo == nounPerson.singular || nounSubTwo == nounPerson.plural) {
+        verbGerTwo = randomString(verbGerund.person);
+    } else if (nounSubTwo == nounPlace.singular || nounSubTwo == nounPlace.plural) {
+        verbGerTwo = randomString(verbGerund.place);
+    } else if (nounSubTwo == nounThing.singular || nounSubTwo == nounThing.plural) {
+        verbGerTwo = randomString(verbGerund.thing);
+    } else if (nounSubTwo == nounConcept.singular || nounSubTwo == nounConcept.plural) {
+        verbGerTwo = randomString(verbGerund.concept);
+    } else {
+        verbGerTwo = "whooya";
+    }
 
     // singular and plural subjects
     switch (plotSubjSelect) {
@@ -5307,19 +5290,15 @@ function plotCreate() {
     switch (plotActSelect) {
         case "action 1": //pre-existing action
             plotAction = "<b>" + actionFrag;
-            verby = false;
         break;
         case "action 2": //[verb]ing [noun]
             plotAction = "<b>" + verbGerOne + " " + nounOne;
-            verby = true;
         break;
         case "action 3": //[continuous] to [verb] [noun]
             plotAction = "<b>" + verbConty + " " + verbPres + " " + nounOne;
-            verby = false;
         break;
         case "action 4": //trying to [verb] [noun]
             plotAction = "trying to <b>" + verbPres + " " + nounOne;
-            verby = false;
         break;
     }
 
@@ -5341,11 +5320,10 @@ function plotCreate() {
         break;
         case "method 5": //[action] by [gerund] [noun]
             plotMethod = "</b>" + "by <b>" + verbGerTwo + " " + nounTwo;
-            verby = true;
         break;
     }
 
-    console.log(verby);
+    // console.log(verby);
 
     switch(plotSelect) {
         case "plot 1":
