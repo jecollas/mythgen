@@ -15,37 +15,76 @@ const plots = {
 }
 
 // Fetch Quest, Rumors
-const property = [//singular or plural,,,
-    // Ace-10 of spades from MHoF
-    "used to belong to a famous general",
-    "was blessed by the gods",
-    "was used to kill someone important",
-    "played a key role in changing fate",
-    "everyone hates",
-    "is a vital clue in an ongoing mystery or investigation",
-    "has become corrupted",
-    "hurts people",
+const property = {
+    singular: [//singular or plural,,,
+        // starts with "is"
+        "is a vital clue in an ongoing mystery or investigation",
+        "is absolutely useless",
+        "is full of dirt",
+        "is deeply and incredibly cursed",
+        "is made of gold",
+        "is hot to the touch",
+        "is cold to the touch",
 
-    // from the Meme Machine
-    "contains ancient secrets",
-    "is absolutely useless",
-    "is full of dirt",
-    "was cursed by a witch",
-    "is deeply and incredibly cursed",
-    "used to be green",
-    "has eyes",
-    "looks like a goose",
-    "someone left on a boat",
-    "was lost at sea",
-    "will fix my marriage",
-    "can heal any wound",
-    "is made of gold",
-    "went missing years ago",
-    "is hot to the touch",
-    "is cold to the touch",
-    "was stolen by bandits",
-    "was created as a result of a fae deal gone wrong"
-];
+        // was
+        "was blessed by the gods",
+        "was used to kill someone important",
+        "was cursed by a witch",
+        "was lost at sea",
+        "was stolen by bandits",
+        "was created as a result of a fae deal gone wrong",
+        "was left on a boat",
+
+        // has
+        "has become corrupted",
+        "has eyes",
+
+        "hurts people",
+        "contains ancient secrets",
+        "looks like a goose",
+        
+        "used to belong to a famous general",
+        "played a key role in changing fate",
+        "everyone hates",
+
+        "used to be green",
+        "will fix my marriage",
+        "can heal any wound",
+        "went missing years ago",
+    ],
+    plural: [
+        "are a vital clue in an ongoing mystery or investigation",
+        "are absolutely useless",
+        "are full of dirt",
+        "are deeply and incredibly cursed",
+        "are made of gold",
+        "are hot to the touch",
+        "are cold to the touch",
+
+        "were blessed by the gods",
+        "were used to kill someone important",
+        "were cursed by a witch",
+        "were lost at sea",
+        "were stolen by bandits",
+        "were created as a result of a fae deal gone wrong",
+        "were left on a boat",
+
+        "have become corrupted",
+        "have eyes",
+
+        "hurt people",
+        "contain ancient secrets",
+        "look like a goose",
+
+        "used to belong to a famous general",
+        "played a key role in changing fate",
+        "everyone hates",
+        "used to be green",
+        "will fix my marriage",
+        "can heal any wound",
+        "went missing years ago",
+    ]
+};
 
 // Fetch Quest, Adventure Generator
 const quest = {
@@ -1588,6 +1627,7 @@ const oldVerbs = {
         "attempting to",
         "pretending to",
         "planning to",
+        "intending to",
         "threatening to",
         "starting to"
     ],
@@ -1946,13 +1986,7 @@ const verbs = {
             "delay",
             "plan for",
             "impede",
-            "disfigure",
-            "forage",
-            "hide", // [a] thing
             "seek",
-            "rest",
-            "blockade",
-            "discover",
             "raise",
             "glean",
             "keep",
@@ -1963,21 +1997,14 @@ const verbs = {
             "build up",
             "secure",
             "deny",
-            "resurrect",
-            "over-run",
             "defile",
             "slow",
             "disguise",
             "restore",
             "get",
             "daydream about",
-            "get involved with",
-            "betray",
-            "bind",
             "bring back",
             "bring",
-            "burn",
-            "catch",
             "change",
             "end",
             "escape",
@@ -1985,21 +2012,10 @@ const verbs = {
             "extinguish",
             "find",
             "form",
-            "free",
-            "heal",
             "hold",
-            "locate",
-            "reset",
-            "revive",
-            "save",
-            "shame",
             "turn back",
-            "unite",
-            "fulfill",
-            "banish",
             "gain",
             "show the inferiority of",
-            "crash",
         ]
     },
     gerund: {
@@ -2351,40 +2367,25 @@ const verbs = {
             "delaying",
             "planning for",
             "impeding",
-            "hindering",
-            "disfiguring",
-            "foraging",
-            "hiding",
             "seeking",
-            "resting",
-            "blockading",
-            "discovering",
             "raising",
             "gleaning",
             "keeping",
             "sacrificing",
             "shirking",
             "stirring",
-            "searching for",
             "invoking",
             "building up",
             "securing",
             "denying",
-            "resurrecting",
-            "over-running",
             "defiling",
             "slowing",
             "disguising",
             "restoring",
             "getting",
             "daydreaming about",
-            "getting involved with",
-            "betraying",
-            "binding",
             "bringing back",
             "bringing",
-            "burning",
-            "catching",
             "changing",
             "ending",
             "erasing",
@@ -2392,33 +2393,22 @@ const verbs = {
             "extinguishing",
             "finding",
             "forming",
-            "freeing",
-            "healing",
             "holding",
-            "locating",
-            "reseting",
-            "reviving",
-            "saving",
-            "shaming",
             "turning back",
-            "uniting",
-            "fulfilling",
-            "banishing",
             "gaining",
             "showing the inferiority of",
-            "crashing",
         ]
     },
     continuous: {
         present: [
-            "try to", //verb goal noun
-            "attempt to",
-            "pretend to",
-            "plan to",
-            "intend to",
-            "want to",
-            "need to",
-            "threaten to"
+            "tries to", //verb goal noun
+            "attempts to",
+            "pretends to",
+            "plans to",
+            "intends to",
+            "wants to",
+            "needs to",
+            "threatens to"
         ],
         gerund: [
             "trying to", //verb goal noun
@@ -3232,6 +3222,8 @@ const nouns = {
             "hags",
             "violent vigilantes",
             "three possums in a trench coat",
+            
+            "another group",
             "the homies",
             "the dead",
             "the law",
@@ -3251,34 +3243,35 @@ const nouns = {
     },
     place: {
         singular: [
-            "church",
-            "court",
-            "local tavern",
-            "kingdom",
-            "market",
-            "city",
-            "fortress",
-            "settlement",
-            "building site",
-            "nation",
-            "cult",
             "building here in town",
+            "building site",
+            "church",
+            "city",
+            "court",
+            "cult",
+            "fortress",
+            "haven",
             "illegal gambling ring",
             "illicit underground unicorn fight club",
-            "haven",
+            "kingdom",
+            "local tavern",
+            "magical gate",
+            "market",
+            "nation",
+            "portal to another dimension",
+            "settlement",
             "village",
             "wedding",
-            "magical gate",
-            "portal to another dimension",
             "werewolf lair",
         ],
         plural: [
-            "seas",
             "churches",
-            "courts",
-            "walls separating reality",
-            "lands",
             "shrines",
+            "walls separating reality",
+            
+            "the courts",
+            "the lands",
+            "the seas",
         ]
     },
     thing: {
@@ -3332,27 +3325,52 @@ const nouns = {
             "ancient arrowhead",
             "merfolk bridal veil",
             "soulstone",
+            "new world order",
+            "divine audience",
+            "low profile",
+            "plague",
+            "new ethic",
+            "deal with the fae",
+            "legacy",
+            "rivalry",
+            "war",
+            "race",
+            "new society",
+            "new community",
+            "great wound upon the land",
+            "great wound upon the people",
+            "coup",
+            "truce",
+            "agreement with the archenemy",
+            "civil war",
+            "agreement",
+            "prophecy",
+            "riot",
+            "laissez-faire attitude",
+            "insatiable hunger",
+            "game that is also a test",
         ],
         plural: [
-            "diseased blankets",
-            "arcane murals",
-            "kittens",
-            "creature hybrids",
-            "stolen teeth",
-            "snakes",
-            "literal garbage",
-            "magical man-catchers",
-            "forged documents",
-            "forbidden tomes",
-            "secret documents",
-            "divine regalia",
-            "cursed armor",
-            "embalmed corpses",
-            "drugs",
             "alcohol",
+            "arcane murals",
+            "contracts",
+            "creature hybrids",
+            "cursed armor",
             "deceptive documents",
+            "diseased blankets",
+            "divine regalia",
+            "drugs",
+            "embalmed corpses",
             "flows of gold",
-            "contracts"
+            "forbidden tomes",
+            "forged documents",
+            "kittens",
+            "literal garbage",
+            "lurid colors",
+            "magical man-catchers",
+            "secret documents",
+            "snakes",
+            "stolen teeth",
         ]
     },
     concept: {
@@ -3406,62 +3424,38 @@ const nouns = {
             "mass hypnosis",
             "iron will and determination",
             "demonic help",
-            // stuff that starts with a(n)
-            "divine audience",
-            "low profile",
-            "plague",
-            "new ethic",
-            "deal with the fae",
-            "legacy",
-            "rivalry",
-            "war",
-            "race",
-            "new society",
-            "new community",
-            "great wound upon the land",
-            "great wound upon the people",
-            "coup",
-            "truce",
-            "agreement with the archenemy",
-            "civil war",
-            "new world order",
-            "agreement",
-            "prophecy",
-            "riot",
-            "laissez-faire attitude",
-            "insatiable hunger",
-            "game that is also a test",
+            
             "the blame",
-            "the power of the Ooze",
-            "the notice of a god",
-            "the next season",
             "the economy",
-            "the prophecy",
             "the market",
+            "the next season",
+            "the notice of a god",
+            "the power of prayer",
+            "the power of the Ooze",
             "the power vested in them by law",
-            "the power of prayer"
+            "the prophecy",
         ],
         plural: [
-            "privileges",
             "alliances",
-            "prices",
-            "resources",
-            "rumors",
-            "public speeches",
-            "sensitive divinations",
-            "fake identities",
-            "pure wits",
+            "blatant lies",
             "deep pockets",
             "divine blessings",
+            "fake identities",
             "false promises",
-            "blatant lies",
+            "fame and prestige",
             "little resources left",
-            "public officials and decrees",
             "market manipulations",
-            "lurid colors",
+            "prices",
+            "privileges",
+            "public officials and decrees",
+            "public speeches",
+            "pure wits",
+            "resources",
+            "rumors",
+            "sensitive divinations",
+
             "the hopes of the whole village",
             "the real answers",
-            "fame and prestige",
         ]
     },
     posessions: [ // literally just nix most of the prepositions here and sort them other places
@@ -3923,7 +3917,7 @@ const fragments = {
         "kill a colony of humanoids",
         "kill a king",
         "locate a tome of unspeakable truths",
-        "make fun of",
+        // "make fun of",
         "make substantial profits",
         "negotiate a truce",
         "negotiate an agreement with the arch enemy",
@@ -4320,7 +4314,7 @@ let plotMeanSelect = "";
 function plotCreate() {
     plotSelect = randomString(plotType);
     plotSubjSelect = randomString(plotSubjType);
-    plotActSelect = randomString(plotActType); // here
+    plotActSelect = randomString(plotActType);
     plotMeanSelect = randomString(plotMeanType);
 
     let plotPerson = "";
@@ -4338,7 +4332,8 @@ function plotCreate() {
     var verbGerund = verbs.gerund;
     var verbCont = verbs.continuous;
 
-    const verbConty = randomString(verbCont.gerund);
+    const verbContPres = randomString(verbCont.present);
+    const verbContGer = randomString(verbCont.gerund);
 
     // NON NOUN/VERB NONSENSE
     const goal = randomString(fragments.goal);
@@ -4348,8 +4343,9 @@ function plotCreate() {
 
     const group = randomString(chara.group);
     const members = randomString(nounPerson.plural);
-    const condition = randomString(property); // do something here so that it uses "is" or "are" depending on if the noun is singular or plural
 
+    let condition = "";
+    
     const actionFrag = randomString(fragments.action);
     const meansFrag = randomString(fragments.means);
 
@@ -4361,28 +4357,35 @@ function plotCreate() {
     const tone = randomString(plots.tone);
     const genre = randomString(plots.genre);
 
-    var verbGerOne;
-    var verbGerTwo;
-    var verbPres;
+    let verbGerOne = "";
+    let verbGerTwo = "";
+    let verbPres = "";
 
     // noun horseshit
-    const nounSingular = [nounPerson.singular, nounPlace.singular, nounThing.singular, nounConcept.singular];
-    const nounPlural = [nounPerson.plural, nounPlace.plural, nounThing.plural, nounConcept.plural];
+    const nounSingular = [
+        nounPerson.singular,nounPlace.singular,nounThing.singular,nounConcept.singular
+    ];
+    const nounPlural = [
+        nounPerson.plural, nounPlace.plural, nounThing.plural, nounConcept.plural
+    ];
+    
     const nounArray = [nounSingular, nounPlural];
 
     // noun one
-    const nounTypeOne = randomString(nounArray);
-    const nounSubOne = randomString(nounTypeOne);
-    const nounSelectOne = randomString(nounSubOne);
+    const nounTypeOne = randomString(nounArray); // singular or plural
+    const nounSubOne = randomString(nounTypeOne); // person, place, thing, or concept
+    const nounSelectOne = randomString(nounSubOne); // noun from that array
 
-    // singular or plural?
-    if (nounTypeOne == nounSingular) {
-        nounOne = wordPrep(nounSelectOne) + nounSelectOne;
-    } else if (nounTypeOne == nounPlural) {
+    // singular or plural? also, concepts don't get a preposition
+    if (nounTypeOne == nounPlural || (nounSubOne == nounConcept.singular || nounSubOne == nounConcept.plural)) {
         nounOne = nounSelectOne;
+        condition = randomString(property.plural);
+    } else if (nounTypeOne == nounSingular) {
+        nounOne = wordPrep(nounSelectOne) + nounSelectOne;
+        condition = randomString(property.singular);
     }
 
-    // gerund one and present verb select 
+    // verbs -- gerund one and present verb select 
     if (nounSubOne == nounPerson.singular || nounSubOne == nounPerson.plural) {
         verbGerOne = randomString(verbGerund.person);
         verbPres = randomString(verbPresent.person);
@@ -4395,9 +4398,6 @@ function plotCreate() {
     } else if (nounSubOne == nounConcept.singular || nounSubOne == nounConcept.plural) {
         verbGerOne = randomString(verbGerund.concept);
         verbPres = randomString(verbPresent.concept);
-    } else {
-        verbGerOne = "yahoo";
-        verbPres = "hooboye";
     }
 
     // noun two
@@ -4405,14 +4405,14 @@ function plotCreate() {
     const nounSubTwo = randomString(nounTypeTwo);
     const nounSelectTwo = randomString(nounSubTwo);
 
-    // singular or plural?
-    if (nounTypeTwo == nounSingular) {
-        nounTwo = wordPrep(nounSelectTwo) + nounSelectTwo;
-    } else if (nounTypeTwo == nounPlural) {
+    // singular or plural? also, concepts don't get a preposition
+    if (nounTypeTwo == nounPlural || (nounSubTwo == nounConcept.singular || nounSubTwo == nounConcept.plural)) {
         nounTwo = nounSelectTwo;
+    } else if (nounTypeTwo == nounSingular) {
+        nounTwo = wordPrep(nounSelectTwo) + nounSelectTwo;
     }
 
-    // gerund two select
+    // verbs -- gerund two select
     if (nounSubTwo == nounPerson.singular || nounSubTwo == nounPerson.plural) {
         verbGerTwo = randomString(verbGerund.person);
     } else if (nounSubTwo == nounPlace.singular || nounSubTwo == nounPlace.plural) {
@@ -4421,39 +4421,46 @@ function plotCreate() {
         verbGerTwo = randomString(verbGerund.thing);
     } else if (nounSubTwo == nounConcept.singular || nounSubTwo == nounConcept.plural) {
         verbGerTwo = randomString(verbGerund.concept);
-    } else {
-        verbGerTwo = "whooya";
+    }
+
+    // subject-verb agreement
+    let sva = "";    
+    if (plotSubjSelect.startsWith("singular")) {
+        sva = "is";
+    } else if (plotSubjSelect.startsWith("plural")) {
+        sva = "are";
     }
 
     // singular and plural subjects
     switch (plotSubjSelect) {
         case "singular 1":
-            plotPerson = wordPrep(charNoun) + charNoun + "</b> who <b>" + charTrait + "</b> is";
+            plotPerson = wordPrep(charNoun) + charNoun + "</b> who <b>" + charTrait + "</b>";
         break;
         case "singular 2":
-            plotPerson = wordPrep(charAdj) + charAdj + " " + charNoun + "</b> is";
+            plotPerson = wordPrep(charAdj) + charAdj + " " + charNoun + "</b>";
         break;
         case "plural 1":
-            plotPerson = wordPrep(group) + group + "</b> of <b>" + members + "</b> are";
+            plotPerson = wordPrep(group) + group + "</b> of <b>" + members + "</b>";
         break;
         case "plural 2":
-            plotPerson = wordPrep(charAdj) + charAdj + " " + group + "</b> of <b>" + members + "</b> are";
+            plotPerson = wordPrep(charAdj) + charAdj + " " + group + "</b> of <b>" + members + "</b>";
         break;
     }
 
     // different kinds of actions
     switch (plotActSelect) {
         case "action 1": //pre-existing action
-            plotAction = "<b>" + actionFrag;
+            plotAction = sva + " <b>" + actionFrag;
         break;
         case "action 2": //[verb]ing [noun]
-            plotAction = "<b>" + verbGerOne + " " + nounOne;
+            plotAction = sva + " <b>" + verbGerOne + " " + nounOne;
         break;
         case "action 3": //[continuous] to [verb] [noun]
-            plotAction = "<b>" + verbConty + " " + verbPres + " " + nounOne;
+            plotAction = sva + " <b>" + verbContGer + " " + verbPres + " " + nounOne;
         break;
-        case "action 4": //trying to [verb] [noun]
-            plotAction = "trying to <b>" + verbPres + " " + nounOne;
+        //[try] to [verb] [noun]
+        case "action 4": 
+            plotAction = "<b>" + verbContPres + " " + verbPres + " " + nounOne + "</b>";
         break;
     }
 
@@ -4524,7 +4531,7 @@ function questGen() {
     questSelect = randomString(qQuest);
 
     const qItem = randomString(nouns.all);
-    const qProperty = randomString(property);
+    const qProperty = randomString(property.singular);
     const qGoal = randomString(fragments.goal);
     const qMotive = randomString(quest.motivation);
     const qTwist = randomString(quest.twist);
@@ -4801,7 +4808,7 @@ function rumorGen() {
     
     const rumor_source = randomString(rumors.source);
     const rumor_item = randomString(nouns.all);
-    const rumor_property = randomString(property);
+    const rumor_property = randomString(property.singular);
     const rumor_monsters = randomString(monsters);
     const rumor_trait = randomString(chara.trait);
     const rumor_accuse = randomString(rumors.accuse);
