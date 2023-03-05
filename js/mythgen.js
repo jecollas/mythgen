@@ -1179,6 +1179,15 @@ const characters = {
         "Traveler"
     ],
     faceRoles: [
+        "Dedrot",
+        "Ororo",
+        "Amitel",
+        "Ryknos",
+        "Adara",
+        "Naenya",
+        "Enoon",
+        "Scandelen",
+        "Ixbus",
         "Lord Proctor Behran",
         "Farmer Grey",
         "Octavious",
@@ -1203,16 +1212,16 @@ const characters = {
         "Roark Galt",
         "Johann Becket",
         "Bellator Zhao",
-        "Mythria Diamantis",
         "Count Amedeo",
         "Master Trapmaker Dom Sourfang",
-        "Joff Godley"
+        "Yama",
+        "the Rend"
     ],
     fakeFirst:[
-        "Billy","Bobby","Mary","Barry","Steven","Marlon","Rachel","Shelby","Eliza","Elizabeth","Joseph","Andy","Arietta","Morgan","Taylor","Tristan","Kai","Anabelle","Duke","Esteban","Antonio","Anthony","Tony","Jackie","John","Mike","Michael","Chev","Mandy","Sully","Joel","Roger","Peter","Connor","Brian","Brendan","Emmy","Isaac","Melissa","Jaime","Jesse","Dakota","Jackson","Sawyer","Xavier","Ester","Tien","Logan","James","Mason","Jason","Calvin","Caleb","Ada","Clay","Gerard","Amy","Lydia","Eugenia","Rose","Jade","Jane","Roxy","Dave","David","Alexis","Jake","Dirk","Sarah","Raleigh","Nikolai","Laila","Emerald","Marcus","Marc","Mark","Caroline","Katie","Kaitlin","Bridget","Haley","Jack","Lauren","Reya","Letitia","Axle","Alex","Rae","Fae","Danny","Dani","Hugo","Juan","Johnny","Paul","Dominic","Mia","Michelle","Dwayne","Chris","Antigone","Maria","Mehak","Vishali","Iris","Shane","Sam","Jimmy","Isabella","Wendy","Thomas","Dan","Daniel","Elias","Cris","Norbert"
+        "Billy","Bobby","Mary","Barry","Steven","Marlon","Rachel","Shelby","Eliza","Elizabeth","Joseph","Andy","Arietta","Morgan","Taylor","Tristan","Kai","Anabelle","Duke","Esteban","Antonio","Anthony","Tony","Jackie","John","Mike","Michael","Chev","Mandy","Sully","Joel","Roger","Peter","Connor","Brian","Brendan","Emmy","Isaac","Melissa","Jaime","Jesse","Dakota","Jackson","Sawyer","Xavier","Ester","Tien","Logan","James","Mason","Jason","Calvin","Caleb","Ada","Clay","Gerard","Amy","Lydia","Eugenia","Rose","Jade","Jane","Roxy","Dave","David","Alexis","Jake","Dirk","Sarah","Raleigh","Nikolai","Laila","Emerald","Marcus","Marc","Mark","Caroline","Katie","Kaitlin","Bridget","Haley","Jack","Lauren","Reya","Letitia","Axle","Alex","Rae","Fae","Danny","Dani","Hugo","Juan","Johnny","Paul","Dominic","Mia","Michelle","Dwayne","Chris","Antigone","Maria","Mehak","Vishali","Iris","Shane","Sam","Jimmy","Isabella","Wendy","Thomas","Dan","Daniel","Elias","Cris","Norbert","Arya","Cale","Jonathan","Jon","Merla","Sylora","Rhiann","Martin","Sasha","Tim","Timothy","Shirou","Rin","Holly","Ace","Ed","Edward","Corvanna","Allura","Sakura","Shinji","Asuka","Rei",
     ],
     fakeLast: [
-        "Venitzo","Nightlocke","Shelley","Brando","Grey","Stevenson","Andrews","McGrath","Wheeler","Taylor","Brodey","Lee","Han","Collins","LeBeau","Blackwood","Jackson","Stratman","Smith","Filli","Miller","Merlino","Fox","Waldron","Rogers","Adams","de la Cruz","Santiago","Lessio","Belen","Rodriguez","Connors","Parker","Barnes","Price","Sawyer","Wolfe","Mayer","Howlett","Freyason","Foster","Reynolds","Thorne","Owens","Doe","Morse","Paura","Walters","Ivanofski","St. Claire","Shaughnessy","Carson","Fianna","Delarose","Darwin","Red","Green","Perez","Runner","Walker","Toretto","DiArcangelo","Desantos","Tavares","Diamond","Wu","Demehri","Cahill","Brown","Fenton","Rienton"
+        "Venitzo","Nightlocke","Shelley","Brando","Grey","Stevenson","Andrews","McGrath","Wheeler","Taylor","Brodey","Lee","Han","Collins","LeBeau","Blackwood","Jackson","Stratman","Smith","Filli","Miller","Merlino","Fox","Waldron","Rogers","Adams","de la Cruz","Santiago","Lessio","Belen","Rodriguez","Connors","Parker","Barnes","Price","Sawyer","Wolfe","Mayer","Howlett","Freyason","Foster","Reynolds","Thorne","Owens","Doe","Morse","Paura","Walters","Ivanofski","St. Claire","Shaughnessy","Carson","Fianna","Delarose","Darwin","Red","Green","Perez","Runner","Walker","Toretto","DiArcangelo","Desantos","Tavares","Diamond","Wu","Demehri","Cahill","Brown","Fenton","Rienton","Sims","James","Wolfhide","Blackwood","Black","Stoker","Berry","Night","Caligo","Pereira","Rackham","Teach","Murphy","Ikari","Matou","Langley","Ayanami","Vantas","Captor","Darling","Peters","Lukas","Perotta"
     ]
 };
 
@@ -1307,7 +1316,7 @@ const oldVerbs = {
         "prey",
         "cheat",
         "shirk",
-        "stir",
+        "stir up",
         "incite",
         "deflect",
         "quest for",
@@ -1498,7 +1507,7 @@ const oldVerbs = {
         "preying",
         "cheating",
         "shirking",
-        "stirring",
+        "stirring up",
         "inciting",
         "deflecting",
         "questing for",
@@ -1732,7 +1741,7 @@ const verbs = {
             "keep",
             "sacrifice",
             "shirk",
-            "stir",
+            "stir up",
             "invoke",
             "build up",
             "secure",
@@ -1825,7 +1834,7 @@ const verbs = {
             "keep",
             "sacrifice",
             "shirk",
-            "stir",
+            "stir up",
             "invoke",
             "build up",
             "secure",
@@ -1938,7 +1947,7 @@ const verbs = {
             "keep",
             "sacrifice",
             "shirk",
-            "stir",
+            "stir up",
             "invoke",
             "build up",
             "secure",
@@ -1992,7 +2001,7 @@ const verbs = {
             "keep",
             "sacrifice",
             "shirk",
-            "stir",
+            "stir up",
             "invoke",
             "build up",
             "secure",
@@ -2112,7 +2121,7 @@ const verbs = {
             "keeping",
             "sacrificing",
             "shirking",
-            "stirring",
+            "stirring up",
             "searching for",
             "invoking",
             "building up",
@@ -2205,7 +2214,7 @@ const verbs = {
             "keeping",
             "sacrificing",
             "shirking",
-            "stirring",
+            "stirring up",
             "searching for",
             "invoking",
             "building up",
@@ -2318,7 +2327,7 @@ const verbs = {
             "keeping",
             "sacrificing",
             "shirking",
-            "stirring",
+            "stirring up",
             "searching for",
             "invoking",
             "building up",
@@ -2373,7 +2382,7 @@ const verbs = {
             "keeping",
             "sacrificing",
             "shirking",
-            "stirring",
+            "stirring up",
             "invoking",
             "building up",
             "securing",
@@ -2501,7 +2510,7 @@ const verbs = {
             "prey",
             "cheat",
             "shirk",
-            "stir",
+            "stir up",
             "incite",
             "deflect",
             "quest for",
@@ -2692,7 +2701,7 @@ const verbs = {
             "preying",
             "cheating",
             "shirking",
-            "stirring",
+            "stirring up",
             "inciting",
             "deflecting",
             "questing for",
@@ -4312,6 +4321,7 @@ let plotActSelect = "";
 let plotMeanSelect = "";
 
 function plotCreate() {
+    // break this up into functions!!!
     plotSelect = randomString(plotType);
     plotSubjSelect = randomString(plotSubjType);
     plotActSelect = randomString(plotActType);
@@ -4457,9 +4467,8 @@ function plotCreate() {
         break;
         case "action 3": //[continuous] to [verb] [noun]
             plotAction = sva + " <b>" + verbContGer + " " + verbPres + " " + nounOne;
-        break;
-        //[try] to [verb] [noun]
-        case "action 4": 
+        break;        
+        case "action 4": //[try] to [verb] [noun]
             plotAction = "<b>" + verbContPres + " " + verbPres + " " + nounOne + "</b>";
         break;
     }
@@ -4614,7 +4623,6 @@ function adventureGen() {
     const agPresent = randomString(oldVerbs.present)
     const agverbGerOne = randomString(oldVerbs.gerund);
     const agGerundTwo = randomString(oldVerbs.gerund);
-    // const agContPres = randomString(oldVerbs.contPres); //[try] to [verb] [noun]
     const agContGer = randomString(oldVerbs.contGer);
 
     switch (subjectSelect) {
@@ -4642,11 +4650,6 @@ function adventureGen() {
         case "action 4": //try to [verb] [noun]
             agAction = "trying to <b>" + agPresent + " " + agNounOne;
         break;
-        //*sigh*, maybe later
-        //[try] to [verb] [noun]
-        // case "action 5": 
-        //     agAction = "<b>" + agContPres + " " + agPresent + " " + agNounOne + "</b>";
-        // break;
     }
 
     const agSubject = agPerson + " " + agAction;
@@ -4754,7 +4757,7 @@ function npcGen() {
 }
 
 // Rumors
-const rRumors = [
+const rumorType = [
     "rumor 1",
     "rumor 2",
     "rumor 3",
@@ -4779,7 +4782,8 @@ const charTypeOne = [
 const charTypeTwo = [
     "player character",
     "face role",
-    "fake role"
+    "fake role",
+    "fake role 2"
 ];
 
 let rumorSelect = "";
@@ -4787,40 +4791,44 @@ let personSelectOne = "";
 let personSelectTwo = "";
 
 function rumorGen() {
-    rumorSelect = randomString(rRumors);
+    rumorSelect = randomString(rumorType);
     personSelectOne = randomString(charTypeOne);
     personSelectTwo = randomString(charTypeTwo);
 
-    var charNoun = nouns.person;
+    let personOne = "";
+    let personTwo = "";
+    let rumor = "";
 
+    var charNoun = nouns.person;
+    var itemNoun = nouns.thing;
+
+    // person one (required)
     const playerOne = randomString(characters.players);
     const faceOne= randomString(characters.faceRoles);
     const firstNameOne = randomString(characters.fakeFirst);
     const lastNameOne = randomString(characters.fakeLast);
+    const fakeNameOne = firstNameOne + " " + lastNameOne;
+    const rumorCharOne = randomString(charNoun.singular);
+    const charOne = wordPrep(rumorCharOne) + " " + rumorCharOne;    
 
+    // person two (optional)
     const playerTwo = randomString(characters.players);
-    const faceTwo = randomString(characters.faceRoles);
+    const faceTwo = randomString(characters.faceRoles);    
     const firstNameTwo = randomString(characters.fakeFirst);
     const lastNameTwo = randomString(characters.fakeLast);
+    const fakeNameTwo = firstNameTwo + " " + lastNameTwo;
+    const rumorCharTwo = randomString(charNoun.singular);
+    const charTwo = wordPrep(rumorCharTwo) + " " + rumorCharTwo;
 
-    let personOne = "";
-    let personTwo = "";
-    
+    // not people-related
     const source = randomString(rumors.source);
-    const item = randomString(nouns.all);
+    const item = randomString(itemNoun.singular);
     const itemProperty = randomString(property.singular);
     const monster = randomString(monsters);
     const trait = randomString(chara.trait);
-    const accuse = randomString(rumors.accuse);
+    const accuse = randomString(rumors.accuse);    
 
-    const rumorCharOne = randomString(charNoun.singular);
-    
-    const charOne = wordPrep(rumorCharOne) + " " + rumorCharOne;
-
-    const rumorCharTwo = randomString(charNoun.singular);
-    
-    const charTwo = wordPrep(rumorCharTwo) + " " + rumorCharTwo;
-
+    // templates for person one (required)
     switch (personSelectOne) {
         case "player character":
             personOne = "<b>" + playerOne + "</b>";
@@ -4829,13 +4837,14 @@ function rumorGen() {
             personOne = "<b>" + faceOne + "</b>";
         break;
         case "fake role 1":
-            personOne = "someone named <b>" + firstNameOne + " " + lastNameOne + "</b>";
+            personOne = "someone called <b>" + fakeNameOne + "</b>";
         break;
         case "fake role 2":
-            personOne = "<b>" + charOne + "</b> named <b>" + firstNameOne + " " + lastNameOne + "</b>";
+            personOne = "<b>" + charOne + "</b> named <b>" + firstNameOne + "</b>";
         break;
     }
 
+    // templates for person two (optional)
     switch (personSelectTwo) {
         case "player character":
             personTwo = "<b>" + playerTwo + "</b>";
@@ -4843,47 +4852,59 @@ function rumorGen() {
         case "face role":
             personTwo = "<b>" + faceTwo + "</b>";
         break;
-        case "fake role":
-            personTwo = "someone named <b>" + firstNameTwo + " " + lastNameTwo + "</b>";
+        case "fake role 1":
+            personTwo = "someone called <b>" + fakeNameTwo + "</b>";
+        break;
+        case "fake role 2":
+            personTwo = "<b>" + charTwo + "</b> named <b>" + firstNameTwo + "</b>";
         break;
     }
 
+    // switches out rumor template
     switch (rumorSelect) {
+        // has
         case "rumor 1":
-            document.getElementById("rm-rumor").innerHTML = "<p>" + source + " " + personOne + " has <b>" + item + "</b> that <b>" + itemProperty + ".</b></p>";
+            rumor = personOne + " has <b>" + wordPrep(item) + item + "</b> that <b>" + itemProperty + ".</b></p>";
         break;
+        // is looking for
         case "rumor 2":
-            document.getElementById("rm-rumor").innerHTML = "<p>" + source + " " +  personOne + " was seen <b>" + accuse + ".</b></p>";
+            rumor = personOne + " is looking for <b>" + wordPrep(item) + item + "</b> that <b>" + itemProperty + ".</b></p>";
         break;
         case "rumor 3":
-            document.getElementById("rm-rumor").innerHTML = "<p>" + source + " " + personOne + " is looking for some help with something.</p>";
+            rumor = personOne + " is looking for <b>" + item + ".</b></p>";
         break;
         case "rumor 4":
-            document.getElementById("rm-rumor").innerHTML = "<p>" + source + " " + personOne + " is looking for <b>" + item + ".</b></p>";
+            rumor = personOne + " is looking for some help with something.</p>";
         break;
+        // was seen
         case "rumor 5":
-            document.getElementById("rm-rumor").innerHTML = "<p>" + source + " " + personOne + " is looking for <b>" + item + "</b> that <b>" + itemProperty + ".</b></p>";
+            rumor =  personOne + " was seen <b>" + accuse + ".</b></p>";
         break;
         case "rumor 6":
-            document.getElementById("rm-rumor").innerHTML = "<p>" + source + " they may be upping woodland patrols due to a rise in the number of <b>" + monster + ".</b></p>";
+            rumor = personOne + " was seen <b>" + accuse + "</b> with <b>" + personTwo + ".</b></p>";
         break;
+        // was asking around for
         case "rumor 7":
-            document.getElementById("rm-rumor").innerHTML = "<p>" + source + " " + personOne + " was asking around for <b>" + charTwo + ".</b></p>";
+            rumor = personOne + " was asking around for <b>" + charTwo + ".</b></p>";
         break;
         case "rumor 8":
-            document.getElementById("rm-rumor").innerHTML = "<p>" + source + " " + personOne + " was asking around for someone who <b>" + trait + ".</b></p>";
+            rumor = personOne + " was asking around for someone who <b>" + trait + ".</b></p>";
         break;
         case "rumor 9":
-            document.getElementById("rm-rumor").innerHTML = "<p>" + source + " " +  personOne + " <b>" + trait + ".</b></p>";
+            rumor = personOne + " was asking around for <b>" + personTwo + ".</b></p>";
         break;
+        // is
         case "rumor 10":
-            document.getElementById("rm-rumor").innerHTML = "<p>" + source + " " +  personTwo + " is <b>" + charOne + ".</b></p>";
+            rumor = personOne + " <b>" + trait + ".</b></p>";
         break;
         case "rumor 11":
-            document.getElementById("rm-rumor").innerHTML = "<p>" + source + " " +  personTwo + " was asking around for <b>" + personOne + ".</b></p>";
+            rumor = personOne + " is <b>" + charOne + ".</b></p>";
         break;
+        // other
         case "rumor 12":
-            document.getElementById("rm-rumor").innerHTML = "<p>" + source + " " +  personOne + " was seen <b>" + accuse + "</b> with <b>" + personTwo + ".</b></p>";
+            rumor = personOne + " they may be upping woodland patrols due to a rise in the number of <b>" + monster + ".</b></p>";
         break;
     }
+
+    document.getElementById("rm-rumor").innerHTML = "<p>" + source + " " + rumor;
 }
