@@ -4520,7 +4520,7 @@ function plotCreate() {
         break;
         // "<p>This is going to be <b>" + tone + " " + genre + " " + type + ".</b></p>"
         case "plot 7":
-            plotStory = "<p>This is <b>" + wordPrep(tone) + " " + tone + " " + genre + "</b> story in which <b>" + plotSubject + " " + plotMethod + "</b> in order to <b>" + goal + ".</b> The twist is that <b>" + twist + ".</b></p>";
+            plotStory = "<p>This is <b>" + wordPrep(tone) + " " + tone + " " + genre + "</b> story in which <b>" + plotSubject + "</b> in order to <b>" + goal + ".</b> The twist is that <b>" + twist + ".</b></p>";
         break;           
     }
 
@@ -4790,6 +4790,19 @@ let rumorSelect = "";
 let personSelectOne = "";
 let personSelectTwo = "";
 
+// TOWN GOSSIP TEMPLATE
+// Can probably do
+// 1x Cards - Material Property
+    // [material] can do [property]
+// 1x Cards - NPC Lore
+    // [NPC] is [blank]
+// 1x Cards - Monster Stat Clue
+    // [monster] can do [thing]
+// Can't really do
+// 1x Cards - Town Battle Clue
+// 1x Cards - Main Plot Clue
+// 2x Cards - Future Plot Seed
+// 3x Cards - Anytime Plot Clue
 function rumorGen() {
     rumorSelect = randomString(rumorType);
     personSelectOne = randomString(charTypeOne);
