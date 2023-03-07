@@ -27,26 +27,27 @@
 
         <div class="content">
             <p>Select a currency type from the dropdown, and then click the "Generate Code" button to get a random five-digit item code.</p>
-
-            <p><strong>Note: The value in the number input does not affect the generated code. It's still a work in progress.</strong></p>
+            <p><b>Note to self:</b> Add a radio button to allow the user to generate multiple codes (1 code, 5 codes, or 10 codes). Also, work on password protecting this page so I can make it visible in the nav again!</p>
+            <!-- <p><strong>Note: The value in the number input does not affect the generated code. It's still a work in progress.</strong></p> -->
 
             <div class="prompt">
-                <p id="price" value="0">Price: 
-                    <!-- <input type="number" id="price" value="0" disabled> -->
-                    <select name="currency-options" id="currencySelect">
-                        <option value="copper">Copper</option>
-                        <option value="silver">Silver</option>
-                        <option value="gold">Gold</option>
-                    </select>
-                </p>
-
-                <button onclick="codeGen(currencyValue())">Generate Code</button>
-
-                <p id="result">
-                    <span id="returnText"></span>
-                    <span id="returnValue"></span>
-                </p>
+                <div class="output">
+                    <p id="price" value="0">Currency Type: 
+                        <!-- <input type="number" id="price" value="0" disabled> -->
+                        <select name="currency-options" id="currencySelect">
+                            <option value="copper">Copper</option>
+                            <option value="silver">Silver</option>
+                            <option value="gold">Gold</option>
+                        </select>
+                    </p>
+                    <p id="result">
+                        <span id="returnText"></span>
+                        <span id="returnValue"></span>
+                    </p>
+                </div>
+                
             </div>
+            <button onclick="codeGen(currencyValue())">Generate Code</button>
         </div>
 
         <script src="js/codegen.js"></script>

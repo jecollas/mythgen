@@ -1236,6 +1236,7 @@ const monsters = [
 ];
 
 // Adventure Generator
+// DON'T DELETE UNTIL VERB FUNCTION IS DONE
 const oldVerbs = {    
     present: [
         "kill",
@@ -1645,7 +1646,6 @@ const oldVerbs = {
     ]
 }
 
-// REMEMBER! {object}, [array]
 const verbs = {
     present: {
         person: [
@@ -2817,7 +2817,6 @@ const verbs = {
     }
 }
 
-// Fetch Quest, Rumors, Adventure Generator, Plot Creator
 const nouns = {
     person: {
         singular: [
@@ -3858,7 +3857,6 @@ const nouns = {
 }
 
 // where fragments go to die after I tear them apart like confetti
-// Adventure Generator
 const fragments = {
     goal: [
         // adventure seed generator
@@ -4237,8 +4235,18 @@ const fragments = {
     ]
 }
 
-// NON-GENERATOR FUNCTIONS
+// noun ref vars
+var nounPerson = nouns.person;
+var nounPlace = nouns.place;
+var nounThing = nouns.thing;
+var nounConcept = nouns.concept;
 
+// verb ref vars
+var verbPresent = verbs.present;
+var verbGerund = verbs.gerund;
+var verbCont = verbs.continuous;
+
+// NON-STORY GENERATOR FUNCTIONS
 // random string for all generators
 function randomString(arr) {
     const randomIndex = Math.floor(Math.random() * arr.length);
@@ -4248,10 +4256,10 @@ function randomString(arr) {
 
 // adds "a" or "an" to the front of a thing
 // if it sees "the" at the front of a word it leaves it alone
-function wordPrep(word){
+function wordPrep(word) {
     if (["the ","another "].some((elem) => word.startsWith(elem))) {
         prep = "";
-    } else if (["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"].some((elem) => word.startsWith(elem)) && word != "unique") {
+    } else if (["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"].some((elem) => word.startsWith(elem)) && !word.startsWith("uni")) {
         prep = "an ";
     } else {
         prep = "a ";
@@ -4260,20 +4268,135 @@ function wordPrep(word){
 }
 
 // literally I don't need this but w/e
-function wordPrepThe(){
-    prep = "the";
-    return prep;
-}
+// function wordPrepThe() {
+//     prep = "the";
+//     return prep;
+// }
 
 // adds singular possessive 's to the end of a noun
 // this should do a thing where the possessive changes if singular or plural
-function wordPoss(word){
-    word += "'s";
-    return word;
+// function wordPoss(word) {
+//     word += "'s";
+//     return word;
+// }
+
+// subject-verb agreement
+function subiAgree(subi) {
+    if (subi.startsWith("singular")) {
+        sva = "is";
+    } else if (subi.startsWith("plural")) {
+        sva = "are";
+    }
+    return sva;
+}
+
+// person select
+function personSelect() { // singular and plural subjects
+    const personList = [
+        "singular 1",
+        "singular 2",
+        "plural 1",
+        "plural 2"
+    ];
+    
+    const personType = randomString(personList);
+    const subi = subiAgree(personType);
+
+    const adj = randomString(chara.adjective);
+    const trait = randomString(chara.trait);    
+    const group = randomString(chara.group);
+
+    const noun = randomString(nounPerson.singular);
+    const members = randomString(nounPerson.plural);
+    let subject = "";
+    
+    switch (personType) {
+        case "singular 1":
+            subject = wordPrep(noun) + noun + "</b> who <b>" + trait + "</b>";
+        break;
+        case "singular 2":
+            subject = wordPrep(adj) + adj + " " + noun + "</b>";
+        break;
+        case "plural 1":
+            subject = wordPrep(group) + group + "</b> of <b>" + members + "</b>";
+        break;
+        case "plural 2":
+            subject = wordPrep(adj) + adj + " " + group + "</b> of <b>" + members + "</b>";
+        break;
+    }
+    return {subject, subi};
+}
+
+// action select
+function actionSelect(subi, noun, verbPres, verbGer) { 
+    // add to adventure generator and rumors
+    // nounOne, verbGerOne, etc
+    const actionList = [ 
+        "action 1",
+        "action 2",
+        "action 3",
+        "action 4"
+    ];
+
+    const actionType = randomString(actionList);
+    const fragment = randomString(fragments.action);
+    const verbContPres = randomString(verbCont.present);
+    const verbContGer = randomString(verbCont.gerund);
+    let action = "";
+
+    switch (actionType) {
+        case "action 1": //pre-existing action
+            action = subi + " <b>" + fragment;
+        break;
+        case "action 2": //[verb]ing [noun]
+            action = subi + " <b>" + verbGer + " " + noun;
+        break;
+        case "action 3": //[continuous] to [verb] [noun]
+            action = subi + " <b>" + verbContGer + " " + verbPres + " " + noun;
+        break;        
+        case "action 4": //[try] to [verb] [noun]
+            action = "<b>" + verbContPres + " " + verbPres + " " + noun + "</b>";
+        break;
+    }
+    return action;
+}
+
+// method select
+function methodSelect(noun, verbGer) { 
+    const methodList = [
+        "method 1",
+        "method 2",
+        "method 3",
+        "method 4",
+        "method 5"
+    ];
+
+    const methodType = randomString(methodList);
+    const fragment = randomString(fragments.means);
+    let method = "";
+
+    switch (methodType) {
+        case "method 1":
+            method = fragment;
+        break;
+        case "method 2":
+            method = "</b>" + "using <b>" + noun;
+        break;
+        case "method 3":
+            method = "</b>" + "with <b>" + noun;
+        break;
+        case "method 4":
+            method = "</b>" + "with the help of <b>" + noun;
+        break;
+        case "method 5": //[action] by [gerund] [noun]
+            method = "</b>" + "by <b>" + verbGer + " " + noun;
+        break;
+    }
+    return method;
 }
 
 // GENERATOR FUNCTIONS
-// Plot Test
+// Plot Type
 function plotGen() {
     const type = randomString(plots.type);
     const tone = randomString(plots.tone);
@@ -4282,7 +4405,6 @@ function plotGen() {
     document.getElementById("pt-plot").innerHTML = "<p>This plot is going to be <b>" + wordPrep(tone) + " " + tone + " " + genre + " " + type + ".</b></p>"
 }
 
-// Big Boy Plot Maker
 const plotType = [
     "plot 1",
     "plot 2",
@@ -4293,77 +4415,22 @@ const plotType = [
     "plot 7"
 ];
 
-const plotSubjType = [
-    "singular 1",
-    "singular 2",
-    "plural 1",
-    "plural 2"
-]
-
-const plotActType = [ 
-    "action 1",
-    "action 2",
-    "action 3",
-    "action 4"
-];
-
-const plotMeanType = [
-    "method 1",
-    "method 2",
-    "method 3",
-    "method 4",
-    "method 5"
-];
-
 let plotSelect = "";
-let plotSubjSelect = "";
-let plotActSelect = "";
-let plotMeanSelect = "";
 
+// PLOT BUILDER – the big boy :)
 function plotCreate() {
-    // break this up into functions!!!
     plotSelect = randomString(plotType);
-    plotSubjSelect = randomString(plotSubjType);
-    plotActSelect = randomString(plotActType);
-    plotMeanSelect = randomString(plotMeanType);
 
-    let plotPerson = "";
-    let plotAction = "";
-    let plotMethod = "";
-
-    // noun vars
-    var nounPerson = nouns.person;
-    var nounPlace = nouns.place;
-    var nounThing = nouns.thing;
-    var nounConcept = nouns.concept;
-
-    // verb vars
-    var verbPresent = verbs.present;
-    var verbGerund = verbs.gerund;
-    var verbCont = verbs.continuous;
-
-    const verbContPres = randomString(verbCont.present);
-    const verbContGer = randomString(verbCont.gerund);
-
-    // NON NOUN/VERB NONSENSE
+    // non-noun/verb nonsense
     const goal = randomString(fragments.goal);
     const motive = randomString(quest.motivation); // the reason why
     const twist = randomString(quest.twist);
     const location = randomString(quest.place);
 
-    const group = randomString(chara.group);
-    const members = randomString(nounPerson.plural);
-
+    let plotStory = "";
     let condition = "";
     
-    const actionFrag = randomString(fragments.action);
-    const meansFrag = randomString(fragments.means);
-
-    const charTrait = randomString(chara.trait);
-    const charAdj = randomString(chara.adjective);
-    const charNoun = randomString(nounPerson.singular);
-    
-    const type = randomString(plots.type);
+    // const type = randomString(plots.type); // haven't used this yet
     const tone = randomString(plots.tone);
     const genre = randomString(plots.genre);
 
@@ -4372,6 +4439,9 @@ function plotCreate() {
     let verbPres = "";
 
     // noun horseshit
+    // FOR VERB AND NOUN FUNCTIONS, just have them generate one thing that gets paired up so i can call those functions up to three times
+        // function noun() – generates nounType, nounSubtype, nounSelect, noun, condition
+        // function verb(nounSubtype) – generates verbPres, verbGer
     const nounSingular = [
         nounPerson.singular,nounPlace.singular,nounThing.singular,nounConcept.singular
     ];
@@ -4433,68 +4503,15 @@ function plotCreate() {
         verbGerTwo = randomString(verbGerund.concept);
     }
 
-    // subject-verb agreement
-    let sva = "";    
-    if (plotSubjSelect.startsWith("singular")) {
-        sva = "is";
-    } else if (plotSubjSelect.startsWith("plural")) {
-        sva = "are";
-    }
+    // DONE WITH THE NOUNS AND VERBS MY GOD
+    const subject = personSelect();
+    const plotPerson = subject.subject;
+    const subi = subject.subi;
 
-    // singular and plural subjects
-    switch (plotSubjSelect) {
-        case "singular 1":
-            plotPerson = wordPrep(charNoun) + charNoun + "</b> who <b>" + charTrait + "</b>";
-        break;
-        case "singular 2":
-            plotPerson = wordPrep(charAdj) + charAdj + " " + charNoun + "</b>";
-        break;
-        case "plural 1":
-            plotPerson = wordPrep(group) + group + "</b> of <b>" + members + "</b>";
-        break;
-        case "plural 2":
-            plotPerson = wordPrep(charAdj) + charAdj + " " + group + "</b> of <b>" + members + "</b>";
-        break;
-    }
-
-    // different kinds of actions
-    switch (plotActSelect) {
-        case "action 1": //pre-existing action
-            plotAction = sva + " <b>" + actionFrag;
-        break;
-        case "action 2": //[verb]ing [noun]
-            plotAction = sva + " <b>" + verbGerOne + " " + nounOne;
-        break;
-        case "action 3": //[continuous] to [verb] [noun]
-            plotAction = sva + " <b>" + verbContGer + " " + verbPres + " " + nounOne;
-        break;        
-        case "action 4": //[try] to [verb] [noun]
-            plotAction = "<b>" + verbContPres + " " + verbPres + " " + nounOne + "</b>";
-        break;
-    }
-
-    const plotSubject = plotPerson + " " + plotAction;
-
-    // options for the means
-    switch (plotMeanSelect) {
-        case "method 1":
-            plotMethod = meansFrag;
-        break;
-        case "method 2":
-            plotMethod = "</b>" + "using <b>" + nounTwo;
-        break;
-        case "method 3":
-            plotMethod = "</b>" + "with <b>" + nounTwo;
-        break;
-        case "method 4":
-            plotMethod = "</b>" + "with the help of <b>" + nounTwo;
-        break;
-        case "method 5": //[action] by [gerund] [noun]
-            plotMethod = "</b>" + "by <b>" + verbGerTwo + " " + nounTwo;
-        break;
-    }
-
-    let plotStory = "";
+    const plotAction = actionSelect(subi, nounOne, verbPres, verbGerOne);
+    const plotMethod = methodSelect(nounTwo, verbGerTwo);
+    
+    let plotSubject = plotPerson + " " + plotAction;
 
     switch(plotSelect) {
         case "plot 1":
@@ -4518,14 +4535,12 @@ function plotCreate() {
         case "plot 6":
             plotStory = "<p>In this story, <b>" + plotSubject + ".</b> They are doing this <b> " + motive + ".</b></p>";
         break;
-        // "<p>This is going to be <b>" + tone + " " + genre + " " + type + ".</b></p>"
         case "plot 7":
             plotStory = "<p>This is <b>" + wordPrep(tone) + " " + tone + " " + genre + "</b> story in which <b>" + plotSubject + "</b> in order to <b>" + goal + ".</b> The twist is that <b>" + twist + ".</b></p>";
-        break;           
+        break;
+        // NEXT: trying to [action thing] to [other people]
     }
-
     document.getElementById("pb-plot").innerHTML = plotStory;
-
 }
 
 // Fetch Quest
@@ -4539,18 +4554,18 @@ let questSelect = "";
 function questGen() {
     questSelect = randomString(qQuest);
 
-    const qItem = randomString(nouns.all);
-    const qProperty = randomString(property.singular);
-    const qGoal = randomString(fragments.goal);
-    const qMotive = randomString(quest.motivation);
-    const qTwist = randomString(quest.twist);
+    const item = randomString(nouns.all);
+    const condition = randomString(property.singular);
+    const goal = randomString(fragments.goal);
+    const motive = randomString(quest.motivation);
+    const twist = randomString(quest.twist);
 
     switch(questSelect) {
         case "quest 1":
-            document.getElementById("qq-quest").innerHTML = "<p>The party is looking for <b>" + qItem + "</b> that <b>" + qProperty + ".</b> They are looking for this <b>" + qMotive + ",</b> but the thing is that <b>" + qTwist + ".</b></p>";
+            document.getElementById("qq-quest").innerHTML = "<p>The party is looking for <b>" + item + "</b> that <b>" + condition + ".</b> They are looking for this <b>" + motive + ",</b> but the thing is that <b>" + twist + ".</b></p>";
         break;
         case "quest 2":
-            document.getElementById("qq-quest").innerHTML = "<p>The party is looking for <b>" + qItem + "</b> that <b>" + qProperty + "</b> in order to <b>" + qGoal + ".</b> They want this <b>" + qMotive + ",</b> but what they haven't realized yet is that <b>" + qTwist + ".</b></p>";
+            document.getElementById("qq-quest").innerHTML = "<p>The party is looking for <b>" + item + "</b> that <b>" + condition + "</b> in order to <b>" + goal + ".</b> They want this <b>" + motive + ",</b> but what they haven't realized yet is that <b>" + twist + ".</b></p>";
         break;
     }
 }
@@ -4563,59 +4578,13 @@ const adventureType = [
     "adventure 4"
 ];
 
-const subjectType = [
-    "singular 1",
-    "singular 2",
-    "plural"
-]
-
-const actionType = [ 
-    "action 1",
-    "action 2",
-    "action 3",
-    "action 4"
-];
-
-const methodType = [
-    "method 1",
-    "method 2",
-    "method 3",
-    "method 4"
-];
-
-let adventureSelect = "";
-let subjectSelect = "";
-let actionSelect = "";
-let methodSelect = "";
-
 function adventureGen() {
-    adventureSelect = randomString(adventureType);
-    subjectSelect = randomString(subjectType);
-    actionSelect = randomString(actionType);
-    methodSelect = randomString(methodType);
-
-    var charNoun = nouns.person;
-
-    const agChara = randomString(charNoun.singular);
-    const agCharNoun = randomString(charNoun.singular);
-    const agAdjective = randomString(chara.adjective);
-
-    const agCharTrait = randomString(chara.trait);
-    const agGroup = randomString(chara.group);
-    const agMembers = randomString(charNoun.plural);
+    let adventureSelect = randomString(adventureType);
 
     const agGoal = randomString(fragments.goal); 
     const agPlace = randomString(quest.place);
     const agMotive = randomString(quest.motivation); // the "because" bullshit
     const agTwist = randomString(quest.twist);
-
-    let agPerson = "";
-    let agAction = "";
-    let agMethod = "";
-
-    const agActionFrag = randomString(fragments.action);
-    const agMethodFrag = randomString(fragments.means);
-    const agMethodNoun = randomString(nouns.all);
 
     const agNounOne = randomString(nouns.all);
     const agNounTwo = randomString(nouns.all);
@@ -4623,51 +4592,15 @@ function adventureGen() {
     const agPresent = randomString(oldVerbs.present)
     const agverbGerOne = randomString(oldVerbs.gerund);
     const agGerundTwo = randomString(oldVerbs.gerund);
-    const agContGer = randomString(oldVerbs.contGer);
 
-    switch (subjectSelect) {
-        case "singular 1":
-            agPerson = wordPrep(agChara) + " " + agChara + "</b> who <b>" + agCharTrait + "</b> is";
-        break;
-        case "singular 2":
-            agPerson = wordPrep(agAdjective) + " " + agAdjective + " " + agCharNoun + "</b> is";
-        break;
-        case "plural":
-            agPerson = wordPrep(agAdjective) + " " + agAdjective + " " + agGroup + "</b> of <b>" + agMembers + "</b> are";
-        break;
-    }
+    const person = personSelect();
+    const agPerson = person.subject;
+    const subi = person.subi;
 
-    switch (actionSelect) {
-        case "action 1": //action fragment
-            agAction = "<b>" + agActionFrag;
-        break;
-        case "action 2": //are [verb]ing [noun]
-            agAction = "<b>" + agverbGerOne + " " + agNounOne;
-        break;
-        case "action 3": //[trying] to [verb] [noun]
-            agAction = "<b>" + agContGer + " " + agPresent + " " + agNounOne;
-        break;
-        case "action 4": //try to [verb] [noun]
-            agAction = "trying to <b>" + agPresent + " " + agNounOne;
-        break;
-    }
+    const agAction = actionSelect(subi, agNounOne, agPresent, agverbGerOne);
+    const agMethod = methodSelect(agNounTwo, agGerundTwo);
 
     const agSubject = agPerson + " " + agAction;
-
-    switch (methodSelect) {
-        case "method 1":
-            agMethod = "<b>" + agMethodFrag;
-        break;
-        case "method 2":
-            agMethod = "</b>using <b>" + agMethodNoun;
-        break;
-        case "method 3":
-            agMethod = "</b>with the help of <b>" + agMethodNoun;
-        break;
-        case "method 4": //[action] by [gerund] [noun]
-            agMethod = "</b>by <b>" + agGerundTwo + " " + agNounTwo;
-        break;
-    }
 
     switch (adventureSelect) {
         // multiple lines
@@ -4685,7 +4618,6 @@ function adventureGen() {
         case "adventure 4":
             document.getElementById("ag-adventure").innerHTML = "<p>In this story, <b>" + agSubject + ".</b> They are doing this <b> " + agMotive + ".</b></p>";
         break;
-        // Add Next: trying to [action thing] to [other people]
     }
 }
 
@@ -4812,34 +4744,31 @@ function rumorGen() {
     let personTwo = "";
     let rumor = "";
 
-    var charNoun = nouns.person;
-    var itemNoun = nouns.thing;
-
     // person one (required)
     const playerOne = randomString(characters.players);
     const faceOne= randomString(characters.faceRoles);
     const firstNameOne = randomString(characters.fakeFirst);
     const lastNameOne = randomString(characters.fakeLast);
-    const fakeNameOne = firstNameOne + " " + lastNameOne;
-    const rumorCharOne = randomString(charNoun.singular);
-    const charOne = wordPrep(rumorCharOne) + " " + rumorCharOne;    
+    const rumorCharOne = randomString(nounPerson.singular);
+    let fakeNameOne = firstNameOne + " " + lastNameOne;
+    let charOne = wordPrep(rumorCharOne) + " " + rumorCharOne;    
 
     // person two (optional)
     const playerTwo = randomString(characters.players);
     const faceTwo = randomString(characters.faceRoles);    
     const firstNameTwo = randomString(characters.fakeFirst);
     const lastNameTwo = randomString(characters.fakeLast);
-    const fakeNameTwo = firstNameTwo + " " + lastNameTwo;
-    const rumorCharTwo = randomString(charNoun.singular);
-    const charTwo = wordPrep(rumorCharTwo) + " " + rumorCharTwo;
+    const rumorCharTwo = randomString(nounPerson.singular);
+    let fakeNameTwo = firstNameTwo + " " + lastNameTwo;
+    let charTwo = wordPrep(rumorCharTwo) + " " + rumorCharTwo;
 
     // not people-related
     const source = randomString(rumors.source);
-    const item = randomString(itemNoun.singular);
     const itemProperty = randomString(property.singular);
     const monster = randomString(monsters);
     const trait = randomString(chara.trait);
     const accuse = randomString(rumors.accuse);    
+    const item = randomString(nounThing.singular);
 
     // templates for person one (required)
     switch (personSelectOne) {
@@ -4877,47 +4806,46 @@ function rumorGen() {
     switch (rumorSelect) {
         // has
         case "rumor 1":
-            rumor = personOne + " has <b>" + wordPrep(item) + item + "</b> that <b>" + itemProperty + ".</b></p>";
+            rumor = personOne + " has <b>" + wordPrep(item) + item + "</b> that <b>" + itemProperty;
         break;
         // is looking for
         case "rumor 2":
-            rumor = personOne + " is looking for <b>" + wordPrep(item) + item + "</b> that <b>" + itemProperty + ".</b></p>";
+            rumor = personOne + " is looking for <b>" + wordPrep(item) + item + "</b> that <b>" + itemProperty;
         break;
         case "rumor 3":
-            rumor = personOne + " is looking for <b>" + item + ".</b></p>";
+            rumor = personOne + " is looking for <b>" + item;
         break;
         case "rumor 4":
-            rumor = personOne + " is looking for some help with something.</p>";
+            rumor = personOne + " is looking for some help with something";
         break;
         // was seen
         case "rumor 5":
-            rumor =  personOne + " was seen <b>" + accuse + ".</b></p>";
+            rumor =  personOne + " was seen <b>" + accuse;
         break;
         case "rumor 6":
-            rumor = personOne + " was seen <b>" + accuse + "</b> with <b>" + personTwo + ".</b></p>";
+            rumor = personOne + " was seen <b>" + accuse + "</b> with <b>" + personTwo;
         break;
         // was asking around for
         case "rumor 7":
-            rumor = personOne + " was asking around for <b>" + charTwo + ".</b></p>";
+            rumor = personOne + " was asking around for <b>" + charTwo;
         break;
         case "rumor 8":
-            rumor = personOne + " was asking around for someone who <b>" + trait + ".</b></p>";
+            rumor = personOne + " was asking around for someone who <b>" + trait;
         break;
         case "rumor 9":
-            rumor = personOne + " was asking around for <b>" + personTwo + ".</b></p>";
+            rumor = personOne + " was asking around for <b>" + personTwo;
         break;
         // is
         case "rumor 10":
-            rumor = personOne + " <b>" + trait + ".</b></p>";
+            rumor = personOne + " <b>" + trait;
         break;
         case "rumor 11":
-            rumor = personOne + " is <b>" + charOne + ".</b></p>";
+            rumor = personOne + " is <b>" + charOne;
         break;
         // other
         case "rumor 12":
-            rumor = personOne + " they may be upping woodland patrols due to a rise in the number of <b>" + monster + ".</b></p>";
+            rumor = personOne + " they may be upping woodland patrols due to a rise in the number of <b>" + monster;
         break;
     }
-
-    document.getElementById("rm-rumor").innerHTML = "<p>" + source + " " + rumor;
+    document.getElementById("rm-rumor").innerHTML = "<p>" + source + " " + rumor + ".</b></p>";
 }

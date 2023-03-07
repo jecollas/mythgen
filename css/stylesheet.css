@@ -64,7 +64,8 @@ button {
     padding-bottom: 1em;
 }
 
-.content {
+.content,
+.control {
     padding: 1em 2em;
     max-width: 95%;
 }
@@ -79,9 +80,31 @@ button {
 }
 
 .output p {
+    font-size: 1em;
     margin: 1.25em;
 }
 
 select {
   margin-left: 1em;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row .control {
+    flex: 10%;
+    /* background-color: gray; */
+}
+
+.row .content {
+    flex: 80%;
+}
+
+@media (max-width: 800px) {
+    .row .control, 
+    .row .content {
+        flex: 100%;
+    }
 }
