@@ -64,8 +64,22 @@ button {
     padding-bottom: 1em;
 }
 
-.content,
-.control {
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.row .control {
+    flex: 15%;
+    flex-basis: 15%;
+}
+
+.row .content {
+    flex: 70%;
+}
+
+.control,
+.content {
     margin: 1em 1.5em;
     max-width: 95%;
 }
@@ -125,31 +139,26 @@ input:checked + label {
     margin: 1.25em;
 }
 
-select {
-  margin-left: 1em;
+.radio-option {
+    display: list-item;
+    list-style-type: none;
 }
 
-.row {
-    display: flex;
-    flex-direction: row;
-    /* flex-wrap: wrap; */
+.sub1 {
+    margin-left: 1.2em;;
 }
 
-.row .control {
-    flex: 15%;
-    max-width: 100%;
+@media screen and (min-width: 600px) and (max-width: 991px) {
+    .row .control {
+        flex: 25%;
+    }
+    
+    .row .content {
+        flex: 60%;
+    }
 }
 
-.row .content {
-    flex: 70%;
-    /* max-width: 100%; */
-}
-
-.control {
-    flex-basis: 15%;
-}
-
-@media (max-width: 800px) {
+@media screen and (max-width: 600px) {
     .row {
         flex-wrap: wrap;
     }
@@ -159,16 +168,28 @@ select {
         flex: 100%;
     }
 
-    form.control,
-    form.control p {
+    form.control {
         margin-bottom: 0;
     }
 
     form.control p {
+        font-size: 0.9em;
         font-style: italic;
+        margin-bottom: 0;
     }
 
-    form.control p,
+    .radio-option {
+        display: inline-block;
+    }
+
+    .control-button {
+        display: block;
+    }
+
+    .content {
+        margin-top: 0;
+    }
+
     .content p {
         font-size: 0.9em;
     }
@@ -178,8 +199,8 @@ select {
         display: none;
     }
 
-    .content {
-        margin-top: 0;
+    label {
+        height: 100%;
     }
 
     .prompt {

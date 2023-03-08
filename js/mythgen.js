@@ -4042,22 +4042,45 @@ function plotGen() {
     document.querySelector(".output").innerHTML = "<p>This plot is going to be <b>" + wordPrep(tone) + " " + tone + " " + genre + " " + type + ".</b></p>"
 }
 
-const plotType = [
-    "plot 1",
-    "plot 2",
-    "plot 3",
-    "plot 4",
-    "plot 5",
-    "plot 6",
-    "plot 7"
+const qQuest = [
+    "quest 1",
+    "quest 2"
 ];
 
-let plotSelect = "";
+const adventureType = [
+    "adventure 1",
+    "adventure 2",
+    "adventure 3",
+    "adventure 4"
+];
+
+const plotType = [
+    "quest 1",
+    "quest 2",
+    "adventure 1",
+    "adventure 2",
+    "adventure 3",
+    "adventure 4",
+    "plot 1"
+];
 
 // PLOT BUILDER – the big boy :)
 function plotCreate() {
-    plotSelect = randomString(plotType);
-    let plotStory = "";
+    const plotQ = document.getElementById("pbQuest");
+    const plotA = document.getElementById("pbAdventure");
+    let story = "";
+    let plotSelect = "";
+
+    // selects which plot array it picks from based on options selected
+    if (plotQ.checked && plotA.checked === false) {
+        plotSelect = randomString(qQuest);
+    } else if (plotQ.checked === false && plotA.checked) {
+        plotSelect = randomString(adventureType);
+    } else if (plotQ.checked && plotA.checked) {
+        plotSelect = randomString(qQuest.concat(adventureType));
+    } else {
+        plotSelect = randomString(plotType);
+    }
 
     const goal = randomString(fragments.goal);
     const motive = randomString(quest.motivation); // the reason why
@@ -4106,45 +4129,38 @@ function plotCreate() {
     }
 
     switch(plotSelect) {
-        case "plot 1":
-            plotStory = "The party is looking for <b>" + nounOne + "</b> that <b>" + condOne + ".</b> They are looking for this <b>" + motive + ",</b> but the thing is that <b>" + twist;
+        case "quest 1":
+            story = "The party is looking for <b>" + nounOne + "</b> that <b>" + condOne + ".</b> They are looking for this <b>" + motive + ",</b> but the thing is that <b>" + twist;
         break;
-        case "plot 2":
-            plotStory = "The party is looking for <b>" + nounOne + "</b> that <b>" + condOne + "</b> in order to <b>" + goal + ".</b></p>" + 
+        case "quest 2":
+            story = "The party is looking for <b>" + nounOne + "</b> that <b>" + condOne + "</b> in order to <b>" + goal + ".</b></p>" + 
             "<p>They want this <b>" + motive + ",</b> but what they haven't realized yet is that <b>" + twist;
         break;
-        case "plot 3":
-            plotStory = "In this story, <b>" + plotSubject + " " + location  + ".</b></p>" + 
+        case "adventure 1":
+            story = "In this story, <b>" + plotSubject + " " + location  + ".</b></p>" + 
             "<p>Their goal is to <b>" + goal + " " + plotMethod + " " + motive + ",</b> but <b>" + twist;
         break;
-        case "plot 4":
-            plotStory = "This story takes place <b>" + location +",</b> where <b>" + plotSubject + ".</b> Their goal is to <b>" + goal + " " + plotMethod + ".</b></p>" + 
+        case "adventure 2":
+            story = "This story takes place <b>" + location +",</b> where <b>" + plotSubject + ".</b> Their goal is to <b>" + goal + " " + plotMethod + ".</b></p>" + 
             "<p>They are doing this <b>" + motive + ",</b> but <b>" + twist;
         break;
-        case "plot 5":
-            plotStory = "In this story, <b>" + plotSubject + "</b> in order to <b>" + goal;
+        case "adventure 3":
+            story = "In this story, <b>" + plotSubject + "</b> in order to <b>" + goal;
         break;
-        case "plot 6":
-            plotStory = "In this story, <b>" + plotSubject + ".</b> They are doing this <b> " + motive;
+        case "adventure 4":
+            story = "In this story, <b>" + plotSubject + ".</b> They are doing this <b> " + motive;
         break;
-        case "plot 7":
-            plotStory = "This is <b>" + wordPrep(tone) + " " + tone + " " + genre + "</b> story in which <b>" + plotSubject + "</b> in order to <b>" + goal + ".</b> The twist is that <b>" + twist;
+        case "plot 1":
+            story = "This is <b>" + wordPrep(tone) + " " + tone + " " + genre + "</b> story in which <b>" + plotSubject + "</b> in order to <b>" + goal + ".</b> The twist is that <b>" + twist;
         break;
         // NEXT: trying to [action thing] to [other people]
     }
-    document.querySelector(".output").innerHTML = "<p>" + plotStory + ".</b></p>";
+    document.querySelector(".output").innerHTML = "<p>" + story + ".</b></p>";
 }
 
 // Fetch Quest
-const qQuest = [
-    "quest 1",
-    "quest 2"
-];
-
-let questSelect = "";
-
 function questGen() {
-    questSelect = randomString(qQuest);
+    let questSelect = randomString(qQuest);
     let storyQuest = "";
 
     const noun = nounSelect();
@@ -4167,13 +4183,6 @@ function questGen() {
 }
 
 // Adventure Generator
-const adventureType = [
-    "adventure 1",
-    "adventure 2",
-    "adventure 3",
-    "adventure 4"
-];
-
 function adventureGen() {
     let adventureSelect = randomString(adventureType);
     let agPlot = "";
@@ -4400,13 +4409,31 @@ function rumorGen() {
     document.querySelector(".output").innerHTML = "<p>" + source + " " + rumor + ".</b></p>";
 }
 
+// enables checkboxes for selected plot options
+function options() {
+    let plots = Array.from(document.getElementsByClassName("radio-option"));
+    plots.forEach((element) => {
+        var types = element.querySelector("input[type=radio]");
+        if (types.checked) {
+            var subs = element.querySelectorAll("input[type=checkbox]");
+            for (const checkbox of subs) {
+                if (checkbox.disabled) {
+                    checkbox.disabled = false;
+                }
+            }
+        } else if (types.checked === false) {
+            var subs = element.querySelectorAll("input[type=checkbox]");
+            for (const checkbox of subs) {
+                checkbox.disabled = true;
+                checkbox.checked = false;
+            }
+        }
+    });
+}
+
 function controlCheck() {
     if (document.getElementById("ptPlot").checked) {
         plotGen();
-    } else if (document.getElementById("qqQuest").checked) {
-        questGen();
-    } else if (document.getElementById("agAdventure").checked) {
-        adventureGen();
     } else if (document.getElementById("npcParty").checked) {
         npcGen();
     } else if (document.getElementById("rmRumor").checked) {

@@ -27,35 +27,50 @@
 
         <div class="row">
             <form class="control" name="control_panel">
-                <fieldset>
+                <fieldset id="plotPanel">
                     <legend>Control Panel</legend>
-                    <input type="radio" id="ptPlot" name="control_panel" value="ptPlot">
-                    <label for="ptPlot">Plot Type</label><br>
-                    <input type="radio" id="qqQuest" name="control_panel" value="qqQuest">
-                    <label for="qqQuest">Fetch Quest</label><br>
-                    <input type="radio" id="agAdventure" name="control_panel" value="agAdventure">
-                    <label for="agAdventure">Adventure Builder</label><br>
-                    <input type="radio" id="npcParty" name="control_panel" value="npcParty">
-                    <label for="npcParty">NPC Builder</label><br>
-                    <input type="radio" id="rmRumor" name="control_panel" value="rmRumor">
-                    <label for="rmRumor">Rumors</label><br>
-                    <input type="radio" id="pbPlot" name="control_panel" value="pbPlot">
-                    <label for="pbPlot">Plot Builder</label><br>
-                    <input type="button" value="Submit" onclick="controlCheck()">
-                    <input type="reset" value="Reset">
+                    <span class="radio-option">
+                        <input type="radio" id="ptPlot" name="control_panel" value="ptPlot" onclick="options()">
+                        <label for="ptPlot">Plot Type</label>
+                    </span>
+                    <span class="radio-option">
+                        <input type="radio" id="npcParty" name="control_panel" value="npcParty" onclick="options()">
+                        <label for="npcParty">NPC Builder</label>
+                        <div class="sub1" id="npcSub">
+                            <input type="checkbox" id="charOne" name="control_panel" value="charOne" disabled>
+                            <label for="charOne">One NPC</label>
+                        </div>
+                    </span>
+                    <span class="radio-option">                        
+                        <input type="radio" id="rmRumor" name="control_panel" value="rmRumor" onclick="options()">
+                        <label for="rmRumor">Rumors</label>
+                    </span>
+                    <span class="radio-option">
+                        <input type="radio" id="pbPlot" name="control_panel" value="pbPlot" onclick="options()">
+                        <label for="pbPlot">Plot Builder</label>
+                        <div class="sub1" id="pbSub">
+                            <input type="checkbox" id="pbQuest" name="control_panel" value="pbQuest" disabled>
+                            <label for="pbQuest">Fetch Quest</label><br>
+                            <input type="checkbox" id="pbAdventure" name="control_panel" value="pbAdventure" disabled>
+                            <label for="pbAdventure">Adventure</label>
+                        </div>
+                    </span>
+                    <div class="control-button">
+                        <input type="button" value="Submit" onclick="controlCheck()">
+                        <input type="reset" value="Reset">
+                    </div>
                 </fieldset>
                 <p>Select an option from the Control Panel, then hit either the Submit button from the Control Panel or the one below the plot box</p>
-                <p><i>If no plot option is selected, the buttons will default to Plot Builder</i></p>
+                <p class="note"><i>If no plot option is selected, the buttons will default to Plot Builder</i></p>
             </form>       
 
             <div class="content">
                 <p>Work in progress! You can still use this one, but don't be surprised if you come back and things are a little bit different :D</p>
-                <p><b>Note to self:</b> add checkboxes to the control panel for a build-your-own generator option that lets you mix and match variables</p>
+                <p class="note"><b>Note to self:</b> add checkboxes to the control panel for a build-your-own generator option that lets you mix and match variables</p>
                 <div class="prompt">
                     <span class="output" id="pb-plot"><p style="color:grey">Click the button for a plot!</p></span>
                 </div>
                 <button id="yeehaw" onclick="controlCheck()">What the Plot?</button>
-                <!-- <button id="yeehaw" onclick="plotCreate()">What the Plot?</button> -->
             </div>
         </div>
 
