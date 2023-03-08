@@ -26,17 +26,37 @@
         </header>
 
         <div class="row">
-            <div class="control">
-                <h3>Control Panel</h3>
-                <p>Coming soon!</p>
-            </div>       
+            <form class="control" name="control_panel">
+                <!-- <p>Coming soon!</p> -->
+                <fieldset>
+                    <legend>Control Panel</legend>
+                    <input type="radio" id="ptPlot" name="control_panel" value="ptPlot">
+                    <label for="ptPlot">Plot Type</label><br>
+                    <input type="radio" id="qqQuest" name="control_panel" value="qqQuest">
+                    <label for="qqQuest">Fetch Quest</label><br>
+                    <input type="radio" id="agAdventure" name="control_panel" value="agAdventure">
+                    <label for="agAdventure">Adventure Builder</label><br>
+                    <input type="radio" id="npcParty" name="control_panel" value="npcParty">
+                    <label for="npcParty">NPC Builder</label><br>
+                    <input type="radio" id="rmRumor" name="control_panel" value="rmRumor">
+                    <label for="rmRumor">Rumors</label><br>
+                    <input type="radio" id="pbPlot" name="control_panel" value="pbPlot">
+                    <label for="pbPlot">Plot Builder</label><br>
+                    <input type="button" value="Submit" onclick="controlCheck()">
+                    <input type="reset" value="Reset">
+                </fieldset>
+                <p>Select an option, then hit either the Submit button from the Control Panel or the one below the plot box!</p>
+                <p><i>If no plot option is selected, the buttons will default to Plot Builder</i></p>
+            </form>       
 
             <div class="content">
                 <p>Work in progress! You can still use this one, but don't be surprised if you come back and things are a little bit different :D</p>
+                <p><b>Note to self:</b> add checkboxes to the control panel for a build-your-own generator option that lets you mix and match variables</p>
                 <div class="prompt">
                     <span class="output" id="pb-plot"><p style="color:grey">Click the button for a plot!</p></span>
                 </div>
-                <button onclick="plotCreate()">What the Plot?</button>
+                <button id="yeehaw" onclick="controlCheck()">What the Plot?</button>
+                <!-- <button id="yeehaw" onclick="plotCreate()">What the Plot?</button> -->
             </div>
         </div>
 

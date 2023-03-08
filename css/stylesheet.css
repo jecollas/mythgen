@@ -66,8 +66,45 @@ button {
 
 .content,
 .control {
-    padding: 1em 2em;
+    margin: 1em 1.5em;
     max-width: 95%;
+}
+
+.content p {
+    padding-right: 1em;
+}
+
+form {
+    margin: 1em;
+}
+
+fieldset {
+    margin: 1em 0;
+    padding-bottom: 0;
+}
+
+legend {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+input:not([type=button]),
+input:not([type=reset]) {
+    margin-top: 0.5em;
+}
+
+input[type=button],
+input[type=reset] {
+    font-size: 1em;
+    margin: 1em 0;
+}
+
+input:checked {
+    accent-color: #3A004D;
+}
+
+input:checked + label {
+    font-weight: bold;
 }
 
 .prompt {
@@ -90,19 +127,25 @@ select {
 
 .row {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
 }
 
 .row .control {
     flex: 10%;
-    /* background-color: gray; */
+    max-width: 100%;
 }
 
 .row .content {
-    flex: 80%;
+    flex: 70%;
+    /* max-width: 100%; */
 }
 
 @media (max-width: 800px) {
+    .row {
+        flex-wrap: wrap;
+    }
+
     .row .control, 
     .row .content {
         flex: 100%;

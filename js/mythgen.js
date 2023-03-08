@@ -4401,8 +4401,8 @@ function plotGen() {
     const type = randomString(plots.type);
     const tone = randomString(plots.tone);
     const genre = randomString(plots.genre);
-
-    document.getElementById("pt-plot").innerHTML = "<p>This plot is going to be <b>" + wordPrep(tone) + " " + tone + " " + genre + " " + type + ".</b></p>"
+    
+    document.querySelector(".output").innerHTML = "<p>This plot is going to be <b>" + wordPrep(tone) + " " + tone + " " + genre + " " + type + ".</b></p>"
 }
 
 const plotType = [
@@ -4540,7 +4540,7 @@ function plotCreate() {
         break;
         // NEXT: trying to [action thing] to [other people]
     }
-    document.getElementById("pb-plot").innerHTML = plotStory;
+    document.querySelector(".output").innerHTML = plotStory;
 }
 
 // Fetch Quest
@@ -4562,10 +4562,10 @@ function questGen() {
 
     switch(questSelect) {
         case "quest 1":
-            document.getElementById("qq-quest").innerHTML = "<p>The party is looking for <b>" + item + "</b> that <b>" + condition + ".</b> They are looking for this <b>" + motive + ",</b> but the thing is that <b>" + twist + ".</b></p>";
+            document.querySelector(".output").innerHTML = "<p>The party is looking for <b>" + item + "</b> that <b>" + condition + ".</b> They are looking for this <b>" + motive + ",</b> but the thing is that <b>" + twist + ".</b></p>";
         break;
         case "quest 2":
-            document.getElementById("qq-quest").innerHTML = "<p>The party is looking for <b>" + item + "</b> that <b>" + condition + "</b> in order to <b>" + goal + ".</b> They want this <b>" + motive + ",</b> but what they haven't realized yet is that <b>" + twist + ".</b></p>";
+            document.querySelector(".output").innerHTML = "<p>The party is looking for <b>" + item + "</b> that <b>" + condition + "</b> in order to <b>" + goal + ".</b> They want this <b>" + motive + ",</b> but what they haven't realized yet is that <b>" + twist + ".</b></p>";
         break;
     }
 }
@@ -4605,18 +4605,18 @@ function adventureGen() {
     switch (adventureSelect) {
         // multiple lines
         case "adventure 1":
-            document.getElementById("ag-adventure").innerHTML = "<p>In this story, <b>" + agSubject + " " + agPlace  + ".</b></p>" + 
+            document.querySelector(".output").innerHTML = "<p>In this story, <b>" + agSubject + " " + agPlace  + ".</b></p>" + 
             "<p>Their goal is to <b>" + agGoal + " " + agMethod + " " + agMotive + ",</b> but <b>" + agTwist + ".</b></p>";
         break;
         case "adventure 2":
-            document.getElementById("ag-adventure").innerHTML = "<p>This story takes place <b>" + agPlace +",</b> where <b>" + agSubject + ".</b> Their goal is to <b>" + agGoal + " " + agMethod + ".</b></p>" + 
+            document.querySelector(".output").innerHTML = "<p>This story takes place <b>" + agPlace +",</b> where <b>" + agSubject + ".</b> Their goal is to <b>" + agGoal + " " + agMethod + ".</b></p>" + 
             "<p>They are doing this <b>" + agMotive + ",</b> but <b>" + agTwist + ".</b></p>";
         break;
         case "adventure 3":
-            document.getElementById("ag-adventure").innerHTML = "<p>In this story, <b>" + agSubject + "</b> in order to <b>" + agGoal + ".</b></p>";
+            document.querySelector(".output").innerHTML = "<p>In this story, <b>" + agSubject + "</b> in order to <b>" + agGoal + ".</b></p>";
         break;
         case "adventure 4":
-            document.getElementById("ag-adventure").innerHTML = "<p>In this story, <b>" + agSubject + ".</b> They are doing this <b> " + agMotive + ".</b></p>";
+            document.querySelector(".output").innerHTML = "<p>In this story, <b>" + agSubject + ".</b> They are doing this <b> " + agMotive + ".</b></p>";
         break;
     }
 }
@@ -4685,7 +4685,7 @@ function npcGen() {
             partyBuild = charaCatOne + ", " + charaCatTwo + ",</b> and <b>" + charaCatThree + ".</b></p>";
         break;
     }
-    document.getElementById("npc-party").innerHTML = "<p>Our party includes <b>" + partyBuild;
+    document.querySelector(".output").innerHTML = "<p>Our party includes <b>" + partyBuild;
 }
 
 // Rumors
@@ -4847,5 +4847,23 @@ function rumorGen() {
             rumor = personOne + " they may be upping woodland patrols due to a rise in the number of <b>" + monster;
         break;
     }
-    document.getElementById("rm-rumor").innerHTML = "<p>" + source + " " + rumor + ".</b></p>";
+    document.querySelector(".output").innerHTML = "<p>" + source + " " + rumor + ".</b></p>";
+}
+
+function controlCheck() {
+    if (document.getElementById("ptPlot").checked) {
+        plotGen();
+    } else if (document.getElementById("qqQuest").checked) {
+        questGen();
+    } else if (document.getElementById("agAdventure").checked) {
+        adventureGen();
+    } else if (document.getElementById("npcParty").checked) {
+        npcGen();
+    } else if (document.getElementById("rmRumor").checked) {
+        rumorGen();
+    } else if (document.getElementById("pbPlot").checked) {
+        plotCreate();
+    } else {
+        plotCreate();
+    }
 }
