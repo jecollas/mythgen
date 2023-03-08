@@ -713,202 +713,6 @@ const chara = {
         "teenage",
         "corny"
     ],
-    trait: [
-        "can be restless",
-        "can be ambitious",
-        "is kind",
-        "used to be idealistic",
-        "is past prime",
-        "can be brusque",
-        "is stubborn to a fault",
-        "has not laughed in a long time",
-        "lies more often than not",
-        "is surprisingly gentle",
-        "once was hopeful",
-        "can be independently-minded",
-        "can be selfish",
-        "can be sharp",
-        "can be over-critical",
-        "tends to be reckless",
-        "is abrasive",
-        "has become aimless",
-        "has a lot of defense mechanisms",
-        "can be cold",
-        "has a tendency to be cowardly",
-        "is destructive",
-        "can be detached",
-        "can be judgemental",
-        "has a sense of humor",
-        "has a reputation for being melodramatic",
-        "has burnt every bridge",
-        "can be vain",
-        "has become withdrawn",
-        "is taciturn",
-        "can be stoic",
-        "is suave",
-        "is quick-witted",
-        "no longer has any loyalties",
-        "has a strong moral compass",
-        "has 99 problems, and a sidekick is one of them",
-        "is a crank",
-        "has a reputation for being eccentric",
-        "is misunderstood",
-        "is a worrywart",
-        "is innocent",
-        "is rather unpredictable",
-        "is unexpectedly charismatic",
-        "has a poker face",
-        "is soft-hearted",
-        "can be independently-minded",
-        "used to be selfish",
-        "has many controversial opinions",
-        "is deadpan",
-        "can be pretentious",
-        "is prim",
-        "is puritanical",
-        "can be tactless",
-        "tends to attract trouble",
-        "is blind",
-        "thrives on drama",
-        "can be forgetful",
-        "is a drifter",
-        "is a chatterbox",
-        "is spineless",
-        "is rather incompetent",
-        "is bright",
-        "is sensible to a fault",
-        "is a forgiving soul",
-        "is braver than most",
-        "has no moral code",
-        "has run away",
-        "is affable",
-        "is taciturn",
-        "is overly polite",
-        "can be naïve",
-        "can be overly pompous",
-        "is overly adventurous",
-        "is a lover of books",
-        
-        // from the Meme Machine
-        "was found by the side of the road",
-        "is haunted",
-        "is hot",
-        "is divorced",
-        "is bisexual",
-        "is goth",
-        "is evil",
-        "is stinky",
-        "is nonbinary",
-        "is literally neurodivergent and a minor",
-        "is a furry",
-        "is a flat earther",
-        "is a flat earther to be a dick",
-        "is a bit of a daredevil",
-        "is an arsonist",
-        "is an alcoholic",
-        "is so hungover",
-        "is so close to snapping",
-        "is terrified of ducks",
-        "is really up their own ass about poetry",
-        "is currently facing a lawsuit",
-        "is currently running a scam",
-        // "is banned from Applebee's",
-        "is banned from the Dancing Dragonfly",
-        "is plagued by visions",
-        "is blue for no reason",
-        "is reasonably horny",
-        "is unreasonably horny",
-        "is from hell",
-        "is from the LARP equivalent of Texas",
-        "is afraid of the dark",
-        "is a competitive little shit",
-        "has a headache",
-        "has a fat ass",
-        "has a cool hat",
-        "has a child nemesis",
-        "has a tiny creature for a sidekick",
-        "has a penchant for truly terrible wordplay",
-        "has no idea whats going on",
-        "has not been around civilization for some time",
-        "has not bathed in three weeks",
-        "has the attention span of a goldfish",
-        "has had their medical license revoked",
-        "has already snapped",
-        "has killed before and will kill again",
-        "has got it going on",
-        "has human eyes",
-        "does not have human eyes",
-        "has interesting feelings about spiders",
-        "has three weed-smoking girlfriends",
-        "has blue hair and pronouns",
-        "has an ongoing feud with the local mage's guild (don't ask)",
-        "only has one outfit",
-        "thinks they're a goose",
-        "thinks they're hot shit",
-        "thinks your mom is hot",
-        "thinks your dad is hot",
-        "thinks your parent of unspecified gender is hot",
-        "thinks the earth is shaped like a donut because it's funny",
-        "thinks the earth is shaped like a donut because they're kind of hungry right now",
-        "believes all rumors to be true",
-        "doesn't talk to their parents",
-        "doesn't believe in hell",
-        "doesn't think the sun is real",
-        "needs therapy",
-        "needs a nap",
-        "needs to get laid",
-        "eats glue",
-        "eats magic items",
-        "smokes way too much weed",
-        "smokes a regular amount of weed",
-        "considers themself to be morally grey but has committed several murders",
-        "will die on any hill",
-        "won't shut up about their kids",
-        "would survive a Saw trap",
-        "loves arguing",
-        "loves puppets",
-        "loves soup",
-        "loves their wife",
-        "likes to break the fourth wall",
-        "really likes dragons",
-        "hates children",
-        "acts like an anime character",
-        "solves all of their problems with card games",     
-        "regularly commits tax fraud",
-        "used to be a war criminal and has since been pardoned",
-        "lies about their age",
-        "lies through the newspaper",
-        "faked their death",
-        "denies any and all responsibility for... the incident",
-        "woke up and chose violence",
-        "vapes",
-        "fucks",
-        "can be real dick",
-        "naps in weird places",
-        "got their ears pierced at Claire's",
-        "wears way too much eyeliner",
-        "went out for a pack of smokes and never returned",
-        "took one philosophy class in university and won't shut up about it",
-        "solves mysteries on the side",
-        "is really passionate about saving the bees",
-        "has their own fan club",
-        "plays the violin",
-        "plays the piano",
-        "minds their own business",
-        "loves to gossip",
-        "is a raging anti-capitalist",
-        "is a CEO",
-        "is a union-buster",
-        "hates you personally",
-        "is a teenager",
-        "is on holiday",
-        "wants to show you pictures of their vacation",
-        "wants to show you pictures of their kid",
-        "believes they are a gretch (they are not a gretch)",
-        "enjoys antiquities",
-        "delights in awkward situations",
-        "refuses to participate in the economy"
-    ],
     group: [
         // adventure seed generator
         "order",
@@ -1000,78 +804,6 @@ const chara = {
         "circus"
     ]
 }
-
-// Rumors
-const rumors = {
-    source: [
-        "My cousin's friend told him that",
-        "My cousin's friend told her that",
-        "My cousin told me that",
-        "My friend overheard some patrons at the tavern talking about how",
-        "I overheard one of the town guard saying that",
-        "My friend heard that",
-        "I overheard someone saying that",
-        "A buddy of mine said that",
-        "You didn't hear this from me, but",
-        "Rumor has it that",
-        "Don't quote me on this, but I heard that",
-        "I don't know if this is true or not, but I heard that",
-        "I heard through the grapevine that",
-        "So get this — apparently",
-        "A friend of mine was telling me the other day that",
-        "A friend of a friend said that",
-        "I read in the newspaper that",
-        "The bartender slipped me a note that said that",
-        "The bartender gave me a heads up that",
-        "Someone gave me a heads up that",
-        "The spirits revealed to me that",
-        "Just trust me on this one, but",
-        "The town busybody said that",
-        "This might just be me being nosy, but",
-        "I'm usually one to mind my own business, but I heard that"
-    ],
-    accuse: [
-        "having sex",
-        "dabbing",
-        "daydreaming",
-        "being a little bitch",
-        "lying to a person of authority",
-        "faking their death",
-        "being gay and doing crimes",
-        "transing their gender",
-        "kidnapping someone's beloved pet",
-        "eating literal garbage",
-        "unhinging their jaw like a snake",
-        "sneaking suspiciously into a building here in town",
-        "coercing people into giving them their teeth",
-        "getting their teeth stolen",
-        "planning to commit treason",
-        "getting absolutely wasted",
-        "making a deal with the fae",
-        "tilting at windmills",
-        "catfishing the constable with pictures of the queen",
-        "catfishing the mayor with pictures of the queen",
-        "catfishing the queen with pictures of snakes",
-        "eating a big pile of spaghetti and not sharing any of it",
-        "threatening to kill somebody",
-        "killing somebody",
-        "hiding a body",
-        "pickpocketing their best friend",
-        "kissing the homies goodnight",
-        "t-posing for dominance",
-        "being a fucking narc",
-        "being awful to the police",
-        "pulling a dragon's tail",
-        "vandalizing the local tavern",
-        "getting involved with an illicit underground unicorn fight club",
-        "playing Yu-Gi-Oh",
-        "undermining the government at every turn",
-        "falling on their ass",
-        "eating shit and falling off their horse",
-        "riding topless",
-        "stealing from the church"
-    ]
-};
 
 // NPC Builder, Rumors
 const characters = {
@@ -1235,417 +967,6 @@ const monsters = [
     "Nutkin"
 ];
 
-// Adventure Generator
-// DON'T DELETE UNTIL VERB FUNCTION IS DONE
-const oldVerbs = {    
-    present: [
-        "kill",
-        "bribe",
-        "explore",
-        "summon",
-        "transport",
-        "steal",
-        "hunt",
-        "torture",
-        "gather",
-        "curse",
-        "enchant",
-        "disable",
-        "create",
-        "attack",
-        "write",
-        "assassinate",
-        "kidnap",
-        "sabotage",
-        "dishonor",
-        "marry",
-        "travel",
-        "sneak",
-        "unleash",
-        "escort",
-        "dig",
-        "protect",
-        "blackmail",
-        "rob",
-        "nap",
-        "disfigure",
-        "forage",
-        "impersonate",
-        "hide",
-        "destroy",
-        "search for",
-        "seek",
-        "flee with",
-        "flee from",
-        "trick",
-        "manipulate",
-        "rest",
-        "blockade",
-        "discover",
-        "invade",
-        "embarrass",
-        "look for",
-        "camp",
-        "recruit",
-        "terrorize",
-        "invest in",
-        "invest suspiciously heavily in",
-        "dupe",
-        "abuse",
-        "tax",
-        "spread",
-        "make",
-        "organize",
-        "request",
-        "challenge",
-        "cause",
-        "raise",
-        "sail",
-        "raze",
-        "build",
-        "look for",
-        "glean",
-        "paint",
-        "excavate",
-        "impede",
-        "perform",
-        "keep",
-        "control",
-        "capture",
-        "sacrifice",
-        "reconnaissance for",
-        "prey",
-        "cheat",
-        "shirk",
-        "stir up",
-        "incite",
-        "deflect",
-        "quest for",
-        "invoke",
-        "propagate",
-        "sell",
-        "wage war on",
-        "build up",
-        "hinder",
-        "secure",
-        "deny",
-        "resurrect",
-        "picket",
-        "drown",
-        "vandalize",
-        "claim",
-        "take",
-        "stifle",
-        "over-run",
-        "starve",
-        "defile",
-        "cull",
-        "establish",
-        "proselytize",
-        "pass",
-        "slow",
-        "disguise",
-        "restore",
-        "get",
-        "murder",
-        "declare war on",
-        "daydream about",
-        "lie to",
-        "fake",
-        "eat",
-        "coerce",
-        "catfish",
-        "get involved with",
-        "play with",
-        "become",
-        "betray",
-        "bind",
-        "break",
-        "bring back",
-        "bring",
-        "burn",
-        "catch",
-        "change",
-        "clear",
-        "conquer",
-        "convert",
-        "cure",
-        "defeat",
-        "delay",
-        "earn",
-        "eliminate",
-        "end",
-        "enslave",
-        "erase",
-        "escape",
-        "expand",
-        "expose",
-        "extinguish",
-        "fight against",
-        "find",
-        "form",
-        "found",
-        "free",
-        "heal",
-        "hold",
-        "implode",
-        "join",
-        "locate",
-        "make fun of",
-        "make substantial profits on",
-        "negotiate",
-        "open",
-        "overthrow",
-        "plan for",
-        "prove",
-        "reset",
-        "return",
-        "revive",
-        "save",
-        "shame",
-        "slaughter",
-        "start",
-        "stick it to",
-        "turn back",
-        "undo",
-        "unite",
-        "worship",
-        "ally themselves with",
-        "awaken",
-        "pay",
-        "appease",
-        "avert",
-        "topple",
-        "fulfill",
-        "acquire",
-        "banish",
-        "sow",
-        "gain",
-        "complete",
-        "shake",
-        "show the inferiority of",
-        "crash",
-        "corner the market in",
-        "renegotiate",
-        "bring low",
-        "win against"
-    ],
-    gerund: [
-        "killing",
-        "bribing",
-        "exploring",
-        "summoning",
-        "transporting",
-        "stealing",
-        "hunting",
-        "torturing",
-        "gathering",
-        "cursing",
-        "enchanting",
-        "disabling",
-        "creating",
-        "attacking",
-        "writing",
-        "assassinating",
-        "kidnapping",
-        "sabotaging",
-        "dishonoring",
-        "marrying",
-        "traveling",
-        "sneaking",
-        "unleashing",
-        "escorting",
-        "digging",
-        "protecting",
-        "blackmailing",
-        "robbing",
-        "napping",
-        "disfiguring",
-        "foraging",
-        "hiding",
-        "destroying",
-        "searching for",
-        "seeking",
-        "fleeing with",
-        "fleeing from",
-        "tricking",
-        "manipulating",
-        "resting",
-        "blockading",
-        "discovering",
-        "invading",
-        "embarrassing",
-        "looking",
-        "camping",
-        "recruiting",
-        "terrorizing",
-        "investing in",
-        "investing suspiciously heavily in",
-        "duping",
-        "abusing",
-        "taxing",
-        "spreading",
-        "making",
-        "organizing",
-        "requesting",
-        "challenging",
-        "causing",
-        "raising",
-        "sailing",
-        "razing",
-        "building",
-        "looking for",
-        "gleaning",
-        "painting",
-        "excavating",
-        "impeding",
-        "performing",
-        "keeping",
-        "controlling",
-        "capturing",
-        "sacrificing",
-        "reconnaissancing for",
-        "preying",
-        "cheating",
-        "shirking",
-        "stirring up",
-        "inciting",
-        "deflecting",
-        "questing for",
-        "searching for",
-        "invoking",
-        "propagating",
-        "selling",
-        "waging war on",
-        "building up",
-        "hindering",
-        "securing",
-        "denying",
-        "resurrecting",
-        "picketing",
-        "drowning",
-        "vandalizing",
-        "claiming",
-        "taking",
-        "stifling",
-        "over-running",
-        "starving",
-        "defiling",
-        "culling",
-        "establishing",
-        "proselytizing",
-        "passing",
-        "slowing",
-        "disguising",
-        "restoring",
-        "getting",
-        "murdering",
-        "declaring war on",
-        "daydreaming about",
-        "lying to",
-        "faking",
-        "eating",
-        "coercing",
-        "catfishing",
-        "getting involved with",
-        "playing with",
-        "becoming",
-        "betraying",
-        "binding",
-        "breaking",
-        "bringing back",
-        "bringing",
-        "burning",
-        "catching",
-        "changing",
-        "clearing",
-        "conquering",
-        "converting",
-        "curing",
-        "defeating",
-        "delaying",
-        "earning",
-        "eliminating",
-        "ending",
-        "enslaving",
-        "erasing",
-        "escaping",
-        "expanding",
-        "exposing",
-        "extinguishing",
-        "fighting against",
-        "finding",
-        "forming",
-        "founding",
-        "freeing",
-        "healing",
-        "holding",
-        "imploding",
-        "joining",
-        "locating",
-        "making fun of",
-        "making substantial profits on",
-        "negotiating",
-        "opening",
-        "overthrowing",
-        "planning for",
-        "proving",
-        "reseting",
-        "returning",
-        "reviving",
-        "saving",
-        "shaming",
-        "slaughtering",
-        "starting",
-        "sticking it to",
-        "turning back",
-        "undoing",
-        "uniting",
-        "worshipping",
-        "allying themselves with",
-        "awakening",
-        "paying",
-        "appeasing",
-        "averting",
-        "toppling",
-        "fulfilling",
-        "acquiring",
-        "banishing",
-        "gaining",
-        "completing",
-        "shaking",
-        "showing the inferiority of",
-        "crashing",
-        "cornering the market in",
-        "renegotiating",
-        "bringing low",
-        "winning against"
-    ],
-    contPres: [
-        "try to", //verb goal noun
-        "attempt to",
-        "pretend to",
-        "plan to",
-        "intend to",
-        "want to",
-        "need to",
-        "threaten to",
-        "start to"
-    ],
-    contGer: [
-        "trying to", //verb goal noun
-        "attempting to",
-        "pretending to",
-        "planning to",
-        "intending to",
-        "threatening to",
-        "starting to"
-    ],
-    continuousOther: [
-        "finally"
-    ]
-}
-
 const verbs = {
     present: {
         person: [
@@ -1782,7 +1103,8 @@ const verbs = {
             "banish",
             "gain",
             "show the inferiority of",
-            "crash"
+            "crash",
+            "conspire with"
         ],
         place: [
             "explore",
@@ -1875,7 +1197,8 @@ const verbs = {
             "banish",
             "gain",
             "show the inferiority of",
-            "crash"
+            "crash",
+            "squat in"
         ],
         thing: [
             "kill",
@@ -2164,6 +1487,7 @@ const verbs = {
             "gaining",
             "showing the inferiority of",
             "crashing",
+            "conspiring with"
         ],
         place: [
             "exploring",
@@ -2257,6 +1581,7 @@ const verbs = {
             "gaining",
             "showing the inferiority of",
             "crashing",
+            "squatting in"
         ],
         thing: [
             "killing",
@@ -2424,7 +1749,8 @@ const verbs = {
             "attempting to",
             "pretending to",
             "planning to",
-            "threatening to"
+            "threatening to",
+            "being framed for"
         ],
         other: [
             "finally"
@@ -3045,7 +2371,7 @@ const nouns = {
             "CEO",
             "union buster",
             "dudebro",
-            "pharaoh"
+            "pharaoh",
         ],
         plural: [
             "travelers",
@@ -3858,6 +3184,232 @@ const nouns = {
 
 // where fragments go to die after I tear them apart like confetti
 const fragments = {
+    trait: [ // character traits
+        "can be restless",
+        "can be ambitious",
+        "is kind",
+        "used to be idealistic",
+        "is past prime",
+        "can be brusque",
+        "is stubborn to a fault",
+        "has not laughed in a long time",
+        "lies more often than not",
+        "is surprisingly gentle",
+        "once was hopeful",
+        "can be independently-minded",
+        "can be selfish",
+        "can be sharp",
+        "can be over-critical",
+        "tends to be reckless",
+        "is abrasive",
+        "has become aimless",
+        "has a lot of defense mechanisms",
+        "can be cold",
+        "has a tendency to be cowardly",
+        "is destructive",
+        "can be detached",
+        "can be judgemental",
+        "has a sense of humor",
+        "has a reputation for being melodramatic",
+        "has burnt every bridge",
+        "can be vain",
+        "has become withdrawn",
+        "is taciturn",
+        "can be stoic",
+        "is suave",
+        "is quick-witted",
+        "no longer has any loyalties",
+        "has a strong moral compass",
+        "has 99 problems, and a sidekick is one of them",
+        "is a crank",
+        "has a reputation for being eccentric",
+        "is misunderstood",
+        "is a worrywart",
+        "is innocent",
+        "is rather unpredictable",
+        "is unexpectedly charismatic",
+        "has a poker face",
+        "is soft-hearted",
+        "can be independently-minded",
+        "used to be selfish",
+        "has many controversial opinions",
+        "is deadpan",
+        "can be pretentious",
+        "is prim",
+        "is puritanical",
+        "can be tactless",
+        "tends to attract trouble",
+        "is blind",
+        "thrives on drama",
+        "can be forgetful",
+        "is a drifter",
+        "is a chatterbox",
+        "is spineless",
+        "is rather incompetent",
+        "is bright",
+        "is sensible to a fault",
+        "is a forgiving soul",
+        "is braver than most",
+        "has no moral code",
+        "has run away",
+        "is affable",
+        "is taciturn",
+        "is overly polite",
+        "can be naïve",
+        "can be overly pompous",
+        "is overly adventurous",
+        "is a lover of books",
+        
+        // from the Meme Machine
+        "was found by the side of the road",
+        "is haunted",
+        "is hot",
+        "is divorced",
+        "is bisexual",
+        "is goth",
+        "is evil",
+        "is stinky",
+        "is nonbinary",
+        "is literally neurodivergent and a minor",
+        "is a furry",
+        "is a flat earther",
+        "is a flat earther to be a dick",
+        "is a bit of a daredevil",
+        "is an arsonist",
+        "is an alcoholic",
+        "is so hungover",
+        "is so close to snapping",
+        "is terrified of ducks",
+        "is really up their own ass about poetry",
+        "is currently facing a lawsuit",
+        "is currently running a scam",
+        // "is banned from Applebee's",
+        "is banned from the Dancing Dragonfly",
+        "is plagued by visions",
+        "is blue for no reason",
+        "is reasonably horny",
+        "is unreasonably horny",
+        "is from hell",
+        "is from the LARP equivalent of Texas",
+        "is afraid of the dark",
+        "is a competitive little shit",
+        "has a headache",
+        "has a fat ass",
+        "has a cool hat",
+        "has a child nemesis",
+        "has a tiny creature for a sidekick",
+        "has a penchant for truly terrible wordplay",
+        "has no idea whats going on",
+        "has not been around civilization for some time",
+        "has not bathed in three weeks",
+        "has the attention span of a goldfish",
+        "has had their medical license revoked",
+        "has already snapped",
+        "has killed before and will kill again",
+        "has got it going on",
+        "has human eyes",
+        "does not have human eyes",
+        "has interesting feelings about spiders",
+        "has three weed-smoking girlfriends",
+        "has blue hair and pronouns",
+        "has an ongoing feud with the local mage's guild (don't ask)",
+        "only has one outfit",
+        "thinks they're a goose",
+        "thinks they're hot shit",
+        "thinks your mom is hot",
+        "thinks your dad is hot",
+        "thinks your parent of unspecified gender is hot",
+        "thinks the earth is shaped like a donut because it's funny",
+        "thinks the earth is shaped like a donut because they're kind of hungry right now",
+        "believes all rumors to be true",
+        "doesn't talk to their parents",
+        "doesn't believe in hell",
+        "doesn't think the sun is real",
+        "needs therapy",
+        "needs a nap",
+        "needs to get laid",
+        "eats glue",
+        "eats magic items",
+        "smokes way too much weed",
+        "smokes a regular amount of weed",
+        "considers themself to be morally grey but has committed several murders",
+        "will die on any hill",
+        "won't shut up about their kids",
+        "would survive a Saw trap",
+        "loves arguing",
+        "loves puppets",
+        "loves soup",
+        "loves their wife",
+        "likes to break the fourth wall",
+        "really likes dragons",
+        "hates children",
+        "acts like an anime character",
+        "solves all of their problems with card games",     
+        "regularly commits tax fraud",
+        "used to be a war criminal and has since been pardoned",
+        "lies about their age",
+        "lies through the newspaper",
+        "faked their death",
+        "denies any and all responsibility for... the incident",
+        "woke up and chose violence",
+        "vapes",
+        "fucks",
+        "can be real dick",
+        "naps in weird places",
+        "got their ears pierced at Claire's",
+        "wears way too much eyeliner",
+        "went out for a pack of smokes and never returned",
+        "took one philosophy class in university and won't shut up about it",
+        "solves mysteries on the side",
+        "is really passionate about saving the bees",
+        "has their own fan club",
+        "plays the violin",
+        "plays the piano",
+        "minds their own business",
+        "loves to gossip",
+        "is a raging anti-capitalist",
+        "is a CEO",
+        "is a union-buster",
+        "hates you personally",
+        "is a teenager",
+        "is on holiday",
+        "wants to show you pictures of their vacation",
+        "wants to show you pictures of their kid",
+        "believes they are a gretch (they are not a gretch)",
+        "enjoys antiquities",
+        "delights in awkward situations",
+        "refuses to participate in the economy",
+        "is on official business",
+        "is on a pilgrimage",
+        "is in disguise"
+    ],
+    source: [ // rumor source
+        "My cousin's friend told him that",
+        "My cousin's friend told her that",
+        "My cousin told me that",
+        "My friend overheard some patrons at the tavern talking about how",
+        "I overheard one of the town guard saying that",
+        "My friend heard that",
+        "I overheard someone saying that",
+        "A buddy of mine said that",
+        "You didn't hear this from me, but",
+        "Rumor has it that",
+        "Don't quote me on this, but I heard that",
+        "I don't know if this is true or not, but I heard that",
+        "I heard through the grapevine that",
+        "So get this — apparently",
+        "A friend of mine was telling me the other day that",
+        "A friend of a friend said that",
+        "I read in the newspaper that",
+        "The bartender slipped me a note that said that",
+        "The bartender gave me a heads up that",
+        "Someone gave me a heads up that",
+        "The spirits revealed to me that",
+        "Just trust me on this one, but",
+        "The town busybody said that",
+        "This might just be me being nosy, but",
+        "I'm usually one to mind my own business, but I heard that"
+    ],
     goal: [
         // adventure seed generator
         "assume control",
@@ -4223,15 +3775,6 @@ const fragments = {
         "by any means necessary",
         "with lurid colors",
         "with deceptive documents"
-    ],
-    secretThirdThing: [
-        "on official business",       
-        "on a pilgramage",        
-        "conspiring with",
-        "intents to kidnap children from their parents", //verb
-        "being framed for", // this also belongs in a separate thing
-        "squatting",
-        "in disguise",
     ]
 }
 
@@ -4267,31 +3810,125 @@ function wordPrep(word) {
     return prep;
 }
 
-// literally I don't need this but w/e
-// function wordPrepThe() {
-//     prep = "the";
-//     return prep;
-// }
-
 // adds singular possessive 's to the end of a noun
 // this should do a thing where the possessive changes if singular or plural
+// OH FUCK I CAN DO THIS NOW I THINK HELL YEAH
 // function wordPoss(word) {
 //     word += "'s";
 //     return word;
 // }
 
 // subject-verb agreement
-function subiAgree(subi) {
-    if (subi.startsWith("singular")) {
+function svaAgree(sva) {
+    if (sva.startsWith("singular")) {
         sva = "is";
-    } else if (subi.startsWith("plural")) {
+    } else if (sva.startsWith("plural")) {
         sva = "are";
     }
     return sva;
 }
 
+function verbSelect(noun) {
+    let present = "";
+    let gerund = "";
+    
+    if (noun == nounPerson.singular || noun == nounPerson.plural) {
+        present = randomString(verbPresent.person);
+        gerund = randomString(verbGerund.person);
+    } else if (noun == nounPlace.singular || noun == nounPlace.plural) {
+        present = randomString(verbPresent.place);
+        gerund = randomString(verbGerund.place);
+    } else if (noun == nounThing.singular || noun == nounThing.plural) {
+        present = randomString(verbPresent.thing);
+        gerund = randomString(verbGerund.thing);
+    } else if (noun == nounConcept.singular || noun == nounConcept.plural) {
+        present = randomString(verbPresent.concept);
+        gerund = randomString(verbGerund.concept);
+    }
+    return {present, gerund};
+}
+
+function nounSelect() {
+    let noun = "";
+    let condition = "";
+    
+    const singular = [
+        nounPerson.singular,nounPlace.singular,nounThing.singular,nounConcept.singular
+    ];
+    const plural = [
+        nounPerson.plural, nounPlace.plural, nounThing.plural, nounConcept.plural
+    ];
+    
+    const nouns = [singular, plural];
+    const type = randomString(nouns); // singular, plural
+    const subtype = randomString(type); // person, place, thing, etc
+    const select = randomString(subtype); // noun from that array
+
+    // plural or singular? also, concepts don't get a preposition
+    if (type == plural || (subtype == nounConcept.singular || subtype == nounConcept.plural)) {
+        noun = select;
+        condition = randomString(property.plural);
+    } else if (type == singular) {
+        noun = wordPrep(select) + select;
+        condition = randomString(property.singular);
+    }
+    return [noun, subtype, condition];
+}
+
+function charaCreate() {
+    const charaNoun = randomString(nounPerson.singular);
+    const adj = randomString(chara.adjective);
+    const trait = randomString(fragments.trait);
+    const fakeFirst = randomString(characters.fakeFirst);
+    const fakeLast = randomString(characters.fakeLast);
+    let fakeRole = fakeFirst + " " + fakeLast;
+    let charaPrep = wordPrep(charaNoun) + charaNoun;
+    
+    let charaDesc = charaPrep + "</b> who <b>" + trait;
+    let charaCat = wordPrep(adj) + " " + adj + " " + charaNoun;
+    let charaCon = charaCat + "</b> who <b>" + trait;
+    let charaFake = charaPrep + "</b> named <b>" + fakeRole + "</b> who <b>" + trait;
+
+    return [charaDesc, charaCat, charaCon, charaFake];
+}
+
+function charaSelect() {
+    const charaList = [
+        "player character",
+        "face role",
+        "fake role 1",
+        "fake role 2"
+    ];
+    const charaType = randomString(charaList);
+
+    const player = randomString(characters.players);
+    const npc = randomString(characters.faceRoles);
+    const fname = randomString(characters.fakeFirst);
+    const lname = randomString(characters.fakeLast);
+    const person = randomString(nounPerson.singular);
+
+    let chara = "";
+    let fakeName = fname + " " + lname;
+
+    switch (charaType) {
+        case "player character":
+            chara = "<b>" + player + "</b>";
+        break;
+        case "face role":
+            chara = "<b>" + npc + "</b>";
+        break;
+        case "fake role 1":
+            chara = "someone called <b>" + fakeName + "</b>";
+        break;
+        case "fake role 2":
+            chara = "<b>" + wordPrep(person) + " " + person + "</b> named <b>" + fname + "</b>";
+        break;
+    }
+    return chara;
+}
+
 // person select
-function personSelect() { // singular and plural subjects
+function personSelect() {
     const personList = [
         "singular 1",
         "singular 2",
@@ -4300,14 +3937,15 @@ function personSelect() { // singular and plural subjects
     ];
     
     const personType = randomString(personList);
-    const subi = subiAgree(personType);
+    const sva = svaAgree(personType);
 
     const adj = randomString(chara.adjective);
-    const trait = randomString(chara.trait);    
+    const trait = randomString(fragments.trait);    
     const group = randomString(chara.group);
 
     const noun = randomString(nounPerson.singular);
     const members = randomString(nounPerson.plural);
+    
     let subject = "";
     
     switch (personType) {
@@ -4324,13 +3962,12 @@ function personSelect() { // singular and plural subjects
             subject = wordPrep(adj) + adj + " " + group + "</b> of <b>" + members + "</b>";
         break;
     }
-    return {subject, subi};
+    return {subject, sva};
 }
 
 // action select
-function actionSelect(subi, noun, verbPres, verbGer) { 
-    // add to adventure generator and rumors
-    // nounOne, verbGerOne, etc
+function actionSelect(noun, verbPres, verbGer) { 
+    // add to rumors
     const actionList = [ 
         "action 1",
         "action 2",
@@ -4338,27 +3975,27 @@ function actionSelect(subi, noun, verbPres, verbGer) {
         "action 4"
     ];
 
-    const actionType = randomString(actionList);
+    const type = randomString(actionList);
     const fragment = randomString(fragments.action);
     const verbContPres = randomString(verbCont.present);
     const verbContGer = randomString(verbCont.gerund);
     let action = "";
 
-    switch (actionType) {
+    switch (type) {
         case "action 1": //pre-existing action
-            action = subi + " <b>" + fragment;
+            action = "<b>" + fragment;
         break;
         case "action 2": //[verb]ing [noun]
-            action = subi + " <b>" + verbGer + " " + noun;
+            action = "<b>" + verbGer + " " + noun;
         break;
         case "action 3": //[continuous] to [verb] [noun]
-            action = subi + " <b>" + verbContGer + " " + verbPres + " " + noun;
+            action = "<b>" + verbContGer + " " + verbPres + " " + noun;
         break;        
         case "action 4": //[try] to [verb] [noun]
             action = "<b>" + verbContPres + " " + verbPres + " " + noun + "</b>";
         break;
     }
-    return action;
+    return {action, type};
 }
 
 // method select
@@ -4420,127 +4057,82 @@ let plotSelect = "";
 // PLOT BUILDER – the big boy :)
 function plotCreate() {
     plotSelect = randomString(plotType);
+    let plotStory = "";
 
-    // non-noun/verb nonsense
     const goal = randomString(fragments.goal);
     const motive = randomString(quest.motivation); // the reason why
     const twist = randomString(quest.twist);
     const location = randomString(quest.place);
-
-    let plotStory = "";
-    let condition = "";
     
     // const type = randomString(plots.type); // haven't used this yet
     const tone = randomString(plots.tone);
     const genre = randomString(plots.genre);
 
-    let verbGerOne = "";
-    let verbGerTwo = "";
-    let verbPres = "";
+    // nouns – groups one and two
+    const nounGO = nounSelect();    
+    const nounOne = nounGO[0];
+    const nounSubOne = nounGO[1];
+    const condOne = nounGO[2]; // condition
 
-    // noun horseshit
-    // FOR VERB AND NOUN FUNCTIONS, just have them generate one thing that gets paired up so i can call those functions up to three times
-        // function noun() – generates nounType, nounSubtype, nounSelect, noun, condition
-        // function verb(nounSubtype) – generates verbPres, verbGer
-    const nounSingular = [
-        nounPerson.singular,nounPlace.singular,nounThing.singular,nounConcept.singular
-    ];
-    const nounPlural = [
-        nounPerson.plural, nounPlace.plural, nounThing.plural, nounConcept.plural
-    ];
+    const nounGT = nounSelect();
+    const nounTwo = nounGT[0];
+    const nounSubTwo = nounGT[1];
+
+    // verbs – groups one and two
+    const verbGO = verbSelect(nounSubOne);
+    const verbPresOne = verbGO.present;
+    const verbGerOne = verbGO.gerund;
     
-    const nounArray = [nounSingular, nounPlural];
+    const verbGT = verbSelect(nounSubTwo);
+    const verbGerTwo = verbGT.gerund;
 
-    // noun one
-    const nounTypeOne = randomString(nounArray); // singular or plural
-    const nounSubOne = randomString(nounTypeOne); // person, place, thing, or concept
-    const nounSelectOne = randomString(nounSubOne); // noun from that array
-
-    // singular or plural? also, concepts don't get a preposition
-    if (nounTypeOne == nounPlural || (nounSubOne == nounConcept.singular || nounSubOne == nounConcept.plural)) {
-        nounOne = nounSelectOne;
-        condition = randomString(property.plural);
-    } else if (nounTypeOne == nounSingular) {
-        nounOne = wordPrep(nounSelectOne) + nounSelectOne;
-        condition = randomString(property.singular);
-    }
-
-    // verbs -- gerund one and present verb select 
-    if (nounSubOne == nounPerson.singular || nounSubOne == nounPerson.plural) {
-        verbGerOne = randomString(verbGerund.person);
-        verbPres = randomString(verbPresent.person);
-    } else if (nounSubOne == nounPlace.singular || nounSubOne == nounPlace.plural) {
-        verbGerOne = randomString(verbGerund.place);
-        verbPres = randomString(verbPresent.place);
-    } else if (nounSubOne == nounThing.singular || nounSubOne == nounThing.plural) {
-        verbGerOne = randomString(verbGerund.thing);
-        verbPres = randomString(verbPresent.thing);
-    } else if (nounSubOne == nounConcept.singular || nounSubOne == nounConcept.plural) {
-        verbGerOne = randomString(verbGerund.concept);
-        verbPres = randomString(verbPresent.concept);
-    }
-
-    // noun two
-    const nounTypeTwo = randomString(nounArray);
-    const nounSubTwo = randomString(nounTypeTwo);
-    const nounSelectTwo = randomString(nounSubTwo);
-
-    // singular or plural? also, concepts don't get a preposition
-    if (nounTypeTwo == nounPlural || (nounSubTwo == nounConcept.singular || nounSubTwo == nounConcept.plural)) {
-        nounTwo = nounSelectTwo;
-    } else if (nounTypeTwo == nounSingular) {
-        nounTwo = wordPrep(nounSelectTwo) + nounSelectTwo;
-    }
-
-    // verbs -- gerund two select
-    if (nounSubTwo == nounPerson.singular || nounSubTwo == nounPerson.plural) {
-        verbGerTwo = randomString(verbGerund.person);
-    } else if (nounSubTwo == nounPlace.singular || nounSubTwo == nounPlace.plural) {
-        verbGerTwo = randomString(verbGerund.place);
-    } else if (nounSubTwo == nounThing.singular || nounSubTwo == nounThing.plural) {
-        verbGerTwo = randomString(verbGerund.thing);
-    } else if (nounSubTwo == nounConcept.singular || nounSubTwo == nounConcept.plural) {
-        verbGerTwo = randomString(verbGerund.concept);
-    }
-
-    // DONE WITH THE NOUNS AND VERBS MY GOD
+    // person select
     const subject = personSelect();
     const plotPerson = subject.subject;
-    const subi = subject.subi;
+    const sva = subject.sva;
 
-    const plotAction = actionSelect(subi, nounOne, verbPres, verbGerOne);
+    // action select
+    const action = actionSelect(nounOne, verbPresOne, verbGerOne);
+    const plotAction = action.action;
+    const actionType = action.type;
+    
     const plotMethod = methodSelect(nounTwo, verbGerTwo);
     
-    let plotSubject = plotPerson + " " + plotAction;
+    let plotSubject = "";
+    if (actionType == "action 4") {
+        plotSubject = plotPerson + " " + plotAction;
+    } else {
+        plotSubject = plotPerson + " " + sva + " " + plotAction;
+    }
 
     switch(plotSelect) {
         case "plot 1":
-            plotStory = "<p>The party is looking for <b>" + nounOne + "</b> that <b>" + condition + ".</b> They are looking for this <b>" + motive + ",</b> but the thing is that <b>" + twist + ".</b></p>";
+            plotStory = "The party is looking for <b>" + nounOne + "</b> that <b>" + condOne + ".</b> They are looking for this <b>" + motive + ",</b> but the thing is that <b>" + twist;
         break;
         case "plot 2":
-            plotStory = "<p>The party is looking for <b>" + nounOne + "</b> that <b>" + condition + "</b> in order to <b>" + goal + ".</b></p>" + 
-            "<p>They want this <b>" + motive + ",</b> but what they haven't realized yet is that <b>" + twist + ".</b></p>";
+            plotStory = "The party is looking for <b>" + nounOne + "</b> that <b>" + condOne + "</b> in order to <b>" + goal + ".</b></p>" + 
+            "<p>They want this <b>" + motive + ",</b> but what they haven't realized yet is that <b>" + twist;
         break;
         case "plot 3":
-            plotStory = "<p>In this story, <b>" + plotSubject + " " + location  + ".</b></p>" + 
-            "<p>Their goal is to <b>" + goal + " " + plotMethod + " " + motive + ",</b> but <b>" + twist + ".</b></p>";
+            plotStory = "In this story, <b>" + plotSubject + " " + location  + ".</b></p>" + 
+            "<p>Their goal is to <b>" + goal + " " + plotMethod + " " + motive + ",</b> but <b>" + twist;
         break;
         case "plot 4":
-            plotStory = "<p>This story takes place <b>" + location +",</b> where <b>" + plotSubject + ".</b> Their goal is to <b>" + goal + " " + plotMethod + ".</b></p>" + 
-            "<p>They are doing this <b>" + motive + ",</b> but <b>" + twist + ".</b></p>";
+            plotStory = "This story takes place <b>" + location +",</b> where <b>" + plotSubject + ".</b> Their goal is to <b>" + goal + " " + plotMethod + ".</b></p>" + 
+            "<p>They are doing this <b>" + motive + ",</b> but <b>" + twist;
         break;
         case "plot 5":
-            plotStory = "<p>In this story, <b>" + plotSubject + "</b> in order to <b>" + goal + ".</b></p>";
+            plotStory = "In this story, <b>" + plotSubject + "</b> in order to <b>" + goal;
         break;
         case "plot 6":
-            plotStory = "<p>In this story, <b>" + plotSubject + ".</b> They are doing this <b> " + motive + ".</b></p>";
+            plotStory = "In this story, <b>" + plotSubject + ".</b> They are doing this <b> " + motive;
         break;
         case "plot 7":
-            plotStory = "<p>This is <b>" + wordPrep(tone) + " " + tone + " " + genre + "</b> story in which <b>" + plotSubject + "</b> in order to <b>" + goal + ".</b> The twist is that <b>" + twist + ".</b></p>";
+            plotStory = "This is <b>" + wordPrep(tone) + " " + tone + " " + genre + "</b> story in which <b>" + plotSubject + "</b> in order to <b>" + goal + ".</b> The twist is that <b>" + twist;
         break;
         // NEXT: trying to [action thing] to [other people]
     }
-    document.querySelector(".output").innerHTML = plotStory;
+    document.querySelector(".output").innerHTML = "<p>" + plotStory + ".</b></p>";
 }
 
 // Fetch Quest
@@ -4553,21 +4145,25 @@ let questSelect = "";
 
 function questGen() {
     questSelect = randomString(qQuest);
+    let storyQuest = "";
 
-    const item = randomString(nouns.all);
-    const condition = randomString(property.singular);
+    const noun = nounSelect();
+    const item = noun[0];
+    const condition = noun[2];
+
     const goal = randomString(fragments.goal);
     const motive = randomString(quest.motivation);
     const twist = randomString(quest.twist);
 
     switch(questSelect) {
         case "quest 1":
-            document.querySelector(".output").innerHTML = "<p>The party is looking for <b>" + item + "</b> that <b>" + condition + ".</b> They are looking for this <b>" + motive + ",</b> but the thing is that <b>" + twist + ".</b></p>";
+            storyQuest = "The party is looking for <b>" + item + "</b> that <b>" + condition + ".</b> They are looking for this <b>" + motive + ",</b> but the thing is that <b>" + twist;
         break;
         case "quest 2":
-            document.querySelector(".output").innerHTML = "<p>The party is looking for <b>" + item + "</b> that <b>" + condition + "</b> in order to <b>" + goal + ".</b> They want this <b>" + motive + ",</b> but what they haven't realized yet is that <b>" + twist + ".</b></p>";
+            storyQuest = "The party is looking for <b>" + item + "</b> that <b>" + condition + "</b> in order to <b>" + goal + ".</b> They want this <b>" + motive + ",</b> but what they haven't realized yet is that <b>" + twist;
         break;
     }
+    document.querySelector(".output").innerHTML = "<p>" + storyQuest + ".</b></p>";
 }
 
 // Adventure Generator
@@ -4580,45 +4176,64 @@ const adventureType = [
 
 function adventureGen() {
     let adventureSelect = randomString(adventureType);
+    let agPlot = "";
 
     const agGoal = randomString(fragments.goal); 
     const agPlace = randomString(quest.place);
-    const agMotive = randomString(quest.motivation); // the "because" bullshit
+    const agMotive = randomString(quest.motivation); // "because"
     const agTwist = randomString(quest.twist);
 
-    const agNounOne = randomString(nouns.all);
-    const agNounTwo = randomString(nouns.all);
+    // nouns – groups one and two
+    const nounGO = nounSelect();    
+    const nounOne = nounGO[0];
+    const nounSubOne = nounGO[1];
 
-    const agPresent = randomString(oldVerbs.present)
-    const agverbGerOne = randomString(oldVerbs.gerund);
-    const agGerundTwo = randomString(oldVerbs.gerund);
+    const nounGT = nounSelect();
+    const nounTwo = nounGT[0];
+    const nounSubTwo = nounGT[1];
+
+    // verbs – groups one and two
+    const verbGO = verbSelect(nounSubOne);
+    const verbPresOne = verbGO.present;
+    const verbGerOne = verbGO.gerund;
+    
+    const verbGT = verbSelect(nounSubTwo);
+    const verbGerTwo = verbGT.gerund;
 
     const person = personSelect();
     const agPerson = person.subject;
-    const subi = person.subi;
+    const sva = person.sva;
 
-    const agAction = actionSelect(subi, agNounOne, agPresent, agverbGerOne);
-    const agMethod = methodSelect(agNounTwo, agGerundTwo);
+    const action = actionSelect(nounOne, verbPresOne, verbGerOne);
+    const agAction = action.action;
+    const actionType = action.type;
 
-    const agSubject = agPerson + " " + agAction;
+    const agMethod = methodSelect(nounTwo, verbGerTwo);
+    let agSubject = "";
+
+    if (actionType == "action 4") {
+        agSubject = agPerson + " " + agAction;
+    } else {
+        agSubject = agPerson + " " + sva + " " + agAction;
+    }
 
     switch (adventureSelect) {
-        // multiple lines
         case "adventure 1":
-            document.querySelector(".output").innerHTML = "<p>In this story, <b>" + agSubject + " " + agPlace  + ".</b></p>" + 
-            "<p>Their goal is to <b>" + agGoal + " " + agMethod + " " + agMotive + ",</b> but <b>" + agTwist + ".</b></p>";
+            agPlot = "In this story, <b>" + agSubject + " " + agPlace  + ".</b></p>" + 
+            "<p>Their goal is to <b>" + agGoal + " " + agMethod + " " + agMotive + ",</b> but <b>" + agTwist;
         break;
         case "adventure 2":
-            document.querySelector(".output").innerHTML = "<p>This story takes place <b>" + agPlace +",</b> where <b>" + agSubject + ".</b> Their goal is to <b>" + agGoal + " " + agMethod + ".</b></p>" + 
-            "<p>They are doing this <b>" + agMotive + ",</b> but <b>" + agTwist + ".</b></p>";
+            agPlot = "This story takes place <b>" + agPlace +",</b> where <b>" + agSubject + ".</b> Their goal is to <b>" + agGoal + " " + agMethod + ".</b></p>" + 
+            "<p>They are doing this <b>" + agMotive + ",</b> but <b>" + agTwist;
         break;
         case "adventure 3":
-            document.querySelector(".output").innerHTML = "<p>In this story, <b>" + agSubject + "</b> in order to <b>" + agGoal + ".</b></p>";
+            agPlot = "In this story, <b>" + agSubject + "</b> in order to <b>" + agGoal;
         break;
         case "adventure 4":
-            document.querySelector(".output").innerHTML = "<p>In this story, <b>" + agSubject + ".</b> They are doing this <b> " + agMotive + ".</b></p>";
+            agPlot = "In this story, <b>" + agSubject + ".</b> They are doing this <b> " + agMotive;
         break;
     }
+    document.querySelector(".output").innerHTML = "<p>" + agPlot + ".</b></p>";
 }
 
 // NPC Builder
@@ -4636,56 +4251,50 @@ let partySelect = "";
 
 function npcGen() {
     partySelect = randomString(npcParty);
-    
-    var charNoun = nouns.person;
 
-    const charaOne = randomString(charNoun.singular);
-    const adjOne = randomString(chara.adjective);
-    const traitOne = randomString(chara.trait);
-    const charaPrepOne = wordPrep(charaOne) + charaOne;
-    const charaCatOne = wordPrep(adjOne) + " " + adjOne + " " + charaOne;
+    const charaOne = charaCreate();
+    const descOne = charaOne[0];
+    const catOne = charaOne[1];
+    const conOne = charaOne[2];
+    const fakeOne = charaOne[3];
 
-    const charaTwo = randomString(charNoun.singular);
-    const adjTwo = randomString(chara.adjective)
-    const traitTwo = randomString(chara.trait);
-    const charaPrepTwo = wordPrep(charaTwo) + charaTwo;
-    const charaCatTwo = wordPrep(adjTwo) + adjTwo + " " + charaTwo;
-    
-    const charaThree = randomString(charNoun.singular);
-    const adjThree = randomString(chara.adjective)
-    const traitThree = randomString(chara.trait);
-    const charaPrepThree = wordPrep(charaThree) + charaThree;
-    const charaCatThree = wordPrep(adjThree) + adjThree + " " + charaThree;
+    const charaTwo = charaCreate();
+    const descTwo = charaTwo[0];
+    const catTwo = charaTwo[1];
+    const conTwo = charaTwo[2];
+    // const fakeTwo = charaTwo[3];
 
-    const fakeFirst = randomString(characters.fakeFirst);
-    const fakeLast = randomString(characters.fakeLast);
-    const fakeRole = fakeFirst + " " + fakeLast;
+    const charaThree = charaCreate();
+    const descThree = charaThree[0];
+    const catThree = charaThree[1];
+    // const conThree = charaThree[2];
+    // const fakeThree = charaThree[3];
 
     let partyBuild = "";
     switch(partySelect) {
         case "party 1":
-            partyBuild = charaPrepOne + "</b> who <b>" + traitOne + ".</b></p>";
+            partyBuild = descOne;
         break;
         case "party 2":
-            partyBuild = charaPrepOne + "</b> who <b>" + traitOne + ",</b> and <b>" + charaPrepTwo + "</b> who <b>" + traitTwo + ".</b></p>";
+            partyBuild = descOne + ",</b> and <b>" + descTwo;
         break;
         case "party 3":
-            partyBuild = charaPrepOne + "</b> who <b>" + traitOne + ", " + charaPrepTwo + "</b> who <b>" + traitTwo + ",</b> and <b>" + charaPrepThree + "</b> who <b>" + traitThree + ".</b></p>";
+            partyBuild = descOne + ", " + descTwo + ",</b> and <b>" + descThree;
         break;
         case "party 4":
-            partyBuild = charaPrepOne + "</b> named <b>" + fakeRole + "</b> who <b>" + traitOne + ".</b></p>";
+            partyBuild = catOne + ", " + catTwo + ",</b> and <b>" + catThree;
         break;
         case "party 5":
-            partyBuild = charaCatOne + "</b> who <b>" + traitOne + ".</b></p>";
+            partyBuild = conOne;
         break;
         case "party 6":
-            partyBuild = charaCatOne + "</b> who <b>" + traitOne + ",</b> and <b>" + charaCatTwo + "</b> who <b>" + traitTwo + ".</b></p>";
+            partyBuild = conOne + ",</b> and <b>" + conTwo;
         break;
         case "party 7":
-            partyBuild = charaCatOne + ", " + charaCatTwo + ",</b> and <b>" + charaCatThree + ".</b></p>";
+            partyBuild = fakeOne;
         break;
     }
-    document.querySelector(".output").innerHTML = "<p>Our party includes <b>" + partyBuild;
+    document.querySelector(".output").innerHTML = "<p>Our party includes <b>" + partyBuild + ".</b></p>";
 }
 
 // Rumors
@@ -4704,23 +4313,7 @@ const rumorType = [
     "rumor 12"
 ];
 
-const charTypeOne = [
-    "player character",
-    "face role",
-    "fake role 1",
-    "fake role 2"
-];
-
-const charTypeTwo = [
-    "player character",
-    "face role",
-    "fake role",
-    "fake role 2"
-];
-
 let rumorSelect = "";
-let personSelectOne = "";
-let personSelectTwo = "";
 
 // TOWN GOSSIP TEMPLATE
 // Can probably do
@@ -4737,80 +4330,37 @@ let personSelectTwo = "";
 // 3x Cards - Anytime Plot Clue
 function rumorGen() {
     rumorSelect = randomString(rumorType);
-    personSelectOne = randomString(charTypeOne);
-    personSelectTwo = randomString(charTypeTwo);
-
-    let personOne = "";
-    let personTwo = "";
     let rumor = "";
 
-    // person one (required)
-    const playerOne = randomString(characters.players);
-    const faceOne= randomString(characters.faceRoles);
-    const firstNameOne = randomString(characters.fakeFirst);
-    const lastNameOne = randomString(characters.fakeLast);
-    const rumorCharOne = randomString(nounPerson.singular);
-    let fakeNameOne = firstNameOne + " " + lastNameOne;
-    let charOne = wordPrep(rumorCharOne) + " " + rumorCharOne;    
+    const personOne = charaSelect();
+    const personTwo = charaSelect();
 
-    // person two (optional)
-    const playerTwo = randomString(characters.players);
-    const faceTwo = randomString(characters.faceRoles);    
-    const firstNameTwo = randomString(characters.fakeFirst);
-    const lastNameTwo = randomString(characters.fakeLast);
-    const rumorCharTwo = randomString(nounPerson.singular);
-    let fakeNameTwo = firstNameTwo + " " + lastNameTwo;
-    let charTwo = wordPrep(rumorCharTwo) + " " + rumorCharTwo;
+    const noun = nounSelect();
+    const item = noun[0];
+    const type = noun[1];
+    const condition = noun[2];
 
-    // not people-related
-    const source = randomString(rumors.source);
-    const itemProperty = randomString(property.singular);
+    const verb = verbSelect(type);
+    const present = verb.present;
+    const gerund = verb.gerund;
+
+    const action = actionSelect(item, present, gerund);
+    const accuse = action.action;
+
+    const source = randomString(fragments.source);
     const monster = randomString(monsters);
-    const trait = randomString(chara.trait);
-    const accuse = randomString(rumors.accuse);    
-    const item = randomString(nounThing.singular);
-
-    // templates for person one (required)
-    switch (personSelectOne) {
-        case "player character":
-            personOne = "<b>" + playerOne + "</b>";
-        break;
-        case "face role":
-            personOne = "<b>" + faceOne + "</b>";
-        break;
-        case "fake role 1":
-            personOne = "someone called <b>" + fakeNameOne + "</b>";
-        break;
-        case "fake role 2":
-            personOne = "<b>" + charOne + "</b> named <b>" + firstNameOne + "</b>";
-        break;
-    }
-
-    // templates for person two (optional)
-    switch (personSelectTwo) {
-        case "player character":
-            personTwo = "<b>" + playerTwo + "</b>";
-        break;
-        case "face role":
-            personTwo = "<b>" + faceTwo + "</b>";
-        break;
-        case "fake role 1":
-            personTwo = "someone called <b>" + fakeNameTwo + "</b>";
-        break;
-        case "fake role 2":
-            personTwo = "<b>" + charTwo + "</b> named <b>" + firstNameTwo + "</b>";
-        break;
-    }
-
+    const trait = randomString(fragments.trait);
+    const nounPers = randomString(nounPerson.singular);
+    
     // switches out rumor template
     switch (rumorSelect) {
         // has
         case "rumor 1":
-            rumor = personOne + " has <b>" + wordPrep(item) + item + "</b> that <b>" + itemProperty;
+            rumor = personOne + " has <b>" + item + "</b> that <b>" + condition;
         break;
         // is looking for
         case "rumor 2":
-            rumor = personOne + " is looking for <b>" + wordPrep(item) + item + "</b> that <b>" + itemProperty;
+            rumor = personOne + " is looking for <b>" + item + "</b> that <b>" + condition;
         break;
         case "rumor 3":
             rumor = personOne + " is looking for <b>" + item;
@@ -4827,7 +4377,7 @@ function rumorGen() {
         break;
         // was asking around for
         case "rumor 7":
-            rumor = personOne + " was asking around for <b>" + charTwo;
+            rumor = personOne + " was asking around for <b>" + nounPers;
         break;
         case "rumor 8":
             rumor = personOne + " was asking around for someone who <b>" + trait;
@@ -4840,7 +4390,7 @@ function rumorGen() {
             rumor = personOne + " <b>" + trait;
         break;
         case "rumor 11":
-            rumor = personOne + " is <b>" + charOne;
+            rumor = personOne + " is <b>" + nounPers;
         break;
         // other
         case "rumor 12":

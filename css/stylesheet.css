@@ -72,6 +72,7 @@ button {
 
 .content p {
     padding-right: 1em;
+    max-width: 95%;
 }
 
 form {
@@ -135,13 +136,17 @@ select {
 }
 
 .row .control {
-    flex: 10%;
+    flex: 15%;
     max-width: 100%;
 }
 
 .row .content {
     flex: 70%;
     /* max-width: 100%; */
+}
+
+.control {
+    flex-basis: 15%;
 }
 
 @media (max-width: 800px) {
