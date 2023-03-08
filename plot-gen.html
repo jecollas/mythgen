@@ -37,8 +37,13 @@
                         <input type="radio" id="npcParty" name="control_panel" value="npcParty" onclick="options()">
                         <label for="npcParty">NPC Builder</label>
                         <div class="sub1" id="npcSub">
+                            <span style="margin-left: 1.2em; color: gray;">Coming Soon!</span><br>
                             <input type="checkbox" id="charOne" name="control_panel" value="charOne" disabled>
-                            <label for="charOne">One NPC</label>
+                            <label for="charOne">One NPC</label><br>
+                            <input type="checkbox" id="charTwo" name="control_panel" value="charTwo" disabled>
+                            <label for="charTwo">Two NPCs</label><br>
+                            <input type="checkbox" id="charThree" name="control_panel" value="charThree" disabled>
+                            <label for="charThree">Three NPCs</label>
                         </div>
                     </span>
                     <span class="radio-option">                        
@@ -66,7 +71,7 @@
 
             <div class="content">
                 <p>Work in progress! You can still use this one, but don't be surprised if you come back and things are a little bit different :D</p>
-                <p class="note"><b>Note to self:</b> add checkboxes to the control panel for a build-your-own generator option that lets you mix and match variables</p>
+                <p class="note"><b>Note to self:</b> keep working on the control panel checkboxes. Separate out the NPC generator into options for one NPC, two NPCs, and three NPCs. They should be radios instead of checkboxes</p>
                 <div class="prompt">
                     <span class="output" id="pb-plot"><p style="color:grey">Click the button for a plot!</p></span>
                 </div>

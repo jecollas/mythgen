@@ -106,8 +106,8 @@ legend {
     font-weight: bold;
 }
 
-input:not([type=button]),
-input:not([type=reset]) {
+input[type=radio],
+input[type=checkbox] {
     margin-top: 0.5em;
 }
 
@@ -125,6 +125,16 @@ input:checked + label {
     font-weight: bold;
 }
 
+.radio-option {
+    display: list-item;
+    list-style-type: none;
+    padding: 0;
+}
+
+.sub1 input {
+    margin-left: 1.2em;
+}
+
 .prompt {
     margin-top: 1.5em;
     border-style: solid;
@@ -139,13 +149,9 @@ input:checked + label {
     margin: 1.25em;
 }
 
-.radio-option {
-    display: list-item;
-    list-style-type: none;
-}
-
-.sub1 {
-    margin-left: 1.2em;;
+/* hides checkboxes if the plot option isnt selected */
+input[type=radio]:not(:checked) ~ .sub1 {
+    display: none;
 }
 
 @media screen and (min-width: 600px) and (max-width: 991px) {
@@ -161,18 +167,14 @@ input:checked + label {
 @media screen and (max-width: 600px) {
     .row {
         flex-wrap: wrap;
-    }
-
-    .row .control, 
-    .row .content {
         flex: 100%;
     }
 
-    form.control {
+    .control {
         margin-bottom: 0;
     }
 
-    form.control p {
+    .control p {
         font-size: 0.9em;
         font-style: italic;
         margin-bottom: 0;
@@ -180,6 +182,7 @@ input:checked + label {
 
     .radio-option {
         display: inline-block;
+        vertical-align: top;
     }
 
     .control-button {
