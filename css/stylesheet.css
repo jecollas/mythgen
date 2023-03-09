@@ -149,11 +149,6 @@ input:checked + label {
     margin: 1.25em;
 }
 
-/* hides checkboxes if the plot option isnt selected */
-input[type=radio]:not(:checked) ~ .sub1 {
-    display: none;
-}
-
 @media screen and (min-width: 600px) and (max-width: 991px) {
     .row .control {
         flex: 25%;
@@ -183,6 +178,11 @@ input[type=radio]:not(:checked) ~ .sub1 {
     .radio-option {
         display: inline-block;
         vertical-align: top;
+    }
+
+    /* hides checkboxes if the plot option isnt selected */
+    input[type=radio]:not(:checked) ~ .sub1 {
+        display: none;
     }
 
     .control-button {

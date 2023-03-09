@@ -3,9 +3,17 @@
 // VARIABLES START
 // Plot Type
 const plots = {
-    type: [
-        "one-shot","vignette","line","arc","convergence","divergence","swansong","module","recurrence"
-    ],
+    type: {
+        "one shot": '<b>One Shot:</b> As advertised. Also known as "One & Done", these are a one-scene plot in their entirety. This includes "Anytime Plot" and "New Cast Plot"',
+        "vignette": "<b>Vignette:</b> A plot that consists of no more than 3-5 Scenes to execute in a single weekend event. This should be the most common scene type as they start and finish within the event weekend",
+        "line": "<b>(Plot) Lines:</b> Formula plot that has 6-12 plots and tends to run for 2-3 event.",
+        "arc": "<b>(Plot) Arc:</b> A long-term plot with stages that may last multiple events. over multiple seasons",
+        "convergence": "<b>Convergence:</b> When plots overlap and are merged into a single, combined Plot Arc (sometimes a Plot Line, but that's unusual). This can be two Plot Lines from the same writer, or a collaboration between Plot Lines run by separate writers on the plot team",
+        "divergence": "<b>Divergence:</b> When the thread of a plot splits away to start a new plot type, that runs independent of the original or parallel",
+        "swansong": "<b>Swansong:</b> The ending of a plot, character, item etc. This is the close out for a long-running plot, character, item etc",
+        "module": "<b>Module:</b> A cool thing that Gary does :) Idk there's not a definition on Trello for this one, but it's kind of like a dungeon crawl",
+        "recurrence": "<b>Recurrence:</b> Reocurrs, I guess? Look, I don't have have all the answers, okay? All of my brain juice is going towards software engineering at the moment, cut me some slack"
+    },
     tone: [
         "aggressive","goofy","grim","happy","ironic","satiric","opportunist","philanthropic","sad","serious","tragic","whimsical","witty"
     ],
@@ -4032,16 +4040,34 @@ function methodSelect(noun, verbGer) {
     return method;
 }
 
-// GENERATOR FUNCTIONS
-// Plot Type
-function plotGen() {
-    const type = randomString(plots.type);
-    const tone = randomString(plots.tone);
-    const genre = randomString(plots.genre);
-    
-    document.querySelector(".output").innerHTML = "<p>This plot is going to be <b>" + wordPrep(tone) + " " + tone + " " + genre + " " + type + ".</b></p>"
-}
+// people consts
+const npcOne = [
+    "one person 1",
+    "one person 2",
+    "one person 3",
+];
 
+const npcTwo = [
+    "two people 1",
+    "two people 2",
+];
+
+const npcThree = [
+    "three people 1",
+    "three people 2",
+];
+
+const npcParty = [
+    "one person 1",
+    "one person 2",
+    "one person 3",
+    "two people 1",
+    "two people 2",
+    "three people 1",
+    "three people 2",
+];
+
+// plot template consts
 const qQuest = [
     "quest 1",
     "quest 2"
@@ -4055,31 +4081,60 @@ const adventureType = [
 ];
 
 const plotType = [
+    "plot 1",
+    "plot 2"
+]
+
+const storyType = [
     "quest 1",
     "quest 2",
     "adventure 1",
     "adventure 2",
     "adventure 3",
     "adventure 4",
-    "plot 1"
+    "plot 1",
+    "plot 2"
 ];
+
+// GENERATOR FUNCTIONS
+// Plot Type
+function plotGen() {
+    const tone = randomString(plots.tone);
+    const genre = randomString(plots.genre);
+
+    const typeKeys = Object.keys(plots.type);
+    const type = randomString(typeKeys);
+    const term = plots.type[type];
+    
+    document.querySelector(".output").innerHTML = "<p>This plot is going to be <b>" + wordPrep(tone) + " " + tone + " " + genre + " " + type + ".</b></p>" + 
+    "<p>" + term + ".</p>"
+}
 
 // PLOT BUILDER – the big boy :)
 function plotCreate() {
     const plotQ = document.getElementById("pbQuest");
     const plotA = document.getElementById("pbAdventure");
+    const plotT = document.getElementById("pbType");
     let story = "";
     let plotSelect = "";
 
     // selects which plot array it picks from based on options selected
-    if (plotQ.checked && plotA.checked === false) {
-        plotSelect = randomString(qQuest);
-    } else if (plotQ.checked === false && plotA.checked) {
-        plotSelect = randomString(adventureType);
-    } else if (plotQ.checked && plotA.checked) {
-        plotSelect = randomString(qQuest.concat(adventureType));
+    // MOVE THESE OUTTA HERE. THIS IS GETTING STUPID.
+    if (plotQ.checked && plotA.checked === false && plotT.checked === false) {
+        plotSelect = randomString(qQuest); // just quest
+    } else if (plotQ.checked === false && plotA.checked && plotT.checked === false) {
+        plotSelect = randomString(adventureType); // just adventure
+    } else if (plotQ.checked === false && plotA.checked === false && plotT.checked ) {
+        plotSelect = randomString(plotType); // just plot type
+    } else if (plotQ.checked && plotA.checked && plotT.checked === false) {
+        plotSelect = randomString(qQuest.concat(adventureType)); // quest and adventure
+    } else if (plotQ.checked && plotA.checked === false && plotT.checked) {
+        plotSelect = randomString(qQuest.concat(plotType)); // quest and plot type
+    } else if (plotQ.checked === false && plotA.checked && plotT.checked) {
+        plotSelect = randomString(adventureType.concat(plotType)); // adventure and plot type
     } else {
-        plotSelect = randomString(plotType);
+        // plotSelect = randomString(storyType); // can this just be a big concat?
+        plotSelect = randomString(qQuest.concat(adventureType).concat(plotType)); // yes. yes it can >:)
     }
 
     const goal = randomString(fragments.goal);
@@ -4087,9 +4142,12 @@ function plotCreate() {
     const twist = randomString(quest.twist);
     const location = randomString(quest.place);
     
-    // const type = randomString(plots.type); // haven't used this yet
     const tone = randomString(plots.tone);
     const genre = randomString(plots.genre);
+
+    const typeKeys = Object.keys(plots.type);
+    const type = randomString(typeKeys);
+    const term = plots.type[type];
 
     // nouns – groups one and two
     const nounGO = nounSelect();    
@@ -4152,6 +4210,10 @@ function plotCreate() {
         break;
         case "plot 1":
             story = "This is <b>" + wordPrep(tone) + " " + tone + " " + genre + "</b> story in which <b>" + plotSubject + "</b> in order to <b>" + goal + ".</b> The twist is that <b>" + twist;
+        break;
+        case "plot 2":
+            story = "This <b>" + type + "</b> is <b>" + wordPrep(tone) + " " + tone + " " + genre + "</b> story where <b>" + plotSubject + "</b> in order to <b>" + goal + ".</b></p>" +
+            "<p>" + term; 
         break;
         // NEXT: trying to [action thing] to [other people]
     }
@@ -4246,20 +4308,20 @@ function adventureGen() {
 }
 
 // NPC Builder
-const npcParty = [
-    "party 1",
-    "party 2",
-    "party 3",
-    "party 4",
-    "party 5",
-    "party 6",
-    "party 7"
-];
+// const npcParty = [
+//     "one person 1",
+//     "one person 2",
+//     "one person 3",
+//     "two people 1",
+//     "two people 2",
+//     "three people 1",
+//     "three people 2",
+// ];
 
-let partySelect = "";
+// let partySelect = "";
 
 function npcGen() {
-    partySelect = randomString(npcParty);
+    let partySelect = randomString(npcParty);
 
     const charaOne = charaCreate();
     const descOne = charaOne[0];
@@ -4281,27 +4343,27 @@ function npcGen() {
 
     let partyBuild = "";
     switch(partySelect) {
-        case "party 1":
+        case "one person 1":
             partyBuild = descOne;
         break;
-        case "party 2":
-            partyBuild = descOne + ",</b> and <b>" + descTwo;
-        break;
-        case "party 3":
-            partyBuild = descOne + ", " + descTwo + ",</b> and <b>" + descThree;
-        break;
-        case "party 4":
-            partyBuild = catOne + ", " + catTwo + ",</b> and <b>" + catThree;
-        break;
-        case "party 5":
+        case "one person 2":
             partyBuild = conOne;
         break;
-        case "party 6":
-            partyBuild = conOne + ",</b> and <b>" + conTwo;
-        break;
-        case "party 7":
+        case "one person 3":
             partyBuild = fakeOne;
         break;
+        case "two people 1":
+            partyBuild = descOne + ",</b> and <b>" + descTwo;
+        break;
+        case "two people 2":
+            partyBuild = conOne + ",</b> and <b>" + conTwo;
+        break;
+        case "three people 1":
+            partyBuild = descOne + ", " + descTwo + ",</b> and <b>" + descThree;
+        break;
+        case "three people 2":
+            partyBuild = catOne + ", " + catTwo + ",</b> and <b>" + catThree;
+        break;        
     }
     document.querySelector(".output").innerHTML = "<p>Our party includes <b>" + partyBuild + ".</b></p>";
 }
@@ -4322,8 +4384,6 @@ const rumorType = [
     "rumor 12"
 ];
 
-let rumorSelect = "";
-
 // TOWN GOSSIP TEMPLATE
 // Can probably do
 // 1x Cards - Material Property
@@ -4338,7 +4398,7 @@ let rumorSelect = "";
 // 2x Cards - Future Plot Seed
 // 3x Cards - Anytime Plot Clue
 function rumorGen() {
-    rumorSelect = randomString(rumorType);
+    let rumorSelect = randomString(rumorType);
     let rumor = "";
 
     const personOne = charaSelect();
@@ -4409,38 +4469,46 @@ function rumorGen() {
     document.querySelector(".output").innerHTML = "<p>" + source + " " + rumor + ".</b></p>";
 }
 
+// gets name of parent element. use this for checkboxes for something
+function get_parent(elem) {
+    var x = elem.closest(".radio-option").attributes["name"].value;
+    // console.log(x);
+}
+
 // enables checkboxes for selected plot options
 function options() {
     let plots = Array.from(document.getElementsByClassName("radio-option"));
     plots.forEach((element) => {
-        var types = element.querySelector("input[type=radio]");
+        const types = element.querySelector("input[type=radio]");
         if (types.checked) {
             var subs = element.querySelectorAll("input[type=checkbox]");
             for (const checkbox of subs) {
                 if (checkbox.disabled) {
-                    checkbox.disabled = false;
+                    checkbox.disabled = false; // enables relevant checkboxes
                 }
             }
+            // console.log(subs); // returns nodeList of relevant checkboxes
         } else if (types.checked === false) {
             var subs = element.querySelectorAll("input[type=checkbox]");
             for (const checkbox of subs) {
-                checkbox.disabled = true;
-                checkbox.checked = false;
+                checkbox.disabled = true; // re-disables irrelevant checkboxes
+                checkbox.checked = false; // unchecks those checkboxes
             }
         }
     });
 }
 
-function controlCheck() {
-    if (document.getElementById("ptPlot").checked) {
-        plotGen();
-    } else if (document.getElementById("npcParty").checked) {
-        npcGen();
-    } else if (document.getElementById("rmRumor").checked) {
-        rumorGen();
-    } else if (document.getElementById("pbPlot").checked) {
-        plotCreate();
-    } else {
-        plotCreate();
-    }
+// changes generator function call based on whatever button's clicked
+function genSet(elem) {
+    var x = elem.attributes["value"].value;
+    document.getElementById("plotSubmit").setAttribute("onclick", x);
+    document.getElementById("plotCreate").setAttribute("onclick", x);
+    options(); // does the disable/enable thing
+}
+
+// resets generator function call back to plotCreate()
+function plotReset() {
+    document.getElementById("plotSubmit").setAttribute("onclick", "plotCreate()");
+    document.getElementById("plotCreate").setAttribute("onclick", "plotCreate()");
+    options();
 }
