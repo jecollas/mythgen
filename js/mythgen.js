@@ -4068,7 +4068,7 @@ const npcParty = [
 ];
 
 // plot template consts
-const qQuest = [
+const questType = [
     "quest 1",
     "quest 2"
 ];
@@ -4083,7 +4083,7 @@ const adventureType = [
 const plotType = [
     "plot 1",
     "plot 2"
-]
+];
 
 const storyType = [
     "quest 1",
@@ -4110,31 +4110,38 @@ function plotGen() {
     "<p>" + term + ".</p>"
 }
 
-// PLOT BUILDER – the big boy :)
-function plotCreate() {
-    const plotQ = document.getElementById("pbQuest");
-    const plotA = document.getElementById("pbAdventure");
-    const plotT = document.getElementById("pbType");
-    let story = "";
-    let plotSelect = "";
+const plotPieces = {
+    "pbQuest": questType,
+    "pbAdventure": adventureType,
+    "pbType": plotType,
+    "charOne": npcOne,
+    "charTwo": npcTwo,
+    "charThree": npcThree
+}
 
-    // selects which plot array it picks from based on options selected
-    // MOVE THESE OUTTA HERE. THIS IS GETTING STUPID.
-    if (plotQ.checked && plotA.checked === false && plotT.checked === false) {
-        plotSelect = randomString(qQuest); // just quest
-    } else if (plotQ.checked === false && plotA.checked && plotT.checked === false) {
-        plotSelect = randomString(adventureType); // just adventure
-    } else if (plotQ.checked === false && plotA.checked === false && plotT.checked ) {
-        plotSelect = randomString(plotType); // just plot type
-    } else if (plotQ.checked && plotA.checked && plotT.checked === false) {
-        plotSelect = randomString(qQuest.concat(adventureType)); // quest and adventure
-    } else if (plotQ.checked && plotA.checked === false && plotT.checked) {
-        plotSelect = randomString(qQuest.concat(plotType)); // quest and plot type
-    } else if (plotQ.checked === false && plotA.checked && plotT.checked) {
-        plotSelect = randomString(adventureType.concat(plotType)); // adventure and plot type
-    } else {
-        // plotSelect = randomString(storyType); // can this just be a big concat?
-        plotSelect = randomString(qQuest.concat(adventureType).concat(plotType)); // yes. yes it can >:)
+// picks from plot arrays based on checkboxes selected
+function checkOptions() {
+    const select = Array.from(document.getElementsByTagName("input"));
+    const options = [];
+    select.forEach(elem => {
+        var subs = elem.getAttribute("type");
+        if (subs == "checkbox" && elem.checked) {
+            var y = elem.getAttribute("id");
+            options.push(plotPieces[y]);
+        }
+    });
+    var plots = [].concat.apply([], options);
+    return plots;
+}
+
+// PLOT BUILDER – the big boy :)
+function plotCreate() { 
+    let story = "";
+    let plotSelect = ""; // uses templates from checkboxes
+    
+    plotSelect = randomString(checkOptions());
+    if (plotSelect === undefined) { // if nothing is checked, default to all
+        plotSelect = randomString(storyType);
     }
 
     const goal = randomString(fragments.goal);
@@ -4222,7 +4229,7 @@ function plotCreate() {
 
 // Fetch Quest
 function questGen() {
-    let questSelect = randomString(qQuest);
+    let questSelect = randomString(questType);
     let storyQuest = "";
 
     const noun = nounSelect();
@@ -4307,21 +4314,13 @@ function adventureGen() {
     document.querySelector(".output").innerHTML = "<p>" + agPlot + ".</b></p>";
 }
 
-// NPC Builder
-// const npcParty = [
-//     "one person 1",
-//     "one person 2",
-//     "one person 3",
-//     "two people 1",
-//     "two people 2",
-//     "three people 1",
-//     "three people 2",
-// ];
-
-// let partySelect = "";
-
 function npcGen() {
-    let partySelect = randomString(npcParty);
+    let partySelect = "";
+
+    partySelect = randomString(checkOptions());
+    if (partySelect === undefined) {
+        partySelect = randomString(npcParty);
+    }
 
     const charaOne = charaCreate();
     const descOne = charaOne[0];
@@ -4342,6 +4341,7 @@ function npcGen() {
     // const fakeThree = charaThree[3];
 
     let partyBuild = "";
+    var add = ",</b> and <b>";
     switch(partySelect) {
         case "one person 1":
             partyBuild = descOne;
@@ -4353,16 +4353,16 @@ function npcGen() {
             partyBuild = fakeOne;
         break;
         case "two people 1":
-            partyBuild = descOne + ",</b> and <b>" + descTwo;
+            partyBuild = descOne + add + descTwo;
         break;
         case "two people 2":
-            partyBuild = conOne + ",</b> and <b>" + conTwo;
+            partyBuild = conOne + add + conTwo;
         break;
         case "three people 1":
-            partyBuild = descOne + ", " + descTwo + ",</b> and <b>" + descThree;
+            partyBuild = descOne + ", " + descTwo + add + descThree;
         break;
         case "three people 2":
-            partyBuild = catOne + ", " + catTwo + ",</b> and <b>" + catThree;
+            partyBuild = catOne + ", " + catTwo + add + catThree;
         break;        
     }
     document.querySelector(".output").innerHTML = "<p>Our party includes <b>" + partyBuild + ".</b></p>";
@@ -4475,40 +4475,53 @@ function get_parent(elem) {
     // console.log(x);
 }
 
-// enables checkboxes for selected plot options
+// enables specific checkboxes for selected radio buttons
 function options() {
-    let plots = Array.from(document.getElementsByClassName("radio-option"));
-    plots.forEach((element) => {
-        const types = element.querySelector("input[type=radio]");
-        if (types.checked) {
-            var subs = element.querySelectorAll("input[type=checkbox]");
-            for (const checkbox of subs) {
-                if (checkbox.disabled) {
-                    checkbox.disabled = false; // enables relevant checkboxes
-                }
-            }
-            // console.log(subs); // returns nodeList of relevant checkboxes
-        } else if (types.checked === false) {
-            var subs = element.querySelectorAll("input[type=checkbox]");
-            for (const checkbox of subs) {
-                checkbox.disabled = true; // re-disables irrelevant checkboxes
+    let options = Array.from(document.getElementsByClassName("radio-option"));
+    options.forEach(elem => {
+        const main = elem.querySelector("input[type=radio]");
+        var subs = elem.querySelectorAll("input[type=checkbox]");
+        // console.log(subs); // returns nodeList of all checkboxes
+        for (const checkbox of subs) {
+            if (main.checked && checkbox.disabled) {
+                checkbox.disabled = false; // enables relevant checkboxes
+            } else if (main.checked === false) {
+                checkbox.disabled = true; // disables irrelevant checkboxes
                 checkbox.checked = false; // unchecks those checkboxes
             }
         }
     });
 }
 
-// changes generator function call based on whatever button's clicked
-function genSet(elem) {
-    var x = elem.attributes["value"].value;
-    document.getElementById("plotSubmit").setAttribute("onclick", x);
-    document.getElementById("plotCreate").setAttribute("onclick", x);
-    options(); // does the disable/enable thing
+// unchecks all input buttons and disables all checkboxes
+function reset() {
+    let buttons = Array.from(document.getElementsByTagName("input"));
+    buttons.forEach(elem => {
+        var subs = elem.getAttribute("type");
+        if (elem.checked) {
+            elem.checked = false; // unchecks all buttons
+        }
+        if (subs == "checkbox" && elem.disabled === false) {
+            elem.disabled = true; // disables all checkboxes
+        }
+    });
 }
 
-// resets generator function call back to plotCreate()
+// changes the generator function call based on whichever button's clicked
+function genSet(elem) {
+    options(); // does the disable/enable thing
+    var story = elem.attributes["value"].value;
+    const buttons = document.querySelectorAll("#plotSubmit, #plotCreate");
+    buttons.forEach(elem => {
+        elem.setAttribute("onclick", story);
+    });
+}
+
+// resets control panel buttons and generator function call
 function plotReset() {
-    document.getElementById("plotSubmit").setAttribute("onclick", "plotCreate()");
-    document.getElementById("plotCreate").setAttribute("onclick", "plotCreate()");
-    options();
+    reset(); // resets the control panel
+    const buttons = document.querySelectorAll("#plotSubmit, #plotCreate");
+    buttons.forEach(elem => {
+        elem.setAttribute("onclick", "plotCreate()");
+    });
 }
