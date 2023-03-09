@@ -197,8 +197,7 @@ input[type=radio]:not(:checked) ~ .sub1 {
         font-size: 0.9em;
     }
 
-    form p:nth-child(3),
-    .content p:nth-child(2) {
+    p.note {
         display: none;
     }
 
