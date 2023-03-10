@@ -1,18 +1,20 @@
 // compiled js file
 
-// VARIABLES START
-// Plot Type
+////////////////////////////////
+//// OBJECT VARIABLES
+////////////////////////////////
+// plot type, tone, and genre
 const plots = {
     type: {
         "one shot": '<b>One Shot:</b> As advertised. Also known as "One & Done", these are a one-scene plot in their entirety. This includes "Anytime Plot" and "New Cast Plot"',
         "vignette": "<b>Vignette:</b> A plot that consists of no more than 3-5 Scenes to execute in a single weekend event. This should be the most common scene type as they start and finish within the event weekend",
-        "line": "<b>(Plot) Lines:</b> Formula plot that has 6-12 plots and tends to run for 2-3 event.",
+        "line": "<b>(Plot) Lines:</b> Formula plot that has 6-12 plots and tends to run for 2-3 events",
         "arc": "<b>(Plot) Arc:</b> A long-term plot with stages that may last multiple events. over multiple seasons",
         "convergence": "<b>Convergence:</b> When plots overlap and are merged into a single, combined Plot Arc (sometimes a Plot Line, but that's unusual). This can be two Plot Lines from the same writer, or a collaboration between Plot Lines run by separate writers on the plot team",
         "divergence": "<b>Divergence:</b> When the thread of a plot splits away to start a new plot type, that runs independent of the original or parallel",
-        "swansong": "<b>Swansong:</b> The ending of a plot, character, item etc. This is the close out for a long-running plot, character, item etc",
+        "swansong": "<b>Swansong:</b> The ending of a plot, character, item, etc. This is the close out for a long-running plot, character, item, etc",
         "module": "<b>Module:</b> A cool thing that Gary does :) Idk there's not a definition on Trello for this one, but it's kind of like a dungeon crawl",
-        "recurrence": "<b>Recurrence:</b> Reocurrs, I guess? Look, I don't have have all the answers, okay? All of my brain juice is going towards software engineering at the moment, cut me some slack"
+        "recurrence": "<b>Recurrence:</b> Reocurrs, I guess? Look, I don't have have all the answers, okay? All of my brain juice is going towards software engineering at the moment"
     },
     tone: [
         "aggressive","goofy","grim","happy","ironic","satiric","opportunist","philanthropic","sad","serious","tragic","whimsical","witty"
@@ -22,9 +24,9 @@ const plots = {
     ]
 }
 
-// Fetch Quest, Rumors
+// item properties for singular and plural objects
 const property = {
-    singular: [//singular or plural,,,
+    singular: [
         // starts with "is"
         "is a vital clue in an ongoing mystery or investigation",
         "is absolutely useless",
@@ -94,7 +96,7 @@ const property = {
     ]
 };
 
-// Fetch Quest, Adventure Generator
+// story motivation, twist, and location
 const quest = {
     motivation: [
         // Ace-10 of spades from MHoF
@@ -216,12 +218,11 @@ const quest = {
         "because they are getting paid",
         "because they want to harm their (innocent) enemy",
         "because they are cursed and doomed to die",
-        "because of the failure of their previous plot to (roll motivation again)",
+        "because of the failure of their previous plot",
         "because they are dying of an unknown disease",
         "because they seek to boil off the oceans",
         "because they serve an evil master from another dimension",
         "because they want to destroy a god",
-        "because they want to wipe out a race",
         "because it is their divine right",
         "because they are above the law",
         "because they are jilted",
@@ -563,417 +564,21 @@ const quest = {
     ]
 }
 
-// NPC Builder, Rumors, Adventure Generator
-const chara = {
-    adjective: [
-        "peasant",
-        "young",
-        "fruit-selling",
-        "gentleman",
-        "gentlewoman",
-        "apprentice",
-        "charlatan",
-        "vampire",
-        "dale elf",
-        "deep elf",
-        "dwarf",
-        "goblin",
-        "half elf",
-        "high elf",
-        "human",
-        "suhk",
-        "wildren",
-        "eccentric",
-        "werewolf",
-        "feral",
-        "influencer",
-        "child",
-        "celebrity",
-        "old",
-        "tax-evading",
-        "draft-dodging",
-        "professional",
-        "retired",
-        "goth",
-        "little",
-        "hot",
-        "absent",
-        "shitty",
-        "time-traveling",
-        "Italian",
-        "asshole",
-        "deadbeat",
-        "butch",
-        "dancing",
-        "singing",
-        "paramilitary",
-        "military",
-        "search",
-        "suicidal",
-        "fleeing",
-        "organized",
-        "insatiable",
-        "sickened",
-        "lusty",
-        "maniacal",
-        "unorganized",
-        "pugilistic",
-        "busybody",
-        "evil",
-        "sociopathic",
-        "underground",
-        "dying",
-        "benevolent",
-        "arsonistic",
-        "disorganized",
-        "convicted",
-        "noble",
-        "liar",
-        "chaotic",
-        "malicious",
-        "murderous",
-        "pugnacious",
-        "secret",
-        "elderly",
-        "violent",
-        "unharmonious",
-        "devious",
-        "surreptitious",
-        "quarelling",
-        "ideologically split",
-        "ragged",
-        "cursed",
-        "good",
-        "enlightened",
-        "zealous",
-        "heroic",
-        "amnesiac",
-        "resurrected",
-        "fey-touched",
-        "elite",
-        "lycanthropic",
-        "escaped",
-        "injured",
-        "commissioned",
-        "official",
-        "random",
-        "self-pitying",
-        "well-dressed",
-        "xenophobic",
-        "superstitious",
-        "drunk",
-        "depressive",
-        "morbid",
-        "mortally wounded",
-        "diseased",
-        "contrite",
-        "hateful",
-        "alcoholic",
-        "drug-addicted",
-        "fanatical",
-        "homeless",
-        "confused",
-        "artistic",
-        "desperate",
-        "suspicious",
-        "unaccountable",
-        "exhausted",
-        "vocal",
-        "undead",
-        "shady",
-        "righteous",
-        "plaintive",
-        "cowardly",
-        "insane",
-        "unscrupulous",
-        "oppressed",
-        "conned",
-        "fallen",
-        "undercover",
-        "reluctant",
-        "bloodthirsty",
-        "otherworldly",
-        "celestial",
-        "outsider",
-        "insectoid",
-        "brilliant",
-        "greedy",
-        "materialistic",
-        "unholy",
-        "ancient",
-        "obsessive",
-        "sole",
-        "outgrown",
-        "renowned",
-        "rich",
-        "poor",
-        "reformed",
-        "secretive",
-        "paranoid",
-        "compulsive",
-        "perverse",
-        "iconoclastic",
-        "nihilistic",
-        "former",
-        "underappreciated",
-        "kindly",
-        "unique",
-        "teenage",
-        "corny"
-    ],
-    group: [
-        // adventure seed generator
-        "order",
-        "horde",
-        "clique",
-        "gaggle",
-        "mob",
-        "collegium ",
-        "armed group",
-        "squad",
-        "cadre",
-        "trio",
-        "duo",
-        "quintet",
-        "pack",
-        "wandering troupe",
-        "crime ring",
-        "group",
-        "cabal",
-        "coven",
-        "gang",
-        "bunch",
-        "fellowship",
-        "posse",
-        "school class",
-        "syndicate",
-        "delegation",
-        "secret society",
-        "guild",
-        "extended family",
-        "noble house",
-        "platoon",
-        "caravan",
-        "sisterhood",
-        "work team",
-        "team",
-        "association",
-        "cartel",
-        "club",
-        "congregation",
-        "gentlemen's club",
-        "faction",
-        "crew",
-        "hidden society",
-        "league",
-        "converstation club",
-        "religious sect",
-        "tribe",
-        "elite squad",
-        "brotherhood",
-        "charity organization",
-        "support staff",
-        "entourage",
-        "assembly",
-        "noble family",
-        "governing body",
-        "ensemble",
-        "conclave",
-        "coterie",
-        "organization",
-        "citizens",
-        "circle",
-        "partnership",
-        "society",
-        "party",
-        "cult",
-        "group",
-        "troop",
-        "army",
-        "mass",
-        "gathering",
-        "political faction",
-        "inbred family",
-        "choir",
-        "crowd",
-        "splinter faction",
-        "band",
-        "conspiracy",
-        "cult",
-        "clan",
-        "collegium",
-        "patchwork",
-        "network",
-        "cell",
-        "panel",
-        "doomsday cult",
-        "union",
-        "collective",
-        "circus"
-    ]
-}
-
-// NPC Builder, Rumors
+// player characters, face roles, and first/last names
 const characters = {
     players: [
-        "Karlaen Sin'del",
-        "Lord Swift Fingers",
-        "Delawyn Liamour",
-        "Ursa Oak",
-        "Elias Athear",
-        "Agon Caradin of Canton", 
-        "Jaxx Malendarr",
-        "Alwin Malendarr",
-        "Verdic Bin Corsica il-Pachero os-Farwhen",
-        "Baratraxar Hopsworth Greynettle",
-        "Isla Marillon Shallowcove",
-        "Cerradus",
-        "Tallian Gratz",
-        "Waylund",
-        "Kilgor",
-        "Leisa Vadi",
-        "Tacitus Jules Hooker",
-        "Sigmund Bjorvika",
-        "Relldar Delandrielle",
-        "Elen",
-        "Remi Dubois",
-        "Grylis Sharptongue",
-        "Azalea Briarwood",
-        "Knox",
-        "Norain Wulf",
-        "Wren",
-        "Arl",
-        "Ankh Nym'dul",
-        "Brandan Von Naegling",
-        "Calus Varin",
-        "Alyssandra Lamoran",
-        "Myrtle Muckandmire",
-        "Gregnobulous Frogmagourke",
-        "Rina Duskwalker",
-        "Crittamon Luckstryder",
-        "Whisper",
-        "Artharias",
-        "Theran Slate",
-        "Brigid",
-        "Cayn",
-        "Ekyo",
-        "Meeps Swag McMuffin",
-        "Clay",
-        "Fenrisse Starling",
-        "Balthazar",
-        "Koth Stalgrim",
-        "Hilde",
-        "Zumlar Mystralith",
-        "Cotter Cornwall",
-        "Gizzet Moonbright (Giz'Ora)",
-        "Yinren Valgon",
-        "Alistair Caliban",
-        "Willow",
-        "Grimstone",
-        "Pappa Varnak",
-        "Caleb Urtgard",
-        "Zav",
-        "Minyo Hasselblöd",
-        "Mallazyr 'Dexter' Teken'Tlar",
-        "Munta Theynore",
-        "Esther Melea Artemis Glade",
-        "Esperanza Ta Zata",
-        "Riddle",
-        "Lorik Ovgar",
-        "Thordric Magestone",
-        "Hedrin Longfellow",
-        "Taliesin Finch",
-        "Seraphina Mehri",
-        "Sueb Dew",
-        "Maurmagil",
-        "Ezra",
-        "Nakoa",
-        "Eitri Hawthorne of the Storm's Mistress",
-        "Lucius Grell",
-        "Mayax",
-        "Matias Elson",
-        "Ven",
-        "Trisrora",
-        "Hart",
-        "Catanya",
-        "Xanthion Stonebreaker",
-        "Saige",
-        "Vendal Sihde",
-        "Chessaul Nymval",
-        "Lady Indy L'Rhine",
-        "Vitae Silias",
-        "Ajax Ardak",
-        "Wenek",
-        "Magnus Stillmyst",
-        "Mathers",
-        "Marlonious Finch",
-        "Owen Anderson",
-        "Aishin Stormcloud",
-        "Alansar Trignot",
-        "Victus Krane",
-        "Tass",
-        "Opulus",
-        "Grom",
-        "Geillia Mabrik",
-        "Amuck Ambrosius",
-        "Traveler"
+        "Karlaen Sin'del","Lord Swift Fingers","Delawyn Liamour","Ursa Oak","Elias Athear","Agon Caradin of Canton","Jaxx Malendarr","Alwin Malendarr","Verdic Bin Corsica il-Pachero os-Farwhen","Baratraxar Hopsworth Greynettle","Isla Marillon Shallowcove","Cerradus","Tallian Gratz","Waylund","Kilgor","Leisa Vadi","Tacitus Jules Hooker","Sigmund Bjorvika","Relldar Delandrielle","Elen","Remi Dubois","Grylis Sharptongue","Azalea Briarwood","Knox","Norain Wulf","Wren","Arl","Ankh Nym'dul","Brandan Von Naegling","Calus Varin","Alyssandra Lamoran","Myrtle Muckandmire","Gregnobulous Frogmagourke","Rina Duskwalker","Crittamon Luckstryder","Whisper","Artharias","Theran Slate","Brigid","Cayn","Ekyo","Meeps Swag McMuffin","Clay","Fenrisse Starling","Balthazar","Koth Stalgrim","Hilde","Zumlar Mystralith","Cotter Cornwall","Gizzet Moonbright","Yinren Valgon","Alistair Caliban","Willow","Grimstone","Pappa Varnak","Caleb Urtgard","Zav","Minyo Hasselblöd","Mallazyr 'Dexter' Teken'Tlar","Munta Theynore","Esther Melea Artemis Glade","Esperanza Ta Zata","Riddle","Lorik Ovgar","Thordric Magestone","Hedrin Longfellow","Taliesin Finch","Seraphina Mehri","Sueb Dew","Maurmagil","Ezra","Nakoa","Eitri Hawthorne","Lucius Grell","Mayax","Matias Elson","Ven","Trisrora","Hart","Catanya","Xanthion Stonebreaker","Saige","Vendal Sihde","Chessaul Nymval","Lady Indy L'Rhine","Vitae Silias","Ajax Ardak","Wenek","Magnus Stillmyst","Mathers","Marlonious Finch","Owen Anderson","Aishin Stormcloud","Alansar Trignot","Victus Krane","Tass","Opulus","Grom","Geillia Mabrik","Amuck Ambrosius","Traveler"
     ],
     faceRoles: [
-        "Dedrot",
-        "Ororo",
-        "Amitel",
-        "Ryknos",
-        "Adara",
-        "Naenya",
-        "Enoon",
-        "Scandelen",
-        "Ixbus",
-        "Lord Proctor Behran",
-        "Farmer Grey",
-        "Octavious",
-        "Dennis",
-        "Zephyr Zax",
-        "Druidkeeper Hesperides Crimsonvine",
-        "Dr. Emmet Calhoun",
-        "Dr. Arianaya Bell-Dreveaux",
-        "Euclid, the Bawdy Bard",
-        "Ser Amaris",
-        "Fable",
-        "Xavier Denerethion",
-        "Baron Dworrin Stonethrust",
-        "Ali from Owlstone Keep",
-        "Paradiddle the Odditites Merchant",
-        "Nalfor Morehammer",
-        "Norrin Radd",
-        "Duke Geralt Marielle",
-        "Lord Auranos Ashbridge",
-        "Getorix Wahl",
-        "Oleg Hammersong",
-        "Roark Galt",
-        "Johann Becket",
-        "Bellator Zhao",
-        "Count Amedeo",
-        "Master Trapmaker Dom Sourfang",
-        "Yama",
-        "the Rend",
+        "Dedrot","Ororo","Amitel","Ryknos","Adara","Naenya","Enoon","Scandelen","Ixbus","Lord Proctor Behran","Farmer Grey","Octavious","Dennis","Zephyr Zax","Druidkeeper Hesperides Crimsonvine","Dr. Emmet Calhoun","Dr. Arianaya Bell-Dreveaux","Euclid, the Bawdy Bard","Ser Amaris","Fable","Xavier Denerethion","Baron Dworrin Stonethrust","Ali from Owlstone Keep","Paradiddle the Odditites Merchant","Nalfor Morehammer","Norrin Radd","Duke Geralt Marielle","Lord Auranos Ashbridge","Getorix Wahl","Oleg Hammersong","Roark Galt","Johann Becket","Bellator Zhao","Count Amedeo","Master Trapmaker Dom Sourfang","Yama","the Rend"
     ],
-    fakeFirst:[
+    fname:[
         "Billy","Bobby","Mary","Barry","Steven","Marlon","Rachel","Shelby","Eliza","Elizabeth","Joseph","Andy","Arietta","Morgan","Taylor","Tristan","Kai","Anabelle","Duke","Esteban","Antonio","Anthony","Tony","Jackie","John","Mike","Michael","Chev","Mandy","Sully","Joel","Roger","Peter","Connor","Brian","Brendan","Emmy","Isaac","Melissa","Jaime","Jesse","Dakota","Jackson","Sawyer","Xavier","Ester","Tien","Logan","James","Mason","Jason","Calvin","Caleb","Ada","Clay","Gerard","Amy","Lydia","Eugenia","Rose","Jade","Jane","Roxy","Dave","David","Alexis","Jake","Dirk","Sarah","Raleigh","Nikolai","Laila","Emerald","Marcus","Marc","Mark","Caroline","Katie","Kaitlin","Bridget","Haley","Jack","Lauren","Reya","Letitia","Axle","Alex","Rae","Fae","Danny","Dani","Hugo","Juan","Johnny","Paul","Dominic","Mia","Michelle","Dwayne","Chris","Antigone","Maria","Mehak","Vishali","Iris","Shane","Sam","Jimmy","Isabella","Wendy","Thomas","Dan","Daniel","Elias","Cris","Norbert","Arya","Cale","Jonathan","Jon","Merla","Sylora","Rhiann","Martin","Sasha","Tim","Timothy","Shirou","Rin","Holly","Ace","Ed","Edward","Corvanna","Allura","Sakura","Shinji","Asuka","Rei","Richardo","Jose","Graham","Scott"
     ],
-    fakeLast: [
+    lname: [
         "Venitzo","Nightlocke","Shelley","Brando","Grey","Stevenson","Andrews","McGrath","Wheeler","Taylor","Brodey","Lee","Han","Collins","LeBeau","Blackwood","Jackson","Stratman","Smith","Filli","Miller","Merlino","Fox","Waldron","Rogers","Adams","de la Cruz","Santiago","Lessio","Belen","Rodriguez","Connors","Parker","Barnes","Price","Sawyer","Wolfe","Mayer","Howlett","Freyason","Foster","Reynolds","Thorne","Owens","Doe","Morse","Paura","Walters","Ivanofski","St. Claire","Shaughnessy","Carson","Fianna","Delarose","Darwin","Red","Green","Perez","Runner","Walker","Toretto","DiArcangelo","Desantos","Tavares","Diamond","Wu","Demehri","Cahill","Brown","Fenton","Rienton","Sims","James","Wolfhide","Blackwood","Black","Stoker","Berry","Night","Caligo","Pereira","Rackham","Teach","Murphy","Ikari","Matou","Langley","Ayanami","Vantas","Captor","Darling","Peters","Lukas","Perotta","Thornton","Fitch","Finch","Rodruiguez","Campbell","Bell","Graham","O'Connor","McMurphy"
     ]
 };
-
-// Rumors
-const monsters = [
-    "Boguns",
-    "Gnolls",
-    "Banshees",
-    "Undead",
-    "Elementals",
-    "Nutkin"
-];
 
 const verbs = {
     present: {
@@ -1062,7 +667,6 @@ const verbs = {
             "forage",
             "hide", // [a] thing
             "seek",
-            "rest",
             "blockade",
             "discover",
             "raise",
@@ -1112,7 +716,8 @@ const verbs = {
             "gain",
             "show the inferiority of",
             "crash",
-            "conspire with"
+            "conspire with",
+            "make fun of"
         ],
         place: [
             "explore",
@@ -1156,7 +761,6 @@ const verbs = {
             "forage",
             "hide", // [a] thing
             "seek",
-            "rest",
             "blockade",
             "discover",
             "raise",
@@ -1270,7 +874,6 @@ const verbs = {
             "forage",
             "hide", // [a] thing
             "seek",
-            "rest",
             "blockade",
             "discover",
             "raise",
@@ -1444,7 +1047,6 @@ const verbs = {
             "foraging",
             "hiding",
             "seeking",
-            "resting",
             "blockading",
             "discovering",
             "raising",
@@ -1495,7 +1097,8 @@ const verbs = {
             "gaining",
             "showing the inferiority of",
             "crashing",
-            "conspiring with"
+            "conspiring with",
+            "making fun of"
         ],
         place: [
             "exploring",
@@ -1538,7 +1141,6 @@ const verbs = {
             "foraging",
             "hiding",
             "seeking",
-            "resting",
             "blockading",
             "discovering",
             "raising",
@@ -1652,7 +1254,6 @@ const verbs = {
             "foraging",
             "hiding",
             "seeking",
-            "resting",
             "blockading",
             "discovering",
             "raising",
@@ -1743,410 +1344,13 @@ const verbs = {
     },
     continuous: {
         present: [
-            "tries to", //verb goal noun
-            "attempts to",
-            "pretends to",
-            "plans to",
-            "intends to",
-            "wants to",
-            "needs to",
-            "threatens to"
+            "tries to","attempts to","pretends to","plans to","intends to","wants to","needs to","threatens to","finally"
         ],
         gerund: [
-            "trying to", //verb goal noun
-            "attempting to",
-            "pretending to",
-            "planning to",
-            "threatening to",
-            "being framed for"
+            "trying to","attempting to","pretending to","planning to","threatening to","finally"
         ],
         other: [
-            "finally"
-        ]
-    },
-    all: {
-        present: [
-            "kill",
-            "bribe",
-            "explore",
-            "summon",
-            "transport",
-            "steal",
-            "hunt",
-            "torture",
-            "gather",
-            "curse",
-            "enchant",
-            "disable",
-            "create",
-            "attack",
-            "write",
-            "assassinate",
-            "kidnap",
-            "sabotage",
-            "dishonor",
-            "marry",
-            "travel",
-            "sneak",
-            "unleash",
-            "escort",
-            "dig",
-            "protect",
-            "blackmail",
-            "rob",
-            "nap",
-            "disfigure",
-            "forage",
-            "impersonate",
-            "hide",
-            "destroy",
-            "search for",
-            "seek",
-            "flee with",
-            "flee from",
-            "trick",
-            "manipulate",
-            "rest",
-            "blockade",
-            "discover",
-            "invade",
-            "embarrass",
-            "look for",
-            "camp",
-            "recruit",
-            "terrorize",
-            "invest in",
-            "invest suspiciously heavily in",
-            "dupe",
-            "abuse",
-            "tax",
-            "spread",
-            "make",
-            "organize",
-            "request",
-            "challenge",
-            "cause",
-            "raise",
-            "sail",
-            "raze",
-            "build",
-            "look for",
-            "glean",
-            "paint",
-            "excavate",
-            "impede",
-            "perform",
-            "keep",
-            "control",
-            "capture",
-            "sacrifice",
-            "reconnaissance for",
-            "prey",
-            "cheat",
-            "shirk",
-            "stir up",
-            "incite",
-            "deflect",
-            "quest for",
-            "invoke",
-            "propagate",
-            "sell",
-            "wage war on",
-            "build up",
-            "hinder",
-            "secure",
-            "deny",
-            "resurrect",
-            "picket",
-            "drown",
-            "vandalize",
-            "claim",
-            "take",
-            "stifle",
-            "over-run",
-            "starve",
-            "defile",
-            "cull",
-            "establish",
-            "proselytize",
-            "pass",
-            "slow",
-            "disguise",
-            "restore",
-            "get",
-            "murder",
-            "declare war on",
-            "daydream about",
-            "lie to",
-            "fake",
-            "eat",
-            "coerce",
-            "catfish",
-            "get involved with",
-            "play with",
-            "become",
-            "betray",
-            "bind",
-            "break",
-            "bring back",
-            "bring",
-            "burn",
-            "catch",
-            "change",
-            "clear",
-            "conquer",
-            "convert",
-            "cure",
-            "defeat",
-            "delay",
-            "earn",
-            "eliminate",
-            "end",
-            "enslave",
-            "erase",
-            "escape",
-            "expand",
-            "expose",
-            "extinguish",
-            "fight against",
-            "find",
-            "form",
-            "found",
-            "free",
-            "heal",
-            "hold",
-            "implode",
-            "join",
-            "locate",
-            "make fun of",
-            "make substantial profits on",
-            "negotiate",
-            "open",
-            "overthrow",
-            "plan for",
-            "prove",
-            "reset",
-            "return",
-            "revive",
-            "save",
-            "shame",
-            "slaughter",
-            "start",
-            "stick it to",
-            "turn back",
-            "undo",
-            "unite",
-            "worship",
-            "ally themselves with",
-            "awaken",
-            "pay",
-            "appease",
-            "avert",
-            "topple",
-            "fulfill",
-            "acquire",
-            "banish",
-            "sow",
-            "gain",
-            "complete",
-            "shake",
-            "show the inferiority of",
-            "crash",
-            "corner the market in",
-            "renegotiate",
-            "bring low",
-            "win against"
-        ],
-        gerund: [
-            "killing",
-            "bribing",
-            "exploring",
-            "summoning",
-            "transporting",
-            "stealing",
-            "hunting",
-            "torturing",
-            "gathering",
-            "cursing",
-            "enchanting",
-            "disabling",
-            "creating",
-            "attacking",
-            "writing",
-            "assassinating",
-            "kidnapping",
-            "sabotaging",
-            "dishonoring",
-            "marrying",
-            "traveling",
-            "sneaking",
-            "unleashing",
-            "escorting",
-            "digging",
-            "protecting",
-            "blackmailing",
-            "robbing",
-            "napping",
-            "disfiguring",
-            "foraging",
-            "hiding",
-            "destroying",
-            "searching for",
-            "seeking",
-            "fleeing with",
-            "fleeing from",
-            "tricking",
-            "manipulating",
-            "resting",
-            "blockading",
-            "discovering",
-            "invading",
-            "embarrassing",
-            "looking",
-            "camping",
-            "recruiting",
-            "terrorizing",
-            "investing in",
-            "investing suspiciously heavily in",
-            "duping",
-            "abusing",
-            "taxing",
-            "spreading",
-            "making",
-            "organizing",
-            "requesting",
-            "challenging",
-            "causing",
-            "raising",
-            "sailing",
-            "razing",
-            "building",
-            "looking for",
-            "gleaning",
-            "painting",
-            "excavating",
-            "impeding",
-            "performing",
-            "keeping",
-            "controlling",
-            "capturing",
-            "sacrificing",
-            "reconnaissancing for",
-            "preying",
-            "cheating",
-            "shirking",
-            "stirring up",
-            "inciting",
-            "deflecting",
-            "questing for",
-            "searching for",
-            "invoking",
-            "propagating",
-            "selling",
-            "waging war on",
-            "building up",
-            "hindering",
-            "securing",
-            "denying",
-            "resurrecting",
-            "picketing",
-            "drowning",
-            "vandalizing",
-            "claiming",
-            "taking",
-            "stifling",
-            "over-running",
-            "starving",
-            "defiling",
-            "culling",
-            "establishing",
-            "proselytizing",
-            "passing",
-            "slowing",
-            "disguising",
-            "restoring",
-            "getting",
-            "murdering",
-            "declaring war on",
-            "daydreaming about",
-            "lying to",
-            "faking",
-            "eating",
-            "coercing",
-            "catfishing",
-            "getting involved with",
-            "playing with",
-            "becoming",
-            "betraying",
-            "binding",
-            "breaking",
-            "bringing back",
-            "bringing",
-            "burning",
-            "catching",
-            "changing",
-            "clearing",
-            "conquering",
-            "converting",
-            "curing",
-            "defeating",
-            "delaying",
-            "earning",
-            "eliminating",
-            "ending",
-            "enslaving",
-            "erasing",
-            "escaping",
-            "expanding",
-            "exposing",
-            "extinguishing",
-            "fighting against",
-            "finding",
-            "forming",
-            "founding",
-            "freeing",
-            "healing",
-            "holding",
-            "imploding",
-            "joining",
-            "locating",
-            "making fun of",
-            "making substantial profits on",
-            "negotiating",
-            "opening",
-            "overthrowing",
-            "planning for",
-            "proving",
-            "reseting",
-            "returning",
-            "reviving",
-            "saving",
-            "shaming",
-            "slaughtering",
-            "starting",
-            "sticking it to",
-            "turning back",
-            "undoing",
-            "uniting",
-            "worshipping",
-            "allying themselves with",
-            "awakening",
-            "paying",
-            "appeasing",
-            "averting",
-            "toppling",
-            "fulfilling",
-            "acquiring",
-            "banishing",
-            "gaining",
-            "completing",
-            "shaking",
-            "showing the inferiority of",
-            "crashing",
-            "cornering the market in",
-            "renegotiating",
-            "bringing low",
-            "winning against"
+            "being framed for"
         ]
     }
 }
@@ -2154,433 +1358,10 @@ const verbs = {
 const nouns = {
     person: {
         singular: [
-            "king",
-            "chosen one",
-            "princess",
-            "empress",
-            "constable",
-            "mayor",
-            "Serpent God",
-            "local authority",
-            "little bitch",
-            "person of authority",
-            "demon",
-            "lost loved one",
-            "cleric",
-            "divinity",
-            "rival",
-            "local noble",
-            "vampire",
-            "king",
-            "forgotten god",
-            "knight",
-            "monster",
-            "forgotten divinity",
-            "vampire lord",
-            "demoness",
-            "slayer",
-            "dragon",
-            "peasant girl",
-            "peasant boy",
-            "young boy",
-            "young girl",
-            "lad",
-            "lass",
-            "fruit-seller",
-            "gem merchant",
-            "sellsword",
-            "nomad",
-            "knight",
-            "assassin",
-            "gentleman thief",
-            "gentlewoman thief",
-            "soldier",
-            "monk",
-            "sorceror",
-            "enchanter",
-            "witch",
-            "warlock",
-            "warrior",
-            "mage",
-            "outlaw",
-            "ruffian",
-            "brigand",
-            "pickpocket",
-            "thief",
-            "woodsman",
-            "warlord",
-            "page",
-            "squire",
-            "troubadour",
-            "empress",
-            "emperor",
-            "noblewoman",
-            "nobleman",
-            "lord",
-            "lady",
-            "prince",
-            "princess",
-            "diplomat",
-            "monsterologist",
-            "swordmaster",
-            "apprentice",
-            "assassin-in-training",
-            "enchantress-in-training",
-            "summoner-in-training",
-            "witch-in-training",
-            "necromancer-in-training",
-            "prophet-in-training",
-            "sorceror-in-training",
-            "ogre",
-            "dragon",
-            "centaur",
-            "charlatan",
-            "vampire",
-            "genie",
-            "troll",
-            "dale elf",
-            "deep elf",
-            "dwarf",
-            "goblin",
-            "half elf",
-            "high elf",
-            "human",
-            "suhk",
-            "wildren",
-            "alchemist",
-            "artificer",
-            "bard",
-            "cleric",
-            "druid",
-            "fighter",
-            "paladin",
-            "ranger",
-            "rogue",
-            "runesmith",
-            "wizard",
-            "coalescer",
-            "excavator",
-            "harvester",
-            "logger",
-            "skinner",
-            "farmer",
-            "hunter",
-            "lumberjack",
-            "miner",
-            "panner",
-            "butcher",
-            "carpenter",
-            "gemcutter",
-            "glassmaker",
-            "papermaker",
-            "smelter",
-            "tanner",
-            "weaver",
-            "architect",
-            "blacksmith",
-            "brewer",
-            "chef",
-            "glassblower",
-            "lapidary",
-            "leatherworker",
-            "tailor",
-            "trapmaker",
-            "woodworker",
-            "appraiser",
-            "laborer",
-            "mender",
-            "eccentric candyman",
-            "retail employee",
-            "werewolf",
-            "feral child",
-            "snake-oil salesman",
-            "influencer",
-            "cowboy",
-            "pirate",
-            "rat",
-            "child psychologist",
-            "ghost hunter",
-            "archivist",
-            "creature",
-            "demolitions expert",
-            "goose",
-            "duelist",
-            "dog",
-            "construct",
-            "landlord",
-            "celebrity chef",
-            "village idiot",
-            "old guy",
-            "old lady",
-            "tax-evader",
-            "draft dodger",
-            "pyrotechnician",
-            "arsonist",
-            "professional arsonist",
-            "retired assassin",
-            "goth",
-            "clown",
-            "entire circus of clowns",
-            "doctor",
-            "lawyer",
-            "con artist",
-            "grifter",
-            "lad in a fancy suit",
-            "hot girl",
-            "hot guy",
-            "hot person",
-            "malewife",
-            "entity",
-            "absent father",
-            "war criminal",
-            "shitty wizard",
-            "conspiracy theorist",
-            "adrenaline junkie",
-            "time traveler",
-            "Italian",
-            "asshole",
-            "deadbeat dad",
-            "deadbeat mom",
-            "deadbeat parent",
-            "Little League coach",
-            "mobster",
-            "grad student",
-            "librarian",
-            "researcher",
-            "research assistant",
-            "entomologist",
-            "butch lesbian",
-            "dancer",
-            "singer",
-            "musician",
-            "historian",
-            "private investigator",
-            "detective",
-            "comedian",
-            "person",
-            "pro-wrestler",
-            "furry",
-            "girl",
-            "boy",
-            "candyman",
-            "retail employee",
-            "child",
-            "psychologist",
-            "guy",
-            "lad in a fancy suit",
-            "father",
-            "mother",
-            "dad",
-            "mom",
-            "parent",
-            "lesbian",
-            "idiot",
-            "raging anti-capitalist",
-            "CEO",
-            "union buster",
-            "dudebro",
-            "pharaoh",
+            "king","chosen one","princess","empress","constable","mayor","Serpent God","local authority","little bitch","person of authority","demon","lost loved one","cleric","divinity","rival","local noble","vampire","king","forgotten god","knight","monster","forgotten divinity","vampire lord","demoness","slayer","dragon","peasant girl","peasant boy","young boy","young girl","lad","lass","fruit-seller","gem merchant","sellsword","nomad","knight","gentleman thief","gentlewoman thief","soldier","monk","sorceror","enchanter","witch","warlock","warrior","mage","outlaw","ruffian","brigand","pickpocket","thief","woodsman","warlord","page","squire","troubadour","empress","emperor","noblewoman","nobleman","lord","lady","prince","princess","diplomat","monsterologist","swordmaster","apprentice","assassin-in-training","enchantress-in-training","summoner-in-training","witch-in-training","necromancer-in-training","prophet-in-training","sorceror-in-training","ogre","dragon","centaur","charlatan","vampire","genie","troll","dale elf","deep elf","dwarf","goblin","half elf","high elf","human","suhk","wildren","alchemist","artificer","bard","cleric","druid","fighter","paladin","ranger","rogue","runesmith","wizard","coalescer","excavator","harvester","logger","skinner","farmer","hunter","lumberjack","miner","panner","butcher","carpenter","gemcutter","glassmaker","papermaker","smelter","tanner","weaver","architect","blacksmith","brewer","chef","glassblower","lapidary","leatherworker","tailor","trapmaker","woodworker","appraiser","laborer","mender","eccentric candyman","retail employee","werewolf","feral child","snake-oil salesman","influencer","cowboy","pirate","rat","child psychologist","ghost hunter","archivist","creature","demolitions expert","goose","duelist","dog","construct","landlord","celebrity chef","village idiot","old guy","old lady","tax-evader","draft dodger","pyrotechnician","arsonist","professional arsonist","retired assassin","goth","clown","entire circus of clowns","doctor","lawyer","con artist","grifter","lad in a fancy suit","hot girl","hot guy","hot person","malewife","entity","absent father","war criminal","shitty wizard","conspiracy theorist","adrenaline junkie","time traveler","Italian","asshole","deadbeat dad","deadbeat mom","deadbeat parent","deadbeat","Little League coach","mobster","grad student","librarian","researcher","research assistant","entomologist","butch lesbian","dancer","singer","musician","historian","private investigator","detective","comedian","person","pro-wrestler","furry","girl","boy","candyman","retail employee","child","psychologist","guy","lad in a fancy suit","father","mother","dad","mom","parent","lesbian","idiot","raging anti-capitalist","CEO","union buster","dudebro","pharaoh","saber","archer","lancer","caster","rider","assassin","berserker"
         ],
         plural: [
-            "travelers",
-            "officials",
-            "peasants",
-            "people",
-            "themselves",
-            "children",        
-            "clerics",
-            "mages",
-            "somebody",
-            "martyrs",
-            "followers",
-            "hostages",
-            "slaves",
-            "new members",
-            "followers of another group",
-            "unstable individuals",
-            "long-extinct creatures",
-            "honest shopkeepers",
-            "younger citizens",
-            "thousands of ghosts",
-            "powerful friends",
-            "bribed officials",
-            "animals",
-            "group of citizens",
-            "army",
-            "cult",
-            "militia",
-            "government",
-            "puppet organization",
-            "colony of humanoids",
-            "group of people",
-            "army of undead",
-            "magical army",
-            "band of mercenaries",
-            "thousand tortured souls",
-            "squires",
-            "adventurers",
-            "assassins",
-            "fish people",
-            "drunken farmers",
-            "illusionists",
-            "settlers",
-            "werewolves",
-            "raiders",
-            "industrialists",
-            "acolytes",
-            "vampires",
-            "collectors",
-            "animals",
-            "land surveyors",
-            "rogues",
-            "elementals",
-            "goblin hunters",
-            "lowlives",
-            "knights",
-            "mercenaries",
-            "bardic actors",
-            "plants",
-            "nobles and their retinue",
-            "royalty",
-            "lepers",
-            "kobold trapsmiths",
-            "wizards",
-            "ancients",
-            "bandits",
-            "mendicant monks",
-            "giants",
-            "prisoners",
-            "dwarven archaeologists",
-            "con artists",
-            "alchemists",
-            "thieving travelers",
-            "villians",
-            "slaves",
-            "diplomats",
-            "doppelgangers",
-            "temple monks",
-            "rebels",
-            "runaways",
-            "psychics",
-            "tinkers",
-            "local spirits",
-            "masterless golems",
-            "druids",
-            "kings",
-            "diviners",
-            "travelling merchants",
-            "mysterious cloaked men",
-            "liches",
-            "sprites",
-            "traitors",
-            "monitors",
-            "scholars",
-            "guards",
-            "ousted monarchs",
-            "ghosts",
-            "militia members",
-            "children",
-            "orphan children",
-            "fairies",
-            "holy inquisitors",
-            "singers",
-            "enchanters",
-            "enchantresses",
-            "merchants",
-            "cavaliers",
-            "religious zealots",
-            "mummers",
-            "bards",
-            "orcs",
-            "dragons",
-            "otherwordly beings",
-            "dukes",
-            "duchesses",
-            "undead",
-            "slavers",
-            "escaped slaves",
-            "witches",
-            "planar travelers",
-            "charity mission workers",
-            "chaos worshippers",
-            "monks",
-            "priests",
-            "peasants",
-            "common folk",
-            "terrorists",
-            "defectors",
-            "pageboys",
-            "spies",
-            "foreign diplomats",
-            "nuns",
-            "nomads",
-            "plant creatures",
-            "philosophers",
-            "sea creatures",
-            "pirates",
-            "barons",
-            "ladies",
-            "teenagers",
-            "unemployed tradespeople",
-            "aristocrats",
-            "royals",
-            "scientists",
-            "necromancers",
-            "gnomes",
-            "masons",
-            "painters",
-            "senior villagers",
-            "housebreakers",
-            "fishermen",
-            "vintners",
-            "leatherworkers",
-            "intelligentsia",
-            "craftspersons",
-            "convicts",
-            "felons",
-            "smiths",
-            "homunculi",
-            "golems",
-            "bodysnatchers",
-            "vivisectionists",
-            "ax murderers",
-            "tulip growers",
-            "fey creatures",
-            "barbarians",
-            "scribes",
-            "crime bosses",
-            "drug lords",
-            "brothel keepers",
-            "veterans",
-            "draftees",
-            "deserters",
-            "masters",
-            "journeymen",
-            "home owners",
-            "shopkeepers",
-            "smugglers",
-            "corrupt politicians",
-            "mages",
-            "hags",
-            "violent vigilantes",
-            "three possums in a trench coat",
-            
-            "another group",
-            "the homies",
-            "the dead",
-            "the law",
-            "the elderly",
-            "the aristocracy",
-            "the church",
-            "the militia",
-            "the rich",
-            "the court",
-            "the local crime underground",
-            "the masses",
-            "the ancients",
-            "'the man'",
-            "the mighty",
-            "another group"
+            "travelers","officials","peasants","people","themselves","children","clerics","mages","martyrs","followers","hostages","slaves","new members","followers of another group","unstable individuals","long-extinct creatures","honest shopkeepers","younger citizens","thousands of ghosts","powerful friends","bribed officials","animals","group of citizens","army","cultists","militia members","government officials","puppet organization","colony of humanoids","group of people","army of undead","magical army","band of mercenaries","thousand tortured souls","squires","adventurers","assassins","fish people","drunken farmers","illusionists","settlers","werewolves","raiders","industrialists","acolytes","vampires","collectors","animals","land surveyors","rogues","elementals","goblin hunters","lowlives","knights","mercenaries","bardic actors","plants","nobles and their retinue","royalty","lepers","kobold trapsmiths","wizards","ancients","bandits","mendicant monks","giants","prisoners","dwarven archaeologists","con artists","alchemists","thieving travelers","villians","slaves","diplomats","doppelgangers","temple monks","rebels","runaways","psychics","tinkers","local spirits","masterless golems","druids","kings","diviners","travelling merchants","mysterious cloaked men","liches","sprites","traitors","monitors","scholars","guards","ousted monarchs","ghosts","militia members","children","orphan children","fairies","holy inquisitors","singers","enchanters","enchantresses","merchants","cavaliers","religious zealots","mummers","bards","orcs","dragons","otherwordly beings","dukes","duchesses","undead","slavers","escaped slaves","witches","planar travelers","charity mission workers","chaos worshippers","monks","priests","peasants","common folk","terrorists","defectors","pageboys","spies","foreign diplomats","nuns","nomads","plant creatures","philosophers","sea creatures","pirates","barons","ladies","teenagers","unemployed tradespeople","aristocrats","royals","scientists","necromancers","gnomes","masons","painters","senior villagers","housebreakers","fishermen","vintners","leatherworkers","intelligentsia","craftspersons","convicts","felons","smiths","homunculi","golems","bodysnatchers","vivisectionists","ax murderers","tulip growers","fey creatures","barbarians","scribes","crime bosses","drug lords","brothel keepers","veterans","draftees","deserters","masters","journeymen","home owners","shopkeepers","smugglers","corrupt politicians","mages","hags","violent vigilantes","three possums in a trench coat","another group","the homies","the dead","the law","the elderly","the aristocracy","the church","the militia","the rich","the court","the local crime underground","the masses","the ancients","'the man'","the mighty","another group"
         ]
     },
     place: {
@@ -2610,14 +1391,13 @@ const nouns = {
             "churches",
             "shrines",
             "walls separating reality",
-            
             "the courts",
             "the lands",
             "the seas",
         ]
     },
     thing: {
-        singular: [ // tangible objects
+        singular: [
             "sword",
             "shield",
             "bottle of alcohol",
@@ -2713,6 +1493,7 @@ const nouns = {
             "secret documents",
             "snakes",
             "stolen teeth",
+            "public speeches",
         ]
     },
     concept: {
@@ -2765,8 +1546,7 @@ const nouns = {
             "frenzied devotion",
             "mass hypnosis",
             "iron will and determination",
-            "demonic help",
-            
+            "demonic help",            
             "the blame",
             "the economy",
             "the market",
@@ -2790,7 +1570,6 @@ const nouns = {
             "prices",
             "privileges",
             "public officials and decrees",
-            "public speeches",
             "pure wits",
             "resources",
             "rumors",
@@ -2860,337 +1639,10 @@ const nouns = {
 
         // other
         "who they really are"
-    ],
-    all : [
-        // Ace-10 of spades from MHoF
-        "a sword",
-        "a shield",
-        "a bottle of alcohol",
-        "a knife",
-        "a dog",
-        // "a fight",
-        "a really cool cloak",
-        "information",
-        "financial compensation",
-        "a really big knife",
-        "a potion",
-
-        // from the Meme Machine
-        "a really tiny knife",
-        "a jar",
-        "a steamy adult romance novel",
-        "a cursed magical item",
-        "a small horse",
-        "a spyglass",
-        "a pair of scissors",
-        "a magic item",
-
-        // Adventure Generator
-        "new members",
-        "travelers",
-        "officials",
-        "power",
-        "followers of another group",
-        "the seas",
-        "enourmous amount of gold",
-        "the king",
-        "diseased blankets",
-        "a plague's progression",
-        "public speeches",
-        "peasants",
-        "a divine audience",
-        "chaos",
-        "the dead",
-        "their lost honor",
-        "a city",
-        "a fortress",
-        "another group",
-        "approval",
-        "the chosen one",
-        "the law",
-        "murder",
-        "alliances",
-        "information",
-        "arcane murals",
-        "an ancient song",
-        "a fleet of warships",
-        "sensitive divinations",
-        "a low profile",
-        "a settlement",
-        "the militia",
-        "citizens",
-        "unstable individuals",
-        "themselves",
-        "a weak spot",
-        "a cure",
-        "children",
-        "the elderly",
-        "the aristocracy",
-        "clerics",
-        "mages",
-        "duty",
-        "interest",
-        "rebellion",
-        "violence",
-        "blame",
-        "a magical formula",
-        "an Archwizard's legendary lost spellbook",
-        "privileges",
-        "a new ethic",
-        "a plague",
-        "false hope",
-        "a new powerful magic book",
-        "rumors",
-        "a trade war",
-        "a trade monopoly",
-        "trade",
-        "prices",
-        "resources",
-        "long-extinct creatures",
-        "honest shopkeepers",
-        "kittens",
-        "creature hybrids",
-        "a building site",
-        "a rival's masterwork",
-        "younger citizens",
-        "responsibility",
-        "the blame",
-        "opposition",
-        "the masses",
-        "shrines",
-        "the herd",
-        "an illegal gambling ring",
-        "a little bitch",
-        "a person of authority",
-        "someone's death",
-        "someone's beloved pet",
-        "literal garbage",
-        "a building here in town",
-        "stolen teeth",
-        "a deal with the fae",
-        "the constable",
-        "the mayor",
-        "snakes",
-        "a big pile of spaghetti",
-        "somebody",
-        "a body",
-        "someone's best friend",
-        "the homies",
-        "the local tavern",
-        "an illicit underground unicorn fight club",
-        "the government",
-        "the church",
-        "control",
-        "martyrs",
-        "the rich",
-        "their country for personal gain",
-        "a demon",
-        "the walls separating reality",
-        "a lost loved one",
-        "peace",
-        "a haven",
-        "everything",
-        "the notice of a god",
-        "history",
-        "their names",
-        "a nation",
-        "a legacy",
-        "a new divinity",
-        "a powerful magic item",
-        "their insanity",
-        "a cleric",
-        "an army",
-        "a wedding",
-        "a divinity",
-        "a rival",
-        "a village",
-        "magic",
-        "a villain's weakness",
-        "who they really are",
-        "fame and prestige",
-        "their rival",
-        "a local noble",
-        "a rivalry",
-        "a war",
-        "their targets",
-        "their past",
-        "punishment",
-        "their domains",
-        "the court",
-        "a race",
-        "against a rival",
-        "rest",
-        "the real answers",
-        "a cult",
-        "a new society",
-        "a new community",
-        "the princess",
-        "their people",
-        "revenge",
-        "a great wound upon the land",
-        "a great wound upon the people",
-        "their treasure",
-        "a coup",
-        "a vampire",
-        "their goddess",
-        "colony of humanoids",
-        "a king",
-        "a tome of unspeakable truths",
-        "a truce",
-        "an agreement with the archenemy",
-        "a magical gate",
-        "a portal to another dimension",
-        "the empress",
-        "the next season",
-        "their bravery",
-        "followers",
-        "time",
-        "the ancients",
-        "a forgotten god",
-        "a knight",
-        "a group of people",
-        "a civil war",
-        "a new world order",
-        "'the man'",
-        "a monster",
-        "reality",
-        "the lands",
-        "unspeakable evil",
-        "a forgotten divinity",
-        "a vampire lord",
-        "thousands of ghosts",
-        "a werewolf lair",
-        "their debts",
-        "a demoness",
-        "unnatural disaster",
-        "disaster",
-        "the kingdom",
-        "respect",
-        "a prophecy",
-        "a prophecy's fulfillment",
-        "destiny",
-        "their children",
-        "hostages",
-        "the Serpent God",
-        "their reputation",
-        "a riot",
-        "disorder",
-        "treachery",
-        "leverage",
-        "a menagerie of creatures",
-        "their collections",
-        "doomsday",
-        "their successors",
-        "their rival's disgrace",
-        "their place in history",
-        "the economy",
-        "the market",
-        "an agreement",
-        "the animals",
-        "the mighty",
-        "the prophecy",
-        
-        //means 
-        "fake identities",
-        "an old rusty chain",
-        "a dragon's support",
-        "magical man-catchers",
-        "a family heirloom weapon",
-        "threats and intimidation",
-        "misdirection",
-        "pure wits",
-        "a diadem of control",
-        "a powerful magic wand",
-        "forged documents",
-        "flows of gold",
-        "a plague of locusts",
-        "the iron hand of the tyrant",
-        "extortion",
-        "deception",
-        "a strange music box",
-        "extreme discretion",
-        "an enchanted quill",
-        "a key",
-        "forbidden tomes",
-        "powerful friends",
-        "information from a contact person",
-        "deep pockets",
-        "their dormant magical talent",
-        "an ancient holy symbol",
-        "secret documents",
-        "a recently found artifact",
-        "the power vested in them by law",
-        "an army of undead",
-        "the skull of a long dead necromancer",
-        "a god's blessing",
-        "a laissez-faire attitude",
-        "a cursed weapon",
-        "the king's orders in hand",
-        "a magical army",
-        "the power of prayer",
-        "a slayer",
-        "divine blessings",
-        "a band of mercenaries",
-        "a con artists glib",
-        "the heart of a tree of life",
-        "the support of the church",
-        "a very intricate and detailed masterplan",
-        "a thousand tortured souls",
-        "an astrolabe",
-        "the bones of an ancient mage",
-        "the support of a mob",
-        "the help of bribed bureaucrats",
-        "blackmail",
-        "a god's finger",
-        "an insatiable hunger",
-        "false promises",
-        "blatant lies",
-        "the blood of the innocent",
-        "contracts for the gullible",
-        "the might of the kingdom's military",
-        "the support of the noble court",
-        "a dragon's hoard",
-        "bribed officials",
-        "a stolen artifact",
-        "an ancient arrowhead",
-        "frenzied devotion",
-        "a merfolk bridal veil",
-        "a game that is also a test",
-        "mass hypnosis",
-        "iron will and determination",
-        "divine regalia",
-        "the hopes of the whole village",
-        "a cursed armor",
-        "the queen's blessing",
-        "little resources left",
-        "embalmed corpses",
-        "a soulstone",
-        "an elf's life essence",
-        "an army",
-        "a dragon",
-        "public officials and decrees",
-        "a civil war",
-        "sabotage",
-        "espionage",
-        "drugs",
-        "a puppet organization",
-        "bribery",
-        "alcohol",
-        "slaves",
-        "contracts",
-        "demonic help",
-        "the local authority",
-        "the local crime underground",
-        "market manipulations",
-        "cloning",
-        "the power of the Ooze",
-        "any means necessary",
-        "lurid colors",
-        "deceptive documents"
     ]
 }
 
-// where fragments go to die after I tear them apart like confetti
+// where fragments go after I tear them apart like confetti
 const fragments = {
     trait: [ // character traits
         "can be restless",
@@ -3419,7 +1871,6 @@ const fragments = {
         "I'm usually one to mind my own business, but I heard that"
     ],
     goal: [
-        // adventure seed generator
         "assume control",
         "become immortal",
         "become king",
@@ -3429,7 +1880,6 @@ const fragments = {
         "bind a demon",
         "break the walls separating reality",
         "bring a lost loved one back to life",
-        "bring domination to their race",
         "bring peace",
         "build a haven",
         "burn everything",
@@ -3463,7 +1913,6 @@ const fragments = {
         "escape punishment",
         "expand their domains",
         "expose the court",
-        "extinguish a race",
         "fight against a rival",
         "finally rest",
         "find the real answers",
@@ -3786,18 +2235,256 @@ const fragments = {
     ]
 }
 
-// noun ref vars
-var nounPerson = nouns.person;
-var nounPlace = nouns.place;
-var nounThing = nouns.thing;
-var nounConcept = nouns.concept;
+// toss these somewhere else
+const monsters = ["Boguns","Gnolls","Banshees","Undead","Elementals","Nutkin"];
+const groups = [
+    // adventure seed generator
+    "order",
+    "horde",
+    "clique",
+    "gaggle",
+    "mob",
+    "collegium ",
+    "armed group",
+    "squad",
+    "cadre",
+    "trio",
+    "duo",
+    "quintet",
+    "pack",
+    "wandering troupe",
+    "crime ring",
+    "group",
+    "cabal",
+    "coven",
+    "gang",
+    "bunch",
+    "fellowship",
+    "posse",
+    "school class",
+    "syndicate",
+    "delegation",
+    "secret society",
+    "guild",
+    "extended family",
+    "noble house",
+    "platoon",
+    "caravan",
+    "sisterhood",
+    "work team",
+    "team",
+    "association",
+    "cartel",
+    "club",
+    "congregation",
+    "gentlemen's club",
+    "faction",
+    "crew",
+    "hidden society",
+    "league",
+    "converstation club",
+    "religious sect",
+    "tribe",
+    "elite squad",
+    "brotherhood",
+    "charity organization",
+    "support staff",
+    "entourage",
+    "assembly",
+    "noble family",
+    "governing body",
+    "ensemble",
+    "conclave",
+    "coterie",
+    "organization",
+    "citizens",
+    "circle",
+    "partnership",
+    "society",
+    "party",
+    "cult",
+    "group",
+    "troop",
+    "army",
+    "mass",
+    "gathering",
+    "political faction",
+    "inbred family",
+    "choir",
+    "crowd",
+    "splinter faction",
+    "band",
+    "conspiracy",
+    "clan",
+    "collegium",
+    "patchwork",
+    "network",
+    "cell",
+    "panel",
+    "doomsday cult",
+    "union",
+    "collective",
+    "circus"
+];
+const adjective = [// build this array out
+    "peasant",
+    "young",
+    "fruit-selling",
+    "gentleman",
+    "gentlewoman",
+    "apprentice",
+    "charlatan",
+    "vampire",
+    "dale elf",
+    "deep elf",
+    "dwarf",
+    "goblin",
+    "half elf",
+    "high elf",
+    "human",
+    "suhk",
+    "wildren",
+    "eccentric",
+    "werewolf",
+    "feral",
+    "influencer",
+    "child",
+    "celebrity",
+    "old",
+    "tax-evading",
+    "draft-dodging",
+    "professional",
+    "retired",
+    "goth",
+    "little",
+    "hot",
+    "absent",
+    "shitty",
+    "time-traveling",
+    "Italian",
+    "asshole",
+    "deadbeat",
+    "butch",
+    "dancing",
+    "singing",
+    "paramilitary",
+    "military",
+    "suicidal",
+    "fleeing",
+    "organized",
+    "insatiable",
+    "sickened",
+    "lusty",
+    "maniacal",
+    "unorganized",
+    "pugilistic",
+    "busybody",
+    "evil",
+    "sociopathic",
+    "underground",
+    "dying",
+    "benevolent",
+    "arsonistic",
+    "disorganized",
+    "convicted",
+    "noble",
+    "liar",
+    "chaotic",
+    "malicious",
+    "murderous",
+    "pugnacious",
+    "secret",
+    "elderly",
+    "violent",
+    "unharmonious",
+    "devious",
+    "surreptitious",
+    "quarelling",
+    "ideologically split",
+    "ragged",
+    "cursed",
+    "good",
+    "enlightened",
+    "zealous",
+    "heroic",
+    "amnesiac",
+    "resurrected",
+    "fey-touched",
+    "elite",
+    "lycanthropic",
+    "escaped",
+    "injured",
+    "commissioned",
+    "official",
+    "random",
+    "self-pitying",
+    "well-dressed",
+    "xenophobic",
+    "superstitious",
+    "drunk",
+    "depressive",
+    "morbid",
+    "mortally wounded",
+    "diseased",
+    "contrite",
+    "hateful",
+    "alcoholic",
+    "drug-addicted",
+    "fanatical",
+    "homeless",
+    "confused",
+    "artistic",
+    "desperate",
+    "suspicious",
+    "unaccountable",
+    "exhausted",
+    "vocal",
+    "undead",
+    "shady",
+    "righteous",
+    "plaintive",
+    "cowardly",
+    "insane",
+    "unscrupulous",
+    "oppressed",
+    "conned",
+    "fallen",
+    "undercover",
+    "reluctant",
+    "bloodthirsty",
+    "otherworldly",
+    "celestial",
+    "outsider",
+    "insectoid",
+    "brilliant",
+    "greedy",
+    "materialistic",
+    "unholy",
+    "ancient",
+    "obsessive",
+    "sole",
+    "outgrown",
+    "renowned",
+    "rich",
+    "poor",
+    "reformed",
+    "secretive",
+    "paranoid",
+    "compulsive",
+    "perverse",
+    "iconoclastic",
+    "nihilistic",
+    "former",
+    "underappreciated",
+    "kindly",
+    "unique",
+    "teenage",
+    "corny"
+];
 
-// verb ref vars
-var verbPresent = verbs.present;
-var verbGerund = verbs.gerund;
-var verbCont = verbs.continuous;
-
-// NON-STORY GENERATOR FUNCTIONS
+///////////////////////////////////////
+//// NON-STORY GENERATOR FUNCTIONS
+///////////////////////////////////////
 // random string for all generators
 function randomString(arr) {
     const randomIndex = Math.floor(Math.random() * arr.length);
@@ -3805,8 +2492,7 @@ function randomString(arr) {
     return item;
 }
 
-// adds "a" or "an" to the front of a thing
-// if it sees "the" at the front of a word it leaves it alone
+// adds "a" or "an" as a preposition. if it sees "the" or "another" at the front or a word it leaves it alone
 function wordPrep(word) {
     if (["the ","another "].some((elem) => word.startsWith(elem))) {
         prep = "";
@@ -3815,16 +2501,16 @@ function wordPrep(word) {
     } else {
         prep = "a ";
     }
+    prep += word;
     return prep;
 }
 
 // adds singular possessive 's to the end of a noun
-// this should do a thing where the possessive changes if singular or plural
-// OH FUCK I CAN DO THIS NOW I THINK HELL YEAH
-// function wordPoss(word) {
-//     word += "'s";
-//     return word;
-// }
+// do something where the possessive changes if singular or plural
+function wordPoss(word) {
+    word += "'s";
+    return word;
+}
 
 // subject-verb agreement
 function svaAgree(sva) {
@@ -3835,6 +2521,20 @@ function svaAgree(sva) {
     }
     return sva;
 }
+
+///////////////////////////////////
+//// VERBS AND NOUNS
+///////////////////////////////////
+// noun ref vars
+var nounPerson = nouns.person;
+var nounPlace = nouns.place;
+var nounThing = nouns.thing;
+var nounConcept = nouns.concept;
+
+// verb ref vars
+var verbPresent = verbs.present;
+var verbGerund = verbs.gerund;
+var verbCont = verbs.continuous;
 
 function verbSelect(noun) {
     let present = "";
@@ -3866,8 +2566,10 @@ function nounSelect() {
     const plural = [
         nounPerson.plural, nounPlace.plural, nounThing.plural, nounConcept.plural
     ];
-    
-    const nouns = [singular, plural];
+    const nouns = [
+        singular, plural
+    ];
+
     const type = randomString(nouns); // singular, plural
     const subtype = randomString(type); // person, place, thing, etc
     const select = randomString(subtype); // noun from that array
@@ -3877,25 +2579,29 @@ function nounSelect() {
         noun = select;
         condition = randomString(property.plural);
     } else if (type == singular) {
-        noun = wordPrep(select) + select;
+        noun = wordPrep(select);
         condition = randomString(property.singular);
     }
     return [noun, subtype, condition];
 }
 
+///////////////////////////////////////////
+//// CHARACTER CREATOR
+///////////////////////////////////////////
 function charaCreate() {
     const charaNoun = randomString(nounPerson.singular);
-    const adj = randomString(chara.adjective);
+    const adj = randomString(adjective);
     const trait = randomString(fragments.trait);
-    const fakeFirst = randomString(characters.fakeFirst);
-    const fakeLast = randomString(characters.fakeLast);
-    let fakeRole = fakeFirst + " " + fakeLast;
-    let charaPrep = wordPrep(charaNoun) + charaNoun;
+    const fname = randomString(characters.fname);
+    const lname = randomString(characters.lname);
     
-    let charaDesc = charaPrep + "</b> who <b>" + trait;
-    let charaCat = wordPrep(adj) + " " + adj + " " + charaNoun;
+    let fakeRole = fname + " " + lname;
+
+    // returned chara types
+    let charaDesc = wordPrep(charaNoun) + "</b> who <b>" + trait;
+    let charaCat = wordPrep(adj) + " " + charaNoun;
     let charaCon = charaCat + "</b> who <b>" + trait;
-    let charaFake = charaPrep + "</b> named <b>" + fakeRole + "</b> who <b>" + trait;
+    let charaFake = wordPrep(charaNoun) + "</b> named <b>" + fakeRole + "</b> who <b>" + trait;
 
     return [charaDesc, charaCat, charaCon, charaFake];
 }
@@ -3907,12 +2613,12 @@ function charaSelect() {
         "fake role 1",
         "fake role 2"
     ];
+    
     const charaType = randomString(charaList);
-
     const player = randomString(characters.players);
     const npc = randomString(characters.faceRoles);
-    const fname = randomString(characters.fakeFirst);
-    const lname = randomString(characters.fakeLast);
+    const fname = randomString(characters.fname);
+    const lname = randomString(characters.lname);
     const person = randomString(nounPerson.singular);
 
     let chara = "";
@@ -3929,12 +2635,15 @@ function charaSelect() {
             chara = "someone called <b>" + fakeName + "</b>";
         break;
         case "fake role 2":
-            chara = "<b>" + wordPrep(person) + " " + person + "</b> named <b>" + fname + "</b>";
+            chara = "<b>" + wordPrep(person) + "</b> named <b>" + fname + "</b>";
         break;
     }
     return chara;
 }
 
+////////////////////////////////////
+// SELECTOR FUNCTIONS
+////////////////////////////////////
 // person select
 function personSelect() {
     const personList = [
@@ -3947,9 +2656,9 @@ function personSelect() {
     const personType = randomString(personList);
     const sva = svaAgree(personType);
 
-    const adj = randomString(chara.adjective);
+    const adj = randomString(adjective);
     const trait = randomString(fragments.trait);    
-    const group = randomString(chara.group);
+    const group = randomString(groups);
 
     const noun = randomString(nounPerson.singular);
     const members = randomString(nounPerson.plural);
@@ -3958,16 +2667,16 @@ function personSelect() {
     
     switch (personType) {
         case "singular 1":
-            subject = wordPrep(noun) + noun + "</b> who <b>" + trait + "</b>";
+            subject = wordPrep(noun) + "</b> who <b>" + trait + "</b>";
         break;
         case "singular 2":
-            subject = wordPrep(adj) + adj + " " + noun + "</b>";
+            subject = wordPrep(adj) + " " + noun + "</b>";
         break;
         case "plural 1":
-            subject = wordPrep(group) + group + "</b> of <b>" + members + "</b>";
+            subject = wordPrep(group) + "</b> of <b>" + members + "</b>";
         break;
         case "plural 2":
-            subject = wordPrep(adj) + adj + " " + group + "</b> of <b>" + members + "</b>";
+            subject = wordPrep(adj) + " " + group + "</b> of <b>" + members + "</b>";
         break;
     }
     return {subject, sva};
@@ -4040,98 +2749,34 @@ function methodSelect(noun, verbGer) {
     return method;
 }
 
+////////////////////////////
+//// PLOT TEMPLATES
+////////////////////////////
 // people consts
-const npcOne = [
-    "one person 1",
-    "one person 2",
-    "one person 3",
-];
-
-const npcTwo = [
-    "two people 1",
-    "two people 2",
-];
-
-const npcThree = [
-    "three people 1",
-    "three people 2",
-];
-
-const npcParty = [
-    "one person 1",
-    "one person 2",
-    "one person 3",
-    "two people 1",
-    "two people 2",
-    "three people 1",
-    "three people 2",
-];
+const npcOne = ["one person 1","one person 2","one person 3"];
+const npcTwo = ["two people 1","two people 2"];
+const npcThree = ["three people 1","three people 2"];
+const npcParty = npcOne.concat(npcTwo, npcThree);
 
 // plot template consts
-const questType = [
-    "quest 1",
-    "quest 2"
-];
+const plotType = ["plot 1","plot 2"];
+const questType = ["quest 1","quest 2"];
+const adventureType = ["adventure 1","adventure 2","adventure 3","adventure 4"];
+const storyType = plotType.concat(questType, adventureType);
 
-const adventureType = [
-    "adventure 1",
-    "adventure 2",
-    "adventure 3",
-    "adventure 4"
-];
-
-const plotType = [
-    "plot 1",
-    "plot 2"
-];
-
-const storyType = [
-    "quest 1",
-    "quest 2",
-    "adventure 1",
-    "adventure 2",
-    "adventure 3",
-    "adventure 4",
-    "plot 1",
-    "plot 2"
-];
-
-// GENERATOR FUNCTIONS
+////////////////////////////////////////////////
+//// GENERATOR FUNCTIONS
+////////////////////////////////////////////////
 // Plot Type
 function plotGen() {
     const tone = randomString(plots.tone);
     const genre = randomString(plots.genre);
 
-    const typeKeys = Object.keys(plots.type);
-    const type = randomString(typeKeys);
+    const keys = Object.keys(plots.type);
+    const type = randomString(keys);
     const term = plots.type[type];
     
-    document.querySelector(".output").innerHTML = "<p>This plot is going to be <b>" + wordPrep(tone) + " " + tone + " " + genre + " " + type + ".</b></p>" + 
-    "<p>" + term + ".</p>"
-}
-
-const plotPieces = {
-    "pbQuest": questType,
-    "pbAdventure": adventureType,
-    "pbType": plotType,
-    "charOne": npcOne,
-    "charTwo": npcTwo,
-    "charThree": npcThree
-}
-
-// picks from plot arrays based on checkboxes selected
-function checkOptions() {
-    const select = Array.from(document.getElementsByTagName("input"));
-    const options = [];
-    select.forEach(elem => {
-        var subs = elem.getAttribute("type");
-        if (subs == "checkbox" && elem.checked) {
-            var y = elem.getAttribute("id");
-            options.push(plotPieces[y]);
-        }
-    });
-    var plots = [].concat.apply([], options);
-    return plots;
+    document.querySelector(".output").innerHTML = "<p>This plot is going to be <b>" + wordPrep(tone) + " " + genre + " " + type + ".</b></p>" + "<p>" + term + ".</p>"
 }
 
 // PLOT BUILDER – the big boy :)
@@ -4139,8 +2784,9 @@ function plotCreate() {
     let story = "";
     let plotSelect = ""; // uses templates from checkboxes
     
+    // if nothing is checked, default to all
     plotSelect = randomString(checkOptions());
-    if (plotSelect === undefined) { // if nothing is checked, default to all
+    if (plotSelect === undefined) { 
         plotSelect = randomString(storyType);
     }
 
@@ -4151,16 +2797,15 @@ function plotCreate() {
     
     const tone = randomString(plots.tone);
     const genre = randomString(plots.genre);
-
-    const typeKeys = Object.keys(plots.type);
-    const type = randomString(typeKeys);
+    const keys = Object.keys(plots.type);
+    const type = randomString(keys);
     const term = plots.type[type];
 
     // nouns – groups one and two
     const nounGO = nounSelect();    
     const nounOne = nounGO[0];
     const nounSubOne = nounGO[1];
-    const condOne = nounGO[2]; // condition
+    const condOne = nounGO[2];
 
     const nounGT = nounSelect();
     const nounTwo = nounGT[0];
@@ -4170,7 +2815,7 @@ function plotCreate() {
     const verbGO = verbSelect(nounSubOne);
     const verbPresOne = verbGO.present;
     const verbGerOne = verbGO.gerund;
-    
+
     const verbGT = verbSelect(nounSubTwo);
     const verbGerTwo = verbGT.gerund;
 
@@ -4184,6 +2829,7 @@ function plotCreate() {
     const plotAction = action.action;
     const actionType = action.type;
     
+    // method select
     const plotMethod = methodSelect(nounTwo, verbGerTwo);
     
     let plotSubject = "";
@@ -4216,10 +2862,10 @@ function plotCreate() {
             story = "In this story, <b>" + plotSubject + ".</b> They are doing this <b> " + motive;
         break;
         case "plot 1":
-            story = "This is <b>" + wordPrep(tone) + " " + tone + " " + genre + "</b> story in which <b>" + plotSubject + "</b> in order to <b>" + goal + ".</b> The twist is that <b>" + twist;
+            story = "This is <b>" + wordPrep(tone) + " " + genre + "</b> story in which <b>" + plotSubject + "</b> in order to <b>" + goal + ".</b> The twist is that <b>" + twist;
         break;
         case "plot 2":
-            story = "This <b>" + type + "</b> is <b>" + wordPrep(tone) + " " + tone + " " + genre + "</b> story where <b>" + plotSubject + "</b> in order to <b>" + goal + ".</b></p>" +
+            story = "This <b>" + type + "</b> is <b>" + wordPrep(tone) + " " + genre + "</b> story where <b>" + plotSubject + "</b> in order to <b>" + goal + ".</b></p>" +
             "<p>" + term; 
         break;
         // NEXT: trying to [action thing] to [other people]
@@ -4256,10 +2902,10 @@ function adventureGen() {
     let adventureSelect = randomString(adventureType);
     let agPlot = "";
 
-    const agGoal = randomString(fragments.goal); 
-    const agPlace = randomString(quest.place);
-    const agMotive = randomString(quest.motivation); // "because"
-    const agTwist = randomString(quest.twist);
+    const goal = randomString(fragments.goal);
+    const motive = randomString(quest.motivation); // "because"
+    const twist = randomString(quest.twist);
+    const location = randomString(quest.place);
 
     // nouns – groups one and two
     const nounGO = nounSelect();    
@@ -4278,17 +2924,20 @@ function adventureGen() {
     const verbGT = verbSelect(nounSubTwo);
     const verbGerTwo = verbGT.gerund;
 
-    const person = personSelect();
-    const agPerson = person.subject;
-    const sva = person.sva;
+    // person select
+    const subject = personSelect();
+    const agPerson = subject.subject;
+    const sva = subject.sva;
 
+    // action select
     const action = actionSelect(nounOne, verbPresOne, verbGerOne);
     const agAction = action.action;
     const actionType = action.type;
 
+    // method select
     const agMethod = methodSelect(nounTwo, verbGerTwo);
+    
     let agSubject = "";
-
     if (actionType == "action 4") {
         agSubject = agPerson + " " + agAction;
     } else {
@@ -4297,18 +2946,18 @@ function adventureGen() {
 
     switch (adventureSelect) {
         case "adventure 1":
-            agPlot = "In this story, <b>" + agSubject + " " + agPlace  + ".</b></p>" + 
-            "<p>Their goal is to <b>" + agGoal + " " + agMethod + " " + agMotive + ",</b> but <b>" + agTwist;
+            agPlot = "In this story, <b>" + agSubject + " " + location  + ".</b></p>" + 
+            "<p>Their goal is to <b>" + goal + " " + agMethod + " " + motive + ",</b> but <b>" + twist;
         break;
         case "adventure 2":
-            agPlot = "This story takes place <b>" + agPlace +",</b> where <b>" + agSubject + ".</b> Their goal is to <b>" + agGoal + " " + agMethod + ".</b></p>" + 
-            "<p>They are doing this <b>" + agMotive + ",</b> but <b>" + agTwist;
+            agPlot = "This story takes place <b>" + location +",</b> where <b>" + agSubject + ".</b> Their goal is to <b>" + goal + " " + agMethod + ".</b></p>" + 
+            "<p>They are doing this <b>" + motive + ",</b> but <b>" + twist;
         break;
         case "adventure 3":
-            agPlot = "In this story, <b>" + agSubject + "</b> in order to <b>" + agGoal;
+            agPlot = "In this story, <b>" + agSubject + "</b> in order to <b>" + goal;
         break;
         case "adventure 4":
-            agPlot = "In this story, <b>" + agSubject + ".</b> They are doing this <b> " + agMotive;
+            agPlot = "In this story, <b>" + agSubject + ".</b> They are doing this <b> " + motive;
         break;
     }
     document.querySelector(".output").innerHTML = "<p>" + agPlot + ".</b></p>";
@@ -4342,29 +2991,23 @@ function npcGen() {
 
     let partyBuild = "";
     var add = ",</b> and <b>";
-    switch(partySelect) {
-        case "one person 1":
-            partyBuild = descOne;
-        break;
-        case "one person 2":
-            partyBuild = conOne;
-        break;
-        case "one person 3":
-            partyBuild = fakeOne;
-        break;
-        case "two people 1":
-            partyBuild = descOne + add + descTwo;
-        break;
-        case "two people 2":
-            partyBuild = conOne + add + conTwo;
-        break;
-        case "three people 1":
-            partyBuild = descOne + ", " + descTwo + add + descThree;
-        break;
-        case "three people 2":
-            partyBuild = catOne + ", " + catTwo + add + catThree;
-        break;        
+
+    const party = {
+        "one person 1": descOne,
+        "one person 2": conOne,
+        "one person 3": fakeOne,
+        "two people 1": descOne + add + descTwo,
+        "two people 2": conOne + add + conTwo,
+        "three people 1": descOne + ", " + descTwo + add + descThree,
+        "three people 2": catOne + ", " + catTwo + add + catThree
     }
+
+    for (const people in party) {
+        if (people == partySelect) {
+            partyBuild = party[people];
+        }
+    }
+
     document.querySelector(".output").innerHTML = "<p>Our party includes <b>" + partyBuild + ".</b></p>";
 }
 
@@ -4469,27 +3112,55 @@ function rumorGen() {
     document.querySelector(".output").innerHTML = "<p>" + source + " " + rumor + ".</b></p>";
 }
 
+//////////////////////////////
+//// CHECKBOXES AND BUTTONS
+//////////////////////////////
+const plotPieces = {
+    "pbQuest": questType,
+    "pbAdventure": adventureType,
+    "pbType": plotType,
+    "charOne": npcOne,
+    "charTwo": npcTwo,
+    "charThree": npcThree
+}
+
+// picks from plot arrays based on checkboxes selected
+function checkOptions() {
+    const select = Array.from(document.getElementsByTagName("input"));
+    const options = [];
+    select.forEach(elem => {
+        var subs = elem.getAttribute("type");
+        if (subs == "checkbox" && elem.checked) {
+            var x = elem.getAttribute("id");
+            options.push(plotPieces[x]);
+        }
+    });
+    var plots = [].concat.apply([], options);
+    return plots;
+}
+
 // gets name of parent element. use this for checkboxes for something
 function get_parent(elem) {
     var x = elem.closest(".radio-option").attributes["name"].value;
-    // console.log(x);
+    // console.log(x);    
 }
 
 // enables specific checkboxes for selected radio buttons
-function options() {
+function options() {    
     let options = Array.from(document.getElementsByClassName("radio-option"));
     options.forEach(elem => {
         const main = elem.querySelector("input[type=radio]");
-        var subs = elem.querySelectorAll("input[type=checkbox]");
+        var subs = elem.querySelectorAll("input[type=checkbox]");        
         // console.log(subs); // returns nodeList of all checkboxes
-        for (const checkbox of subs) {
+        for (const checkbox of subs) { 
             if (main.checked && checkbox.disabled) {
                 checkbox.disabled = false; // enables relevant checkboxes
             } else if (main.checked === false) {
                 checkbox.disabled = true; // disables irrelevant checkboxes
                 checkbox.checked = false; // unchecks those checkboxes
             }
-        }
+            // console.log(subs); // returns nodeList of relevant checkboxes
+        }    
     });
 }
 

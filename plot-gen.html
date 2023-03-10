@@ -37,12 +37,11 @@
                         <input type="radio" id="npcParty" name="control_panel" value="npcGen()" onclick="genSet(this)">
                         <label for="npcParty">NPC Builder</label>
                         <div class="sub1" id="npcSub">
-                            <span style="margin-left: 1.2em; color: gray;">Now Available!</span><br>
                             <input type="checkbox" id="charOne" name="control_panel" value="charOne" disabled>
                             <label for="charOne">One NPC</label><br>
                             <input type="checkbox" id="charTwo" name="control_panel" value="charTwo" disabled>
                             <label for="charTwo">Two NPCs</label><br>
-                            <input type="checkbox" id="charThree" name="control_panel" value="charThree" disabled>
+                            <input type="checkbox" id="charThree" name="control_panel" disabled>
                             <label for="charThree">Three NPCs</label>
                         </div>
                     </span>
@@ -54,7 +53,7 @@
                         <input type="radio" id="pbPlot" name="control_panel" value="plotCreate()" onclick="genSet(this)">
                         <label for="pbPlot">Plot Builder</label>
                         <div class="sub1" id="pbSub">
-                            <input type="checkbox" id="pbQuest" name="control_panel" value="pbQuest" onclick="get_parent(this)" disabled>
+                            <input type="checkbox" id="pbQuest" name="control_panel" value="pbQuest" disabled>
                             <label for="pbQuest">Fetch Quest</label><br>
                             <input type="checkbox" id="pbAdventure" name="control_panel" value="pbAdventure" disabled>
                             <label for="pbAdventure">Adventure</label><br>
@@ -73,7 +72,7 @@
 
             <div class="content">
                 <p><span class="note">Work in progress! You can still use this one, but don't be surprised if you come back and things are a little bit different :D</span> The checkboxes under Plot Builder allow you to focus on the kind of plot you want to generate. If none of the boxes are selected, it'll return any one of the plot templates available.</p>
-                <p class="note"><b>Note to self:</b> keep working on the control panel checkboxes. Update Control Panel javascript so that if you click one of the checkboxes, it selects the associated radio</p>
+                <p class="note"><b>Note to self:</b> Update Control Panel javascript so that if you click one of the checkboxes, it selects the associated radio</p>
                 <div class="prompt">
                     <span class="output" id="pb-plot"><p style="color:grey">Click the button for a plot!</p></span>
                 </div>
