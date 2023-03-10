@@ -19,7 +19,7 @@
                         <li><a href="adventure-gen.html">Adventure Generator</a></li>
                         <li><a href="npc-builder.html">NPC Builder</a></li>
                         <li><a href="rumors.html">Rumors</a></li>
-                        <li><a href="plot-gen.html">Plot Builder</a></li>
+                        <li><a class="active" href="plot-gen.html">Plot Builder</a></li>
                     </ul>  
                 </div>
             </nav>
@@ -53,12 +53,12 @@
                         <input type="radio" id="pbPlot" name="control_panel" value="plotCreate()" onclick="genSet(this)">
                         <label for="pbPlot">Plot Builder</label>
                         <div class="sub1" id="pbSub">
+                            <input type="checkbox" id="pbType" name="control_panel" value="pbType" disabled>
+                            <label for="pbType">Plot Type</label><br>
                             <input type="checkbox" id="pbQuest" name="control_panel" value="pbQuest" disabled>
                             <label for="pbQuest">Fetch Quest</label><br>
                             <input type="checkbox" id="pbAdventure" name="control_panel" value="pbAdventure" disabled>
                             <label for="pbAdventure">Adventure</label><br>
-                            <input type="checkbox" id="pbType" name="control_panel" value="pbType" disabled>
-                            <label for="pbType">Plot Type</label>
                         </div>
                     </span>
                     <div class="control-button">

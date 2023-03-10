@@ -2646,106 +2646,69 @@ function charaSelect() {
 ////////////////////////////////////
 // person select
 function personSelect() {
-    const personList = [
-        "singular 1",
-        "singular 2",
-        "plural 1",
-        "plural 2"
-    ];
-    
-    const personType = randomString(personList);
-    const sva = svaAgree(personType);
-
     const adj = randomString(adjective);
     const trait = randomString(fragments.trait);    
     const group = randomString(groups);
-
-    const noun = randomString(nounPerson.singular);
     const members = randomString(nounPerson.plural);
-    
-    let subject = "";
-    
-    switch (personType) {
-        case "singular 1":
-            subject = wordPrep(noun) + "</b> who <b>" + trait + "</b>";
-        break;
-        case "singular 2":
-            subject = wordPrep(adj) + " " + noun + "</b>";
-        break;
-        case "plural 1":
-            subject = wordPrep(group) + "</b> of <b>" + members + "</b>";
-        break;
-        case "plural 2":
-            subject = wordPrep(adj) + " " + group + "</b> of <b>" + members + "</b>";
-        break;
+    const noun = randomString(nounPerson.singular);    
+    const personList = {
+        "singular 1": wordPrep(noun) + "</b> who <b>" + trait + "</b>",
+        "singular 2": wordPrep(adj) + " " + noun + "</b>",
+        "plural 1": wordPrep(group) + "</b> of <b>" + members + "</b>",
+        "plural 2": wordPrep(adj) + " " + group + "</b> of <b>" + members + "</b>"
     }
+
+    const keys = Object.keys(personList);
+    const type = randomString(keys);
+    const subject = personList[type];
+    const sva = svaAgree(type);    
     return {subject, sva};
 }
 
 // action select
 function actionSelect(noun, verbPres, verbGer) { 
     // add to rumors
-    const actionList = [ 
-        "action 1",
-        "action 2",
-        "action 3",
-        "action 4"
-    ];
-
-    const type = randomString(actionList);
     const fragment = randomString(fragments.action);
     const verbContPres = randomString(verbCont.present);
     const verbContGer = randomString(verbCont.gerund);
-    let action = "";
-
-    switch (type) {
-        case "action 1": //pre-existing action
-            action = "<b>" + fragment;
-        break;
-        case "action 2": //[verb]ing [noun]
-            action = "<b>" + verbGer + " " + noun;
-        break;
-        case "action 3": //[continuous] to [verb] [noun]
-            action = "<b>" + verbContGer + " " + verbPres + " " + noun;
-        break;        
-        case "action 4": //[try] to [verb] [noun]
-            action = "<b>" + verbContPres + " " + verbPres + " " + noun + "</b>";
-        break;
+    const actionList = {        
+        "action 1": "<b>" + fragment, //pre-existing action        
+        "action 2": "<b>" + verbGer + " " + noun, //[verb]ing [noun]        
+        "action 3": "<b>" + verbContGer + " " + verbPres + " " + noun, //[continuous] to [verb] [noun]        
+        "action 4": "<b>" + verbContPres + " " + verbPres + " " + noun + "</b>" //[try] to [verb] [noun]
     }
+
+    const keys = Object.keys(actionList);
+    const type = randomString(keys);
+    const action = actionList[type];
     return {action, type};
+}
+
+// subject assist
+function subjectCheck(select, person, sva, action) {
+    if (select == "action 4") {
+        subject = person + " " + action;
+    } else {
+        subject = person + " " + sva + " " + action;
+    }
+    return subject;
 }
 
 // method select
 function methodSelect(noun, verbGer) { 
-    const methodList = [
-        "method 1",
-        "method 2",
-        "method 3",
-        "method 4",
-        "method 5"
-    ];
-
-    const methodType = randomString(methodList);
     const fragment = randomString(fragments.means);
-    let method = "";
-
-    switch (methodType) {
-        case "method 1":
-            method = fragment;
-        break;
-        case "method 2":
-            method = "</b>" + "using <b>" + noun;
-        break;
-        case "method 3":
-            method = "</b>" + "with <b>" + noun;
-        break;
-        case "method 4":
-            method = "</b>" + "with the help of <b>" + noun;
-        break;
-        case "method 5": //[action] by [gerund] [noun]
-            method = "</b>" + "by <b>" + verbGer + " " + noun;
-        break;
+    const methodList = {
+        "method 1": fragment,
+        "method 2": "</b>" + "using <b>" + noun,
+        "method 3": "</b>" + "with <b>" + noun,
+        "method 4": "</b>" + "with the help of <b>" + noun, 
+        // [action] by [gerund] [action]
+        "method 5": "</b>" + "by <b>" + verbGer + " " + noun 
     }
+
+    const keys = Object.keys(methodList);
+    const type = randomString(keys);
+    const method = methodList[type];
     return method;
 }
 
@@ -2764,9 +2727,12 @@ const questType = ["quest 1","quest 2"];
 const adventureType = ["adventure 1","adventure 2","adventure 3","adventure 4"];
 const storyType = plotType.concat(questType, adventureType);
 
-////////////////////////////////////////////////
+// rumor templates
+const rumorType = ["rumor 1","rumor 2","rumor 3","rumor 4","rumor 5","rumor 6","rumor 7","rumor 8","rumor 9","rumor 10","rumor 11","rumor 12"];
+
+///////////////////////////////
 //// GENERATOR FUNCTIONS
-////////////////////////////////////////////////
+///////////////////////////////
 // Plot Type
 function plotGen() {
     const tone = randomString(plots.tone);
@@ -2829,47 +2795,28 @@ function plotCreate() {
     const plotAction = action.action;
     const actionType = action.type;
     
-    // method select
     const plotMethod = methodSelect(nounTwo, verbGerTwo);
-    
-    let plotSubject = "";
-    if (actionType == "action 4") {
-        plotSubject = plotPerson + " " + plotAction;
-    } else {
-        plotSubject = plotPerson + " " + sva + " " + plotAction;
+    const plotSubject = subjectCheck(actionType, plotPerson, sva, plotAction);
+
+    // NEXT: trying to [action thing] to [other people]
+    const stories = {
+        "plot 1": "This is <b>" + wordPrep(tone) + " " + genre + "</b> story in which <b>" + plotSubject + "</b> in order to <b>" + goal + ".</b> The twist is that <b>" + twist,
+        "plot 2": "This <b>" + type + "</b> is <b>" + wordPrep(tone) + " " + genre + "</b> story where <b>" + plotSubject + "</b> in order to <b>" + goal + ".</b></p>" +
+        "<p>" + term,
+        "quest 1": "The party is looking for <b>" + nounOne + "</b> that <b>" + condOne + ".</b> They are looking for this <b>" + motive + ",</b> but the thing is that <b>" + twist,
+        "quest 2": "The party is looking for <b>" + nounOne + "</b> that <b>" + condOne + "</b> in order to <b>" + goal + ".</b></p>" + "<p>They want this <b>" + motive + ",</b> but what they haven't realized yet is that <b>" + twist,
+        "adventure 1": "In this story, <b>" + plotSubject + " " + location  + ".</b></p>" + "<p>Their goal is to <b>" + goal + " " + plotMethod + " " + motive + ",</b> but <b>" + twist,
+        "adventure 2": "In this story, <b>" + plotSubject + "</b> in order to <b>" + goal,
+        "adventure 3": "In this story, <b>" + plotSubject + ".</b> They are doing this <b> " + motive,
+        "adventure 4": "This story takes place <b>" + location +",</b> where <b>" + plotSubject + ".</b> Their goal is to <b>" + goal + " " + plotMethod + ".</b></p>" + "<p>They are doing this <b>" + motive + ",</b> but <b>" + twist,
     }
 
-    switch(plotSelect) {
-        case "quest 1":
-            story = "The party is looking for <b>" + nounOne + "</b> that <b>" + condOne + ".</b> They are looking for this <b>" + motive + ",</b> but the thing is that <b>" + twist;
-        break;
-        case "quest 2":
-            story = "The party is looking for <b>" + nounOne + "</b> that <b>" + condOne + "</b> in order to <b>" + goal + ".</b></p>" + 
-            "<p>They want this <b>" + motive + ",</b> but what they haven't realized yet is that <b>" + twist;
-        break;
-        case "adventure 1":
-            story = "In this story, <b>" + plotSubject + " " + location  + ".</b></p>" + 
-            "<p>Their goal is to <b>" + goal + " " + plotMethod + " " + motive + ",</b> but <b>" + twist;
-        break;
-        case "adventure 2":
-            story = "This story takes place <b>" + location +",</b> where <b>" + plotSubject + ".</b> Their goal is to <b>" + goal + " " + plotMethod + ".</b></p>" + 
-            "<p>They are doing this <b>" + motive + ",</b> but <b>" + twist;
-        break;
-        case "adventure 3":
-            story = "In this story, <b>" + plotSubject + "</b> in order to <b>" + goal;
-        break;
-        case "adventure 4":
-            story = "In this story, <b>" + plotSubject + ".</b> They are doing this <b> " + motive;
-        break;
-        case "plot 1":
-            story = "This is <b>" + wordPrep(tone) + " " + genre + "</b> story in which <b>" + plotSubject + "</b> in order to <b>" + goal + ".</b> The twist is that <b>" + twist;
-        break;
-        case "plot 2":
-            story = "This <b>" + type + "</b> is <b>" + wordPrep(tone) + " " + genre + "</b> story where <b>" + plotSubject + "</b> in order to <b>" + goal + ".</b></p>" +
-            "<p>" + term; 
-        break;
-        // NEXT: trying to [action thing] to [other people]
+    for (const plot in stories) {
+        if (plot == plotSelect) {
+            story = stories[plot];
+        }
     }
+
     document.querySelector(".output").innerHTML = "<p>" + story + ".</b></p>";
 }
 
@@ -2886,14 +2833,17 @@ function questGen() {
     const motive = randomString(quest.motivation);
     const twist = randomString(quest.twist);
 
-    switch(questSelect) {
-        case "quest 1":
-            storyQuest = "The party is looking for <b>" + item + "</b> that <b>" + condition + ".</b> They are looking for this <b>" + motive + ",</b> but the thing is that <b>" + twist;
-        break;
-        case "quest 2":
-            storyQuest = "The party is looking for <b>" + item + "</b> that <b>" + condition + "</b> in order to <b>" + goal + ".</b> They want this <b>" + motive + ",</b> but what they haven't realized yet is that <b>" + twist;
-        break;
+    const quests = {
+        "quest 1": "The party is looking for <b>" + item + "</b> that <b>" + condition + ".</b> They are looking for this <b>" + motive + ",</b> but the thing is that <b>" + twist,
+        "quest 2": "The party is looking for <b>" + item + "</b> that <b>" + condition + "</b> in order to <b>" + goal + ".</b> They want this <b>" + motive + ",</b> but what they haven't realized yet is that <b>" + twist
     }
+
+    for (const story in quests) {
+        if (story == questSelect) {
+            storyQuest = quests[story];
+        }
+    }
+
     document.querySelector(".output").innerHTML = "<p>" + storyQuest + ".</b></p>";
 }
 
@@ -2934,32 +2884,22 @@ function adventureGen() {
     const agAction = action.action;
     const actionType = action.type;
 
-    // method select
-    const agMethod = methodSelect(nounTwo, verbGerTwo);
-    
-    let agSubject = "";
-    if (actionType == "action 4") {
-        agSubject = agPerson + " " + agAction;
-    } else {
-        agSubject = agPerson + " " + sva + " " + agAction;
+    const agMethod = methodSelect(nounTwo, verbGerTwo);    
+    const agSubject = subjectCheck(actionType, agPerson, sva, agAction);
+
+    const adventures = {
+        "adventure 1": "In this story, <b>" + agSubject + " " + location  + ".</b></p>" + "<p>Their goal is to <b>" + goal + " " + agMethod + " " + motive + ",</b> but <b>" + twist,
+        "adventure 2": "In this story, <b>" + agSubject + "</b> in order to <b>" + goal,
+        "adventure 3": "In this story, <b>" + agSubject + ".</b> They are doing this <b> " + motive,
+        "adventure 4": "This story takes place <b>" + location +",</b> where <b>" + agSubject + ".</b> Their goal is to <b>" + goal + " " + agMethod + ".</b></p>" + "<p>They are doing this <b>" + motive + ",</b> but <b>" + twist,
     }
 
-    switch (adventureSelect) {
-        case "adventure 1":
-            agPlot = "In this story, <b>" + agSubject + " " + location  + ".</b></p>" + 
-            "<p>Their goal is to <b>" + goal + " " + agMethod + " " + motive + ",</b> but <b>" + twist;
-        break;
-        case "adventure 2":
-            agPlot = "This story takes place <b>" + location +",</b> where <b>" + agSubject + ".</b> Their goal is to <b>" + goal + " " + agMethod + ".</b></p>" + 
-            "<p>They are doing this <b>" + motive + ",</b> but <b>" + twist;
-        break;
-        case "adventure 3":
-            agPlot = "In this story, <b>" + agSubject + "</b> in order to <b>" + goal;
-        break;
-        case "adventure 4":
-            agPlot = "In this story, <b>" + agSubject + ".</b> They are doing this <b> " + motive;
-        break;
+    for (const story in adventures) {
+        if (story == adventureSelect) {
+            agPlot = adventures[story];
+        }
     }
+
     document.querySelector(".output").innerHTML = "<p>" + agPlot + ".</b></p>";
 }
 
@@ -3011,41 +2951,17 @@ function npcGen() {
     document.querySelector(".output").innerHTML = "<p>Our party includes <b>" + partyBuild + ".</b></p>";
 }
 
-// Rumors
-const rumorType = [
-    "rumor 1",
-    "rumor 2",
-    "rumor 3",
-    "rumor 4",
-    "rumor 5",
-    "rumor 6",
-    "rumor 7",
-    "rumor 8",
-    "rumor 9",
-    "rumor 10",
-    "rumor 11",
-    "rumor 12"
-];
-
 // TOWN GOSSIP TEMPLATE
-// Can probably do
-// 1x Cards - Material Property
-    // [material] can do [property]
-// 1x Cards - NPC Lore
-    // [NPC] is [blank]
-// 1x Cards - Monster Stat Clue
-    // [monster] can do [thing]
-// Can't really do
-// 1x Cards - Town Battle Clue
-// 1x Cards - Main Plot Clue
-// 2x Cards - Future Plot Seed
-// 3x Cards - Anytime Plot Clue
+// Material Property – [material] can do [property]
+// Monster Stat Clue – [monster] can do [thing]
+// NPC Lore – [NPC] is [blank]
 function rumorGen() {
     let rumorSelect = randomString(rumorType);
     let rumor = "";
 
-    const personOne = charaSelect();
-    const personTwo = charaSelect();
+    const charOne = charaSelect();
+    const charTwo = charaSelect();
+    const nounPers = randomString(nounPerson.singular);
 
     const noun = nounSelect();
     const item = noun[0];
@@ -3062,53 +2978,28 @@ function rumorGen() {
     const source = randomString(fragments.source);
     const monster = randomString(monsters);
     const trait = randomString(fragments.trait);
-    const nounPers = randomString(nounPerson.singular);
-    
-    // switches out rumor template
-    switch (rumorSelect) {
-        // has
-        case "rumor 1":
-            rumor = personOne + " has <b>" + item + "</b> that <b>" + condition;
-        break;
-        // is looking for
-        case "rumor 2":
-            rumor = personOne + " is looking for <b>" + item + "</b> that <b>" + condition;
-        break;
-        case "rumor 3":
-            rumor = personOne + " is looking for <b>" + item;
-        break;
-        case "rumor 4":
-            rumor = personOne + " is looking for some help with something";
-        break;
-        // was seen
-        case "rumor 5":
-            rumor =  personOne + " was seen <b>" + accuse;
-        break;
-        case "rumor 6":
-            rumor = personOne + " was seen <b>" + accuse + "</b> with <b>" + personTwo;
-        break;
-        // was asking around for
-        case "rumor 7":
-            rumor = personOne + " was asking around for <b>" + nounPers;
-        break;
-        case "rumor 8":
-            rumor = personOne + " was asking around for someone who <b>" + trait;
-        break;
-        case "rumor 9":
-            rumor = personOne + " was asking around for <b>" + personTwo;
-        break;
-        // is
-        case "rumor 10":
-            rumor = personOne + " <b>" + trait;
-        break;
-        case "rumor 11":
-            rumor = personOne + " is <b>" + nounPers;
-        break;
-        // other
-        case "rumor 12":
-            rumor = personOne + " they may be upping woodland patrols due to a rise in the number of <b>" + monster;
-        break;
+
+    const rumors = {
+        "rumor 1": charOne + " has <b>" + item + "</b> that <b>" + condition,
+        "rumor 2": charOne + " is looking for <b>" + item + "</b> that <b>" + condition,
+        "rumor 3": charOne + " is looking for <b>" + item,
+        "rumor 4": charOne + " is looking for some help with something",
+        "rumor 5": charOne + " was seen <b>" + accuse,
+        "rumor 6": charOne + " was seen <b>" + accuse + "</b> with <b>" + charTwo,
+        "rumor 7": charOne + " was asking around for <b>" + nounPers,
+        "rumor 8": charOne + " was asking around for someone who <b>" + trait,
+        "rumor 9": charOne + " was asking around for <b>" + charTwo,
+        "rumor 10": charOne + " <b>" + trait,
+        "rumor 11": charOne + " is <b>" + nounPers,
+        "rumor 12": charOne + " they may be upping woodland patrols due to a rise in the number of <b>" + monster
     }
+
+    for (const gossip in rumors) {
+        if (gossip == rumorSelect) {
+            rumor = rumors[gossip];
+        }
+    }
+
     document.querySelector(".output").innerHTML = "<p>" + source + " " + rumor + ".</b></p>";
 }
 

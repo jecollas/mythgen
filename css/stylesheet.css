@@ -26,8 +26,13 @@ header a {
     color: #EFE5F2;
 }
 
-header h1 a,
-header a:active {
+header a.active {
+    color: #FFFFFF;
+    font-weight: bold;
+    /* font-size: 1.1em; */
+}
+
+header h1 a {
     color: #FFFFFF;
 }
 
@@ -69,19 +74,34 @@ button {
     flex-direction: row;
 }
 
+.row .side {
+    flex: 15%;
+}
 .row .control {
     flex: 15%;
     flex-basis: 15%;
 }
 
 .row .content {
-    flex: 70%;
+    flex: 85%;
 }
 
+.side,
 .control,
 .content {
     margin: 1em 1.5em;
     max-width: 95%;
+}
+
+.side p {
+    margin: 0.5em 0;
+}
+
+.side ul,
+.side li {
+    padding: 0;
+    margin-top: 0;
+    margin-left: 0.75em;
 }
 
 .content p {
