@@ -582,13 +582,13 @@ const characters = {
 
 const verbs = {
     person: [
-        "kill","bribe","summon","transport","torture","gather","curse","attack","assassinate","kidnap","marry","blackmail","dishonor","protect","unleash","destroy","escort","search for","trick","manipulate","impersonate","flee from","terrorize","embarrass","recruit","murder","coerce","catfish","defeat","worship","ally themselves with","bring low","win against","topple","pay","slaughter","awaken","write to","flee with","look for","tax","control","incite","prey on","drown","starve","proselytize","declare war on","play with","overthrow","make fun of","join","negotiate with","renegotiate with","appease","stick it to","enslave","fight against","become","lie to","cull","eliminate","cure","convert","conquer","dupe","challenge","wage war on","stifle","organize","sail","capture","cheat","propagate","perform for","sabotage","look for","abuse","impede","hinder","disfigure","forage","hide","seek","blockade","discover","raise","glean","keep","sacrifice","shirk","stir up","invoke","build up","secure","deny","resurrect","over-run","defile","slow","disguise","restore","get","daydream about","get involved with","betray","bind","bring back","bring","burn","catch","change","end","escape","expose","extinguish","find","form","free","heal","hold","locate","reset","revive","save","shame","turn back","unite","fulfill","banish","gain","show the inferiority of","crash","conspire with","make fun of"
+        "kill","bribe","summon","transport","torture","gather","curse","attack","assassinate","kidnap","marry","blackmail","dishonor","protect","unleash","destroy","escort","search for","trick","manipulate","impersonate","flee from","terrorize","embarrass","recruit","murder","coerce","catfish","defeat","worship","ally themselves with","bring low","win against","topple","pay","slaughter","awaken","write to","flee with","look for","tax","control","incite","prey on","drown","starve","proselytize","declare war on","play with","overthrow","make fun of","join","negotiate with","renegotiate with","appease","stick it to","enslave","fight against","become","lie to","cull","eliminate","cure","convert","conquer","dupe","challenge","wage war on","stifle","organize","sail","capture","cheat","propagate","perform for","sabotage","look for","abuse","impede","hinder","disfigure","forage","hide","seek","blockade","discover","raise","glean","keep","sacrifice","shirk","stir up","invoke","build up","secure","deny","resurrect","over-run","defile","slow","disguise","restore","get","daydream about","get involved with","betray","bind","bring back","bring","burn","catch","change","end","escape","expose","extinguish","find","form","free","heal","hold","locate","reset","revive","save","shame","turn back","unite","fulfill","banish","gain","show the inferiority of","crash","conspire with","make fun of","mimic"
     ],
     place: [
         "explore","curse","attack","travel to","protect","nap in","rob","destroy","search for","flee from","invade","terrorize","ally themselves with","topple","camp in","look for","tax","raze","control","picket","declare war on","expand","found","open","join","establish","implode","conquer","clear","wage war on","return to","sneak around","organize","build","capture","perform for","look for","disfigure","forage","hide","seek","blockade","discover","raise","glean","keep","sacrifice","shirk","stir up","invoke","build up","secure","deny","resurrect","over-run","defile","slow","disguise","restore","get","daydream about","get involved with","betray","bind","bring back","bring","burn","catch","change","end","escape","expose","extinguish","find","form","free","heal","hold","locate","reset","revive","save","shame","turn back","unite","fulfill","banish","gain","show the inferiority of","crash","squat in"
     ],
     thing: [
-        "kill","summon","transport","steal","torture","hunt","gather","curse","enchant","disable","create","protect","unleash","destroy","escort","search for","earn","corner the market in","acquire","pay for","undo","complete","avert","flee with","look for","cause","sell","play with","make fun of","negotiate for","renegotiate for","make substantial profits on","erase","fake","clear","plan for","invest in","invest suspiciously heavily in","paint","excavate","deflect","quest for","vandalize","claim","make","take","break","eat","return","prove","start","shake","organize","request","propogate","look for","pass on","disfigure","forage","hide","seek","blockade","discover","raise","glean","keep","sacrifice","shirk","stir up","invoke","build up","secure","deny","resurrect","over-run","defile","slow","disguise","restore","get","daydream about","get involved with","betray","bring back","bring","burn","catch","change","end","escape","expose","extinguish","find","form","free","heal","hold","locate","reset","revive","save","shame","turn back","unite","fulfill","banish","gain","show the inferiority of","crash",
+        "kill","summon","transport","steal","torture","hunt","gather","curse","enchant","disable","create","protect","unleash","destroy","escort","search for","earn","corner the market in","acquire","pay for","undo","complete","avert","flee with","look for","cause","sell","play with","make fun of","negotiate for","renegotiate for","make substantial profits on","erase","fake","clear","plan for","invest in","invest suspiciously heavily in","paint","excavate","deflect","quest for","vandalize","claim","make","take","break","eat","return","prove","start","shake","organize","request","propogate","look for","pass on","disfigure","forage","hide","seek","blockade","discover","raise","glean","keep","sacrifice","shirk","stir up","invoke","build up","secure","deny","resurrect","over-run","defile","slow","disguise","restore","get","daydream about","get involved with","betray","bring back","bring","burn","catch","change","end","escape","expose","extinguish","find","form","free","heal","hold","locate","reset","revive","save","shame","turn back","unite","fulfill","banish","gain","show the inferiority of","crash","traffic"
     ],
     concept: [
         "sow","spread","delay","plan for","impede","seek","raise","glean","keep","sacrifice","shirk","stir up","invoke","build up","secure","deny","defile","slow","disguise","restore","get","daydream about","bring back","bring","change","end","escape","expose","extinguish","find","form","hold","turn back","gain","show the inferiority of",
@@ -596,7 +596,7 @@ const verbs = {
     continuous: [
         "tries to","attempts to","pretends to","plans to","intends to","wants to","needs to","threatens to"
     ],
-    other: [
+    other: [ // not being used
         "being framed for","finally"
     ]
 }
@@ -916,7 +916,6 @@ const traitMake = {
     ]
 }
 
-// something something 
 // where fragments go after I tear them apart like confetti
 const fragments = {
     trait: [ // character traits
@@ -1565,33 +1564,43 @@ function svaAgree(sva) {
 /////////////////
 //// GERUNDS
 /////////////////
-const endConsonant = ["b","d","l","m","n","p","r","t"];
-const penultVowel = ["a","e","i","o","u"];
-const endExcept = ["ai","de","ea","ee","ga","he","ke","mo","ne","no","oi","te","ue","ui","ve",];
+// adds double letter
+function doubleLetter(word) {
+    const consonant = ["b","d","l","m","n","p","r","t"];
+    const vowel = ["a","e","i","o","u"];
+    const exceptions = ["ai","de","ea","ee","ga","he","ke","mo","ne","no","oi","te","ue","ui","ve",];
+    
+    var lastLetter = word.charAt(word.length-1);
+    var beforeLast = word.charAt(word.length-2);
+    var twoBeforeLast = word.charAt(word.length-3) + beforeLast;
 
-function doubleLetter (word) {
-    var lastLetter = word.charAt(word.length-1); // last letter
-    var beforeLast = word.charAt(word.length-2); // letter before last
-    var twoBeforeLast = word.charAt(word.length-3) + beforeLast; // two before last
-
-    if (endConsonant.includes(lastLetter) && penultVowel.includes(beforeLast) && !endExcept.includes(twoBeforeLast)) {
+    if (consonant.includes(lastLetter) && vowel.includes(beforeLast) && !exceptions.includes(twoBeforeLast)) {
         word += lastLetter;
     }
     return word;
 }
 
-function letterCheck(word) {
-    word = doubleLetter(word);
-    if (word.endsWith("ie")) {
+// changes "c" to "ck", "ie" to "y", and removes silent "e"
+function letterChange(word) {
+    if (word.endsWith("c")) {
+        word += "k";
+    } else if (word.endsWith("ie")) {
         word = word.substring(0, word.length - 2);
         word += "y";
-    } else if (word.endsWith("e") && !word.endsWith("ee")) {
+    } else if (word.endsWith("e") && !["ee","oe","ye"].some(elem => word.endsWith(elem))) {
         word = word.substring(0, word.length - 1);
     }
     return word;
 }
 
-function wordGer(word) { // gerunds for 
+// checks through special rules for adding -ing to the end of a verb
+function letterCheck(word) {
+    word = doubleLetter(word);
+    word = letterChange(word);
+    return word;
+}
+
+function wordGer(word) { // present verbs
     if (word.includes(" ")) {
         var space = word.search(" ");
         var verb = word.slice(0, space);
@@ -1604,7 +1613,7 @@ function wordGer(word) { // gerunds for
     return word;
 }
 
-function contGer(word) {
+function contGer(word) { // continuous verbs
     var space = word.search(" ");
     var verb = word.slice(0, space);
     var phrase = word.slice(space);
@@ -1658,7 +1667,9 @@ function nounSelect() {
     const select = randomString(subtype); // noun from that array
 
     // plural or singular? also, concepts don't get a preposition
-    if (type == plural || (subtype == nounConcept.singular || subtype == nounConcept.plural)) {
+    if (type == plural
+        //  || (subtype == nounConcept.singular || subtype == nounConcept.plural)
+         ) {
         noun = select;
         condition = randomString(property.plural);
     } else if (type == singular) {
@@ -1834,6 +1845,7 @@ function plotCreate() {
     
     const tone = randomString(plots.tone);
     const genre = randomString(plots.genre);
+    
     const keys = Object.keys(plots.type);
     const type = randomString(keys);
     const term = plots.type[type];
@@ -2054,25 +2066,29 @@ function rumorGen() {
     const present = verb.present;
     const gerund = verb.gerund;
 
-    const action = actionSelect(item, present, gerund);
+    // action should NOT be "action 4"
+    let action = actionSelect(item, present, gerund);
     const accuse = action.action;
+    // const accuseType = action.type;
 
     const source = randomString(fragments.source);
     const monster = randomString(monsters);
     const trait = randomString(fragments.trait);
 
+    // note: subject-verb agreement between item and condition
     const rumors = {
         "rumor 1": charOne + " has <b>" + item + "</b> that <b>" + condition,
         "rumor 2": charOne + " is looking for <b>" + item + "</b> that <b>" + condition,
         "rumor 3": charOne + " is looking for <b>" + item,
         "rumor 4": charOne + " is looking for some help with something",
-        "rumor 5": charOne + " was seen <b>" + accuse,
-        "rumor 6": charOne + " was seen <b>" + accuse + "</b> with <b>" + charTwo,
-        "rumor 7": charOne + " was asking around for <b>" + nounPers,
+        // "rumor 5": charOne + " was seen <b>" + accuse,
+        "rumor 5": charOne + " is " + accuse, //smth with the b tags
+        "rumor 6": charOne + " was seen " + accuse + "</b> with <b>" + charTwo,
+        "rumor 7": charOne + " was asking around for <b>" + wordPrep(nounPers),
         "rumor 8": charOne + " was asking around for someone who <b>" + trait,
         "rumor 9": charOne + " was asking around for <b>" + charTwo,
         "rumor 10": charOne + " <b>" + trait,
-        "rumor 11": charOne + " is <b>" + nounPers,
+        "rumor 11": charOne + " is <b>" + wordPrep(nounPers),
         "rumor 12": charOne + " they may be upping woodland patrols due to a rise in the number of <b>" + monster
     }
 
@@ -2113,10 +2129,10 @@ function checkOptions() {
 }
 
 // gets name of parent element. use this for checkboxes for something
-function get_parent(elem) {
-    var x = elem.closest(".radio-option").attributes["name"].value;
+// function get_parent(elem) {
+    // var x = elem.closest(".radio-option").attributes["name"].value;
     // console.log(x);    
-}
+// }
 
 // enables specific checkboxes for selected radio buttons
 function options() {    
