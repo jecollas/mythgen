@@ -165,7 +165,7 @@ const quest = {
         "because they want to start a war",
         "because they were groomed for this since childhood",
         "to gain glory in the afterlife",
-        "because they serve a demon lord",
+        "because they serve a dark lord",
         "because they wish to unleash the titans",
         "because of peer pressure",
         "to achieve communion with a spiritual manifestation outside of this world",
@@ -593,26 +593,21 @@ const verbs = {
     concept: [
         "sow","spread","delay","plan for","impede","seek","raise","glean","keep","sacrifice","shirk","stir up","invoke","build up","secure","deny","defile","slow","disguise","restore","get","daydream about","bring back","bring","change","end","escape","expose","extinguish","find","form","hold","turn back","gain","show the inferiority of",
     ],
-    continuous: {
-        present: [
-            "tries to","attempts to","pretends to","plans to","intends to","wants to","needs to","threatens to","finally"
-        ],
-        gerund: [
-            "trying to","attempting to","pretending to","planning to","threatening to","finally"
-        ],
-        other: [
-            "being framed for"
-        ]
-    }
+    continuous: [
+        "tries to","attempts to","pretends to","plans to","intends to","wants to","needs to","threatens to"
+    ],
+    other: [
+        "being framed for","finally"
+    ]
 }
 
 const nouns = {
     person: {
         singular: [
-            "king","chosen one","princess","empress","constable","mayor","Serpent God","local authority","little bitch","person of authority","demon","lost loved one","cleric","divinity","rival","local noble","vampire","king","forgotten god","knight","monster","forgotten divinity","vampire lord","demoness","slayer","dragon","peasant girl","peasant boy","young boy","young girl","lad","lass","fruit-seller","gem merchant","sellsword","nomad","knight","gentleman thief","gentlewoman thief","soldier","monk","sorceror","enchanter","witch","warlock","warrior","mage","outlaw","ruffian","brigand","pickpocket","thief","woodsman","warlord","page","squire","troubadour","empress","emperor","noblewoman","nobleman","lord","lady","prince","princess","diplomat","monsterologist","swordmaster","apprentice","assassin-in-training","enchantress-in-training","summoner-in-training","witch-in-training","necromancer-in-training","prophet-in-training","sorceror-in-training","ogre","dragon","centaur","charlatan","vampire","genie","troll","dale elf","deep elf","dwarf","goblin","half elf","high elf","human","suhk","wildren","alchemist","artificer","bard","cleric","druid","fighter","paladin","ranger","rogue","runesmith","wizard","coalescer","excavator","harvester","logger","skinner","farmer","hunter","lumberjack","miner","panner","butcher","carpenter","gemcutter","glassmaker","papermaker","smelter","tanner","weaver","architect","blacksmith","brewer","chef","glassblower","lapidary","leatherworker","tailor","trapmaker","woodworker","appraiser","laborer","mender","eccentric candyman","retail employee","werewolf","feral child","snake-oil salesman","influencer","cowboy","pirate","rat","child psychologist","ghost hunter","archivist","creature","demolitions expert","goose","duelist","dog","construct","landlord","celebrity chef","village idiot","old guy","old lady","tax-evader","draft dodger","pyrotechnician","arsonist","professional arsonist","retired assassin","goth","clown","doctor","lawyer","con artist","grifter","lad in a fancy suit","hot girl","hot guy","hot person","malewife","entity","absent father","war criminal","shitty wizard","conspiracy theorist","adrenaline junkie","time traveler","Italian","asshole","deadbeat dad","deadbeat mom","deadbeat parent","deadbeat","Little League coach","mobster","grad student","librarian","researcher","research assistant","entomologist","butch lesbian","dancer","singer","musician","historian","private investigator","detective","comedian","person","pro-wrestler","furry","girl","boy","candyman","retail employee","child","psychologist","guy","lad in a fancy suit","father","mother","dad","mom","parent","lesbian","idiot","raging anti-capitalist","CEO","union buster","dudebro","pharaoh","saber","archer","lancer","caster","rider","assassin","berserker","heroic spirit"
+            "king","chosen one","princess","empress","constable","mayor","Serpent God","local authority","little bitch","person of authority","lost loved one","cleric","divinity","rival","local noble","vampire","king","forgotten god","knight","monster","forgotten divinity","vampire lord","slayer","dragon","peasant girl","peasant boy","young boy","young girl","lad","lass","fruit-seller","gem merchant","sellsword","nomad","knight","gentleman thief","gentlewoman thief","soldier","monk","sorceror","enchanter","witch","warlock","warrior","mage","outlaw","ruffian","brigand","pickpocket","thief","woodsman","warlord","page","squire","troubadour","empress","emperor","noblewoman","nobleman","lord","lady","prince","princess","diplomat","monsterologist","swordmaster","apprentice","assassin-in-training","enchantress-in-training","summoner-in-training","witch-in-training","necromancer-in-training","prophet-in-training","sorceror-in-training","ogre","dragon","centaur","charlatan","vampire","genie","troll","dale elf","deep elf","dwarf","goblin","half elf","high elf","human","suhk","wildren","alchemist","artificer","bard","cleric","druid","fighter","paladin","ranger","rogue","runesmith","wizard","coalescer","excavator","harvester","logger","skinner","farmer","hunter","lumberjack","miner","panner","butcher","carpenter","gemcutter","glassmaker","papermaker","smelter","tanner","weaver","architect","blacksmith","brewer","chef","glassblower","lapidary","leatherworker","tailor","trapmaker","woodworker","appraiser","laborer","mender","eccentric candyman","retail employee","werewolf","feral child","snake-oil salesman","influencer","cowboy","pirate","rat","child psychologist","ghost hunter","archivist","creature","demolitions expert","goose","duelist","dog","construct","landlord","celebrity chef","village idiot","old guy","old lady","tax-evader","draft dodger","pyrotechnician","arsonist","professional arsonist","retired assassin","goth","clown","doctor","lawyer","con artist","grifter","lad in a fancy suit","hot girl","hot guy","hot person","malewife","entity","absent father","war criminal","shitty wizard","conspiracy theorist","adrenaline junkie","Italian","asshole","deadbeat dad","deadbeat mom","deadbeat parent","deadbeat","Little League coach","mobster","grad student","librarian","researcher","research assistant","entomologist","butch lesbian","dancer","singer","musician","historian","private investigator","detective","comedian","person","pro-wrestler","furry","girl","boy","candyman","retail employee","child","psychologist","guy","lad in a fancy suit","father","mother","dad","mom","parent","lesbian","idiot","raging anti-capitalist","CEO","union buster","dudebro","pharaoh","saber","archer","lancer","caster","rider","assassin","berserker","heroic spirit"
         ],
         plural: [
-            "travelers","officials","peasants","people","themselves","children","clerics","mages","martyrs","followers","hostages","slaves","new members","followers of another group","unstable individuals","long-extinct creatures","honest shopkeepers","younger citizens","thousands of ghosts","powerful friends","bribed officials","animals","group of citizens","army","cultists","militia members","government officials","puppet organization","colony of humanoids","group of people","army of undead","magical army","band of mercenaries","thousand tortured souls","squires","adventurers","assassins","fish people","drunken farmers","illusionists","settlers","werewolves","raiders","industrialists","acolytes","vampires","collectors","animals","land surveyors","rogues","elementals","goblin hunters","lowlives","knights","mercenaries","bardic actors","plants","nobles and their retinue","royalty","lepers","kobold trapsmiths","wizards","ancients","bandits","mendicant monks","giants","prisoners","dwarven archaeologists","con artists","alchemists","thieving travelers","villians","slaves","diplomats","doppelgangers","temple monks","rebels","runaways","psychics","tinkers","local spirits","masterless golems","druids","kings","diviners","travelling merchants","mysterious cloaked men","liches","sprites","traitors","monitors","scholars","guards","ousted monarchs","ghosts","militia members","children","orphan children","fairies","holy inquisitors","singers","enchanters","enchantresses","merchants","cavaliers","religious zealots","mummers","bards","orcs","dragons","otherwordly beings","dukes","duchesses","undead","slavers","escaped slaves","witches","planar travelers","charity mission workers","chaos worshippers","monks","priests","peasants","common folk","terrorists","defectors","pageboys","spies","foreign diplomats","nuns","nomads","plant creatures","philosophers","sea creatures","pirates","barons","ladies","teenagers","unemployed tradespeople","aristocrats","royals","scientists","necromancers","gnomes","masons","painters","senior villagers","housebreakers","fishermen","vintners","leatherworkers","intelligentsia","craftspersons","convicts","felons","smiths","homunculi","golems","bodysnatchers","vivisectionists","ax murderers","tulip growers","fey creatures","barbarians","scribes","crime bosses","drug lords","brothel keepers","veterans","draftees","deserters","masters","journeymen","home owners","shopkeepers","smugglers","corrupt politicians","mages","hags","violent vigilantes","three possums in a trench coat","another group","the homies","the dead","the law","the elderly","the aristocracy","the church","the militia","the rich","the court","the local crime underground","the masses","the ancients","'the man'","the mighty","another group","circus of clowns","heroic spirits"
+            "travelers","officials","peasants","people","themselves","children","clerics","mages","martyrs","followers","hostages","slaves","new members","followers of another group","unstable individuals","long-extinct creatures","honest shopkeepers","younger citizens","thousands of ghosts","powerful friends","bribed officials","animals","group of citizens","army","cultists","militia members","government officials","puppet organization","colony of humanoids","group of people","army of undead","magical army","band of mercenaries","thousand tortured souls","squires","adventurers","assassins","fish people","drunken farmers","illusionists","settlers","werewolves","raiders","industrialists","acolytes","vampires","collectors","animals","land surveyors","rogues","elementals","goblin hunters","lowlives","knights","mercenaries","bardic actors","plants","nobles and their retinue","royalty","lepers","kobold trapsmiths","wizards","ancients","bandits","mendicant monks","giants","prisoners","dwarven archaeologists","con artists","alchemists","thieving travelers","villians","slaves","diplomats","doppelgangers","temple monks","rebels","runaways","psychics","tinkers","local spirits","masterless golems","druids","kings","diviners","travelling merchants","mysterious cloaked men","liches","sprites","traitors","monitors","scholars","guards","ousted monarchs","ghosts","militia members","children","orphan children","fairies","holy inquisitors","singers","enchanters","enchantresses","merchants","cavaliers","religious zealots","mummers","bards","dragons","otherwordly beings","dukes","duchesses","undead","slavers","escaped slaves","witches","planar travelers","charity mission workers","chaos worshippers","monks","priests","peasants","common folk","terrorists","defectors","pageboys","spies","foreign diplomats","nuns","nomads","plant creatures","philosophers","sea creatures","pirates","barons","ladies","teenagers","unemployed tradespeople","aristocrats","royals","scientists","necromancers","gnomes","masons","painters","senior villagers","housebreakers","fishermen","vintners","leatherworkers","intelligentsia","craftspersons","convicts","felons","smiths","homunculi","golems","bodysnatchers","vivisectionists","ax murderers","tulip growers","fey creatures","barbarians","scribes","crime bosses","drug lords","brothel keepers","veterans","draftees","deserters","masters","journeymen","home owners","shopkeepers","smugglers","corrupt politicians","mages","hags","violent vigilantes","three possums in a trench coat","another group","the homies","the dead","the law","the elderly","the aristocracy","the church","the militia","the rich","the court","the local crime underground","the masses","the ancients","'the man'","the mighty","another group","circus of clowns","heroic spirits"
         ]
     },
     place: {
@@ -755,7 +750,7 @@ const nouns = {
             "frenzied devotion",
             "mass hypnosis",
             "iron will and determination",
-            "demonic help",            
+            "otherworldly help",
             "the blame",
             "the economy",
             "the market",
@@ -1161,7 +1156,6 @@ const fragments = {
         "become martyrs",
         "become rich",
         "betray their country for personal gain",
-        "bind a demon",
         "break the walls separating reality",
         "bring a lost loved one back to life",
         "bring peace",
@@ -1247,7 +1241,6 @@ const fragments = {
         "awake thousands of ghosts",
         "find a werewolf lair",
         "pay their debts",
-        "appease a demoness",
         "avert unnatural disaster",
         "avert disaster",
         "topple the kingdom",
@@ -1259,7 +1252,6 @@ const fragments = {
         "free hostages",
         "acquire hostages",
         "invoke the Serpent God",
-        "banish a demon",
         "restore their reputation",
         "incite a riot",
         "sow disorder",
@@ -1440,7 +1432,7 @@ const fragments = {
         "by applying information from a contact person",
         "with deep pockets",
         "by impersonating",
-        "by summoning a demon",
+        "by summoning a construct",
         "by applying their dormant magical talent",
         "with an ancient holy symbol",
         "using secrets documents",
@@ -1507,7 +1499,7 @@ const fragments = {
         "with alcohol",
         "with slaves",
         "by contracts",
-        "with demonic help",
+        "with otherworldly help",
         "with the local authority",
         "with the local crime underground",
         "with market manipulations",
@@ -1527,7 +1519,7 @@ const groups = [
     "order","horde","clique","gaggle","mob","collegium ","armed group","squad","cadre","trio","duo","quintet","pack","wandering troupe","crime ring","group","cabal","coven","gang","bunch","fellowship","posse","school class","syndicate","delegation","secret society","guild","extended family","noble house","platoon","caravan","sisterhood","work team","team","association","cartel","club","congregation","gentlemen's club","faction","crew","hidden society","league","converstation club","religious sect","tribe","elite squad","brotherhood","charity organization","support staff","entourage","assembly","noble family","governing body","ensemble","conclave","coterie","organization","citizens","circle","partnership","society","party","cult","group","troop","army","mass","gathering","political faction","inbred family","choir","crowd","splinter faction","band","conspiracy","clan","collegium","patchwork","network","cell","panel","doomsday cult","union","collective","circus"
 ];
 const adjective = [// build this array out
-    "peasant","young","fruit-selling","gentleman","gentlewoman","apprentice","charlatan","vampire","dale elf","deep elf","dwarf","goblin","half elf","high elf","human","suhk","wildren","eccentric","werewolf","feral","influencer","child","celebrity","old","tax-evading","draft-dodging","professional","retired","goth","little","hot","absent","shitty","time-traveling","Italian","asshole","deadbeat","butch","dancing","singing","paramilitary","military","suicidal","fleeing","organized","insatiable","sickened","lusty","maniacal","unorganized","pugilistic","busybody","evil","sociopathic","underground","dying","benevolent","arsonistic","disorganized","convicted","noble","liar","chaotic","malicious","murderous","pugnacious","secret","elderly","violent","unharmonious","devious","surreptitious","quarelling","ideologically split","ragged","cursed","good","enlightened","zealous","heroic","amnesiac","resurrected","fey-touched","elite","lycanthropic","escaped","injured","commissioned","official","random","self-pitying","well-dressed","xenophobic","superstitious","drunk","depressive","morbid","mortally wounded","diseased","contrite","hateful","alcoholic","drug-addicted","fanatical","homeless","confused","artistic","desperate","suspicious","unaccountable","exhausted","vocal","undead","shady","righteous","plaintive","cowardly","insane","unscrupulous","oppressed","conned","fallen","undercover","reluctant","bloodthirsty","otherworldly","celestial","outsider","insectoid","brilliant","greedy","materialistic","unholy","ancient","obsessive","sole","outgrown","renowned","rich","poor","reformed","secretive","paranoid","compulsive","perverse","iconoclastic","nihilistic","former","underappreciated","kindly","unique","teenage","corny","entire"
+    "peasant","young","fruit-selling","gentleman","gentlewoman","apprentice","charlatan","vampire","dale elf","deep elf","dwarf","goblin","half elf","high elf","human","suhk","wildren","eccentric","werewolf","feral","influencer","child","celebrity","old","tax-evading","draft-dodging","professional","retired","goth","little","hot","absent","shitty","Italian","asshole","deadbeat","butch","dancing","singing","paramilitary","military","suicidal","fleeing","organized","insatiable","sickened","lusty","maniacal","unorganized","pugilistic","busybody","evil","sociopathic","underground","dying","benevolent","arsonistic","disorganized","convicted","noble","liar","chaotic","malicious","murderous","pugnacious","secret","elderly","violent","unharmonious","devious","surreptitious","quarelling","ideologically split","ragged","cursed","good","enlightened","zealous","heroic","amnesiac","resurrected","fey-touched","elite","lycanthropic","escaped","injured","commissioned","official","random","self-pitying","well-dressed","xenophobic","superstitious","drunk","depressive","morbid","mortally wounded","diseased","contrite","hateful","alcoholic","drug-addicted","fanatical","homeless","confused","artistic","desperate","suspicious","unaccountable","exhausted","vocal","undead","shady","righteous","plaintive","cowardly","insane","unscrupulous","oppressed","conned","fallen","undercover","reluctant","bloodthirsty","otherworldly","celestial","outsider","insectoid","brilliant","greedy","materialistic","unholy","ancient","obsessive","sole","outgrown","renowned","rich","poor","reformed","secretive","paranoid","compulsive","perverse","iconoclastic","nihilistic","former","underappreciated","kindly","unique","teenage","corny","entire"
 ];
 
 ///////////////////////////////////////
@@ -1560,39 +1552,46 @@ function wordPoss(word) {
     return word;
 }
 
-// there's gotta be a better way to write this theres GOTTA be a better way
+// subject-verb agreement
+function svaAgree(sva) {
+    if (sva.startsWith("singular")) {
+        sva = "is";
+    } else if (sva.startsWith("plural")) {
+        sva = "are";
+    }
+    return sva;
+}
+
+/////////////////
+//// GERUNDS
+/////////////////
+const endConsonant = ["b","d","l","m","n","p","r","t"];
+const penultVowel = ["a","e","i","o","u"];
+const endExcept = ["ai","de","ea","ee","ga","he","ke","mo","ne","no","oi","te","ue","ui","ve",];
+
 function doubleLetter (word) {
-    if (["ab","ob"].some((elem) => word.endsWith(elem))) {
-        word += "b";
-    } else if (["ed"].some((elem) => word.endsWith(elem))) {
-        word += "d";
-    } else if (["ol"].some((elem) => word.endsWith(elem))) {
-        word += "l";
-    } else if (["an","en","in","on","un"].some((elem) => word.endsWith(elem)) && !["ain","ean","ken","mon","oin"].some((elem) => word.endsWith(elem))) {
-        word += "n";
-    } else if (["ap","ip"].some((elem) => word.endsWith(elem))) {
-        word += "p";
-    } else if (["ir"].some((elem) => word.endsWith(elem))) {
-        word += "r";
-    } else if (["at","et","it","ot","ut"].some((elem) => word.endsWith(elem)) && !["eat","gat","ket","uit"].some((elem) => word.endsWith(elem))) {
-        word += "t";
+    var lastLetter = word.charAt(word.length-1); // last letter
+    var beforeLast = word.charAt(word.length-2); // letter before last
+    var twoBeforeLast = word.charAt(word.length-3) + beforeLast; // two before last
+
+    if (endConsonant.includes(lastLetter) && penultVowel.includes(beforeLast) && !endExcept.includes(twoBeforeLast)) {
+        word += lastLetter;
     }
     return word;
 }
 
 function letterCheck(word) {
-    if (word.endsWith("e") && !["ee","ie"].some((elem) => word.endsWith(elem))) {
-        word = word.substring(0, word.length - 1);
-    } else if (word.endsWith("ie")) {
+    word = doubleLetter(word);
+    if (word.endsWith("ie")) {
         word = word.substring(0, word.length - 2);
         word += "y";
+    } else if (word.endsWith("e") && !word.endsWith("ee")) {
+        word = word.substring(0, word.length - 1);
     }
-    word = doubleLetter(word);
     return word;
 }
 
-// by god we're gonna cook some fucking gerunds
-function wordGer(word) {
+function wordGer(word) { // gerunds for 
     if (word.includes(" ")) {
         var space = word.search(" ");
         var verb = word.slice(0, space);
@@ -1605,14 +1604,14 @@ function wordGer(word) {
     return word;
 }
 
-// subject-verb agreement
-function svaAgree(sva) {
-    if (sva.startsWith("singular")) {
-        sva = "is";
-    } else if (sva.startsWith("plural")) {
-        sva = "are";
-    }
-    return sva;
+function contGer(word) {
+    var space = word.search(" ");
+    var verb = word.slice(0, space);
+    var phrase = word.slice(space);
+    
+    verb = verb.substring(0, verb.length -1);
+    word = [letterCheck(verb), "ing", phrase].join("");
+    return word;
 }
 
 ///////////////////////////////////
@@ -1624,12 +1623,8 @@ var nounPlace = nouns.place;
 var nounThing = nouns.thing;
 var nounConcept = nouns.concept;
 
-// verb ref vars
-var verbCont = verbs.continuous;
-
 function verbSelect(noun) {
     let present = "";
-    
     if (noun == nounPerson.singular || noun == nounPerson.plural) {
         present = randomString(verbs.person);
     } else if (noun == nounPlace.singular || noun == nounPlace.plural) {
@@ -1743,8 +1738,8 @@ function personSelect() {
 function actionSelect(noun, verbPres, verbGer) { 
     // add to rumors
     const fragment = randomString(fragments.action);
-    const verbContPres = randomString(verbCont.present);
-    const verbContGer = randomString(verbCont.gerund);
+    const verbContPres = randomString(verbs.continuous);
+    const verbContGer = contGer(verbContPres);
     const actionList = {        
         "action 1": "<b>" + fragment, //pre-existing action        
         "action 2": "<b>" + verbGer + " " + noun, //[verb]ing [noun]        
