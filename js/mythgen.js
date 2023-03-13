@@ -1644,7 +1644,7 @@ function verbSelect(noun) {
         present = randomString(verbs.concept);
     }
 
-    let gerund = wordGer(present);    
+    let gerund = wordGer(present);
     return {present, gerund};
 }
 
@@ -1721,7 +1721,22 @@ function charaSelect() {
 }
 
 ////////////////////////////////////
-// SELECTOR FUNCTIONS
+//// SELECTOR TEMPLATES
+////////////////////////////////////
+// people consts
+const singlePerson = ["singular 1", "singular 2"];
+const pluralPerson = ["plural 1", "plural 2"];
+const personList = singlePerson.concat(pluralPerson);
+
+// action consts
+const simpleAct = ["action 1", "action 2"];
+const complexAct = ["action 3", "action 4"];
+const actionList = simpleAct.concat(complexAct);
+
+const methodList = ["method 1", "method 2", "method 3", "method 4", "method 5", "method 6"];
+
+////////////////////////////////////
+//// SELECTOR FUNCTIONS
 ////////////////////////////////////
 // person select
 function personSelect() {
@@ -1731,37 +1746,51 @@ function personSelect() {
     const members = randomString(nounPerson.plural);
     const noun = randomString(nounPerson.singular);
 
-    const personList = {
+    const subjects = {
         "singular 1": wordPrep(noun) + "</b> who <b>" + trait + "</b>",
         "singular 2": wordPrep(adj) + " " + noun + "</b>",
         "plural 1": wordPrep(group) + "</b> of <b>" + members + "</b>",
         "plural 2": wordPrep(adj) + " " + group + "</b> of <b>" + members + "</b>"
     }
 
-    const keys = Object.keys(personList);
+    const keys = Object.keys(subjects);
     const type = randomString(keys);
-    const subject = personList[type];
+    const subject = subjects[type];
     const sva = svaAgree(type);    
     return {subject, sva};
 }
 
 // action select
-function actionSelect(noun, verbPres, verbGer) { 
-    // add to rumors
+function actionSelect(contVar, noun, verbPres, verbGer) { 
+    let action = "";
+    let select = "";
+    select = randomString(actionList);
+    if (contVar === false) {
+        select = randomString(simpleAct);
+    }
+
+    // FOR RUMORS: can i move the action list out like I did with the NPC thing so I can 
     const fragment = randomString(fragments.action);
     const verbContPres = randomString(verbs.continuous);
     const verbContGer = contGer(verbContPres);
-    const actionList = {        
+    const actions = {        
         "action 1": "<b>" + fragment, //pre-existing action        
         "action 2": "<b>" + verbGer + " " + noun, //[verb]ing [noun]        
         "action 3": "<b>" + verbContGer + " " + verbPres + " " + noun, //[continuous] to [verb] [noun]        
         "action 4": "<b>" + verbContPres + " " + verbPres + " " + noun + "</b>" //[try] to [verb] [noun]
     }
 
-    const keys = Object.keys(actionList);
-    const type = randomString(keys);
-    const action = actionList[type];
-    return {action, type};
+    for (const act in actions) {
+        if (act == select) {
+            action = actions[act];
+        }
+    }
+
+    console.log(action, select);
+    // const keys = Object.keys(actions);
+    // const type = randomString(keys);
+    // const action = actions[type];
+    return {action, select};
 }
 
 // subject assist
@@ -1778,7 +1807,7 @@ function subjectCheck(select, person, sva, action) {
 function methodSelect(noun, verbGer) { 
     const fragment = randomString(fragments.means);
     const owner = randomString(nounPerson.singular);
-    const methodList = {
+    const methods = {
         "method 1": fragment,
         "method 2": "</b>" + "using <b>" + noun,
         "method 3": "</b>" + "with <b>" + noun,
@@ -1788,9 +1817,9 @@ function methodSelect(noun, verbGer) {
         "method 6": "</b>" + "by utilizing <b>" + wordPrep(owner) + "'s " + noun + "</b>"
     }
 
-    const keys = Object.keys(methodList);
+    const keys = Object.keys(methods);
     const type = randomString(keys);
-    const method = methodList[type];
+    const method = methods[type];
     return method;
 }
 
@@ -1874,9 +1903,10 @@ function plotCreate() {
     const sva = subject.sva;
 
     // action select
-    const action = actionSelect(nounOne, verbPresOne, verbGerOne);
+    let contVar = true;
+    const action = actionSelect(contVar, nounOne, verbPresOne, verbGerOne);
     const plotAction = action.action;
-    const actionType = action.type;
+    const actionType = action.select;
     
     const plotMethod = methodSelect(nounTwo, verbGerTwo);
     const plotSubject = subjectCheck(actionType, plotPerson, sva, plotAction);
@@ -1971,7 +2001,8 @@ function adventureGen() {
     const sva = subject.sva;
 
     // action select
-    const action = actionSelect(nounOne, verbPresOne, verbGerOne);
+    let contVar = true;
+    const action = actionSelect(contVar, nounOne, verbPresOne, verbGerOne);
     const agAction = action.action;
     const actionType = action.type;
 
@@ -2067,7 +2098,8 @@ function rumorGen() {
     const gerund = verb.gerund;
 
     // action should NOT be "action 4"
-    let action = actionSelect(item, present, gerund);
+    let contVar = false;
+    let action = actionSelect(contVar, item, present, gerund);
     const accuse = action.action;
     // const accuseType = action.type;
 
@@ -2075,7 +2107,7 @@ function rumorGen() {
     const monster = randomString(monsters);
     const trait = randomString(fragments.trait);
 
-    // note: subject-verb agreement between item and condition
+    // note: figure out subject-verb agreement between item and condition
     const rumors = {
         "rumor 1": charOne + " has <b>" + item + "</b> that <b>" + condition,
         "rumor 2": charOne + " is looking for <b>" + item + "</b> that <b>" + condition,
