@@ -617,34 +617,10 @@ const nouns = {
     },
     place: {
         singular: [
-            "building here in town",
-            "building site",
-            "church",
-            "city",
-            "court",
-            "cult",
-            "fortress",
-            "haven",
-            "illegal gambling ring",
-            "illicit underground unicorn fight club",
-            "kingdom",
-            "local tavern",
-            "magical gate",
-            "market",
-            "nation",
-            "portal to another dimension",
-            "settlement",
-            "village",
-            "wedding",
-            "werewolf lair",
+            "building here in town","building site","church","city","court","cult","fortress","haven","illegal gambling ring","illicit underground unicorn fight club","kingdom","local tavern","magical gate","market","nation","portal to another dimension","settlement","village","wedding","werewolf lair",
         ],
         plural: [
-            "churches",
-            "shrines",
-            "walls separating reality",
-            "the courts",
-            "the lands",
-            "the seas",
+            "churches","shrines","walls separating reality","the courts","the lands","the seas",
         ]
     },
     thing: {
@@ -723,29 +699,10 @@ const nouns = {
             "insatiable hunger",
             "game that is also a test",
             "meteor",
+            "holy grail"
         ],
         plural: [
-            "alcohol",
-            "arcane murals",
-            "contracts",
-            "creature hybrids",
-            "cursed armor",
-            "deceptive documents",
-            "diseased blankets",
-            "divine regalia",
-            "drugs",
-            "embalmed corpses",
-            "flows of gold",
-            "forbidden tomes",
-            "forged documents",
-            "kittens",
-            "literal garbage",
-            "lurid colors",
-            "magical man-catchers",
-            "secret documents",
-            "snakes",
-            "stolen teeth",
-            "public speeches",
+            "alcohol","arcane murals","contracts","creature hybrids","cursed armor","deceptive documents","diseased blankets","divine regalia","drugs","embalmed corpses","flows of gold","forbidden tomes","forged documents","kittens","literal garbage","lurid colors","magical man-catchers","secret documents","snakes","stolen teeth","public speeches",
         ]
     },
     concept: {
@@ -811,25 +768,7 @@ const nouns = {
             "nausea"
         ],
         plural: [
-            "alliances",
-            "blatant lies",
-            "deep pockets",
-            "divine blessings",
-            "fake identities",
-            "false promises",
-            "fame and prestige",
-            "little resources left",
-            "market manipulations",
-            "prices",
-            "privileges",
-            "public officials and decrees",
-            "pure wits",
-            "resources",
-            "rumors",
-            "sensitive divinations",
-
-            "the hopes of the whole village",
-            "the real answers",
+            "alliances","blatant lies","deep pockets","divine blessings","fake identities","false promises","fame and prestige","little resources left","market manipulations","prices","privileges","public officials and decrees","pure wits","resources","rumors","sensitive divinations","the hopes of the whole village","the real answers",
         ]
     },
     posessions: [ // literally just nix most of the prepositions here and sort them other places
@@ -1656,9 +1595,9 @@ function letterCheck(word) {
 function wordGer(word) {
     if (word.includes(" ")) {
         var space = word.search(" ");
-        var fhalf = word.slice(0, space);
-        var shalf = word.slice(space);        
-        word = [letterCheck(fhalf), "ing", shalf].join("");
+        var verb = word.slice(0, space);
+        var phrase = word.slice(space);        
+        word = [letterCheck(verb), "ing", phrase].join("");
     } else {
         word = letterCheck(word);
         word += "ing";
