@@ -23,7 +23,7 @@ function diceRoll(num) {
     return Math.floor(Math.random() * num) + 1;
 }
 
-function properCase(str) {
+function capitalLetter(str) {
     return str = str[0].toUpperCase() + str.substring(1);
 }
 
@@ -50,8 +50,7 @@ function nameGen() {
     let namble = "";    
     for (i = 0; i < syllCount; i++) {
         var rollTwo = diceRoll(6);
-        var nableJoin = randomString(nableX);
-        
+        var nableJoin = randomString(nableX);        
         if (rollTwo <= 2) {
             nambleName = randomString(nableA);
         } else if (rollTwo <= 4) {
@@ -65,12 +64,8 @@ function nameGen() {
         } else {
             namble += nambleName + nableJoin;
         }
-        console.log(nambleName);
     }
 
-    // namby = namble.replace(/[^\w\s]|(.)(?=\1\1)/i, "");
-    // console.log(namby);
-
-    namble = titleCase(namble.replace(/[^\w\s]|(.)(?=\1\1)/i, ""));
+    namble = titleCase(namble.replace(/[^\w\s]|(.)(?=\1{2})/gi, ""));
     document.querySelector(".output").innerHTML = "<p><b>" + namble + "</b></p>"
 }
