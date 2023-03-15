@@ -1729,11 +1729,15 @@ const pluralPerson = ["plural 1", "plural 2"];
 const personList = singlePerson.concat(pluralPerson);
 
 // action consts
-const simpleAct = ["action 1", "action 2"];
-const complexAct = ["action 3", "action 4"];
-const actionList = simpleAct.concat(complexAct);
+const actionVerb = ["fragment", "gerund, noun"];
+const actionCont = [
+    "cont gerund, present, noun", "cont present, present, noun"
+];
+const actionList = actionVerb.concat(actionCont);
 
-const methodList = ["method 1", "method 2", "method 3", "method 4", "method 5", "method 6"];
+const methodList = [
+    "method 1", "method 2", "method 3", "method 4", "method 5", "method 6"
+];
 
 ////////////////////////////////////
 //// SELECTOR FUNCTIONS
@@ -1764,9 +1768,10 @@ function personSelect() {
 function actionSelect(contVar, noun, verbPres, verbGer) { 
     let action = "";
     let select = "";
+    
     select = randomString(actionList);
     if (contVar === false) {
-        select = randomString(simpleAct);
+        select = randomString(actionVerb);
     }
 
     // FOR RUMORS: can i move the action list out like I did with the NPC thing so I can 
@@ -1774,10 +1779,10 @@ function actionSelect(contVar, noun, verbPres, verbGer) {
     const verbContPres = randomString(verbs.continuous);
     const verbContGer = contGer(verbContPres);
     const actions = {        
-        "action 1": "<b>" + fragment, //pre-existing action        
-        "action 2": "<b>" + verbGer + " " + noun, //[verb]ing [noun]        
-        "action 3": "<b>" + verbContGer + " " + verbPres + " " + noun, //[continuous] to [verb] [noun]        
-        "action 4": "<b>" + verbContPres + " " + verbPres + " " + noun + "</b>" //[try] to [verb] [noun]
+        "fragment": "<b>" + fragment, //pre-existing action
+        "gerund, noun": "<b>" + verbGer + " " + noun, //[verb]ing [noun]
+        "cont gerund, present, noun": "<b>" + verbContGer + " " + verbPres + " " + noun, //[trying] to [verb] [noun]
+        "cont present, present, noun": "<b>" + verbContPres + " " + verbPres + " " + noun + "</b>" //[tries] to [verb] [noun]
     }
 
     for (const act in actions) {
@@ -1787,15 +1792,12 @@ function actionSelect(contVar, noun, verbPres, verbGer) {
     }
 
     console.log(action, select);
-    // const keys = Object.keys(actions);
-    // const type = randomString(keys);
-    // const action = actions[type];
     return {action, select};
 }
 
 // subject assist
 function subjectCheck(select, person, sva, action) {
-    if (select == "action 4") {
+    if (select == "cont present, present, noun") {
         subject = person + " " + action;
     } else {
         subject = person + " " + sva + " " + action;
@@ -1827,19 +1829,23 @@ function methodSelect(noun, verbGer) {
 //// PLOT TEMPLATES
 ////////////////////////////
 // people consts
-const npcOne = ["one person 1","one person 2","one person 3"];
-const npcTwo = ["two people 1","two people 2"];
-const npcThree = ["three people 1","three people 2"];
+const npcOne = ["one person 1","one person 2","one person 3","one person 4"];
+const npcTwo = ["two people 1","two people 2","two people 3","two people 4"];
+const npcThree = ["three people 1","three people 2","three people 3","three people 4"];
 const npcParty = npcOne.concat(npcTwo, npcThree);
 
 // plot template consts
 const plotType = ["plot 1","plot 2"];
 const questType = ["quest 1","quest 2"];
-const adventureType = ["adventure 1","adventure 2","adventure 3","adventure 4"];
+const adventureType = [
+    "adventure 1","adventure 2","adventure 3","adventure 4"
+];
 const storyType = plotType.concat(questType, adventureType);
 
 // rumor templates
-const rumorType = ["rumor 1","rumor 2","rumor 3","rumor 4","rumor 5","rumor 6","rumor 7","rumor 8","rumor 9","rumor 10","rumor 11","rumor 12"];
+const rumorType = [
+    "rumor 1","rumor 2","rumor 3","rumor 4","rumor 5","rumor 6","rumor 7","rumor 8","rumor 9","rumor 10","rumor 11","rumor 12"
+];
 
 ///////////////////////////////
 //// GENERATOR FUNCTIONS
@@ -1868,7 +1874,7 @@ function plotCreate() {
     }
 
     const goal = randomString(fragments.goal);
-    const motive = randomString(quest.motivation); // the reason why
+    const motive = randomString(quest.motivation);
     const twist = randomString(quest.twist);
     const location = randomString(quest.place);
     
@@ -1974,12 +1980,12 @@ function adventureGen() {
     let agPlot = "";
 
     const goal = randomString(fragments.goal);
-    const motive = randomString(quest.motivation); // "because"
+    const motive = randomString(quest.motivation);
     const twist = randomString(quest.twist);
     const location = randomString(quest.place);
 
     // nouns – groups one and two
-    const nounGO = nounSelect();    
+    const nounGO = nounSelect();
     const nounOne = nounGO[0];
     const nounSubOne = nounGO[1];
 
@@ -2006,7 +2012,7 @@ function adventureGen() {
     const agAction = action.action;
     const actionType = action.type;
 
-    const agMethod = methodSelect(nounTwo, verbGerTwo);    
+    const agMethod = methodSelect(nounTwo, verbGerTwo);
     const agSubject = subjectCheck(actionType, agPerson, sva, agAction);
 
     const adventures = {
@@ -2046,25 +2052,31 @@ function npcGen() {
     const descTwo = charaTwo[0];
     const catTwo = charaTwo[1];
     const conTwo = charaTwo[2];
-    // const fakeTwo = charaTwo[3];
+    const fakeTwo = charaTwo[3];
 
     const charaThree = charaCreate();
     const descThree = charaThree[0];
     const catThree = charaThree[1];
-    // const conThree = charaThree[2];
-    // const fakeThree = charaThree[3];
+    const conThree = charaThree[2];
+    const fakeThree = charaThree[3];
 
     let partyBuild = "";
     var add = ",</b> and <b>";
 
+    // I wonder if I can randomize these like how the name pdf has it
     const party = {
         "one person 1": descOne,
-        "one person 2": conOne,
-        "one person 3": fakeOne,
+        "one person 2": catOne,
+        "one person 3": conOne,
+        "one person 4": fakeOne,
         "two people 1": descOne + add + descTwo,
-        "two people 2": conOne + add + conTwo,
+        "two people 2": catOne + add + catTwo,
+        "two people 3": conOne + add + conTwo,
+        "two people 4": fakeOne + add + fakeTwo,
         "three people 1": descOne + ", " + descTwo + add + descThree,
-        "three people 2": catOne + ", " + catTwo + add + catThree
+        "three people 2": catOne + ", " + catTwo + add + catThree,
+        "three people 3": conOne + ", " + conTwo + add + conThree,
+        "three people 4": fakeOne + ", " + fakeTwo + add + fakeThree
     }
 
     for (const people in party) {
@@ -2097,7 +2109,7 @@ function rumorGen() {
     const present = verb.present;
     const gerund = verb.gerund;
 
-    // action should NOT be "action 4"
+    // action should NOT be "cont present, present, noun"
     let contVar = false;
     let action = actionSelect(contVar, item, present, gerund);
     const accuse = action.action;
