@@ -5,13 +5,15 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Jackie Collas">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/stylesheet.css">
     </head>
     <body>
         <header>
             <h1><a href="index.html">Myth Generators</a></h1>
+            <h1><a href="javascript:void(0)" class="icon" onclick="mobileNav()"><span class="fa fa-bars"></span></a></h1>
             <nav>
-                <div class="navbar">
+                <div class="navbar" id="navBar">
                     <ul>
                         <!-- <li><a href="codegen.html">CodeGen</a></li> -->
                         <li><a href="plot-type.html">Plot Type</a></li>
@@ -67,13 +69,12 @@
                         <input type="reset" value="Reset" onclick="plotReset()">
                     </div>
                 </fieldset>
-                <p>Select an option from the Control Panel, then press the Submit button or the button below the plot box.</p>
-                <p class="note"><i>Default to Plot Builder if no options are selected or if the Control Panel is reset.</i></p>
+                <p class="note"><i>Defaults to Plot Builder if no options are selected, or if the Control Panel is reset.</i></p>
             </form>       
 
             <div class="content">
                 <p class="note">Work in progress! You can still use this one, but don't be surprised if you come back and things are a little bit different :D</p>
-                <p>The checkboxes under Plot Builder allow you to focus on the kind of plot you want to generate. If none of the boxes are selected, it'll return any one of the plot templates available.</p>
+                <p>Select an option from the Control Panel, then press the Submit button or the button below the plot box. The checkboxes under Plot Builder allow you to focus on the kind of plot you want to generate. If none of the boxes are selected, it'll return any one of the plot templates available.</p>
                 <p class="note"><b>Note to self:</b> Make this page the home page!!!</p>
                 <div class="prompt">
                     <span class="output" id="pb-plot"><p style="color:grey">Click the button for a plot!</p></span>

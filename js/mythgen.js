@@ -1935,6 +1935,8 @@ function plotCreate() {
         "adventure 3": "In this story, <b>" + plotSubject + ".</b> They are doing this <b> " + motive,
         
         "adventure 4": "This story takes place <b>" + location +",</b> where <b>" + plotSubject + ".</b> Their goal is to <b>" + goal + " " + plotMethod + ".</b></p>" + "<p>They are doing this <b>" + motive + ",</b> but <b>" + twist,
+
+        // from kieran: if they [blank], then they [blank]
     }
 
     for (const plot in stories) {
@@ -2228,4 +2230,17 @@ function plotReset() {
     buttons.forEach(elem => {
         elem.setAttribute("onclick", "plotCreate()");
     });
+}
+
+////////////////
+//// OTHER
+////////////////
+
+function mobileNav() {
+    var x = document.getElementById("navBar");
+    if (x.className === "navbar") {
+        x.className += " responsive";
+    } else {
+        x.className = "navbar";
+    }
 }

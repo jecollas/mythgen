@@ -5,13 +5,15 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Jackie Collas">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/stylesheet.css">
     </head>
     <body>
         <header>
             <h1><a href="index.html">Myth Generators</a></h1>
+            <h1><a href="javascript:void(0)" class="icon" onclick="mobileNav()"><span class="fa fa-bars"></span></a></h1>
             <nav>
-                <div class="navbar">
+                <div class="navbar" id="navBar">
                     <ul>
                         <!-- <li><a href="codegen.html">CodeGen</a></li> -->
                         <li><a class="active" href="plot-type.html">Plot Type</a></li>
@@ -26,13 +28,15 @@
             </nav>
         </header>
 
-        <div class="content">
-            <p>Basic generator that draws from a list of plot types, genres, and scene tones.</p>
-            <p><b>Note to self:</b> Add a list of examples for the different story genres and scene tones.</p>
-            <div class="prompt">
-                <span class="output" id="pt-plot"><p style="color:grey">Click the button for a plot type!</p></span>
+        <div class="row">
+            <div class="content">
+                <p>Basic generator that draws from a list of plot types, genres, and scene tones.</p>
+                <p><b>Note to self:</b> Add a list of examples for the different story genres and scene tones.</p>
+                <div class="prompt">
+                    <span class="output" id="pt-plot"><p style="color:grey">Click the button for a plot type!</p></span>
+                </div>
+                <button onclick="plotGen()">Gimme a Thing</button>
             </div>
-            <button onclick="plotGen()">Gimme a Thing</button>
         </div>
 
         <script src="js/mythgen.js"></script>
