@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <title>Myth Generators</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Jackie Collas">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/stylesheet.css">
+    </head>
+    <body>
+        <header>
+            <h1><a href="index.html">Myth Generators</a></h1>
+            <h1><a href="javascript:void(0)" class="icon" onclick="mobileNav()"><span class="fa fa-bars"></span></a></h1>
+            <nav>
+                <div class="navbar" id="navBar">
+                    <ul>
+                        <!-- <li><a href="codegen.html">CodeGen</a></li> -->
+                        <li><a href="plot-type.html">Plot Type</a></li>
+                        <li><a href="fetch-quest.html">Fetch Quest</a></li>
+                        <li><a href="adventure-gen.html">Adventure</a></li>
+                        <li><a href="npc-builder.html">NPC Builder</a></li>
+                        <li><a href="rumors.html">Rumors</a></li>
+                        <li><a href="name-gen.html">Names</a></li>
+                        <li><a href="plot-gen.html">Plot Builder</a></li>
+                        <li><a class="active" href="monstermash.html">Monsters</a></a>
+                    </ul>  
+                </div>
+            </nav>
+        </header>
+
+        <div class="row">
+            <div class="side">
+                <h3>Monster Stat Template</h3>
+                    <hr>
+                <p><b>Monster Name:</b> [MONSTER NAME] <i>(name of monster)</i></p>
+                <p><b>Creature Type:</b> [TYPE] <i>(Beast, Construct, Elemental, Monstrous Humanoid, Plant, Undead, Fae, Divine)</i></p>
+                <p><b>Monster Name:</b> [MONSTER NAME] <i>(name of monster)</i></p>
+                <p><b>Hit Points:</b> [NUMBER] <i>(number of hit points)</i></p>
+                <p><b>Armor:</b> [TYPES WEARABLE] <i>(None, Light Armor, Medium Armor, Heavy Armor)</i></p>
+                <p><b>Weapons Used</b> [LIST WEAPONS HERE] <i>(sword, one-handed, shield, bow, throwing, etc.)</i></p>
+                    <hr>
+                <p><b>[CREATURE TYPE] Traits</b></p>
+                <p style="text-indent: 1em;"><i>(this section will list the traits inherent to all creatures of this type. Anthony will fill-in once finalized. This will be universal for all creatures of this type.)</i></p>
+                <p><b>Special Abilities:</b> <i>(abilities specific to this creature only)</i></p>
+                <p><b>Skills:</b> <i>(expendable skills usable)</i></p>
+                <p style="text-indent: 1em;">[NUMBER]X [SKILL NAME] — per [FREQUENCY] <i>(number of uses, name of skill, and frequency - recycle, encounter, run. Ex: 3x Weapon -“Disarm” — per recycle; 1x Packet - “Through Fire, Damage 5” — per run)</i></p>
+                <p><b>Common Loot:</b></p>
+                <p style="text-indent: 1em;">[LIST OF LOOT] <i>(“Common Loot” is any searchable treasure)</i></p>
+                <p><b>Special Loot:</b></p>
+                <p style="text-indent: 1em;">[LIST OF LOOT] — [METHOD OF OBTAINMENT] <i>(skills, professions, unique circumstances)</i></p>
+                    <hr>
+                <p><b>Costuming & Make-up Required:</b></p>
+                <p style="text-indent: 1em;">[SPECIFIC LIST OR DESCRIPTION] <i>(Describe the costume and/or make-up of the creature, be specific. Ex: All green or brown clothing, green and brown make-up on exposed skin, Treant mask)</i></p>
+                <p><b>Description and Role-play:</b></p>
+                <p style="text-indent: 1em;">[DESCRIPTION] <i>(Describe what the creature is, how it acts, and how it should be role-played)</i></p>
+            </div>
+            <div class="content">
+                <p>Not sure if the goal here is creatings parties of existing monsters or generating new monster stats. Literally no idea how I'm going to go about this yet one but that's not stopping me from loading up data with reckless abandon. Let's make some goddamn monsters >:D</p>
+                <p><b>Note:</b> Currently only returns a random type of monster and it's traits.</p>
+                <div class="prompt">
+                    <span class="output" id="monster-mash"><p style="color:grey">Click the button for a mash!</p></span>
+                </div>
+                <button onclick="monsterMash()">For a Monster Mash</button>
+            </div>
+        </div>
+
+        <script src="js/monstermash.js"></script>
+    </body>
+</html>
