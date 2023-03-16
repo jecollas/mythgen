@@ -9,6 +9,7 @@ nav links: #EFE5F2;
 
 * {
   font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
@@ -17,6 +18,36 @@ body {
     overflow-x: hidden;
 }
 
+h3 {
+    margin-top: 0.5em;
+    margin-bottom: 0.75em;
+}
+
+a {
+    text-decoration: none;
+}
+
+p a {
+    font-weight: bold;
+}
+
+hr {
+    height: 1px;
+    width: 95%;
+    border-width: 0;
+    color: #85888C;
+    background-color: #85888C;
+    text-align: left;
+    margin-left: 0;
+}
+
+button {
+    margin-top: 1.5em;
+    font-size: 1em;
+    height: 2em;
+}
+
+/* HEADER */
 header {
     background-color: #3A004D;
     box-shadow: 1px 1px 5px 0px #85888C;
@@ -46,20 +77,7 @@ header a.active {
     font-weight: bold;
 }
 
-a {
-    text-decoration: none;
-}
-
-p a {
-    font-weight: bold;
-}
-
-button {
-    margin-top: 1.5em;
-    font-size: 1em;
-    height: 2em;
-}
-
+/* NAVBAR */
 .navbar {
     width: 100%;
     height: 100%;
@@ -87,32 +105,15 @@ button {
     padding-bottom: 1em;
 }
 
-.row {
-    display: flex;
-    flex-direction: row;
-}
-
-.row .side {
-    flex: 25%;
-}
-.row .control {
-    flex: 15%;
-    flex-basis: 15%;
-}
-
-.row .content {
-    flex: 85%;
-}
-
+/* PAGE ELEMENTS */
 .side,
-.control,
-.content {
-    margin: 1em 1.5em;
-    max-width: 95%;
+div.control {
+    width: 25%;
+    float: left;
 }
 
-.side p {
-    margin: 0.5em 0;
+.side {
+    padding: 1em 1.5em; /* top bottom, right left */
 }
 
 .side ul,
@@ -122,21 +123,40 @@ button {
     margin-left: 0.75em;
 }
 
+.side p {
+    margin: 0.5em 0;
+}
+
+div.control {
+    padding: 0 1.5em 1em;
+}
+
+div.side + div.content,
+div.control + div.content {
+    width: 75%;
+    float: left;
+    padding: 0 1.5em 1em 0.5em; /* top, right, bottom, left */
+}
+
+.content {
+    width: 100%;
+    padding: 0 1.5em; /* top bottom, right left */
+}
+
 .content p {
     padding-right: 1em;
-    /* margin-top: 1.5em; */
+    margin-top: 1.5em;
     max-width: 95%;
 }
 
+/* CONTROL PANEL */
 form {
-    margin-top: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
-    margin-bottom: 0;
+    padding: 0em 0 0; /* top, right left, bottom */
+    padding-top: 0;
 }
 
 fieldset {
-    margin: 1em 0;
+    margin: 1.5em 0 1em;
     padding-bottom: 0;
 }
 
@@ -145,6 +165,7 @@ legend {
     font-weight: bold;
 }
 
+/* BUTTONS */
 input[type=radio],
 input[type=checkbox] {
     margin-top: 0.5em;
@@ -174,11 +195,12 @@ input:checked + label {
     margin-left: 1.2em;
 }
 
+/* PROMPT BOX */
 .prompt {
     margin-top: 1.5em;
     border-style: solid;
     border-width: thin;
-    border-radius: 6px;
+    border-radius: 8px;
     max-width: 80%;
     min-height: 6em;
 }
@@ -188,17 +210,8 @@ input:checked + label {
     margin: 1.25em;
 }
 
-@media screen and (min-width: 600px) and (max-width: 991px) {    
-    .row .control {
-        flex: 25%;
-    }
-    
-    .row .content {
-        flex: 60%;
-    }
-}
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {    
+    /* HEADER */
     header {
         padding: 1em 2em;
         margin-bottom: 0.5em;
@@ -214,6 +227,7 @@ input:checked + label {
         float: right;
     }
     
+    /* NAVBAR */
     .navbar {
         max-height: 0;
     }
@@ -250,29 +264,90 @@ input:checked + label {
         font-size: 1.1em;
         text-align: center;
     }
+
+    /* PAGE ELEMENTS */
+    .side,
+    div.control {
+        width: 30%;
+    }
     
+    div.side + div.content,
+    div.control + div.content {
+        width: 70%;
+    }
+
+    .content {
+        width: 100%;
+        padding: 0 1.5em;
+    }
+
+    .prompt {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    /* PAGE ELEMENTS */
     .row {
-        flex-wrap: wrap;
-        flex: 100%;
+        display: grid;
+        grid-template-columns: auto;
     }
 
-    .control {
+    .side {
+        grid-row: 2;
+        width: 100%;
+    }
+
+    div.control {
+        grid-row: 1;
+        width: 100%;
+        padding: 0 1.5em;
         margin-bottom: 0;
     }
 
-    .control p {
-        font-size: 1em;
-        font-style: italic;
-        margin-bottom: 0;
+    div.side + div.content {
+        grid-row: 1;
+        margin-top: 0.5em;
+        padding: 0 1.5em;
+        width: 100%;}
+
+    div.control + div.content {
+        grid-row: 2;
+        padding: 0 1.5em;
+        width: 100%;
+    }
+
+    .content {
+        width: 100%;
+        padding: 1em 1.5em;
     }
 
     .content p {
         font-size: 1em;
+        margin-top: inherit;
     }
 
-    form.control,
-    fieldset {
-        margin-top: 0.5em;
+    .note {
+        display: none;
+    }
+
+    /* PROMPT BOX */
+    .prompt {
+        max-width: 100%;
+    }
+
+    .output p {
+        margin: 1em;
+    }    
+
+    /* BUTTONS */
+    /* hides checkboxes if the plot option isnt selected */
+    input[type=radio]:not(:checked) ~ .sub1 {
+        display: none;
     }
 
     .radio-option {
@@ -280,32 +355,11 @@ input:checked + label {
         vertical-align: top;
     }
 
-    /* hides checkboxes if the plot option isnt selected */
-    input[type=radio]:not(:checked) ~ .sub1 {
-        display: none;
-    }
-
     .control-button {
         display: block;
     }
 
-    .content {
-        margin-top: 0;
-    }
-
-    .content p {
-        font-size: 0.9em;
-    }
-
-    .note {
-        display: none;
-    }
-
     label {
         height: 100%;
-    }
-
-    .prompt {
-        max-width: 100%;
     }
 }
