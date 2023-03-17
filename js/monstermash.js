@@ -25,7 +25,7 @@ typeTraits = {
     // desc: ""
 
 // Get name and type set up for humanoid and special before you go back and add in all the rest of the stat block information
-creatures = {
+const creatures = {
     beast: {
         cockatrice: {
             name: "cockatrice",
@@ -218,7 +218,7 @@ creatures = {
             desc: "Spriggans are water Fae that try to get unknowing humans to imbibe their liquids for personal gain."
         }
     },
-    monstrousHumanoid: {
+    monstrous: {
         anunagama: {
             name: "anunagama",
             type: "monstrous humanoid",
@@ -335,151 +335,469 @@ creatures = {
 }
 
 const humanoid = {
-    alchemist: [
-        "chemist",
-        "grenadier",
-        "poisoner"
-    ],
-    artificer: [
-        "spell bastion",
-        "spell slinger",
-        "thaumaturge"
-    ],
-    bard: [
-        "agitator",
-        "summoner"
-    ],
-    cleric: [
-        "elemental eater",
-        "field medic",
-        "sanctifier",
-        "scalewalker",
-        "spirit warden"
-    ],
-    druid: [
-        "bearzerker",
-        "bestower",
-        "saboteur"
-    ],
-    fighter: [
-        "brute",
-        "dancer",
-        "geld knight",
-        "legionnaire",
-        "monk",
-        "patient warrior"
-    ],
-    paladin: [
-        "martyr",
-        "radiant knight",
-        "reanimator",
-        "shield-bearer"
-    ],
-    ranger: [
-        "arcane archer",
-        "bounty hunter",
-        "totem master",
-        "trapper"
-    ],
-    rogue: [
-        "juggler",
-        "knave",
-        "sniper",
-        "treasure hunter"
-    ],
-    runesmith: [
-        "runeblade",
-        "runic guard",
-        "sunderer"
-    ],
-    wizard: [
-        "arena wizard",
-        "elemental evoker",
-        "mage hunter",
-        "sandman"
-    ]
+    alchemist: {
+        chemist: {
+            name: "chemist",
+            type: "alchemist"
+        },
+        grenadier: {
+            name: "grenadier",
+            type: "alchemist"
+        },
+        poisoner: {
+            name: "poisoner",
+            type: "alchemist"
+        }
+    },
+    artificer: {
+        spellBastion: {
+            name: "spell bastion",
+            type: "artificer"
+        },
+        spellSlinger: {
+            name: "spell slinger",
+            type: "artificer"
+        },
+        thaumaturge: {
+            name: "thaumaturge",
+            type: "artificer"
+        }
+    },
+    bard: {
+        agitator: {
+            name: "agitator",
+            type: "bard"
+        },
+        summoner: {
+            name: "summoner",
+            type: "bard"
+        }
+    },
+    cleric: {
+        elementalEater: {
+            name: "elemental eater",
+            type: "cleric"
+        },
+        fieldMedic: {
+            name: "field medic",
+            type: "cleric"
+        },
+        sanctifier: {
+            name: "sanctifier",
+            type: "cleric"
+        },
+        scalewalker: {
+            name: "scalewalker",
+            type: "cleric"
+        },
+        spiritWarden: {
+            name: "spirit warden",
+            type: "cleric"
+        }
+    },
+    druid: {
+        bearzerker: {
+            name: "bearzerker",
+            type: "druid"
+        },
+        bestower: {
+            name: "bestower",
+            type: "druid"
+        },
+        saboteur: {
+            name: "saboteur",
+            type: "druid"
+        }
+    },
+    fighter: {
+        brute: {
+            name: "brute",
+            type: "fighter"
+        },
+        dancer: {
+            name: "dancer",
+            type: "fighter"
+        },
+        geldKnight: {
+            name: "geld knight",
+            type: "fighter"
+        },
+        legionnaire: {
+            name: "legionnaire",
+            type: "fighter"
+        },
+        monk: {
+            name: "monk",
+            type: "fighter"
+        },
+        patientWarrior: {
+            name: "patient warrior",
+            type: "fighter"
+        }
+    },
+    paladin: {
+        martyr: {
+            name: "martyr",
+            type: "paladin"
+        },
+        radiantKnight: {
+            name: "radiant knight",
+            type: "paladin"
+        },
+        reanimator: {
+            name: "reanimator",
+            type: "paladin"
+        },
+        shieldBearer: {
+            name: "shield-bearer",
+            type: "paladin"
+        }
+    },
+    ranger: {
+        arcaneArcher: {
+            name: "arcane archer",
+            type: "ranger"
+        },
+        bountyHunter: {
+            name: "bounty hunter",
+            type: "ranger"
+        },
+        totemMaster: {
+            name: "totem master",
+            type: "ranger"
+        },
+        trapper: {
+            name: "trapper",
+            type: "ranger"
+        }
+    },
+    rogue: {
+        juggler: {
+            name: "juggler",
+            type: "rogue"
+        },
+        knave: {
+            name: "knave",
+            type: "rogue"
+        },
+        sniper: {
+            name: "sniper",
+            type: "rogue"
+        },
+        treasureHunter: {
+            name: "treasure hunter",
+            type: "rogue"
+        }
+    },
+    runesmith: {
+        runeblade: {
+            name: "runeblade",
+            type: "runesmith"
+        },
+        runicGuard: {
+            name: "runic guard",
+            type: "runesmith"
+        },
+        sunderer: {
+            name: "sunderer",
+            type: "runesmith"
+        }
+    },
+    wizard: {
+        arenaWizard: {
+            name: "arena wizard",
+            type: "wizard"
+        },
+        elementalEvoker: {
+            name: "elemental evoker",
+            type: "wizard"
+        },
+        mageHunter: {
+            name: "mage hunter",
+            type: "wizard"
+        },
+        sandman: {
+            name: "sandman",
+            type: "wizard"
+        }
+    }
+}
+
+const classicCreature = {
+    beast: {
+        crow: {
+            name: "crow",
+            type: "beast"
+        },
+        giantMagpie: {
+            name: "giant magpie",
+            type: "beast"
+        },
+        giantScorpion: {
+            name: "giant scorpion",
+            type: "beast"
+        }
+    },
+    humanoid: {
+        basicBrute: {
+            name: "basic brute",
+            type: "humanoid"
+        },
+        basicCleric: {
+            name: "basic cleric",
+            type: "humanoid"
+        },
+        basicCutthroat: {
+            name: "basic cutthroat",
+            type: "humanoid"
+        },
+        basicWizard: {
+            name: "basic wizard",
+            type: "humanoid"
+        },
+        mysticKnight: {
+            name: "mystic knight",
+            type: "humanoid"
+        }
+    }
+}
+
+const specialCreature = {
+    construct: {
+        harvestGolumn: {
+            name: "harvest golumn",
+            type: "construct"
+        },
+        maliceAir: {
+            name: "malice of the archive: air",
+            type: "construct"
+        },
+        maliceArcane: {
+            name: "malice of the archive: arcane",
+            type: "construct"
+        },
+        maliceEarth: {
+            name: "malice of the archive: earth",
+            type: "construct"
+        },
+        maliceFire: { 
+            name: "malice of the archive: fire",
+            type: "construct"
+        },
+        maliceWater: {
+            name: "malice of the archive: water",
+            type: "construct"
+        },
+        maliceWood: {
+            name: "malice of the archive: wood",
+            type: "construct"
+        },
+        nightmareMinion: {
+            name: "nightmare minion",
+            type: "construct"
+        },
+        strawSorcerer: {
+            name: "straw sorcerer",
+            type: "construct"
+        },
+        strawman: {
+            name: "strawman",
+            type: "construct"
+        },
+        strawmanTitan: { 
+            name: "strawman titan",
+            type: "construct"
+        }
+    },
+    humanoid: {
+        bestowBreaker: {
+            name: "bestow breaker",
+            type: "humanoid"
+        },
+        boneBreaker: {
+            name: "bonebreaker",
+            type: "humanoid"
+        },
+        gravedigger: {
+            name: "gravedigger",
+            type: "humanoid"
+        },
+        mime: {
+            name: "mime",
+            type: "humanoid"
+        },
+        scavenger: {
+            name: "scavenger",
+            type: "humanoid"
+        }
+    }
 }
 
 const plotSpecific = {
-    construct: [
-        "harvest golumn",
-        "malice of the archive: air",
-        "malice of the archive: arcane",
-        "malice of the archive: earth",
-        "malice of the archive: fire",
-        "malice of the archive: water",
-        "malice of the archive: wood",
-        "nightmare minion",
-        "straw sorcerer",
-        "strawman",
-        "strawman titan"
-    ],
-    divine: [
-        "soggy witch"
-    ],
-    elemental: [
-        "chain bogun",
-        "elemental blip (air)",
-        "elemental blip (arcane)",
-        "elemental blip (earth)",
-        "elemental blip (fire)",
-        "elemental blip (water)",
-        "elemental blip (wood)",
-        "minions of panic",
-        "true fear (panic)"
-    ],
-    fae: [
-        "halcyon (lance)",
-        "pixie",
-        "tanis",
-        "the lethen",
-        "tooth fae",
-        "tridrite (amanda)"
-    ],
-    humanoid: {
-        special: [
-            "bestow breaker",
-            "bonebreaker",
-            "gravedigger",
-            "mime",
-            "scavenger"
-        ],
-        classic: [
-            "basic brute",
-            "basic cleric",
-            "basic cutthroat",
-            "basic wizard",
-            "mystic knight"
-        ],
-        plot: [
-            "banrion alewife haggan",
-            "count amadeo",
-            "fiora bandyabout",
-            "gremold",
-            "jarl bloodbeard",
-            "lady of the pines",
-            "lone wolf",
-            "lord protector aemett behrend",
-            "miasma - hhs",
-            "mix master - hss",
-            "roark galt",
-            "sidewinder",
-            "sir lucien of adara",
-            "the bogun lord",
-            "the willow witch"
-        ]
+    divine: {
+        soggyWitch: {
+            name: "soggy witch",
+            type: "divine"
+        }
     },
-    monstrousHumanoid: [
-        "gretch adult",
-        "gretch elder",
-        "gretch hatchling",
-        "red scarfed gnoll"
-    ],
-    undead: [
-        "alexander's revenant",
-        "bone daddy",
-        "lord & lady demarsk"
-    ]
+    elemental: {
+        chainBogun: {
+            name: "chain bogun",
+            type: "elemental"
+        },
+        blipAir: {
+            name: "elemental blip (air)",
+            type: "elemental"
+        },
+        blipArcane: {
+            name: "elemental blip (arcane)",
+            type: "elemental"
+        },
+        blipEarth: {
+            name: "elemental blip (earth)",
+            type: "elemental"
+        },
+        blipFire: {
+            name: "elemental blip (fire)",
+            type: "elemental"
+        },
+        blipWater: {
+            name: "elemental blip (water)",
+            type: "elemental"
+        },
+        blipWood: {
+            name: "elemental blip (wood)",
+            type: "elemental"
+        },
+        minionsPanic: {
+            name: "minions of panic",
+            type: "elemental"
+        },
+        trueFearPanic: {
+            name: "true fear (panic)",
+            type: "elemental"
+        }
+    },
+    fae: { 
+        halcyon: {
+            name: "halcyon (lance)",
+            type: "fae"
+        },
+        pixie: {
+            name: "pixie",
+            type: "fae"
+        },
+        tanis: {
+            name: "tanis",
+            type: "fae"
+        },
+        theLethen: {
+            name: "the lethen",
+            type: "fae"
+        },
+        toothFae: {
+            name: "tooth fae",
+            type: "fae"
+        },
+        tridrite: {
+            name: "tridrite (amanda)",
+            type: "fae"
+        }
+    },
+    humanoid: {
+        banrionAlewifeHaggan: {
+            name: "banrion alewife haggan",
+            type: "humanoid"
+        },
+        countAmadeo: {
+            name: "count amadeo",
+            type: "humanoid"
+        },
+        fioraBandyabout: {
+            name: "fiora bandyabout",
+            type: "humanoid"
+        },
+        gremold: {
+            name: "gremold",
+            type: "humanoid"
+        },
+        jarlBloodbeard: {
+            name: "jarl bloodbeard",
+            type: "humanoid"
+        },
+        ladyPines: {
+            name: "lady of the pines",
+            type: "humanoid"
+        },
+        loneWolf: {
+            name: "lone wolf",
+            type: "humanoid"
+        },
+        aemettBehrend: {
+            name: "lord protector aemett behrend",
+            type: "humanoid"
+        },
+        miasma: {
+            name: "miasma - H H S",
+            type: "humanoid"
+        },
+        mixMaster: {
+            name: "mix master - H H S",
+            type: "humanoid"
+        },
+        roarkGalt: {
+            name: "roark galt",
+            type: "humanoid"
+        },
+        sideWinder: {
+            name: "sidewinder",
+            type: "humanoid"
+        },
+        sirLucien: {
+            name: "sir lucien of adara",
+            type: "humanoid"
+        },
+        bogunLord: {
+            name: "the bogun lord",
+            type: "humanoid"
+        },
+        willowWitch: {
+            name: "the willow witch",
+            type: "humanoid"
+        }
+    },
+    monstrous: {
+        gretchAdult: {
+            name: "gretch adult",
+            type: "monstrous humanoid"
+        },
+        gretchElder: {
+            name: "gretch elder",
+            type: "monstrous humanoid"
+        },
+        gretchHatchling: {
+            name: "gretch hatchling",
+            type: "monstrous humanoid"
+        },
+        redScarfedGnoll: {
+            name: "red scarfed gnoll",
+            type: "monstrous humanoid"
+        }
+    },
+    undead: {
+        alexandersRevenant: {
+            name: "alexander's revenant",
+            type: "undead"
+        },
+        boneDaddy: {
+            name: "bone daddy",
+            type: "undead"
+        },
+        lordLadyDemarsk: {
+            name: "lord & lady demarsk",
+            type: "undead"
+        }
+    }
 }
 
 function randomString(arr) {
@@ -502,19 +820,27 @@ function titleCase(str) {
     });
 }
 
+function monsterCall(obj) {
+    var classKeys = Object.keys(obj);
+    var classType = randomString(classKeys);
+    var cClass = obj[classType];
+    var cKeys = Object.keys(cClass);
+    var cType = randomString(cKeys);
+    var cTrait = cClass[cType];
+    return cTrait;
+}
+
 function monsterMash() {
     const keys = Object.keys(typeTraits);
     const type = randomString(keys);
     const traits = typeTraits[type];
     // console.log(traits);
 
-    const classKeys = Object.keys(creatures);
-    const classType = randomString(classKeys);
-    const cClass = creatures[classType];
-    const cKeys = Object.keys(cClass);
-    const cType = randomString(cKeys);
-    const cTrait = cClass[cType];
-    // console.log(cTrait);
+    const creatureCall = monsterCall(creatures);
+    const humanCall = monsterCall(humanoid);
+    const classicCall = monsterCall(classicCreature);
+    const specialCall = monsterCall(specialCreature);
+    const specificCall = monsterCall(plotSpecific);
 
     // html bits i really don't want to have to keep typing
     const a = "<span><b>";
@@ -546,11 +872,15 @@ function monsterMash() {
     //     e + "Description and Role-Play" + g + "desc" + c + cTrait.desc + f + "</p>";
     // ;
 
-    // Creature Type and Trait
-    // document.querySelector(".output").innerHTML = "<p><b>" + titleCase(type) + ".</b> " + capitalLetter(traits) + ".</p>";
-
     // Monster Name and Type -- TURN THIS ON WHEN PUSHING CODE
-    document.querySelector(".output").innerHTML = "<p>" + titleCase(cTrait.name) + " — " + titleCase(cTrait.type) + "</p>";
+    document.querySelector(".output").innerHTML = 
+    "<p><b>Monster:</b> " + titleCase(creatureCall.name) + " — " + titleCase(creatureCall.type) + 
+    "<br><b>Humanoid:</b> " + titleCase(humanCall.name) + " — " + titleCase(humanCall.type) + 
+    "<br><b>Classic:</b> " + titleCase(classicCall.name) + " — " + titleCase(classicCall.type) + 
+    // "<br><b>Special:</b> " + titleCase(specialCall.name) + " — " + titleCase(specialCall.type) + 
+    // "<br><b>Plot Specific:</b> " + titleCase(specificCall.name) + " — " + titleCase(specificCall.type) + 
+    "</p>" + 
+    "<p><b>" + titleCase(type) + ".</b> " + capitalLetter(traits) + ".</p>";
     
     // Monster Stat Block -- DO NOT LEAVE THIS TURNED ON WHEN CODE IS PUSHED
     // document.querySelector(".output").innerHTML = creatureInfo;
