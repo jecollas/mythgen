@@ -69,7 +69,7 @@ const materials = {
 // armor: "",
 // weapons: "",
 // traits: function() {
-//     return "" + this.type + "" + this.name + ""
+//     return "<b>" + this.type + ":</b> " + this.name + ""
 // },
 // abilities: "",
 // skills: "",
@@ -78,10 +78,10 @@ const materials = {
 // costume: "",
 // desc: ""
 
-// CREATURE TYPES PROGRESS
+// CREATURE TYPES PROGRESS - humanoids require different structure
 // TODO: construct, elemental, humanoid, monstrous, plant, undead
-// IN PROGRESS: fae
-// DONE: beasts, divine
+// IN PROGRESS: plant
+// DONE: beasts, divine, fae
 
 // TODO: construct (4), elemental (17), monstrous (8), plant (9), undead (10)
 const creatures = {
@@ -389,40 +389,148 @@ const creatures = {
     },
     plant: {
         basicTruffle: {
-            name: "basic truffle",
-            type: "plant"
+            name: "Truffle",
+            type: "Plant",
+            hp: 10,
+            armor: "None",
+            weapons: "2 One-handed melee (Hammers when possible)",
+            traits: function() {
+                return "<b>" + this.type + ":</b> " + this.name + "s can draw power from Hyreath, and may state “I Root myself to the ground, 1 minute”. If the Snare effect lasts the entire minute, restore up to 5 natural armor. This cannot exceed your base number. Deep Woods Only: Immune to Crit; State “Resist”."
+            },
+            abilities: "Poison Coated: When searched, state “Recoil, Poison”.",
+            skills: "<ul><li>x3 Weapon - “Maim” — per recycle</li> <li>x2 Weapon - “Damage 3” — per recycle</li> <li>x3 Weapon - “Through Air, Poison” — per run</li></ul>",
+            commonLoot: "<ul><li>Up to 2 Detritus Button OR</li> <li>1 Mosseater Nob</li></ul>",
+            specialLoot: "None",
+            costume: "Tan/brown mushroom hat, all tan or all brown clothing, tan or brown scarf covering mouth",
+            desc: "<ul><li><i>Personality:</i> Curious and benevolent</li> <li><i>Speech:</i> Broken English. Extraordinarily incorrect grammar. Ideally, players should have to try to decipher what you are saying despite speaking English</li></ul>"
         },
         compostSprout:{
-            name: "compost sprout",
-            type: "plant"
+            name: "Compost Sprout",
+            type: "Plant",
+            hp: 3,
+            armor: "5 Natural Armor (Cannot Wear Armor)",
+            weapons: "1 One-handed Weapon, Staff (Preferably Wood)",
+            traits: function() {
+                return "<b>" + this.type + ":</b> " + this.name + "s can draw power from Hyreath, and may state “I Root myself to the ground, 1 minute”. If the Snare effect lasts the entire minute, restore up to 5 natural armor. This cannot exceed your base number. Deep Woods Only: Immune to Crit; State “Resist”."
+            },
+            abilities: "<ul><li>Constant Decay: Lose 1 Hit Point every 5 minutes.</li><li>Mulch: You may use Diagnose to ask “Are you Dead/in the Dead State?”. If yes, you may cast Weapon - “Through Earth, I end your Death Count. Go directly to Dedrot's Barrister.” If you do, you are restored to full Hit Points.</li></ul>",
+            skills: "<ul><li>x5 “Recoil, Damage 1” on melee strikes — per recycle</li> <li>x1 Weapon - “Wood, Death” (Use sparingly) — per recycle</li></ul>",
+            commonLoot: "Up to 1 Rank 1 Animal Part",
+            specialLoot: "None",
+            costume: "Costuming is Plant suits if available, green and/or brown costuming otherwise. Skeleton Mask, vines",
+            desc: "You are a sprout born of the nutrients of compost. You constantly seek death to keep you fed. You cannot speak but can make ShShShSh noises. You have an innate aversion to fire and will target those who wield it."
         },
         fieldStalker: {
-            name: "field stalker",
-            type: "plant"
+            name: "Field Stalker",
+            type: "Plant",
+            hp: 3,
+            armor: "2 Natural Armor (Cannot Wear Armor)",
+            weapons: "Choose: [One-handed Sword & Dagger] or [Dagger & Thrown Weapon]",
+            traits: function() {
+                return "<b>" + this.type + ":</b> " + this.name + "s can draw power from Hyreath, and may state “I Root myself to the ground, 1 minute”. If the Snare effect lasts the entire minute, restore up to 5 natural armor. This cannot exceed your base number. Deep Woods Only: Immune to Crit; State “Resist”."
+            },
+            abilities: "Children of the Corn: While fighting the same opponent with at least 1 other Field Stalker, you may deliver “To Back” skills from any direction.",
+            skills: "<ul><li>2x Weapon - “Damage 2” — per recycle</li> <li>2x Weapon - “To Back, Crit, Damage 2” — per recycle</li> <li>1x Weapon - “To Back, Silence” — per recycle</li> <li>1x Weapon - “To Back, Waylay” — per recycle</li> <li>1x “Resist Maim” — per recycle</li></ul>",
+            commonLoot: "Up to 2 Produce",
+            specialLoot: "Up to 1 Rank 1 Fruit/Flower",
+            costume: "Costuming is something with a hood that is worn (greens, browns, or black preferably). Corn Mask.",
+            desc: "Field Stalkers are sentient Plants. You hunt in small packs, mainly utilizing ambushes, typically only seen at night. You have low level, animalistic intelligence. You cannot speak but can make gurgling noises."
         },
         ghostwoodSprout: {
-            name: "ghostwood sprout",
-            type: "plant"
+            name: "Ghostwood Sprout",
+            type: "Plant",
+            // hp: ,
+            // armor: "",
+            // weapons: "",
+            // traits: function() {
+            //     return "<b>" + this.type + ":</b> " + this.name + ""
+            // },
+            // abilities: "",
+            // skills: "",
+            // commonLoot: "",
+            // specialLoot: "",
+            // costume: "",
+            // desc: ""
         },
         heartwoodSprout: {
-            name: "heartwood sprout",
-            type: "plant"
+            name: "Heartwood Sprout",
+            type: "Plant",
+            // hp: ,
+            // armor: "",
+            // weapons: "",
+            // traits: function() {
+            //     return "<b>" + this.type + ":</b> " + this.name + ""
+            // },
+            // abilities: "",
+            // skills: "",
+            // commonLoot: "",
+            // specialLoot: "",
+            // costume: "",
+            // desc: ""
         },
         ironwoodSprout: {
-            name: "ironwood sprout",
-            type: "plant"
+            name: "Ironwood Sprout",
+            type: "Plant",
+            // hp: ,
+            // armor: "",
+            // weapons: "",
+            // traits: function() {
+            //     return "<b>" + this.type + ":</b> " + this.name + ""
+            // },
+            // abilities: "",
+            // skills: "",
+            // commonLoot: "",
+            // specialLoot: "",
+            // costume: "",
+            // desc: ""
         },
         pitcherPriest: {
-            name: "pitcher priest",
-            type: "plant"
+            name: "Pitcher Priest",
+            type: "Plant",
+            hp: 10,
+            armor: "None",
+            weapons: "2 One-handed Swords or double-fist packet",
+            traits: function() {
+                return "<b>" + this.type + ":</b> " + this.name + "s can draw power from Hyreath, and may state “I Root myself to the ground, 1 minute”. If the Snare effect lasts the entire minute, restore up to 5 natural armor. This cannot exceed your base number. Deep Woods Only: Immune to Crit; State “Resist”."
+            },
+            abilities: "Vampire Plant: Whenever you deal damage with a called weapon strike, heal that many Hit Points.",
+            skills: "<ul><li>5x Weapon/Packet - “Damage 2” — per recycle</li> <li>2x Weapon/Packet - “Damage 3” — per recycle</li> <li>1x Weapon/Packet - “Damage 5” — per recycle</li> <li>1x Weapon/Packet - “Taunt, 1 minute” — per recycle</li></ul>",
+            commonLoot: "Up to 1 Rank 2 or 3 Flowers/Bugs",
+            specialLoot: "N/A",
+            costume: "Nature Cleric stuff",
+            desc: "You are a blessed of Enoon, some say you used to be human. You lure humans in with your beauty and grace and have them for a meal. Fond of games and bargains. You very much certainly and definitely are a human being that drinks water and eats…stuff. Awkward."
         },
         seedlingSprout: {
-            name: "seedling sprout",
-            type: "plant"
+            name: "Seedling Sprout",
+            type: "Plant",
+            hp: 2,
+            armor: "2 Natural Armor (Cannot Wear Armor)",
+            weapons: "1 One-handed Weapon, Staff (Preferably Wood)",
+            traits: function() {
+                return "<b>" + this.type + ":</b> " + this.name + "s can draw power from Hyreath, and may state “I Root myself to the ground, 1 minute”. If the Snare effect lasts the entire minute, restore up to 5 natural armor. This cannot exceed your base number. Deep Woods Only: Immune to Crit; State “Resist”."
+            },
+            abilities: "None",
+            skills: "<ul><li>1x Weapon - “Damage 2” — per recycle</li> <li>2x Weapon or Packet - “Crit, Damage 1” — per recycle</li> <li>2x Packet - “Through Wood, Snare, 1 minute” — per recycle</li></ul>",
+            commonLoot: "Up to 1 Rank 1 Common Flower",
+            specialLoot: "None",
+            costume: "Costuming is Plant suits if available, green and/or brown costuming otherwise. Green makeup on exposed skin. Floral Crown, leaves only, no flowers.",
+            desc: "You are a newly sprouted sentient plant. Other creatures are seen as competition for resources. You have infantile, animal intelligence (curious and cautious, willing to fight). You cannot speak but can make ShShShSh noises. You have an innate aversion to fire and will target those who wield it."
         },
         stonewoodSprout: {
-            name: "stonewood sprout",
-            type: "plant"
+            name: "Stonewood Sprout",
+            type: "Plant",
+            hp: 3,
+            armor: "12 Natural Armor (Cannot Wear Armor)",
+            weapons: "1 One-handed Weapon, Staff (Preferably Wood)",
+            traits: function() {
+                return "<b>" + this.type + ":</b> " + this.name + "s can draw power from Hyreath, and may state “I Root myself to the ground, 1 minute”. If the Snare effect lasts the entire minute, restore up to 5 natural armor. This cannot exceed your base number. Deep Woods Only: Immune to Crit; State “Resist”."
+            },
+            abilities: "Spell Immunity: You are immune to magic. You are immune to the “Through” keyword, state: “No Effect”",
+            skills: "<ul><li>10x Weapon - “Maim” — per recycle</li> <li>3x Weapon - “Shatter” — per recycle</li></ul>",
+            commonLoot: "Up to 3 Raw Stonewood",
+            specialLoot: "Up to 1 Rank 2 Fruit/Flower",
+            costume: "Costuming is Plant suits if available, green and/or brown costuming otherwise. Gray Sponge Stone Makeup on exposed skin.",
+            desc: "You are a sentient plant. Other creatures are seen as competition for resources. You have infantile, animal intelligence (curious and cautious, willing to fight). You cannot speak but can make ShShShSh noises. You have an innate aversion to fire and will target those who wield it."
         }
     },
     undead: {
@@ -711,7 +819,7 @@ const classicCreature = {
             desc: "You are a Giant Scorpion, incapable of speech or any sort of humanoid actions. You fight both for food and for defense."
         }
     },
-    humanoid: { // will need a different kind of thing for these
+    humanoid: { // will need a different kind of structure
         basicBrute: {
             name: "basic brute",
             type: "humanoid"
@@ -807,7 +915,7 @@ const specialCreature = {
     }
 }
 
-// TODO: elemental (9), fae (6), humanoid (15), monstrous (4), undead (3)
+// TODO: elemental (9), humanoid (15), monstrous (4), undead (3)
 const plotSpecific = {
     divine: { // DONE
         soggyWitch: {
@@ -865,30 +973,102 @@ const plotSpecific = {
             type: "elemental"
         }
     },
-    fae: { 
+    fae: { // DONE 
         halcyon: {
-            name: "halcyon (lance)",
-            type: "fae"
+            name: "Halcyon (Lance)",
+            type: "Fae",
+            hp: 15,
+            armor: "Armor as worn, Leather only",
+            weapons: "Any",
+            traits: function() {
+                return "<b>" + this.type + ":</b>" + this.name + "can only be affected by skills with the “Earth” keyword, including Execute. After 1 minute of Bleed Out, Heal 15 Hit Points."
+            },
+            abilities: "<ul><li>Regeneration: Every 1 minute, you may heal 10 Hit Points or Cure all Maimed limbs.</li> <li>Overwhelmed: You are immune to the spell “Tongues”.</li> <li>Inconspicuous: Whenever you take an effect that does not contain the “Earth” keyword, you immediately state “By my voice, Ignore me”</li></ul>",
+            skills: "None",
+            commonLoot: "Whatever is carried",
+            specialLoot: "None",
+            costume: "Halcyon Costume",
+            desc: "N/A"
         },
         pixie: {
-            name: "pixie",
-            type: "fae"
+            name: "Pixie",
+            type: "Fae",
+            hp: 4,
+            armor: "None",
+            weapons: "1 or 2 One-handed Weapon(s)",
+            traits: function() {
+                return "<b>" + this.type + ":</b> Mantle of Immortality: " + this.name + "s are only affected by skills, spells, and executes containing the “Wood” Keyword. State “No Effect”."
+            },
+            abilities: "N/A",
+            skills: "<ul><li>Unlimited Weapon or Packet “Through Air, Spin in place 5 times”</li> <li>Unlimited Weapon or Packet “Through Air, Pacify”</li></ul>",
+            commonLoot: "None",
+            specialLoot: "Up to 1 Fae Skin — Master Skinner",
+            costume: "Pixie Costumes",
+            desc: "You are a low-level Fae creature. You are an agent of mischief. You are not out to kill or to be overly violent. You exist to stir emotions, frustrate those not having fun, and for being generally annoying. You have high thoughts of yourself due to your Fae heritage. You can speak common, but feel no need to speak to Humanoids.  You only giggle, chortle, and snort."
         },
         tanis: {
-            name: "tanis",
-            type: "fae"
+            name: "Tanis",
+            type: "Fae",
+            hp: 10,
+            armor: "None",
+            weapons: "Any",
+            traits: function() {
+                return "<b>" + this.type + ":</b> Mantle of Immortality: " + this.name + "is immune to all damage and effects not “Through Life”. You will stand back up with full Hit Points after 1 minute of being in Bleed Out. You can only be executed by “Life Execute”, all others, state “No Effect”."
+            },
+            abilities: "Nightmare Toxin: All healing effects will instead deal Damage to Tanis.",
+            skills: "<ul><li>Unlimited Packet “Through Life, I heal you 1 Hit Point”</li> <li>3x “By Voice, Through Life, to my minions, Heal 3 Hit Points”</li> <li>1x “By Voice, Through Life, to my minions, Shell to uncalled strikes, 1 minute”</li></ul>",
+            commonLoot: "None",
+            specialLoot: "Up to 1 Fae Skin — Master Skinner",
+            costume: "Tanis Costume",
+            desc: "Plot"
         },
-        theLethen: {
-            name: "the lethen",
-            type: "fae"
+        lethen: {
+            name: "The Lethen",
+            type: "Fae",
+            hp: 5,
+            armor: "None",
+            weapons: "None",
+            traits: function() {
+                return "<b>" + this.type + ":</b> Mantle of Immortality: " + this.name + " protect themselves by leaving their memories in better times, allowing them to travel back to that place. At any time, you may decide on a location. If you are hit with a Death skill or reach the end of your Death count, return to this location at full Hit Points. If you are executed 10 times during your Death count, this Mantle is broken and you immediately die."
+            },
+            abilities: "Repressed Memory: When struck by a weapon or skill, you may state “By my Voice, Ignore The Lethen, 1 minute”. Each other of The Lethen that hears this repeats this call.",
+            skills: "N/A",
+            commonLoot: "None",
+            specialLoot: "Up to 1 Fae Skin — Master Skinner",
+            costume: "The Lethen Make-up",
+            desc: "As written in plot"
         },
         toothFae: {
-            name: "tooth fae",
-            type: "fae"
+            name: "Tooth Fae",
+            type: "Fae",
+            hp: 5,
+            armor: "None",
+            weapons: "Any",
+            traits: function() {
+                return "<b>" + this.type + ":</b> Mantle of Immortality: " + this.name + " is immune to Damage 3 or less. Damage 4 or greater is reduced to 1 damage. You will stand back up with full Hit Points after 1 minute of being in Bleed Out. You can only be executed by “Wood Execute”, all others, state “No Effect”."
+            },
+            abilities: "Bone Mastery: You are immune to Maim and Weakness, state “No Effect”. Every called skill is “Crit”",
+            skills: "<ul><li>2x Weapon - “Crit, Maim”</li> <li>2x Weapon - “Crit, Sleep”</li></ul>",
+            commonLoot: "None",
+            specialLoot: "Up to 1 Fae Skin — Master Skinner",
+            costume: "Tooth Fae Costume",
+            desc: "Plot"
         },
         tridrite: {
-            name: "tridrite (amanda)",
-            type: "fae"
+            name: "Tridrite (Amanda)",
+            type: "Fae",
+            hp: 50,
+            armor: "None",
+            weapons: "Any",
+            traits: function() {
+                return "<b>" + this.type + ":</b> Mantle of Immortality: " + this.name + " can only be stuck by the legendary sword “Willow Spike”. After being struck 5 times by this sword, the Mantle is broken for 5 minutes. If your Mantle is active, state “No Effect” to any skill or weapon strike."
+            },
+            abilities: "Putrid Swing: You must swing “Disease”, “Poison”, or, “Weakness” with every weapon swing. You choose, please swap them up.",
+            skills: "<ul><li>2x, “By my Voice, To those Diseased, Death”</li> <li>10x Weapon - “Damage 2”</li> <li>Within Reason “By my Voice, To those within 10 Feet, Disease”</li> <li>Within Reason “By my Voice, To those within 10 Feet, Poison”</li> <li>Within Reason “By my Voice, To those within 10 Feet, Weakness”</li></ul>",
+            commonLoot: "None",
+            specialLoot: "Up to 1 Fae Skin — Master Skinner",
+            costume: "Tridrite Costume",
+            desc: "Plot - Amanda's choice"
         }
     },
     humanoid: {
