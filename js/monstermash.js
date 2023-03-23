@@ -11,14 +11,14 @@ const typeTraits = {
 }
 
 // TEMPLATE
-// name: "",
-// tier: "",
-// element: "",
-// property: "",
-// rarity: "",
-// location: "",
-// refined: "",
-// look: ""
+                // name: "",
+                // tier: "",
+                // element: "",
+                // property: "",
+                // rarity: "",
+                // location: "",
+                // refined: "",
+                // look: ""
 
 // MATERIALS 
 const materials = {
@@ -53,44 +53,880 @@ const materials = {
                 location: "Plentiful",
                 refined: "Linen",
                 look: "PhysRep"
+            },
+            devarianEcheveria: {
+                name: "Devarian Echeveria",
+                tier: "Rank 1",
+                element: "Life",
+                property: "Containment",
+                rarity: "Common",
+                location: "Year Round",
+                refined: "Linen",
+                look: "PhysRep"
+            },
+            stranglingAloe: {
+                name: "Strangling Aloe",
+                tier: "Rank 1",
+                element: "Air",
+                property: "Soothing",
+                rarity: "Common",
+                location: "Year Round",
+                refined: "Linen",
+                look: "PhysRep"
+            },
+            redBittersweet: {
+                name: "Red Bittersweet",
+                tier: "Rank 1",
+                element: "Air",
+                property: "Corrosion",
+                rarity: "Uncommon",
+                location: "Spring 2 to Fall 2",
+                refined: "Linen",
+                look: "PhysRep"
+            },
+            flaxenTart: {
+                name: "Flaxen Tart",
+                tier: "Rank 1",
+                element: "Mind",
+                property: "Health",
+                rarity: "Common",
+                location: "Year Round",
+                refined: "Linen",
+                look: "PhysRep"
+            },
+            chokecherry: {
+                name: "Chokecherry",
+                tier: "Rank 1",
+                element: "Mind",
+                property: "Stimulation",
+                rarity: "Uncommon",
+                location: "Summer 2 to Fall 2",
+                refined: "Linen",
+                look: "PhysRep"
+            },
+            autumnGold: {
+                name: "Autumn Gold",
+                tier: "Rank 1",
+                element: "Wood",
+                property: "Repulsion",
+                rarity: "Uncommon",
+                location: "Fall Only",
+                refined: "Linen",
+                look: "PhysRep"
+            },
+            sunburst: {
+                name: "Sunburst",
+                tier: "Rank 1",
+                element: "Fire",
+                property: "Shadow",
+                rarity: "Common",
+                location: "All Spring and Fall 1",
+                refined: "Linen",
+                look: "PhysRep"
+            },
+            twilightDahlia: {
+                name: "Twilight Dahlia",
+                tier: "Rank 1",
+                element: "Spirit",
+                property: "Light",
+                rarity: "Common",
+                location: "Year Round",
+                refined: "Linen",
+                look: "PhysRep"
+            },
+            sunsetChrysanth: {
+                name: "Sunset Chrysanthemum",
+                tier: "Rank 1",
+                element: "Fire",
+                property: "Sleep",
+                rarity: "Common",
+                location: "Year Round",
+                refined: "Linen",
+                look: "PhysRep"
+            },
+            scandelensFiddlehead: {
+                name: "Scandelen's Fiddlehead",
+                tier: "Rank 1",
+                element: "Arcane",
+                property: "Intoxication",
+                rarity: "Common",
+                location: "All Spring and Fall 1",
+                refined: "Linen",
+                look: "PhysRep"
+            },
+            firebrand: {
+                name: "Firebrand",
+                tier: "Rank 1",
+                element: "Life",
+                property: "Acceleration",
+                rarity: "Common",
+                location: "All Spring and Fall 1",
+                refined: "Linen",
+                look: "PhysRep"
+            },
+            dedrotsFingers: {
+                name: "Dedrot's Fingers",
+                tier: "Rank 1",
+                element: "Earth",
+                property: "Undeath",
+                rarity: "Common",
+                location: "Common all times",
+                refined: "Linen",
+                look: "PhysRep"
+            },
+            adarasTears: {
+                name: "Adara's Tears",
+                tier: "Rank 1",
+                element: "Spirit",
+                property: "Strength",
+                rarity: "Uncommon",
+                location: "All Spring and Fall 1",
+                refined: "Linen",
+                look: "PhysRep"
+            },
+            caveMaple: {
+                name: "Cave Maple",
+                tier: "Rank 1",
+                element: "Arcane",
+                property: "Defiance",
+                rarity: "Uncommon",
+                location: "Caves/Caverns/Mines/Dark Places",
+                refined: "Linen",
+                look: "PhysRep"
             }
         },
-        rankTwo: {            
+        rankTwo: {
+            wailoBanshee: {
+                name: "Wail o' Banshee",
+                tier: "Rank 2",
+                element: "Air",
+                property: "Sound",
+                rarity: "Uncommon",
+                location: "Fall Only",
+                refined: "Vellum or Silk",
+                look: "PhysRep"
+            },
+            mosseaterNob: {
+                name: "Mosseater Nob",
+                tier: "Rank 2",
+                element: "Arcane",
+                property: "Absorption",
+                rarity: "Common",
+                location: "Year Round, more in Rain",
+                refined: "Vellum or Silk",
+                look: "PhysRep"
+            },
+            creepingIvoryMillet: {
+                name: "Creeping Ivory Millet",
+                tier: "Rank 2",
+                element: "Wood",
+                property: "Instability",
+                rarity: "Uncommon",
+                location: "Spring 2 to Fall 2",
+                refined: "Vellum or Silk",
+                look: "PhysRep"
+            },
+            crimsonEye: {
+                name: "Crimson Eye",
+                tier: "Rank 2",
+                element: "Life",
+                property: "Rejuvenation",
+                rarity: "Common",
+                location: "All Spring and Fall 1",
+                refined: "Vellum or Silk",
+                look: "PhysRep"
+            },
+            jimsonBerry: {
+                name: "Jimson Berry",
+                tier: "Rank 2",
+                element: "Water",
+                property: "Faith",
+                rarity: "Uncommon",
+                location: "Any",
+                refined: "Vellum or Silk",
+                look: "PhysRep"
+            },
+            moonriseFern: {
+                name: "Moonrise Fern",
+                tier: "Rank 2",
+                element: "Mind",
+                property: "Protection",
+                rarity: "Common",
+                location: "Any",
+                refined: "Vellum or Silk",
+                look: "PhysRep"
+            },
+            rosemallow: {
+                name: "Rosemallow",
+                tier: "Rank 2",
+                element: "Water",
+                property: "Enervation",
+                rarity: "Common",
+                location: "All Spring and Fall 1",
+                refined: "Vellum or Silk",
+                look: "PhysRep"
+            },
+            pinerestPoppy: {
+                name: "Pinerest Poppy",
+                tier: "Rank 2",
+                element: "Arcane",
+                property: "Numbing",
+                rarity: "Uncommon",
+                location: "All Spring and Fall 1",
+                refined: "Vellum or Silk",
+                look: "PhysRep"
+            },
+            highlandAster: {
+                name: "Highland Aster",
+                tier: "Rank 2",
+                element: "Fire",
+                property: "Multiplication",
+                rarity: "Common",
+                location: "All Spring and Fall 1",
+                refined: "Vellum or Silk",
+                look: "PhysRep"
+            },
+            amethystParadise: {
+                name: "Amethyst Paradise",
+                tier: "Rank 2",
+                element: "Mind",
+                property: "Death",
+                rarity: "Uncommon",
+                location: "All Spring and Fall 1",
+                refined: "Vellum or Silk",
+                look: "PhysRep"
+            },
+            spidermossCotton: {
+                name: "Spidermoss Cotton",
+                tier: "Rank 2",
+                element: "Mind",
+                property: "Curses",
+                rarity: "Rare",
+                location: "Fall Only",
+                refined: "Vellum or Silk",
+                look: "PhysRep"
+            },
+            ghelygnitePod: {
+                name: "Ghelygnite Pod",
+                tier: "Rank 2",
+                element: "Fire",
+                property: "Combustion",
+                rarity: "Rare",
+                location: "Any",
+                refined: "Vellum or Silk",
+                look: "PhysRep"
+            },
+            runehavenRedHot: {
+                name: "Runehaven Red Hot",
+                tier: "Rank 2",
+                element: "Fire",
+                property: "Augmentation",
+                rarity: "Uncommon",
+                location: "NOT Fall 3",
+                refined: "Vellum or Silk",
+                look: "PhysRep"
+            }
         },
         rankThree: {
+            rotRoyal: {
+                name: "Rot Royal",
+                tier: "Rank 3",
+                element: "Earth",
+                property: "Crown",
+                rarity: "Rare",
+                location: "Fall Only",
+                refined: "Aetherslip or Dreamcloth",
+                look: "PhysRep"
+            },
+            peasantsPromise: {
+                name: "Peasant's Promise",
+                tier: "Rank 3",
+                element: "Wood",
+                property: "Destiny",
+                rarity: "Rare",
+                location: "Spring Only",
+                refined: "Aetherslip or Dreamcloth",
+                look: "PhysRep"
+            },
+            forsytheBlossom: {
+                name: "Forsythe Blossom",
+                tier: "Rank 3",
+                element: "Water",
+                property: "Fertility",
+                rarity: "Common",
+                location: "All Spring and Fall 1",
+                refined: "Aetherslip or Dreamcloth",
+                look: "PhysRep"
+            },
+            crownofCantara: {
+                name: "Crown of Cantara",
+                tier: "Rank 3",
+                element: "Earth",
+                property: "Control",
+                rarity: "Common",
+                location: "Any",
+                refined: "Aetherslip or Dreamcloth",
+                look: "PhysRep"
+            },
+            dreamTendrils: {
+                name: "Dream Tendrils",
+                tier: "Rank 3",
+                element: "Air",
+                property: "Dream",
+                rarity: "Uncommon",
+                location: "Any",
+                refined: "Aetherslip or Dreamcloth",
+                look: "PhysRep"
+            },
+            goldEuphoria: {
+                name: "Gold Euphoria",
+                tier: "Rank 3",
+                element: "Water",
+                property: "Matter",
+                rarity: "Uncommon",
+                location: "Any Fall",
+                refined: "Aetherslip or Dreamcloth",
+                look: "PhysRep"
+            },
+            agelessAmaranth: {
+                name: "Ageless Amaranth",
+                tier: "Rank 3",
+                element: "N/A",
+                property: "Anachronism",
+                rarity: "Never",
+                location: "Never",
+                refined: "Aetherslip or Dreamcloth",
+                look: "PhysRep"
+            }
         }
-    }
+    },
+    animalInsect: {
+        rankOne: {
+            mouse: {
+                name: "Mouse",
+                tier: "Rank 1",
+            },
+            frog: {
+                name: "Frog",
+                tier: "Rank 1",
+            },
+            bat: {
+                name: "Bat",
+                tier: "Rank 1",
+            },
+            lizard: {
+                name: "Lizard",
+                tier: "Rank 1",
+            },
+            snake: {
+                name: "Snake",
+                tier: "Rank 1",
+            },
+            spider: {
+                name: "Spider",
+                tier: "Rank 1",
+            },
+            ebonyAnt: {
+                name: "Ebony Ant",
+                tier: "Rank 1",
+            },
+            springhopper: {
+                name: "Springhopper",
+                tier: "Rank 1",
+            },
+            rotRoach: {
+                name: "Rot Roach",
+                tier: "Rank 1",
+            },
+            brambleBee: {
+                name: "Bramble Bee",
+                tier: "Rank 1",
+            },
+            sapshellSnail: {
+                name: "Sapshell Snail",
+                tier: "Rank 1",
+            },
+            smelterSnail: {
+                name: "Smelter Snail",
+                tier: "Rank 1",
+            },
+            qoyhtLovebug: {
+                name: "Qoyht Lovebug",
+                tier: "Rank 1",
+            }
+        },
+        rankTwo: {
+            amberFantail: {
+                name: "Amber Fantail",
+                tier: "Rank 2",
+            },
+            onyxFantail: {
+                name: "Onyx Fantail",
+                tier: "Rank 2",
+            },
+            monkMantis: {
+                name: "Monk Mantis",
+                tier: "Rank 2",
+            },
+            aurelianChirper: {
+                name: "Aurelian Chirper",
+                tier: "Rank 2",
+            },
+            deepwaterDamselfly: {
+                name: "Deepwater Damselfly",
+                tier: "Rank 2",
+            },
+            orbWeaver: {
+                name: "Orb Weaver",
+                tier: "Rank 2",
+            },
+            terafly: {
+                name: "Terafly",
+                tier: "Rank 2",
+            },
+            sassareneSandStalker: {
+                name: "Sassarene Sand Stalker",
+                tier: "Rank 2",
+            }
+        },
+        rankThree: {
+            kemzutatenCaterpillar: {
+                name: "Kemzutaten Caterpillar",
+                tier: "Rank 3",
+            },
+            fangbark: {
+                name: "Fangbark",
+                tier: "Rank 3",
+            },
+            mandronianFirewyrm: {
+                name: "Mandronian Firewyrm",
+                tier: "Rank 3",
+            },
+            wystoneWhiptail: {
+                name: "Wystone Whiptail",
+                tier: "Rank 3",
+            },
+            moonwoodMothEater: {
+                name: "Moonwood Moth Eater",
+                tier: "Rank 3",
+            }
+        }
+    },
+    ores: {
+        rankOne: {
+            copper: {
+                name: "Copper",
+                tier: "Rank 1",
+                element: "Mind",
+                property: "Electricity",
+                rarity: "Common",
+                location: "Any",
+                refined: "Copper Ingot",
+                look: "PhysRep"
+            },
+            iron: {
+                name: "Iron",
+                tier: "Rank 1",
+                element: "Earth",
+                property: "Stubborness",
+                rarity: "Common",
+                location: "Any",
+                refined: "Iron Ingot",
+                look: "PhysRep"
+            },
+            rawGlass: {
+                name: "Raw Glass",
+                tier: "Rank 1",
+                element: "Fire",
+                property: "Clarity",
+                rarity: "Common",
+                location: "Any",
+                refined: "Refined Glass",
+                look: "PhysRep"
+            }
+        },
+        rankTwo: {
+            silver: {
+                name: "Silver",
+                tier: "Rank 2",
+                element: "Air",
+                property: "Simplification",
+                rarity: "Common",
+                location: "Any",
+                refined: "Silver Ingot",
+                look: "PhysRep"
+            },
+            steel: {
+                name: "Steel",
+                tier: "Rank 2",
+                element: "Wood",
+                property: "Efficiency",
+                rarity: "Common",
+                location: "Any",
+                refined: "Steel Ingot",
+                look: "PhysRep"
+            },
+            lead: {
+                name: "Lead",
+                tier: "Rank 2",
+                element: "Fire",
+                property: "Burden",
+                rarity: "Uncommon",
+                location: "Any",
+                refined: "Lead Ingot",
+                look: "PhysRep"
+            }
+        },
+        rankThree: {
+            gold: {
+                name: "Gold",
+                tier: "Rank 3",
+                element: "Arcane",
+                property: "Wealth",
+                rarity: "Uncommon",
+                location: "Any",
+                refined: "Gold Ingot",
+                look: "PhysRep"
+            },
+            mythril: {
+                name: "Mythril",
+                tier: "Rank 3",
+                element: "Air",
+                property: "Indestructable",
+                rarity: "Uncommon",
+                location: "Any",
+                refined: "Mythril Ingot",
+                look: "PhysRep"
+            },
+            orichalcum: {
+                name: "Orichalcum",
+                tier: "Rank 3",
+                element: "Spirit",
+                property: "Enchantment",
+                rarity: "Rare",
+                location: "Any",
+                refined: "Orichalcum Ingot",
+                look: "PhysRep"
+            }
+        }
+    },
+    gems: {
+        rankOne: {
+            lesserAmber: {
+                name: "Lesser Amber",
+                tier: "Rank 1",
+            },
+            lesserAmethyst: {
+                name: "Lesser Amethyst",
+                tier: "Rank 1",
+            },
+            lesserRuby: {
+                name: "Lesser Ruby",
+                tier: "Rank 1",
+            },
+            lesserCitrine: {
+                name: "Lesser Citrine",
+                tier: "Rank 1",
+            },
+            lesserDiamond: {
+                name: "Lesser Diamond",
+                tier: "Rank 1",
+            },
+            lesserOnyx: {
+                name: "Lesser Onyx",
+                tier: "Rank 1",
+            },
+            lesserEmerald: {
+                name: "Lesser Emerald",
+                tier: "Rank 1",
+            },
+            lesserSapphire: {
+                name: "Lesser Sapphire",
+                tier: "Rank 1",
+            },
+            lesserPetrifiedWood: {
+                name: "Lesser Petrified Wood",
+                tier: "Rank 1",
+            },
+            whitePearl: {
+                name: "White Pearl",
+                tier: "Rank 1",
+            },
+            blushSpinel: {
+                name: "Blush Spinel",
+                tier: "Rank 1",
+            }
+        },
+        rankTwo: {
+            rawAmber: {
+                name: "Raw Amber",
+                tier: "Rank 2",
+            },
+            rawAmethyst: {
+                name: "Raw Amethyst",
+                tier: "Rank 2",
+            },
+            rawRuby: {
+                name: "Raw Ruby",
+                tier: "Rank 2",
+            },
+            rawCitrine: {
+                name: "Raw Citrine",
+                tier: "Rank 2",
+            },
+            rawDiamond: {
+                name: "Raw Diamond",
+                tier: "Rank 2",
+            },
+            rawOnyx: {
+                name: "Raw Onyx",
+                tier: "Rank 2",
+            },
+            rawEmerald: {
+                name: "Raw Emerald",
+                tier: "Rank 2",
+            },
+            rawSapphire: {
+                name: "Raw Sapphire",
+                tier: "Rank 2",
+            },
+            rawPetrifiedWood: {
+                name: "Raw Petrified Wood",
+                tier: "Rank 2",
+            },
+            goldBlackPearl: {
+                name: "Gold/Black Pearl",
+                tier: "Rank 2",
+            },
+            opal: {
+                name: "Opal",
+                tier: "Rank 2",
+            },
+            gemofTranquility: {
+                name: "Gem of Tranquility",
+                tier: "Rank 2",
+            }
+        },
+        rankThree: {
+            clusterAmber: {
+                name: "Amber Cluster",
+                tier: "Rank 3",
+            },
+            clusterAmethyst: {
+                name: "Amethyst Cluster",
+                tier: "Rank 3",
+            },
+            clusterRuby: {
+                name: "Ruby Cluster",
+                tier: "Rank 3",
+            },
+            clusterCitrine: {
+                name: "Citrine Cluster",
+                tier: "Rank 3",
+            },
+            clusterDiamond: {
+                name: "Diamond Cluster",
+                tier: "Rank 3",
+            },
+            clusterOnyx: {
+                name: "Onyx Cluster",
+                tier: "Rank 3",
+            },
+            clusterEmerald: {
+                name: "Emerald Cluster",
+                tier: "Rank 3",
+            },
+            clusterSapphire: {
+                name: "Sapphire Cluster",
+                tier: "Rank 3",
+            },
+            clusterPetrifiedWood: {
+                name: "Petrified Wood Cluster",
+                tier: "Rank 3",
+            },
+            spiritShard: {
+                name: "Spirit Shard",
+                tier: "Rank 3",
+            },
+            pinkPearl: {
+                name: "Pink Pearl",
+                tier: "Rank 3",
+            }
+        }
+    },
+    wood: {
+        rankOne: {
+            rawWood: {
+                name: "Raw Wood",
+                tier: "Rank 1",
+                element: "Wood",
+                property: "Stability",
+                rarity: "Common",
+                location: "Any",
+                refined: "Lumber",
+                look: "PhysRep"
+            }
+        },
+        rankTwo: {
+            ironwood: {
+                name: "Ironwood",
+                tier: "Rank 2",
+                element: "Earth",
+                property: "Fortification",
+                rarity: "Common",
+                location: "Any",
+                refined: "Ironwood Lumber",
+                look: "PhysRep"
+            },
+            stonewood: {
+                name: "Stonewood",
+                tier: "Rank 2",
+                element: "Wood",
+                property: "Durability",
+                rarity: "Uncommon",
+                location: "Any",
+                refined: "Stonewood Lumber",
+                look: "PhysRep"
+            }
+        },
+        rankThree: {
+            heartwood: {
+                name: "Heartwood",
+                tier: "Rank 3",
+                element: "Water",
+                property: "Compassion",
+                rarity: "Uncommon",
+                location: "Any",
+                refined: "Heartwood Lumber",
+                look: "PhysRep"
+            },
+            ghostwood: {
+                name: "Ghostwood",
+                tier: "Rank 3",
+                element: "Air",
+                property: "Incorporeal",
+                rarity: "Rare",
+                location: "Any",
+                refined: "Ghostwood Lumber",
+                look: "PhysRep"
+            },
+            treantwood: {
+                name: "Treantwood",
+                tier: "Rank 3",
+                element: "Arcane",
+                property: "Immortality",
+                rarity: "Common",
+                location: "Any",
+                refined: "Treantwood Lumber",
+                look: "PhysRep"
+            }
+        }
+    },
+    skinning: {
+        rankOne: {
+            hide: {
+                name: "Hide",
+                tier: "Rank 1",
+            },
+            feather: {
+                name: "Feather",
+                tier: "Rank 1",
+            },
+            fang: {
+                name: "Fang",
+                tier: "Rank 1",
+            },
+            bone: {
+                name: "Bone",
+                tier: "Rank 1",
+            },
+            blood: {
+                name: "Blood",
+                tier: "Rank 1",
+            }
+        },
+        rankTwo: {
+            fur: {
+                name: "Fur",
+                tier: "Rank 2",
+            },
+            owlbearFeathers: {
+                name: "Owlbear Feathers",
+                tier: "Rank 2",
+            },
+            trollhide: {
+                name: "Trollhide",
+                tier: "Rank 2",
+            },
+            calcifiedBone: {
+                name: "Calcified Bone",
+                tier: "Rank 2",
+            },
+            cockatricePinion: {
+                name: "Cockatrice Pinion",
+                tier: "Rank 2",
+            }
+        },
+        rankThree: {
+            scale: {
+                name: "Scale",
+                tier: "Rank 3",
+            },
+            griffinFeather: {
+                name: "Griffin Feather",
+                tier: "Rank 3",
+            },
+            petrifiedBone: {
+                name: "Petrified Bone",
+                tier: "Rank 3",
+            },
+            faeSkin: {
+                name: "Fae Skin",
+                tier: "Rank 3",
+            }
+        }
+    },
+    // refinedMaterial: {
+    //     rankOne: {},
+    //     rankTwo: {},
+    //     rankThree: {}
+    // },
+    // craftedMaterial: {
+    //     rankOne: {},
+    //     rankTwo: {},
+    //     rankThree: {} // no rank 3 crafted materials
+    // }
 }
 
 // STAT BLOCK DATA TEMPLATE
-// name: "",
-// type: "",
-// hp: ,
-// armor: "",
-// weapons: "",
-// traits: function() {
-//     return "<b>" + this.type + ":</b> " + this.name + ""
-// },
-// abilities: "",
-// skills: "",
-// commonLoot: "",
-// specialLoot: "",
-// costume: "",
-// desc: ""
+            // name: "",
+            // type: "",
+            // hp: ,
+            // armor: "",
+            // weapons: "",
+            // traits: function() {
+            //     return "<b>" + this.type + ":</b> " + this.name + ""
+            // },
+            // abilities: "",
+            // skills: "",
+            // commonLoot: "",
+            // specialLoot: "",
+            // costume: "",
+            // desc: ""
 
 // CREATURE TYPES PROGRESS - humanoids require different structure
-// TODO: construct, elemental, humanoid, monstrous, plant, undead
-// IN PROGRESS: plant
-// DONE: beasts, divine, fae
+// TODO: construct, elemental, humanoid, monstrous, undead
+// IN PROGRESS: 
+// DONE: beasts, divine, fae, plant
 
-// TODO: construct (4), elemental (17), monstrous (8), plant (9), undead (10)
+// TODO: construct (4), elemental (17), monstrous (8), undead (10)
 const creatures = {
     beast: { // DONE
         cockatrice: {
             name: "Cockatrice",
             type: "Beast",
             hp: 40,
-            armor: "10 Natural Armor (Cannot Wear Armor)",
+            armor: "10 (Natural Armor, you may not wear armor)",
             weapons: "Cockatrice Claws (Cannot be Disarmed)",
             traits: function () {
                 return "<b>" + this.type + ":</b> " + this.name + "s are heartier, providing them more health and natural armor. Once every 5 minutes, you may state “Resist” when struck with one of the following effects: Bind, Paralyze, Pin, Prone, Slow, or Snare."
@@ -138,7 +974,7 @@ const creatures = {
             name: "Giant Cave Spider",
             type: "Beast",
             hp: 4,
-            armor: "6 Natural Armor (Cannot Wear Armor)",
+            armor: "6 (Natural Armor, you may not wear armor)",
             weapons: "2 One-handed Weapons",
             traits: function () {
                 return "<b>" + this.type + ":</b> " + this.name + "s are heartier, providing them more health and natural armor. Once every 5 minutes, you may state “Resist” when struck with one of the following effects: Bind, Paralyze, Pin, Prone, Slow, or Snare."
@@ -154,7 +990,7 @@ const creatures = {
             name: "Giant Insect",
             type: "Beast",
             hp: 20,
-            armor: "10 Natural Armor",
+            armor: "10 (Natural Armor, you may not wear armor)",
             weapons: "2 One-handed Swords (claws)",
             traits: function () {
                 return "<b>" + this.type + ":</b> " + this.name + "s are heartier, providing them more health and natural armor. Once every 5 minutes, you may state “Resist” when struck with one of the following effects: Bind, Paralyze, Pin, Prone, Slow, or Snare."
@@ -170,7 +1006,7 @@ const creatures = {
             name: "Tatzlewurm",
             type: "Beast",
             hp: 15,
-            armor: "5 Natural Armor (Cannot Wear Armor)",
+            armor: "5 (Natural Armor, you may not wear armor)",
             weapons: "1 One-handed Sword",
             traits: function () {
                 return "<b>" + this.type + ":</b> " + this.name + "s are heartier, providing them more health and natural armor. Once every 5 minutes, you may state “Resist” when struck with one of the following effects: Bind, Paralyze, Pin, Prone, Slow, or Snare."
@@ -387,7 +1223,7 @@ const creatures = {
             type: "monstrous humanoid"
         }
     },
-    plant: {
+    plant: { // DONE
         basicTruffle: {
             name: "Truffle",
             type: "Plant",
@@ -408,7 +1244,7 @@ const creatures = {
             name: "Compost Sprout",
             type: "Plant",
             hp: 3,
-            armor: "5 Natural Armor (Cannot Wear Armor)",
+            armor: "5 (Natural Armor, you may not wear armor)",
             weapons: "1 One-handed Weapon, Staff (Preferably Wood)",
             traits: function() {
                 return "<b>" + this.type + ":</b> " + this.name + "s can draw power from Hyreath, and may state “I Root myself to the ground, 1 minute”. If the Snare effect lasts the entire minute, restore up to 5 natural armor. This cannot exceed your base number. Deep Woods Only: Immune to Crit; State “Resist”."
@@ -424,7 +1260,7 @@ const creatures = {
             name: "Field Stalker",
             type: "Plant",
             hp: 3,
-            armor: "2 Natural Armor (Cannot Wear Armor)",
+            armor: "2 (Natural Armor, you may not wear armor)",
             weapons: "Choose: [One-handed Sword & Dagger] or [Dagger & Thrown Weapon]",
             traits: function() {
                 return "<b>" + this.type + ":</b> " + this.name + "s can draw power from Hyreath, and may state “I Root myself to the ground, 1 minute”. If the Snare effect lasts the entire minute, restore up to 5 natural armor. This cannot exceed your base number. Deep Woods Only: Immune to Crit; State “Resist”."
@@ -439,50 +1275,50 @@ const creatures = {
         ghostwoodSprout: {
             name: "Ghostwood Sprout",
             type: "Plant",
-            // hp: ,
-            // armor: "",
-            // weapons: "",
-            // traits: function() {
-            //     return "<b>" + this.type + ":</b> " + this.name + ""
-            // },
-            // abilities: "",
-            // skills: "",
-            // commonLoot: "",
-            // specialLoot: "",
-            // costume: "",
-            // desc: ""
+            hp: 5,
+            armor: "10 (Natural Armor, you may not wear armor)",
+            weapons: "Any, No Shields",
+            traits: function() {
+                return "<b>" + this.type + ":</b> " + this.name + "s can draw power from Hyreath, and may state “I Root myself to the ground, 1 minute”. If the Snare effect lasts the entire minute, restore up to 5 natural armor. This cannot exceed your base number. Deep Woods Only: Immune to Crit; State “Resist”."
+            },
+            abilities: "Ghostwood Bark: You only take damage from magical attacks or spells. State “No Effect””Recoil, Pacify” when struck by non-magical attacks or skills.",
+            skills: "<ul><li>5x Weapon - “Damage 3” — per recycle</li> <li>3x Weapon - From Behind “Crit, Damage 5” — per recycle</li> <li>2x Weapon - “Shatter” — per recycle</li></ul>",
+            commonLoot: "Up to 2 Raw Ghostwood",
+            specialLoot: "Up to 1 Rank 3 Fruit/Flower",
+            costume: "Ghostwood costume (“Leafman costume”)",
+            desc: "You are a sentient Ghostwood Tree. Other creatures are seen as competition for resources. You have infantile, animal intelligence (curious and cautious, willing to fight). You cannot speak but can make ShShShSh noises. You have an innate aversion to fire and will target those who wield it."
         },
         heartwoodSprout: {
             name: "Heartwood Sprout",
             type: "Plant",
-            // hp: ,
-            // armor: "",
-            // weapons: "",
-            // traits: function() {
-            //     return "<b>" + this.type + ":</b> " + this.name + ""
-            // },
-            // abilities: "",
-            // skills: "",
-            // commonLoot: "",
-            // specialLoot: "",
-            // costume: "",
-            // desc: ""
+            hp: 4,
+            armor: "35 (Natural Armor, you may not wear armor)",
+            weapons: "None",
+            traits: function() {
+                return "<b>" + this.type + ":</b> " + this.name + "s can draw power from Hyreath, and may state “I Root myself to the ground, 1 minute”. If the Snare effect lasts the entire minute, restore up to 5 natural armor. This cannot exceed your base number. Deep Woods Only: Immune to Crit; State “Resist”."
+            },
+            abilities: "<ul><li>Spore Spreader: You may only use your skills while under the effects of Snare. You may only use one skill every 5 seconds. Casually throw the Packet Burst over a group or straight above if surrounded. You must let out a loud sigh of melancholia every time you use a skill. (Note:Please use the hand on head method to pick up spell packets between recycles and after the fight)</li> <li>Overgrowth: Each time you hit 0 Hit Points, state “By voice, to those within 10 feet, Snare”</li></ul>",
+            skills: "<ul><li>Unlimited Packet Burst “Sleep”</li> <li>Unlimited Packet Burst “Silence”</li> <li>Unlimited Packet Burst “Weakness”</li> <li>Unlimited Packet Burst “Slow”</li></ul>",
+            commonLoot: "Up to 3 Heartwood",
+            specialLoot: "Up to 1 Rank 3 Flower/Fruit",
+            costume: "Costuming is Plant suits if available, green and/or brown costuming otherwise. Green makeup on exposed skin. Blooming Flowers on you: Flower Crown, Flower Make-up, etc.",
+            desc: "You are a beautiful, budding version of a sprout. You are sultry and lackadaisical, like a Southern Bell. You are the prettiest sprout and it brings you great agony."
         },
         ironwoodSprout: {
             name: "Ironwood Sprout",
             type: "Plant",
-            // hp: ,
-            // armor: "",
-            // weapons: "",
-            // traits: function() {
-            //     return "<b>" + this.type + ":</b> " + this.name + ""
-            // },
-            // abilities: "",
-            // skills: "",
-            // commonLoot: "",
-            // specialLoot: "",
-            // costume: "",
-            // desc: ""
+            hp: 2,
+            armor: "5 (Natural Armor, you may not wear armor)",
+            weapons: "1 One-handed Weapon, Staff (Preferably Wood)",
+            traits: function() {
+                return "<b>" + this.type + ":</b> " + this.name + "s can draw power from Hyreath, and may state “I Root myself to the ground, 1 minute”. If the Snare effect lasts the entire minute, restore up to 5 natural armor. This cannot exceed your base number. Deep Woods Only: Immune to Crit; State “Resist”."
+            },
+            abilities: "Weak Branch: The Ironwood Sprout wears a white and pink flower as part of its costuming. The cast person will choose a hit location to visibly place the flower. The Ironwood Sprout can only receive damage and effects that strike this hit area. All hits to this area are considered a Torso Shot for the purposes of a final strike. You may move the location of the flower with each recycle.",
+            skills: "<ul><li>1x Weapon - “Damage 2” — per recycle</li> <li>2x Weapon or Packet - “Crit, Damage 1” — per recycle</li> <li>2x Packet - “Through Wood, Snare, 1 minute” — per recycle</li> <li>1x Weapon or Packet - “Taunt” — per recycle</li></ul>",
+            commonLoot: "Up to 2 Raw ironwood",
+            specialLoot: "Up to 1 Rank 2 Fruit/Flower",
+            costume: "Costuming is Plant suits if available, green and/or brown costuming otherwise. Green makeup on exposed skin. Floral Crown, leaves only. White and Pink Ironwood Sprout Flower",
+            desc: "You are a sentient plant. Other creatures are seen as competition for resources. You have infantile, animal intelligence (curious and cautious, willing to fight). You cannot speak but can make ShShShSh noises. You have an innate aversion to fire and will target those who wield it."
         },
         pitcherPriest: {
             name: "Pitcher Priest",
@@ -504,7 +1340,7 @@ const creatures = {
             name: "Seedling Sprout",
             type: "Plant",
             hp: 2,
-            armor: "2 Natural Armor (Cannot Wear Armor)",
+            armor: "2 (Natural Armor, you may not wear armor)",
             weapons: "1 One-handed Weapon, Staff (Preferably Wood)",
             traits: function() {
                 return "<b>" + this.type + ":</b> " + this.name + "s can draw power from Hyreath, and may state “I Root myself to the ground, 1 minute”. If the Snare effect lasts the entire minute, restore up to 5 natural armor. This cannot exceed your base number. Deep Woods Only: Immune to Crit; State “Resist”."
@@ -520,7 +1356,7 @@ const creatures = {
             name: "Stonewood Sprout",
             type: "Plant",
             hp: 3,
-            armor: "12 Natural Armor (Cannot Wear Armor)",
+            armor: "12 (Natural Armor, you may not wear armor)",
             weapons: "1 One-handed Weapon, Staff (Preferably Wood)",
             traits: function() {
                 return "<b>" + this.type + ":</b> " + this.name + "s can draw power from Hyreath, and may state “I Root myself to the ground, 1 minute”. If the Snare effect lasts the entire minute, restore up to 5 natural armor. This cannot exceed your base number. Deep Woods Only: Immune to Crit; State “Resist”."
@@ -806,7 +1642,7 @@ const classicCreature = {
             name: "Giant Scorpion",
             type: "Beast",
             hp: 5,
-            armor: "5 Natural Armor",
+            armor: "5 (Natural Armor, you may not wear armor)",
             weapons: "2 One-handed Swords (claws)",
             traits: function() {
                 return "<b>" + this.type + ":</b> " + this.name + "s are heartier, providing them more health and natural armor. Once every 5 minutes, you may state “Resist” when struck with one of the following effects: Bind, Paralyze, Pin, Prone, Slow, or Snare."
@@ -819,7 +1655,7 @@ const classicCreature = {
             desc: "You are a Giant Scorpion, incapable of speech or any sort of humanoid actions. You fight both for food and for defense."
         }
     },
-    humanoid: { // will need a different kind of structure
+    humanoid: {
         basicBrute: {
             name: "basic brute",
             type: "humanoid"
