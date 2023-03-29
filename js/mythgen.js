@@ -1521,7 +1521,7 @@ const fragments = {
 
 const customFields = {
     location: [
-        "Module Building",
+        "The Mod Building",
         "Mod Cabins",
         "The Corral",
         "The Stables",
@@ -1557,7 +1557,7 @@ const customFields = {
         "Narrator",
         "Junior"
     ],
-    labels: [
+    labels: [ // not doing anything w these
         "Specialty PhysRep/Costume",
         "Specific Location Required",
         "Specific Time Required",
@@ -1568,7 +1568,7 @@ const customFields = {
         "Can Run Multiple Times",
         "Has Follow Up"
     ],
-    other: [
+    other: [ // not doing anything w these
         "Requires a PhysRep",
         "Facerole plot",
         "Cast Heavy",
@@ -1797,10 +1797,8 @@ const pluralPerson = ["plural 1", "plural 2"];
 const personList = singlePerson.concat(pluralPerson);
 
 // action consts
-const actionVerb = ["fragment", "gerund, noun"];
-const actionCont = [
-    "cont gerund, present, noun", "cont present, present, noun"
-];
+const actionVerb = ["action 1", "action 2"];
+const actionCont = ["action 3", "action 4"];
 const actionList = actionVerb.concat(actionCont);
 
 const methodList = [
@@ -1842,15 +1840,14 @@ function actionSelect(contVar, noun, verbPres, verbGer) {
         select = randomString(actionVerb);
     }
 
-    // FOR RUMORS: can i move the action list out like I did with the NPC thing so I can 
     const fragment = randomString(fragments.action);
     const verbContPres = randomString(verbs.continuous);
     const verbContGer = contGer(verbContPres);
     const actions = {        
-        "fragment": "<b>" + fragment, //pre-existing action
-        "gerund, noun": "<b>" + verbGer + " " + noun, //[verb]ing [noun]
-        "cont gerund, present, noun": "<b>" + verbContGer + " " + verbPres + " " + noun, //[trying] to [verb] [noun]
-        "cont present, present, noun": "<b>" + verbContPres + " " + verbPres + " " + noun + "</b>" //[tries] to [verb] [noun]
+        "action 1": "<b>" + fragment, //pre-existing action
+        "action 2": "<b>" + verbGer + " " + noun, //[verb]ing [noun]
+        "action 3": "<b>" + verbContGer + " " + verbPres + " " + noun, //[trying] to [verb] [noun]
+        "action 4": "<b>" + verbContPres + " " + verbPres + " " + noun + "</b>" //[tries] to [verb] [noun]
     }
 
     for (const act in actions) {
@@ -1859,13 +1856,12 @@ function actionSelect(contVar, noun, verbPres, verbGer) {
         }
     }
 
-    console.log(action, select);
     return {action, select};
 }
 
 // subject assist
 function subjectCheck(select, person, sva, action) {
-    if (select == "cont present, present, noun") {
+    if (select == "action 4") {
         subject = person + " " + action;
     } else {
         subject = person + " " + sva + " " + action;
@@ -1988,17 +1984,15 @@ function plotCreate() {
     const plotPlace = randomString(customFields.location);
     const plotIntense = randomString(customFields.intensity);
     const plotLeader = randomString(customFields.leadership);
-    // const plotLabels = randomString(customFields.labels);
 
     // NEXT: trying to [action thing] to [other people]
     const stories = {
         // Plot 1 - Plot 3
-        "plot 1": "This plot is going to be <b>" + wordPrep(tone) + " " + genre + " " + type + ".</b></p>" + "<p>" + term,
+        "plot 1": "This plot is going to be <b>" + wordPrep(tone) + " " + genre + " " + type,
 
         "plot 2": "This is <b>" + wordPrep(tone) + " " + genre + "</b> story in which <b>" + plotSubject + "</b> in order to <b>" + goal + ".</b> The twist is that <b>" + twist,
         
-        "plot 3": "This <b>" + type + "</b> is <b>" + wordPrep(tone) + " " + genre + "</b> story where <b>" + plotSubject + "</b> in order to <b>" + goal + ".</b></p>" +
-        "<p>" + term,
+        "plot 3": "This <b>" + type + "</b> is <b>" + wordPrep(tone) + " " + genre + "</b> story where <b>" + plotSubject + "</b> in order to <b>" + goal,
         
         // Quest 1 - Quest 2
         "quest 1": "The party is looking for <b>" + nounOne + "</b> that <b>" + condOne + ".</b> They are looking for this <b>" + motive + ",</b> but the thing is that <b>" + twist,
@@ -2023,9 +2017,14 @@ function plotCreate() {
         }
     }
 
-    document.querySelector(".output").innerHTML = "<h3>The Plot</h3>" + "<p>" + story + ".</b></p>" + "<hr>" + 
-    "<h3>Custom Fields</h3>" +
-    "<p>" + "This plot will be run at <b>" + plotPlace + ",</b> and its combat level will be <b>" + plotIntense + ".</b> It requires <b>" + plotLeader + "</b> leadership." + "</p>";
+    if (plotSelect == "plot 1" || plotSelect == "plot 3") {
+        document.querySelector(".output").innerHTML = "<p>" + story + ".</b></p>" + "<hr>" 
+        + "<p>" + "This plot will run at <b>" + plotPlace + "</b> with <b>" + plotIntense + "</b> intensity and <b>" + plotLeader + "</b> leadership." + "</p>" 
+        + "<p>" + term + "</p>";
+    } else {
+        document.querySelector(".output").innerHTML = "<p>" + story + ".</b></p>" + "<hr>"
+        + "<p>" + "This plot will run at <b>" + plotPlace + "</b> with <b>" + plotIntense + "</b> intensity and <b>" + plotLeader + "</b> leadership." + "</p>";
+    }
 }
 
 // Fetch Quest
@@ -2057,10 +2056,8 @@ function questGen() {
         }
     }
 
-    document.querySelector(".output").innerHTML = "<p>" + storyQuest + ".</b></p>" + "<hr>" + 
-    "<p><b>Location:</b> " + plotPlace + ", <br>" +
-    "<b>Intensity:</b> " + plotIntense + ", <br>" + 
-    "<b>Leadership:</b> " + plotLeader + "</p>";
+    document.querySelector(".output").innerHTML = "<p>" + storyQuest + ".</b></p>" + "<hr>" 
+    + "<p><b>Location:</b> " + plotPlace + "<br>" + "<b>Intensity:</b> " + plotIntense + "<br>" + "<b>Leadership Required:</b> " + plotLeader + "</p>";
 }
 
 // Adventure Generator
@@ -2099,7 +2096,7 @@ function adventureGen() {
     let contVar = true;
     const action = actionSelect(contVar, nounOne, verbPresOne, verbGerOne);
     const agAction = action.action;
-    const actionType = action.type;
+    const actionType = action.select;
 
     const agMethod = methodSelect(nounTwo, verbGerTwo);
     const agSubject = subjectCheck(actionType, agPerson, sva, agAction);
@@ -2124,10 +2121,8 @@ function adventureGen() {
         }
     }
 
-    document.querySelector(".output").innerHTML = "<p>" + agPlot + ".</b></p>" + "<hr>" + 
-    "<p><b>Location:</b> " + plotPlace + ",<br> " +
-    "<b>Intensity:</b> " + plotIntense + ",<br> " + 
-    "<b>Leadership:</b> " + plotLeader + "</p>";
+    document.querySelector(".output").innerHTML = "<p>" + agPlot + ".</b></p>" + "<hr>" 
+    + "<p><b>Location:</b> " + plotPlace + "<br>" + "<b>Intensity:</b> " + plotIntense + "<br>" + "<b>Leadership Required:</b> " + plotLeader + "</p>";
 }
 
 function npcGen() {

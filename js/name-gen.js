@@ -4,11 +4,20 @@ const nableA = [
 ];
 
 const nableB = [
-    "gax","gent","ghin","glen","glom","go","gor","gram","gray","gy","ha","hag","ham","han","harg","held","ho","holmes","i","ia","ick","id","ieg","ien","ier","ig","ik","in","ing","ion","iron","is","ise","it","ius","j’","je","jeff","jo","ka","kall","kar","kee","khan","kim","kir","kit","ko","kra","kras","ku","la","lagg","lam","lap","lat","leaf","lef","les","lis","lo","lu","ly","mad","mal","man","mant","mar","marsh","mas","mel","met","mez","mi","mil","min","mir","mis","mo","mold","mor","mul","mund","mus","na","nar","ned","nel","nic","no","nor","nu","o","o","ob","oc","ol","ol","old","on"
+    "gax","gent","ghin","glen","glom","go","gor","gram","gray","gy","ha","hag","ham","han","harg","held","ho","holmes","i","ia","ick","id","ieg","ien","ier","ig","ik","in","ing","ion","iron","is","ise","it","ius","j'","je","jeff","jo","ka","kall","kar","kee","khan","kim","kir","kit","ko","kra","kras","ku","la","lagg","lam","lap","lat","leaf","lef","les","lis","lo","lu","ly","mad","mal","man","mant","mar","marsh","mas","mel","met","mez","mi","mil","min","mir","mis","mo","mold","mor","mul","mund","mus","na","nar","ned","nel","nic","no","nor","nu","o","o","ob","oc","ol","ol","old","on"
 ];
 
 const nableC = [
     "ond","ora","os","osa","ot","pal","pan","pen","phan","phil","po","pos","poy","pres","pus","quas","que","quill","ra","rag","ralt","ram","ray","re","rem","ren","rick","rin","ris","rius","ro","rod","ron","ros","roth","row","ru","rua","ry","sa","sail","sal","san","sar","say","seef","seph","sho","sia","silver","sirk","sit","spar","spor","ste","ste","sto","stone","storm","sur","tan","tar","tars","tas","ter","tha","thad","tham","than","theo","ther","thon","thor","thy","ties","to","ton","tra","trav","tre","tredd","tue","ul","um","umm","undo","us","vay","ven","ver","vill","wa","will","wolf","yon","zegy","zin","zo","zoa","zom"
+];
+
+const nableD = [
+    "ar","ad","ia","tav","ros","sol","lux","kar","kat","ne","pe","ta","te","re","zi","ka","na","ya","vri","ska","e","qui","us","gam","zee","eri","dan","fe","fe","ri",
+    "da","mar","a","ru","fi","oh","mi","tu","na","kan","kri","meu","lin","por","rim","ar","an","ea","hor","uss","kur","loz","cro","nus","mee","nah",
+    "me","gi","do","nit","ram","cap","tor","van","tas","lei","jon","py","rope","ma","ry","am","ser","ket","zah","hak","ma","ka","ra","am","po","ra","pei","xes",
+    "sha","de","strev","ik","stee","vas","tri","a",
+    "yu","gi","oh",
+    "cu","chu","lainn","se","tan","ta"
 ];
 
 const nableX = ["","","","",""," "," ","-"]
@@ -49,7 +58,8 @@ function nameGen() {
     let nambleName = "";
     let namble = "";    
     for (i = 0; i < syllCount; i++) {
-        var rollTwo = diceRoll(6);
+        // var rollTwo = diceRoll(6);
+        var rollTwo = diceRoll(8);
         var nableJoin = randomString(nableX);        
         if (rollTwo <= 2) {
             nambleName = randomString(nableA);
@@ -57,6 +67,8 @@ function nameGen() {
             nambleName = randomString(nableB);
         } else if (rollTwo <= 6) {
             nambleName = randomString(nableC);
+        } else if (rollTwo <= 8) {
+            nambleName = randomString(nableD);
         }
 
         if (i == syllCount - 1) {
