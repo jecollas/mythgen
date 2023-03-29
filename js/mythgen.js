@@ -7,13 +7,21 @@
 const plots = {
     type: {
         "one shot": '<b>One Shot:</b> As advertised. Also known as "One & Done", these are a one-scene plot in their entirety. This includes "Anytime Plot" and "New Cast Plot"',
+        
         "vignette": "<b>Vignette:</b> A plot that consists of no more than 3-5 Scenes to execute in a single weekend event. This should be the most common scene type as they start and finish within the event weekend",
+        
         "line": "<b>(Plot) Lines:</b> Formula plot that has 6-12 plots and tends to run for 2-3 events",
+        
         "arc": "<b>(Plot) Arc:</b> A long-term plot with stages that may last multiple events. over multiple seasons",
+        
         "convergence": "<b>Convergence:</b> When plots overlap and are merged into a single, combined Plot Arc (sometimes a Plot Line, but that's unusual). This can be two Plot Lines from the same writer, or a collaboration between Plot Lines run by separate writers on the plot team",
+        
         "divergence": "<b>Divergence:</b> When the thread of a plot splits away to start a new plot type, that runs independent of the original or parallel",
+        
         "swansong": "<b>Swansong:</b> The ending of a plot, character, item, etc. This is the close out for a long-running plot, character, item, etc",
+        
         "module": "<b>Module:</b> A cool thing that Gary does :) Idk there's not a definition on Trello for this one, but it's kind of like a dungeon crawl",
+        
         "recurrence": "<b>Recurrence:</b> Reocurrs, I guess? Look, I don't have have all the answers, okay? All of my brain juice is going towards software engineering at the moment"
     },
     tone: [
@@ -829,6 +837,7 @@ const nouns = {
     ]
 }
 
+// IN PROGRESS
 const traitMake = {
     opener: [
         // THEY ARE
@@ -1510,6 +1519,65 @@ const fragments = {
     ]
 }
 
+const customFields = {
+    location: [
+        "Module Building",
+        "Mod Cabins",
+        "The Corral",
+        "The Stables",
+        "The Basketball Court",
+        "Mod Trail",
+        "King's Road",
+        "The Dancing Dragonfly",
+        "The Pavillion",
+        "The Lower Amphitheater",
+        "The Upper Amphitheater",
+        "Weypoint",
+        "Weyhome",
+        "The Place of Power",
+        "The Glades",
+        "The Forge",
+        "The Deep Woods",
+        "The Druid Grove",
+        "The Iron Mine",
+        "The Adventurer's Guild",
+        "The Town Building"
+    ],
+    intensity: [
+        "Non-Combat",
+        "Combat Heavy",
+        "Possible Combat",
+        "Some Combat",
+        "Stealth - Lethal"
+    ],
+    leadership: [
+        "New Cast",
+        "Cast Regular",
+        "Qualified Team Lead",
+        "Narrator",
+        "Junior"
+    ],
+    labels: [
+        "Specialty PhysRep/Costume",
+        "Specific Location Required",
+        "Specific Time Required",
+        "Item Tags Needed",
+        "Monster/Skill Tags Needed",
+        "Facerole",
+        "Guild/House Plot",
+        "Can Run Multiple Times",
+        "Has Follow Up"
+    ],
+    other: [
+        "Requires a PhysRep",
+        "Facerole plot",
+        "Cast Heavy",
+        "Non-Com",
+        "Roleplay",
+        "Combat"
+    ]
+}
+
 // toss these somewhere else
 const monsters = [
     "Boguns","Gnolls","Banshees","Undead","Elementals","Nutkin"
@@ -1835,7 +1903,7 @@ const npcThree = ["three people 1","three people 2","three people 3","three peop
 const npcParty = npcOne.concat(npcTwo, npcThree);
 
 // plot template consts
-const plotType = ["plot 1","plot 2"];
+const plotType = ["plot 1","plot 2","plot 3"];
 const questType = ["quest 1","quest 2"];
 const adventureType = [
     "adventure 1","adventure 2","adventure 3","adventure 4"
@@ -1917,18 +1985,28 @@ function plotCreate() {
     const plotMethod = methodSelect(nounTwo, verbGerTwo);
     const plotSubject = subjectCheck(actionType, plotPerson, sva, plotAction);
 
+    const plotPlace = randomString(customFields.location);
+    const plotIntense = randomString(customFields.intensity);
+    const plotLeader = randomString(customFields.leadership);
+    // const plotLabels = randomString(customFields.labels);
+
     // NEXT: trying to [action thing] to [other people]
     const stories = {
-        "plot 1": "This is <b>" + wordPrep(tone) + " " + genre + "</b> story in which <b>" + plotSubject + "</b> in order to <b>" + goal + ".</b> The twist is that <b>" + twist,
+        // Plot 1 - Plot 3
+        "plot 1": "This plot is going to be <b>" + wordPrep(tone) + " " + genre + " " + type + ".</b></p>" + "<p>" + term,
+
+        "plot 2": "This is <b>" + wordPrep(tone) + " " + genre + "</b> story in which <b>" + plotSubject + "</b> in order to <b>" + goal + ".</b> The twist is that <b>" + twist,
         
-        "plot 2": "This <b>" + type + "</b> is <b>" + wordPrep(tone) + " " + genre + "</b> story where <b>" + plotSubject + "</b> in order to <b>" + goal + ".</b></p>" +
+        "plot 3": "This <b>" + type + "</b> is <b>" + wordPrep(tone) + " " + genre + "</b> story where <b>" + plotSubject + "</b> in order to <b>" + goal + ".</b></p>" +
         "<p>" + term,
         
+        // Quest 1 - Quest 2
         "quest 1": "The party is looking for <b>" + nounOne + "</b> that <b>" + condOne + ".</b> They are looking for this <b>" + motive + ",</b> but the thing is that <b>" + twist,
         
         "quest 2": "The party is looking for <b>" + nounOne + "</b> that <b>" + condOne + "</b> in order to <b>" + goal + ".</b></p>" + "<p>They want this <b>" + motive + ",</b> but what they haven't realized yet is that <b>" + twist,
         
-        "adventure 1": "In this story, <b>" + plotSubject + " " + location  + ".</b></p>" + "<p>Their goal is to <b>" + goal + " " + plotMethod + " " + motive + ",</b> but <b>" + twist,
+        // Adventure 1 - Adventure 4
+        "adventure 1": "In this story, <b>" + plotSubject + "</b> <b>" + location  + ".</b></p>" + "<p>Their goal is to <b>" + goal + " " + plotMethod + " " + motive + ",</b> but <b>" + twist,
         
         "adventure 2": "In this story, <b>" + plotSubject + "</b> in order to <b>" + goal,
         
@@ -1945,7 +2023,9 @@ function plotCreate() {
         }
     }
 
-    document.querySelector(".output").innerHTML = "<p>" + story + ".</b></p>";
+    document.querySelector(".output").innerHTML = "<h3>The Plot</h3>" + "<p>" + story + ".</b></p>" + "<hr>" + 
+    "<h3>Custom Fields</h3>" +
+    "<p>" + "This plot will be run at <b>" + plotPlace + ",</b> and its combat level will be <b>" + plotIntense + ".</b> It requires <b>" + plotLeader + "</b> leadership." + "</p>";
 }
 
 // Fetch Quest
@@ -1961,6 +2041,10 @@ function questGen() {
     const motive = randomString(quest.motivation);
     const twist = randomString(quest.twist);
 
+    const plotPlace = randomString(customFields.location);
+    const plotIntense = randomString(customFields.intensity);
+    const plotLeader = randomString(customFields.leadership);
+
     const quests = {
         "quest 1": "The party is looking for <b>" + item + "</b> that <b>" + condition + ".</b> They are looking for this <b>" + motive + ",</b> but the thing is that <b>" + twist,
         
@@ -1973,7 +2057,10 @@ function questGen() {
         }
     }
 
-    document.querySelector(".output").innerHTML = "<p>" + storyQuest + ".</b></p>";
+    document.querySelector(".output").innerHTML = "<p>" + storyQuest + ".</b></p>" + "<hr>" + 
+    "<p><b>Location:</b> " + plotPlace + ", <br>" +
+    "<b>Intensity:</b> " + plotIntense + ", <br>" + 
+    "<b>Leadership:</b> " + plotLeader + "</p>";
 }
 
 // Adventure Generator
@@ -2017,6 +2104,10 @@ function adventureGen() {
     const agMethod = methodSelect(nounTwo, verbGerTwo);
     const agSubject = subjectCheck(actionType, agPerson, sva, agAction);
 
+    const plotPlace = randomString(customFields.location);
+    const plotIntense = randomString(customFields.intensity);
+    const plotLeader = randomString(customFields.leadership);
+
     const adventures = {
         "adventure 1": "In this story, <b>" + agSubject + " " + location  + ".</b></p>" + "<p>Their goal is to <b>" + goal + " " + agMethod + " " + motive + ",</b> but <b>" + twist,
         
@@ -2033,7 +2124,10 @@ function adventureGen() {
         }
     }
 
-    document.querySelector(".output").innerHTML = "<p>" + agPlot + ".</b></p>";
+    document.querySelector(".output").innerHTML = "<p>" + agPlot + ".</b></p>" + "<hr>" + 
+    "<p><b>Location:</b> " + plotPlace + ",<br> " +
+    "<b>Intensity:</b> " + plotIntense + ",<br> " + 
+    "<b>Leadership:</b> " + plotLeader + "</p>";
 }
 
 function npcGen() {
@@ -2044,6 +2138,7 @@ function npcGen() {
         partySelect = randomString(npcParty);
     }
 
+    // these can DEFINITELY be constructors
     const charaOne = charaCreate();
     const descOne = charaOne[0];
     const catOne = charaOne[1];
@@ -2124,18 +2219,28 @@ function rumorGen() {
     // note: figure out subject-verb agreement between item and condition
     const rumors = {
         "rumor 1": charOne + " has <b>" + item + "</b> that <b>" + condition,
+        
         "rumor 2": charOne + " is looking for <b>" + item + "</b> that <b>" + condition,
+        
         "rumor 3": charOne + " is looking for <b>" + item,
+        
         "rumor 4": charOne + " is looking for some help with something",
-        // "rumor 5": charOne + " was seen <b>" + accuse,
-        "rumor 5": charOne + " is " + accuse, //smth with the b tags
+        
+        "rumor 5": charOne + " is " + accuse,
+        
         "rumor 6": charOne + " was seen " + accuse + "</b> with <b>" + charTwo,
+        
         "rumor 7": charOne + " was asking around for <b>" + wordPrep(nounPers),
+        
         "rumor 8": charOne + " was asking around for someone who <b>" + trait,
+        
         "rumor 9": charOne + " was asking around for <b>" + charTwo,
+        
         "rumor 10": charOne + " <b>" + trait,
+        
         "rumor 11": charOne + " is <b>" + wordPrep(nounPers),
-        "rumor 12": charOne + " they may be upping woodland patrols due to a rise in the number of <b>" + monster
+        
+        "rumor 12": charOne + " said that they may be upping woodland patrols due to a rise in the number of <b>" + monster
     }
 
     for (const gossip in rumors) {

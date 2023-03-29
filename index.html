@@ -22,49 +22,62 @@
                         <li><a href="npc-builder.html">NPC Builder</a></li>
                         <li><a href="rumors.html">Rumors</a></li>
                         <li><a href="name-gen.html">Names</a></li>
-                        <li><a href="plot-gen.html">Plot Builder</a></li>
-                        <li><a href="monstermash.html">Monsters</a></a>
+                        <!-- <li><a href="plot-gen.html">Plot Builder</a></li> -->
+                        <li><a href="monstermash.html">Monsters</a></li>
+                        <li><a href="about.html">About</a></li>
                     </ul>
                 </div>
             </nav>
         </header>
 
         <div class="row">
-            <div class="side">
-                <h3>MARS'S TO DO LIST</h3>
-                <hr>
-                <p><b>General</b></p>
-                <ul>
-                    <li>Move <a href="plot-gen.html">Plot Builder</a> to this page</li>
-                    <li>Add an About page? Yeah, sure. Why not.</li>
-                    <li>Do something with Monsters</li>
-                    <li>Add materials, skills, professions, etc. etc.</li>
-                    <li>JAVASCRIPT CONSTRUCTORS. THAT COULD SOLVE MY VERB/NOUN PROBLEMS. MY GOD.</li>
-                </ul>
-
-                <p><b>CodeGen</b></p>
-                <ul>
-                    <li>Add radio buttons to generate multiple codes</li>
-                    <li>Password protect the page so I can make it visible in the nav</li>
-                </ul>
-
-                <p><b>Plot Type</b></p>
-                <ul>
-                    <li>Add examples of the different story genres and scene tones</li>
-                </ul>
-
-                <p><b>Names</b></p>
-                <ul>
-                    <li>Add radio buttons to generate multiple names</li>
-                    <li>Add name-gen.js functions to mythgen.js so that the rest of the generators can draw data from there as well</li>
-                </ul>
+            <div class="control">
+                <form class="control" name="control_panel">
+                    <fieldset id="plotPanel">
+                        <legend>Control Panel</legend>
+                        <span class="radio-option" name="npcBuild">
+                            <input type="radio" id="npcParty" name="control_panel" value="npcGen()" onclick="genSet(this)">
+                            <label for="npcParty">NPC Builder</label>
+                            <div class="sub1" id="npcSub">
+                                <input type="checkbox" id="charOne" name="control_panel" value="charOne" disabled>
+                                <label for="charOne">One NPC</label><br>
+                                <input type="checkbox" id="charTwo" name="control_panel" value="charTwo" disabled>
+                                <label for="charTwo">Two NPCs</label><br>
+                                <input type="checkbox" id="charThree" name="control_panel" disabled>
+                                <label for="charThree">Three NPCs</label>
+                            </div>
+                        </span>
+                        <span class="radio-option" name="rumors">
+                            <input type="radio" id="rmRumor" name="control_panel" value="rumorGen()" onclick="genSet(this)">
+                            <label for="rmRumor">Rumors</label>
+                        </span>
+                        <span class="radio-option" name="plotBuild">
+                            <input type="radio" id="pbPlot" name="control_panel" value="plotCreate()" onclick="genSet(this)">
+                            <label for="pbPlot">Plot Builder</label>
+                            <div class="sub1" id="pbSub">
+                                <input type="checkbox" id="pbType" name="control_panel" value="pbType" disabled>
+                                <label for="pbType">Plot Type</label><br>
+                                <input type="checkbox" id="pbQuest" name="control_panel" value="pbQuest" disabled>
+                                <label for="pbQuest">Fetch Quest</label><br>
+                                <input type="checkbox" id="pbAdventure" name="control_panel" value="pbAdventure" disabled>
+                                <label for="pbAdventure">Adventure</label><br>
+                            </div>
+                        </span>
+                        <div class="control-button">
+                            <input type="button" id="plotSubmit" value="Submit" onclick="plotCreate()">
+                            <input type="reset" value="Reset" onclick="plotReset()">
+                        </div>
+                    </fieldset>
+                    <p><i>Defaults to Plot Builder if no options are selected, or if the Control Panel is reset.</i></p>
+                </form>
             </div>
 
             <div class="content">
-                <h2>Work in Progress!</h2>
-                <p>Everything is functional unless explicitly stated otherwise, but don't be surprised if you come back and things are a little bit different :D</p>
-                <p></p>
-                <p>If you're interested in some of my other generators, go look at <a href="https://jecollas.github.io/singleserve/" target="_blank" title="Charendo's Book of Heroes">Charendo's Book of Heroes</a>, the random Player Character generator that I built for D&D5e. My other projects can be found on my github page, <a href="https://github.com/jecollas" target="_blank" title="jecollas (Jacquelyn Collas)">jecollas</a>.</p>
+                <p>Select an option from the Control Panel, then press the Submit button or the button below the plot box. Checkboxes under Plot Builder allow you to focus on the kind of plot you want to generate. If no boxes are selected, it'll return any one of the plot templates available.</p>
+                <div class="prompt">
+                    <span class="output" id="pb-plot"><p style="color:grey">Click the button for a plot!</p></span>
+                </div>
+                <button id="plotCreate" onclick="plotCreate()">What the Plot?</button>
             </div>
         </div>
 
