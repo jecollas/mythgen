@@ -31,14 +31,46 @@
         </header>
 
         <div class="row">
-            <div class="side">
+            <div class="control">
+                <form class="control" name="control_panel">
+                    <fieldset id="namePanel">
+                        <legend>Control Panel</legend>
+                        <span class="radio-option" name="nableOne">
+                            <input type="radio" id="nableOne" name="control_panel" value="1" checked>
+                            <label for="nableOne">One Name</label>
+                        </span>
+                        <span class="radio-option" name="nableThree">
+                            <input type="radio" id="nableThree" name="control_panel" value="3">
+                            <label for="nableThree">Three Names</label>
+                        </span>
+                        <span class="radio-option" name="nableFive">
+                            <input type="radio" id="nableFive" name="control_panel" value="5">
+                            <label for="nableFive">Five Names</label>
+                        </span>
+                        <span class="radio-option" name="nableTen">
+                            <input type="radio" id="nableTen" name="control_panel" value="10">
+                            <label for="nableTen">Ten Names</label>
+                        </span>
+                        <div class="control-button">
+                            <input type="button" id="nameSubmit" value="Submit" onclick="varValue()">
+                        </div>
+                    </fieldset>
+                    <h3>How It Works</h3>
+                    <hr>
+                    <p><b>Step 1: Roll d100</b> for the number of syllables. Syllables can be joined to form a word, or separated by spaces (25% chance) and hyphens (12.5% chance).</p>
+                    <p style="text-indent: 1em;"><b>01-10 One syllable; 11-70 Two syllables; 71-90 Three syllables; 91-100 Four syllables.</b></p>
+                    <p><b>Step 2: Roll 1d6</b> for each syllable to determine the table to use. Repeat this step for each new syllable. <b>1-2: "A"; 3-4: "B"; 5-6: "C"</b></p>
+                    <p><b>Step 3: Roll d100</b> to determine the syllable from the list. Repeat Steps 2 and 3 until each syllable is determined.</p>                 
+                </form>
+            </div>
+            <!-- <div class="side">
                 <h3>How It Works</h3>
                 <hr>
                 <p><b>Step 1: Roll d100</b> for the number of syllables. Syllables can be joined to form a word, or separated by spaces (25% chance) and hyphens (12.5% chance).</p>
                 <p style="text-indent: 1em;"><b>01-10 One syllable; 11-70 Two syllables; 71-90 Three syllables; 91-100 Four syllables.</b></p>
                 <p><b>Step 2: Roll 1d6</b> for each syllable to determine the table to use. Repeat this step for each new syllable. <b>1-2: "A"; 3-4: "B"; 5-6: "C"</b></p>
                 <p><b>Step 3: Roll d100</b> to determine the syllable from the list. Repeat Steps 2 and 3 until each syllable is determined.</p>
-            </div>
+            </div> -->
 
             <div class="content">
                 <p>Based on a <a href="https://www.drivethrurpg.com/product/110274/DD-Basic-Set-Rulebook-B-X-ed-Basic" target="_blank" title="D&D Basic Set Rulebook (B/X ed.) on DriveThru RPG">B/X D&D</a> Name Generator that Eric sent me. Each of these syllables was collected from a proper name from the B/X Rulebooks and B/X modules, or was from the name of an early D&D author.</p>
@@ -52,7 +84,7 @@
                     <input type="radio" id="fiveNames" name="name_number" value="5">
                     <label for="fiveNames">Five Names</label>
                 </form> -->
-                <button onclick="nameGen()">What's my Name?</button>
+                <button onclick="varValue()">What's my Name?</button>
             </div>
         </div>
 

@@ -20,7 +20,7 @@ const nableD = [
     "cu","chu","lainn","se","tan","ta"
 ];
 
-const nableX = ["","","","",""," "," ","-"]
+const nableX = ["","","",""," "," "," ","-"]
 
 function randomString(arr) {
     const randomIndex = Math.floor(Math.random() * arr.length);
@@ -42,7 +42,23 @@ function titleCase(str) {
     });
 }
 
-function nameGen() {
+function varValue() {
+    let nameVal = Array.from(document.getElementsByClassName("radio-option"));
+    let val = "";
+    nameVal.forEach(elem => {
+        const option = elem.querySelector("input[type=radio]");
+        if (option.checked) {
+            val = option.value;
+        }
+    });
+    // return val;
+    nameGen(val);
+}
+
+function nambleRoll() {
+    let nambleName = "";
+    let namble = "";
+
     var rollOne = diceRoll(100);
     let syllCount = 0;
     if (rollOne <= 10) {
@@ -55,10 +71,7 @@ function nameGen() {
         syllCount = 4;
     }
 
-    let nambleName = "";
-    let namble = "";    
     for (i = 0; i < syllCount; i++) {
-        // var rollTwo = diceRoll(6);
         var rollTwo = diceRoll(8);
         var nableJoin = randomString(nableX);        
         if (rollTwo <= 2) {
@@ -77,7 +90,24 @@ function nameGen() {
             namble += nambleName + nableJoin;
         }
     }
-
     namble = titleCase(namble.replace(/[^\w\s]|(.)(?=\1{2})/gi, ""));
-    document.querySelector(".output").innerHTML = "<p><b>" + namble + "</b></p>"
+    return namble;
+}
+
+function nameGen(val) {    
+    let nambleArr = [];
+    let i = 0;
+    let text = "";
+
+    while (i < val) {    
+        nambleArr[i] = nambleRoll();
+        i++;
+    }
+
+    for (let j = 0; j < nambleArr.length; j++) {
+        text += nambleArr[j] + "<br>";
+    }
+
+    // console.log(nambleArr);
+    document.querySelector(".output").innerHTML = "<p><b>" + text + "</b></p>";
 }
