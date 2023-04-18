@@ -603,9 +603,6 @@ const verbs = {
     ],
     continuous: [
         "tries to","attempts to","pretends to","plans to","intends to","wants to","needs to","threatens to"
-    ],
-    other: [ // not being used
-        "being framed for","finally"
     ]
 }
 
@@ -702,73 +699,16 @@ const nouns = {
             "insatiable hunger",
             "game that is also a test",
             "meteor",
-            "holy grail"
+            "holy grail",
+            "literal garbage"
         ],
         plural: [
-            "alcohol","arcane murals","contracts","creature hybrids","cursed armor","deceptive documents","diseased blankets","divine regalia","drugs","embalmed corpses","flows of gold","forbidden tomes","forged documents","kittens","literal garbage","lurid colors","magical man-catchers","secret documents","snakes","stolen teeth","public speeches",
+            "alcohol","arcane murals","contracts","creature hybrids","cursed armor","deceptive documents","diseased blankets","divine regalia","drugs","embalmed corpses","flows of gold","forbidden tomes","forged documents","kittens","lurid colors","magical man-catchers","secret documents","snakes","stolen teeth","public speeches",
         ]
     },
     concept: {
         singular: [ // intangible objects
-            // one word
-            "chaos",
-            "power",
-            "approval",
-            "information",
-            "duty",
-            "interest",
-            "rebellion",
-            "violence",
-            "blame",
-            "murder",
-            "trade",
-            "responsibility",
-            "opposition",
-            "control",
-            "peace",
-            "everything",
-            "history",
-            "magic",
-            "punishment",
-            "rest",
-            "revenge",
-            "time",
-            "reality",
-            "disaster",
-            "respect",
-            "destiny",
-            "disorder",
-            "treachery",
-            "leverage",
-            "misdirection",
-            "extortion",
-            "deception",
-            "blackmail",
-            "sabotage",
-            "espionage",
-            "bribery",
-            "cloning",
-            "financial compensation",
-            "false hope",
-            "unspeakable evil",
-            "unnatural disaster",
-            "threats and intimidation",
-            "extreme discretion",
-            "information from a contact person",
-            "frenzied devotion",
-            "mass hypnosis",
-            "iron will and determination",
-            "otherworldly help",
-            "the blame",
-            "the economy",
-            "the market",
-            "the next season",
-            "the notice of a god",
-            "the power of prayer",
-            "the power of the Ooze",
-            "the power vested in them by law",
-            "the prophecy",
-            "nausea"
+            "chaos","power","approval","information","duty","interest","rebellion","violence","blame","murder","trade","responsibility","opposition","control","peace","everything","history","magic","punishment","rest","revenge","time","reality","disaster","respect","destiny","disorder","treachery","leverage","misdirection","extortion","deception","blackmail","sabotage","espionage","bribery","cloning","financial compensation","false hope","unspeakable evil","unnatural disaster","threats and intimidation","extreme discretion","information from a contact person","frenzied devotion","mass hypnosis","iron will and determination","otherworldly help","the blame","the economy","the market","the next season","the notice of a god","the power of prayer","the power of the Ooze","the power vested in them by law","the prophecy","nausea"
         ],
         plural: [
             "alliances","blatant lies","deep pockets","divine blessings","fake identities","false promises","fame and prestige","little resources left","market manipulations","prices","privileges","public officials and decrees","pure wits","resources","rumors","sensitive divinations","the hopes of the whole village","the real answers",
@@ -1585,10 +1525,74 @@ const customFields = {
     ]
 }
 
+const enemies = {
+    monsters: {
+        beasts: [
+            "Cockatrices","Large Generic Beasts","Small Generic Beasts","Giant Cave Spiders","Giant Insects","Tatzlewurm","Venominds"
+        ],
+        constructs: [
+            "A.M.P.s","Basic Sentries","Counter Core Constructs","Panoptes"
+        ],
+        divine: [
+            "Fear Boguns","Joy Boguns"
+        ],
+        elementals: [
+            "Air Elemental Incarnations","Arcane Elemental Incarnations","Earth Elemental Incarnations","Water Elemental Incarnations","Wood Elemental Incarnations","Air Elemental Sparks","Arcane Elemental Sparks","Earth Elemental Sparks","Fire Elemental Sparks","Water Elemental Sparks","Wood Elemental Sparks","Air Elemental Visages","Arcane Elemental Visages","Fire Elemental Visages","Mind Elemental Visages","Water Elemental Visages","Wood Elemental Visages",
+        ],
+        fae: [
+            "Hobs","Lauma","Nutkin Arborists","Nutkin Drones","Nutkin Scouts","Spriggans"
+        ],
+        humanoids: [
+            "Anunagama","Anunagama Gourmands","Hill Gnolls","Hill Gnoll Commanders","Lepids","River Trolls","Sirens","Werewolves"
+        ],
+        plants: [
+            "Basic Truffles","Compost Sprouts","Field Stalkers","Ghostwood Sprouts","Heartwood Sprouts","Ironwood Sprouts","Pitcher Priests","Seedling Sprouts","Stonewood Sprouts"
+        ],
+        undead: [
+            "Animated Corpses","Bog Mummies","Corpse Eaters","Minor Banshees","Minor Zombies","Life Drinker Mummies","Skeletons","Weeping Monks"
+        ]
+    },
+    humanoids: {
+        alchemist: [
+            "Chemist","Grenadier","Poisoner"
+        ],
+        artificer: [
+            "Spell Bastion","Spell Slinger","Thaumaturge"
+        ],
+        bard: [
+            "Agitator","Summoner"
+        ],
+        cleric: [
+            "Elemental Eater","Field Medic","Sanctifier","Scalewalker","Spirit Warden"
+        ],
+        druid: [
+            "Bearzerker","Bestower","Saboteur"
+        ],
+        fighter: [
+            "Brute","Dancer","Legionnaire","Monk","Patient Warrior"
+        ],
+        paladin: [
+            "Martyr","Radiant Knight","Reanimator","Shield-Bearer"
+        ],
+        ranger: [
+            "Arcane Archer","Bounty Hunter","Totem Master","Trapper"
+        ],
+        rogue: [
+            "Juggler","Knave","Sniper","Treasure Hunter"
+        ],
+        runesmith: [
+            "Runeblade","Runic Guard","Sunderer"
+        ],
+        special: [
+            "Bestow Breaker","Bonebreaker","Geld Knight","Gravedigger","Mime","Scavenger"
+        ],
+        wizard: [
+            "Arena Wizard","Elemental Evoker","Mage Hunter","Sandman"
+        ]
+    }
+}
+
 // toss these somewhere else
-const monsters = [
-    "Boguns","Gnolls","Banshees","Undead","Elementals","Nutkin"
-];
 const groups = [
     "order","horde","clique","gaggle","mob","collegium ","armed group","squad","cadre","trio","duo","quintet","pack","wandering troupe","crime ring","group","cabal","coven","gang","bunch","fellowship","posse","school class","syndicate","delegation","secret society","guild","extended family","noble house","platoon","caravan","sisterhood","work team","team","association","cartel","club","congregation","gentlemen's club","faction","crew","hidden society","league","converstation club","religious sect","tribe","elite squad","brotherhood","charity organization","support staff","entourage","assembly","noble family","governing body","ensemble","conclave","coterie","organization","citizens","circle","partnership","society","party","cult","group","troop","army","mass","gathering","political faction","inbred family","choir","crowd","splinter faction","band","conspiracy","clan","collegium","patchwork","network","cell","panel","doomsday cult","union","collective","circus"
 ];
@@ -1707,25 +1711,24 @@ var nounPlace = nouns.place;
 var nounThing = nouns.thing;
 var nounConcept = nouns.concept;
 
-function verbSelect(noun) {
-    let present = "";
+function Verb(noun) {
+    this.present = "";
     if (noun == nounPerson.singular || noun == nounPerson.plural) {
-        present = randomString(verbs.person);
+        this.present = randomString(verbs.person);
     } else if (noun == nounPlace.singular || noun == nounPlace.plural) {
-        present = randomString(verbs.place);
+        this.present = randomString(verbs.place);
     } else if (noun == nounThing.singular || noun == nounThing.plural) {
-        present = randomString(verbs.thing);
+        this.present = randomString(verbs.thing);
     } else if (noun == nounConcept.singular || noun == nounConcept.plural) {
-        present = randomString(verbs.concept);
+        this.present = randomString(verbs.concept);
     }
 
-    let gerund = wordGer(present);
-    return {present, gerund};
+    this.gerund = wordGer(this.present);
 }
 
-function nounSelect() {
-    let noun = "";
-    let condition = "";
+function Noun() {
+    this.noun = "";
+    this.condition = "";
     
     const singular = [
         nounPerson.singular,nounPlace.singular,nounThing.singular,nounConcept.singular
@@ -1738,26 +1741,26 @@ function nounSelect() {
     ];
 
     const type = randomString(nouns); // singular, plural
-    const subtype = randomString(type); // person, place, thing, etc
-    const select = randomString(subtype); // noun from that array
+    this.subtype = randomString(type); // person, place, thing, etc
+    const select = randomString(this.subtype); // noun from that array
 
     // plural or singular? also, concepts don't get a preposition
-    if (type == plural
-        //  || (subtype == nounConcept.singular || subtype == nounConcept.plural)
-         ) {
-        noun = select;
-        condition = randomString(property.plural);
+    if (type == plural || this.subtype == nounConcept.plural) {
+        this.noun = select;
+        this.condition = randomString(property.plural);
+    } else if (this.subtype == nounConcept.singular) {
+        this.noun = select;
+        this.condition = randomString(property.singular);
     } else if (type == singular) {
-        noun = wordPrep(select);
-        condition = randomString(property.singular);
+        this.noun = wordPrep(select);
+        this.condition = randomString(property.singular);
     }
-    return [noun, subtype, condition];
 }
 
 ///////////////////////////////////////////
 //// CHARACTER CREATOR
 ///////////////////////////////////////////
-function charaCreate() {
+function Chara() {
     const charaNoun = randomString(nounPerson.singular);
     const adj = randomString(adjective);
     const trait = randomString(fragments.trait);
@@ -1765,13 +1768,10 @@ function charaCreate() {
     const lname = randomString(characters.lname);    
     let fakeRole = fname + " " + lname;
 
-    // returned chara types
-    let charaDesc = wordPrep(charaNoun) + "</b> who <b>" + trait;
-    let charaCat = wordPrep(adj) + " " + charaNoun;
-    let charaCon = charaCat + "</b> who <b>" + trait;
-    let charaFake = wordPrep(charaNoun) + "</b> named <b>" + fakeRole + "</b> who <b>" + trait;
-
-    return [charaDesc, charaCat, charaCon, charaFake];
+    this.desc = wordPrep(charaNoun) + "</b> who <b>" + trait;
+    this.cat = wordPrep(adj) + " " + charaNoun;
+    this.con = this.cat + "</b> who <b>" + trait;
+    this.fake = wordPrep(charaNoun) + "</b> named <b>" + fakeRole + "</b> who <b>" + trait;
 }
 
 function charaSelect() {    
@@ -1957,22 +1957,12 @@ function plotCreate() {
     const term = plots.type[type];
 
     // nouns – groups one and two
-    const nounGO = nounSelect();    
-    const nounOne = nounGO[0];
-    const nounSubOne = nounGO[1];
-    const condOne = nounGO[2];
-
-    const nounGT = nounSelect();
-    const nounTwo = nounGT[0];
-    const nounSubTwo = nounGT[1];
+    const nounOne = new Noun();
+    const nounTwo = new Noun();
 
     // verbs – groups one and two
-    const verbGO = verbSelect(nounSubOne);
-    const verbPresOne = verbGO.present;
-    const verbGerOne = verbGO.gerund;
-
-    const verbGT = verbSelect(nounSubTwo);
-    const verbGerTwo = verbGT.gerund;
+    const verbOne = new Verb(nounOne.subtype);
+    const verbTwo = new Verb(nounTwo.subtype);
 
     // person select
     const subject = personSelect();
@@ -1981,11 +1971,11 @@ function plotCreate() {
 
     // action select
     let contVar = true;
-    const action = actionSelect(contVar, nounOne, verbPresOne, verbGerOne);
+    const action = actionSelect(contVar, nounOne.noun, verbOne.present, verbOne.gerund);
     const plotAction = action.action;
     const actionType = action.select;
     
-    const plotMethod = methodSelect(nounTwo, verbGerTwo);
+    const plotMethod = methodSelect(nounTwo.noun, verbTwo.gerund);
     const plotSubject = subjectCheck(actionType, plotPerson, sva, plotAction);
 
     const plotPlace = randomString(customFields.location);
@@ -2002,9 +1992,9 @@ function plotCreate() {
         "plot 3": "This <b>" + type + "</b> is <b>" + wordPrep(tone) + " " + genre + "</b> story where <b>" + plotSubject + "</b> in order to <b>" + goal,
         
         // Quest 1 - Quest 2
-        "quest 1": "The party is looking for <b>" + nounOne + "</b> that <b>" + condOne + ".</b> They are looking for this <b>" + motive + ",</b> but the thing is that <b>" + twist,
+        "quest 1": "The party is looking for <b>" + nounOne.noun + "</b> that <b>" + nounOne.condition + ".</b> They are looking for this <b>" + motive + ",</b> but the thing is that <b>" + twist,
         
-        "quest 2": "The party is looking for <b>" + nounOne + "</b> that <b>" + condOne + "</b> in order to <b>" + goal + ".</b></p>" + "<p>They want this <b>" + motive + ",</b> but what they haven't realized yet is that <b>" + twist,
+        "quest 2": "The party is looking for <b>" + nounOne.noun + "</b> that <b>" + nounOne.condition + "</b> in order to <b>" + goal + ".</b></p>" + "<p>They want this <b>" + motive + ",</b> but what they haven't realized yet is that <b>" + twist,
         
         // Adventure 1 - Adventure 4
         "adventure 1": "In this story, <b>" + plotSubject + "</b> <b>" + location  + ".</b></p>" + "<p>Their goal is to <b>" + goal + " " + plotMethod + " " + motive + ",</b> but <b>" + twist,
@@ -2039,10 +2029,7 @@ function questGen() {
     let questSelect = randomString(questType);
     let storyQuest = "";
 
-    const noun = nounSelect();
-    const item = noun[0];
-    const condition = noun[2];
-
+    const noun = new Noun();
     const goal = randomString(fragments.goal);
     const motive = randomString(quest.motivation);
     const twist = randomString(quest.twist);
@@ -2052,9 +2039,9 @@ function questGen() {
     const plotLeader = randomString(customFields.leadership);
 
     const quests = {
-        "quest 1": "The party is looking for <b>" + item + "</b> that <b>" + condition + ".</b> They are looking for this <b>" + motive + ",</b> but the thing is that <b>" + twist,
+        "quest 1": "The party is looking for <b>" + noun.noun + "</b> that <b>" + noun.condition + ".</b> They are looking for this <b>" + motive + ",</b> but the thing is that <b>" + twist,
         
-        "quest 2": "The party is looking for <b>" + item + "</b> that <b>" + condition + "</b> in order to <b>" + goal + ".</b> They want this <b>" + motive + ",</b> but what they haven't realized yet is that <b>" + twist
+        "quest 2": "The party is looking for <b>" + noun.noun + "</b> that <b>" + noun.condition + "</b> in order to <b>" + goal + ".</b> They want this <b>" + motive + ",</b> but what they haven't realized yet is that <b>" + twist
     }
 
     for (const story in quests) {
@@ -2078,21 +2065,12 @@ function adventureGen() {
     const location = randomString(quest.place);
 
     // nouns – groups one and two
-    const nounGO = nounSelect();
-    const nounOne = nounGO[0];
-    const nounSubOne = nounGO[1];
-
-    const nounGT = nounSelect();
-    const nounTwo = nounGT[0];
-    const nounSubTwo = nounGT[1];
+    const nounOne = new Noun();
+    const nounTwo = new Noun();
 
     // verbs – groups one and two
-    const verbGO = verbSelect(nounSubOne);
-    const verbPresOne = verbGO.present;
-    const verbGerOne = verbGO.gerund;
-    
-    const verbGT = verbSelect(nounSubTwo);
-    const verbGerTwo = verbGT.gerund;
+    const verbOne = new Verb(nounOne.subtype);
+    const verbTwo = new Verb(nounTwo.subtype);
 
     // person select
     const subject = personSelect();
@@ -2101,11 +2079,11 @@ function adventureGen() {
 
     // action select
     let contVar = true;
-    const action = actionSelect(contVar, nounOne, verbPresOne, verbGerOne);
+    const action = actionSelect(contVar, nounOne.noun, verbOne.present, verbOne.gerund);
     const agAction = action.action;
     const actionType = action.select;
 
-    const agMethod = methodSelect(nounTwo, verbGerTwo);
+    const agMethod = methodSelect(nounTwo.noun, verbTwo.gerund);
     const agSubject = subjectCheck(actionType, agPerson, sva, agAction);
 
     const plotPlace = randomString(customFields.location);
@@ -2134,48 +2112,32 @@ function adventureGen() {
 
 function npcGen() {
     let partySelect = "";
+    let partyBuild = "";
+    var add = ",</b> and <b>";
 
     partySelect = randomString(checkOptions());
     if (partySelect === undefined) {
         partySelect = randomString(npcParty);
     }
 
-    // these can DEFINITELY be constructors
-    const charaOne = charaCreate();
-    const descOne = charaOne[0];
-    const catOne = charaOne[1];
-    const conOne = charaOne[2];
-    const fakeOne = charaOne[3];
-
-    const charaTwo = charaCreate();
-    const descTwo = charaTwo[0];
-    const catTwo = charaTwo[1];
-    const conTwo = charaTwo[2];
-    const fakeTwo = charaTwo[3];
-
-    const charaThree = charaCreate();
-    const descThree = charaThree[0];
-    const catThree = charaThree[1];
-    const conThree = charaThree[2];
-    const fakeThree = charaThree[3];
-
-    let partyBuild = "";
-    var add = ",</b> and <b>";
+    const charaOne = new Chara();
+    const charaTwo = new Chara();
+    const charaThree = new Chara();
 
     // I wonder if I can randomize these like how the name pdf has it
     const party = {
-        "one person 1": descOne,
-        "one person 2": catOne,
-        "one person 3": conOne,
-        "one person 4": fakeOne,
-        "two people 1": descOne + add + descTwo,
-        "two people 2": catOne + add + catTwo,
-        "two people 3": conOne + add + conTwo,
-        "two people 4": fakeOne + add + fakeTwo,
-        "three people 1": descOne + ", " + descTwo + add + descThree,
-        "three people 2": catOne + ", " + catTwo + add + catThree,
-        "three people 3": conOne + ", " + conTwo + add + conThree,
-        "three people 4": fakeOne + ", " + fakeTwo + add + fakeThree
+        "one person 1": charaOne.desc,
+        "one person 2": charaOne.cat,
+        "one person 3": charaOne.con,
+        "one person 4": charaOne.fake,
+        "two people 1": charaOne.desc + add + charaTwo.desc,
+        "two people 2": charaOne.cat + add + charaTwo.cat,
+        "two people 3": charaOne.con + add + charaTwo.con,
+        "two people 4": charaOne.fake + add + charaTwo.fake,
+        "three people 1": charaOne.desc + ", " + charaTwo.desc + add + charaThree.desc,
+        "three people 2": charaOne.cat + ", " + charaTwo.cat + add + charaThree.cat,
+        "three people 3": charaOne.con + ", " + charaTwo.con + add + charaThree.con,
+        "three people 4": charaOne.fake + ", " + charaTwo.fake + add + charaThree.fake
     }
 
     for (const people in party) {
@@ -2191,40 +2153,42 @@ function npcGen() {
 // Material Property – [material] can do [property]
 // Monster Stat Clue – [monster] can do [thing]
 // NPC Lore – [NPC] is [blank]
+
+var enemyMonster = enemies.monsters;
+
 function rumorGen() {
     let rumorSelect = randomString(rumorType);
     let rumor = "";
+
+    const monsterKeys = Object.keys(enemyMonster);
+    const monsterType = randomString(monsterKeys);
+    const monsterArray = enemyMonster[monsterType];
+    const monster = randomString(monsterArray);
 
     const charOne = charaSelect();
     const charTwo = charaSelect();
     const nounPers = randomString(nounPerson.singular);
 
-    const noun = nounSelect();
-    const item = noun[0];
-    const type = noun[1];
-    const condition = noun[2];
-
-    const verb = verbSelect(type);
-    const present = verb.present;
-    const gerund = verb.gerund;
+    const noun = new Noun();
+    const verb = new Verb(noun.subtype);
 
     // action should NOT be "cont present, present, noun"
     let contVar = false;
-    let action = actionSelect(contVar, item, present, gerund);
+    let action = actionSelect(contVar, noun.noun, verb.present, verb.gerund);
     const accuse = action.action;
     // const accuseType = action.type;
 
     const source = randomString(fragments.source);
-    const monster = randomString(monsters);
+    // const monster = randomString(monsters);
     const trait = randomString(fragments.trait);
 
     // note: figure out subject-verb agreement between item and condition
     const rumors = {
-        "rumor 1": charOne + " has <b>" + item + "</b> that <b>" + condition,
+        "rumor 1": charOne + " has <b>" + noun.noun + "</b> that <b>" + noun.condition,
         
-        "rumor 2": charOne + " is looking for <b>" + item + "</b> that <b>" + condition,
+        "rumor 2": charOne + " is looking for <b>" + noun.noun + "</b> that <b>" + noun.condition,
         
-        "rumor 3": charOne + " is looking for <b>" + item,
+        "rumor 3": charOne + " is looking for <b>" + noun.noun,
         
         "rumor 4": charOne + " is looking for some help with something",
         
