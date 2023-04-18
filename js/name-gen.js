@@ -12,12 +12,7 @@ const nableC = [
 ];
 
 const nableD = [
-    "ar","ad","ia","tav","ros","sol","lux","kar","kat","ne","pe","ta","te","re","zi","ka","na","ya","vri","ska","e","qui","us","gam","zee","eri","dan","fe","fe","ri",
-    "da","mar","a","ru","fi","oh","mi","tu","na","kan","kri","meu","lin","por","rim","ar","an","ea","hor","uss","kur","loz","cro","nus","mee","nah",
-    "me","gi","do","nit","ram","cap","tor","van","tas","lei","jon","py","rope","ma","ry","am","ser","ket","zah","hak","ma","ka","ra","am","po","ra","pei","xes",
-    "sha","de","strev","ik","stee","vas","tri","a",
-    "yu","gi","oh",
-    "cu","chu","lainn","se","tan","ta"
+    "cap","chu","cro","cu","da","dan","e","ea","eri","fe","fer","fi","gam","gi","hak","hor","ja","jon","kan","kat","ket","kri","kur","lainn","lei","lin","loz","lux","ma","me","mee","meu","nah","nay","ne","nit","nus","oh","pe","pei","por","py","qui","ri","rim","rope","se","ser","sha","ska","sol","stee","strev","ta","tav","te","tor","tri","tu","uss","van","vas","vri","xes","ya","yu","zah","zee","zi"
 ];
 
 const nableX = ["","","",""," "," "," ","-"]
@@ -40,19 +35,6 @@ function titleCase(str) {
     return str.replace(/([^\W_]+[^\s-]*) */g, function(txt) {
         return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
     });
-}
-
-function varValue() {
-    let nameVal = Array.from(document.getElementsByClassName("radio-option"));
-    let val = "";
-    nameVal.forEach(elem => {
-        const option = elem.querySelector("input[type=radio]");
-        if (option.checked) {
-            val = option.value;
-        }
-    });
-    // return val;
-    nameGen(val);
 }
 
 function nambleRoll() {
@@ -94,7 +76,7 @@ function nambleRoll() {
     return namble;
 }
 
-function nameGen(val) {    
+function varValue(val) {    
     let nambleArr = [];
     let i = 0;
     let text = "";
@@ -110,4 +92,16 @@ function nameGen(val) {
 
     // console.log(nambleArr);
     document.querySelector(".output").innerHTML = "<p><b>" + text + "</b></p>";
+}
+
+function nameGen() {
+    let nameVal = Array.from(document.getElementsByClassName("radio-option"));
+    let val = "";
+    nameVal.forEach(elem => {
+        const option = elem.querySelector("input[type=radio]");
+        if (option.checked) {
+            val = option.value;
+        }
+    });
+    varValue(val);
 }
