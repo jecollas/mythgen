@@ -95,7 +95,8 @@ function varValue(val) {
 }
 
 function nameGen() {
-    let nameVal = Array.from(document.getElementsByClassName("radio-option"));
+    // let nameVal = Array.from(document.getElementsByClassName("radio-option"));
+    let nameVal = Array.from(document.getElementsByClassName("rad-radio"));
     let val = "";
     nameVal.forEach(elem => {
         const option = elem.querySelector("input[type=radio]");
