@@ -15,11 +15,13 @@
             <nav>
                 <div class="navbar" id="navBar">
                     <ul>
+                        <li><a href="plot-type.html">Plot Type</a></li>
                         <li><a href="fetch-quest.html">Fetch Quest</a></li>
-                        <li><a class="active" href="adventure-gen.html">Adventure</a></li>
+                        <li><a href="adventure-gen.html">Adventure</a></li>
                         <li><a href="npc-builder.html">NPC Builder</a></li>
                         <li><a href="rumors.html">Rumors</a></li>
                         <li><a href="name-gen.html">Names</a></li>
+                        <li><a class="active" href="monstermash.html">Monsters</a></li>
                         <li><a href="about.html">About</a></li>
                     </ul>  
                 </div>
@@ -28,15 +30,16 @@
 
         <div class="row">
             <div class="content">
-                <p>Based on the <a href="https://docs.google.com/spreadsheets/d/1gaqvIaul5iXTfz3gNfVeOmxDeyU6Lrx_ChLytQqUCFY/edit?usp=sharing" target="_blank" title="Adventure Seed Generator">Adventure Seed Generator</a> by Johnn Four.</p>
-                <p><b>Note to self:</b> This generator can be accessed from the home page and from Plot Builder. DELETE THIS PAGE!</p>
+                <p>Not sure if the goal here is creating parties of existing monsters or generating new monster stats. Literally no idea how I'm going to go about this one yet but that's not stopping me from loading up data with reckless abandon. Let's make some goddamn monsters >:D</p>
+                <p><b>Note:</b> Currently returns the name of a random creature from each of my creature data libraries. There are so many monsters. What the hell. I've barely begun loading up their stats.</p>
                 <div class="prompt">
-                    <span class="output" id="ag-adventure"><p style="color:grey">Click the button for an adventure!</p></span>
+                    <div class="output" id="monster-mash"><p style="color:grey">Click the button for a mash!</p></div>
                 </div>
-                <button onclick="adventureGen()">Adventure Awaits!</button>
+                <button onclick="monsterMash()">For a Monster Mash</button>
             </div>
         </div>
-        
+
+        <script src="js/monstermash.js"></script>
         <script src="js/mythgen.js"></script>
     </body>
 </html>

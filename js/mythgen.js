@@ -1,29 +1,8 @@
-// compiled js file
-
 ////////////////////////////////
 //// OBJECT VARIABLES
 ////////////////////////////////
-// plot type, tone, and genre
+// plot tone, and genre
 const plots = {
-    type: {
-        "one shot": '<b>One Shot:</b> As advertised. Also known as "One & Done", these are a one-scene plot in their entirety. This includes "Anytime Plot" and "New Cast Plot"',
-        
-        "vignette": "<b>Vignette:</b> A plot that consists of no more than 3-5 Scenes to execute in a single weekend event. This should be the most common scene type as they start and finish within the event weekend",
-        
-        "line": "<b>(Plot) Lines:</b> Formula plot that has 6-12 plots and tends to run for 2-3 events",
-        
-        "arc": "<b>(Plot) Arc:</b> A long-term plot with stages that may last multiple events. over multiple seasons",
-        
-        "convergence": "<b>Convergence:</b> When plots overlap and are merged into a single, combined Plot Arc (sometimes a Plot Line, but that's unusual). This can be two Plot Lines from the same writer, or a collaboration between Plot Lines run by separate writers on the plot team",
-        
-        "divergence": "<b>Divergence:</b> When the thread of a plot splits away to start a new plot type, that runs independent of the original or parallel",
-        
-        "swansong": "<b>Swansong:</b> The ending of a plot, character, item, etc. This is the close out for a long-running plot, character, item, etc",
-        
-        "module": "<b>Module:</b> A cool thing that Gary does :) Idk there's not a definition on Trello for this one, but it's kind of like a dungeon crawl",
-        
-        "recurrence": "<b>Recurrence:</b> Reocurrs, I guess? Look, I don't have have all the answers, okay? All of my brain juice is going towards software engineering at the moment"
-    },
     tone: [
         "aggressive","goofy","grim","happy","ironic","satiric","opportunist","philanthropic","sad","serious","tragic","whimsical","witty"
     ],
@@ -573,18 +552,22 @@ const quest = {
 }
 
 // player characters, face roles, and first/last names
+// STEAL NAMES, DELETE EVERYTHING ELSE
+// organize this by fn/ln, maybe by title
 const characters = {
-    players: [
-        "Karlaen Sin'del","Lord Swift Fingers","Delawyn Liamour","Ursa Oak","Elias Athear","Agon Caradin of Canton","Jaxx Malendarr","Alwin Malendarr","Verdic Bin Corsica il-Pachero os-Farwhen","Baratraxar Hopsworth Greynettle","Isla Marillon Shallowcove","Cerradus","Tallian Gratz","Waylund","Kilgor","Leisa Vadi","Tacitus Jules Hooker","Sigmund Bjorvika","Relldar Delandrielle","Elen","Remi Dubois","Grylis Sharptongue","Azalea Briarwood","Knox","Norain Wulf","Wren","Arl","Ankh Nym'dul","Brandan Von Naegling","Calus Varin","Alyssandra Lamoran","Myrtle Muckandmire","Gregnobulous Frogmagourke","Rina Duskwalker","Crittamon Luckstryder","Whisper","Artharias","Theran Slate","Brigid","Cayn","Ekyo","Meeps Swag McMuffin","Clay","Fenrisse Starling","Balthazar","Koth Stalgrim","Hilde","Zumlar Mystralith","Cotter Cornwall","Gizzet Moonbright","Yinren Valgon","Alistair Caliban","Willow","Grimstone","Pappa Varnak","Caleb Urtgard","Zav","Minyo Hasselblöd","Mallazyr 'Dexter' Teken'Tlar","Munta Theynore","Esther Melea Artemis Glade","Esperanza Ta Zata","Riddle","Lorik Ovgar","Thordric Magestone","Hedrin Longfellow","Taliesin Finch","Seraphina Mehri","Sueb Dew","Maurmagil","Ezra","Nakoa","Eitri Hawthorne","Lucius Grell","Mayax","Matias Elson","Ven","Trisrora","Hart","Catanya","Xanthion Stonebreaker","Saige","Vendal Sihde","Chessaul Nymval","Lady Indy L'Rhine","Vitae Silias","Ajax Ardak","Wenek","Magnus Stillmyst","Mathers","Marlonious Finch","Owen Anderson","Aishin Stormcloud","Alansar Trignot","Victus Krane","Tass","Opulus","Grom","Geillia Mabrik","Amuck Ambrosius","Traveler"
-    ],
-    faceRoles: [
-        "Dedrot","Ororo","Amitel","Ryknos","Adara","Naenya","Enoon","Scandelen","Ixbus","Lord Proctor Behran","Farmer Grey","Octavious","Dennis","Zephyr Zax","Druidkeeper Hesperides Crimsonvine","Dr. Emmet Calhoun","Dr. Arianaya Bell-Dreveaux","Euclid, the Bawdy Bard","Ser Amaris","Fable","Xavier Denerethion","Baron Dworrin Stonethrust","Ali from Owlstone Keep","Paradiddle the Odditites Merchant","Nalfor Morehammer","Norrin Radd","Duke Geralt Marielle","Lord Auranos Ashbridge","Getorix Wahl","Oleg Hammersong","Roark Galt","Johann Becket","Bellator Zhao","Count Amedeo","Master Trapmaker Dom Sourfang","Yama","the Rend"
-    ],
     fname:[
-        "Billy","Bobby","Mary","Barry","Steven","Marlon","Rachel","Shelby","Eliza","Elizabeth","Joseph","Andy","Arietta","Morgan","Taylor","Tristan","Kai","Anabelle","Duke","Esteban","Antonio","Anthony","Tony","Jackie","John","Mike","Michael","Chev","Mandy","Sully","Joel","Roger","Peter","Connor","Brian","Brendan","Emmy","Isaac","Melissa","Jaime","Jesse","Dakota","Jackson","Sawyer","Xavier","Ester","Tien","Logan","James","Mason","Jason","Calvin","Caleb","Ada","Clay","Gerard","Amy","Lydia","Eugenia","Rose","Jade","Jane","Roxy","Dave","David","Alexis","Jake","Dirk","Sarah","Raleigh","Nikolai","Laila","Emerald","Marcus","Marc","Mark","Caroline","Katie","Kaitlin","Bridget","Haley","Jack","Lauren","Reya","Letitia","Axle","Alex","Rae","Fae","Danny","Dani","Hugo","Juan","Johnny","Paul","Dominic","Mia","Michelle","Dwayne","Chris","Antigone","Maria","Mehak","Vishali","Iris","Shane","Sam","Jimmy","Isabella","Wendy","Thomas","Dan","Daniel","Elias","Cris","Norbert","Arya","Cale","Jonathan","Jon","Merla","Sylora","Rhiann","Martin","Sasha","Tim","Timothy","Shirou","Rin","Holly","Ace","Ed","Edward","Corvanna","Allura","Sakura","Shinji","Asuka","Rei","Richardo","Jose","Graham","Scott"
+        "Billy","Bobby","Mary","Barry","Steven","Marlon","Rachel","Shelby","Eliza","Elizabeth","Joseph","Andy","Arietta","Morgan","Taylor","Tristan","Kai","Anabelle","Duke","Esteban","Antonio","Anthony","Tony","Jackie","John","Mike","Michael","Chev","Mandy","Sully","Joel","Roger","Peter","Connor","Brian","Brendan","Emmy","Isaac","Melissa","Jaime","Jesse","Dakota","Jackson","Sawyer","Xavier","Ester","Tien","Logan","James","Mason","Jason","Calvin","Caleb","Ada","Clay","Gerard","Amy","Lydia","Eugenia","Rose","Jade","Jane","Roxy","Dave","David","Alexis","Jake","Dirk","Sarah","Raleigh","Nikolai","Laila","Emerald","Marcus","Marc","Mark","Caroline","Katie","Kaitlin","Bridget","Haley","Jack","Lauren","Reya","Letitia","Axle","Alex","Rae","Fae","Danny","Dani","Hugo","Juan","Johnny","Paul","Dominic","Mia","Michelle","Dwayne","Chris","Antigone","Maria","Mehak","Vishali","Iris","Shane","Sam","Jimmy","Isabella","Wendy","Thomas","Dan","Daniel","Elias","Cris","Norbert","Arya","Cale","Jonathan","Jon","Merla","Sylora","Rhiann","Martin","Sasha","Tim","Timothy","Shirou","Rin","Holly","Ace","Ed","Edward","Corvanna","Allura","Sakura","Shinji","Asuka","Rei","Richardo","Jose","Graham","Scott","Colin","Ester","Baran",
+        // player names
+        "Karlaen","Delawyn","Ursa","Elias","Agon","Jax","Jaxx","Alwin","Verdic","Baratraxar","Isla","Cove","Cerradus","Tallian","Waylund","Leisa","Tacitus","Jules","Sigmund","Relldar","Elen","Remi","Grylis","Azalea","Norain","Wren","Brandan","Calus","Alyssandra","Aly","Myrtle","Greg","Gregory","Gregor","Gregnobulous","Rina","Crittamon","Whisper","Artharias","Arthur","Theran","Brigid","Cayn","Ekyo","Clay","Fenrisse","Balthazar","Koth","Hilde","Zumlar","Cotter","Gizzet","Yinren","Alistair","Willow","Caleb","Zav","Zavriel","Minyo","Mallazyr","Dexter","Munta","Esther","Melea","Artemis","Esperanza","Lorik","Thordric","Hedrin","Taliesin","Seraphina","Maurmagil","Ezra","Nakoa","Eitri","Lucius","Matias","Ven","Trisrora","Hart","Catanya","Sage","Saige","Xanthion","Vendal","Chessaul","Indy","Vitae","Ajax","Wenek","Magnus","Marlo","Marlonious","Owen","Aishin","Alansar","Victus","Tass","Opulus","Geillia","Amuck",
+        // face roles
+        "Octavious","Dennis","Zephyr","Hesperides","Emmet","Arianaya","Aria","Euclid","Amaris","Baron","Dworrin","Ali","Paradiddle","Nalfor","Norrin","Geralt","Auranos","Getorix","Oleg","Johann","Amadeo","Dom","Yama"
     ],
     lname: [
-        "Venitzo","Nightlocke","Shelley","Brando","Grey","Stevenson","Andrews","McGrath","Wheeler","Taylor","Brodey","Lee","Han","Collins","LeBeau","Blackwood","Jackson","Stratman","Smith","Filli","Miller","Merlino","Fox","Waldron","Rogers","Adams","de la Cruz","Santiago","Lessio","Belen","Rodriguez","Connors","Parker","Barnes","Price","Sawyer","Wolfe","Mayer","Howlett","Freyason","Foster","Reynolds","Thorne","Owens","Doe","Morse","Paura","Walters","Ivanofski","St. Claire","Shaughnessy","Carson","Fianna","Delarose","Darwin","Red","Green","Perez","Runner","Walker","Toretto","DiArcangelo","Desantos","Tavares","Diamond","Wu","Demehri","Cahill","Brown","Fenton","Rienton","Sims","James","Wolfhide","Blackwood","Black","Stoker","Berry","Night","Caligo","Pereira","Rackham","Teach","Murphy","Ikari","Matou","Langley","Ayanami","Vantas","Captor","Darling","Peters","Lukas","Perotta","Thornton","Fitch","Finch","Rodruiguez","Campbell","Bell","Graham","O'Connor","McMurphy","Becket","Bandyabout","Behrand","Cantor","Crimsonvine","Godley","Oaks","Reed","Shipley"
+        "Venitzo","Nightlocke","Shelley","Brando","Grey","Stevenson","Andrews","McGrath","Wheeler","Taylor","Brodey","Lee","Han","Collins","LeBeau","Blackwood","Jackson","Stratman","Smith","Filli","Miller","Merlino","Fox","Waldron","Rogers","Adams","de la Cruz","Santiago","Lessio","Belen","Rodriguez","Connors","Parker","Barnes","Price","Sawyer","Wolfe","Mayer","Howlett","Freyason","Foster","Reynolds","Thorne","Owens","Doe","Morse","Paura","Walters","Ivanofski","St. Claire","Shaughnessy","Carson","Fianna","Delarose","Darwin","Red","Green","Perez","Runner","Walker","Toretto","DiArcangelo","Desantos","Tavares","Diamond","Wu","Demehri","Cahill","Brown","Fenton","Rienton","Sims","James","Wolfhide","Blackwood","Black","Stoker","Berry","Night","Caligo","Pereira","Rackham","Teach","Murphy","Ikari","Matou","Langley","Ayanami","Vantas","Captor","Darling","Peters","Lukas","Perotta","Thornton","Fitch","Finch","Rodruiguez","Campbell","Bell","Graham","O'Connor","McMurphy","Becket","Bandyabout","Behrand","Cantor","Crimsonvine","Godley","Oaks","Reed","Shipley","Bet",
+        // player names
+        "Sin'del","Liamour","Oak","Athear","Caradin","Malendarr","Bin","Corsica","Pachero","Farwhen","Hopsworth","Greynettle","Grey","Nettle","Marillon","Shallows","Cove","Shallowcove","Gratz","Kilgor","Vadi","Hooker","Bjorvika","Delandrielle","Dubois","Sharp","Sharptongue","Briarwood","Knox","Wulf","Arl","Naegling","Varin","Lamoran","Muckandmire","Frogmagourke","Duskwalker","Luckstryder","Slate","Brightheart","Starling","Stalgrim","Mystralith","Cornwall","Moonbright","Valgon","Caliban","Grimstone","Varnak","Urtgard","Appleheart","Hasselblöd","Teken","Tekentlar","Theynore","Glade","Zata","Tazata","Ovgar","Magestone","Longfellow","Finch","Mehri","Dew","Hawthorne","Grell","Mayax","Elson","Stonebreaker","Sihde","Nymval","L'Rhine","Silias","Ardak","Stillmyst","Anderson","Stormcloud","Trignot","Krane","Grom","Mabrik","Ambrosius",
+        // face roles
+        "Behran","Farmer","Zax","Calhoun","Bell","Dreveaux","Devereux","Fable","Denerethion","Stonethrust","Owlstone","Oddity","Merchant","Morehammer","Radd","Marielle","Ashbridge","Wahl","Hammersong","Roark","Galt","Becket","Zhao","Sourfang"
     ]
 };
 
@@ -609,7 +592,7 @@ const verbs = {
 const nouns = {
     person: {
         singular: [
-            "king","chosen one","princess","empress","constable","mayor","Serpent God","local authority","little bitch","person of authority","lost loved one","cleric","divinity","rival","local noble","vampire","king","forgotten god","knight","monster","forgotten divinity","vampire lord","slayer","dragon","peasant girl","peasant boy","young boy","young girl","lad","lass","fruit-seller","gem merchant","sellsword","nomad","knight","gentleman thief","gentlewoman thief","soldier","monk","sorceror","enchanter","witch","warlock","warrior","mage","outlaw","ruffian","brigand","pickpocket","thief","woodsman","warlord","page","squire","troubadour","empress","emperor","noblewoman","nobleman","lord","lady","prince","princess","diplomat","monsterologist","swordmaster","apprentice","assassin-in-training","enchantress-in-training","summoner-in-training","witch-in-training","necromancer-in-training","prophet-in-training","sorceror-in-training","ogre","dragon","centaur","charlatan","vampire","genie","troll","dale elf","deep elf","dwarf","goblin","half elf","high elf","human","suhk","wildren","alchemist","artificer","bard","cleric","druid","fighter","paladin","ranger","rogue","runesmith","wizard","coalescer","excavator","harvester","logger","skinner","farmer","hunter","lumberjack","miner","panner","butcher","carpenter","gemcutter","glassmaker","papermaker","smelter","tanner","weaver","architect","blacksmith","brewer","chef","glassblower","lapidary","leatherworker","tailor","trapmaker","woodworker","appraiser","laborer","mender","eccentric candyman","retail employee","werewolf","feral child","snake-oil salesman","influencer","cowboy","pirate","rat","child psychologist","ghost hunter","archivist","creature","demolitions expert","goose","duelist","dog","construct","landlord","celebrity chef","village idiot","old guy","old lady","tax-evader","draft dodger","pyrotechnician","arsonist","professional arsonist","retired assassin","goth","clown","doctor","lawyer","con artist","grifter","lad in a fancy suit","hot girl","hot guy","hot person","malewife","entity","absent father","war criminal","shitty wizard","conspiracy theorist","adrenaline junkie","Italian","asshole","deadbeat dad","deadbeat mom","deadbeat parent","deadbeat","Little League coach","mobster","grad student","librarian","researcher","research assistant","entomologist","butch lesbian","dancer","singer","musician","historian","private investigator","detective","comedian","person","pro-wrestler","furry","girl","boy","candyman","retail employee","child","psychologist","guy","lad in a fancy suit","father","mother","dad","mom","parent","lesbian","idiot","raging anti-capitalist","CEO","union buster","dudebro","pharaoh","saber","archer","lancer","caster","rider","assassin","berserker","heroic spirit"
+            "king","chosen one","princess","empress","constable","mayor","Serpent God","local authority","little bitch","person of authority","lost loved one","cleric","divinity","rival","local noble","vampire","king","forgotten god","knight","monster","forgotten divinity","vampire lord","slayer","dragon","peasant girl","peasant boy","young boy","young girl","lad","lass","fruit-seller","gem merchant","sellsword","nomad","knight","gentleman thief","gentlewoman thief","soldier","monk","sorceror","enchanter","witch","warlock","warrior","mage","outlaw","ruffian","brigand","pickpocket","thief","woodsman","warlord","page","squire","troubadour","empress","emperor","noblewoman","nobleman","lord","lady","prince","princess","diplomat","monsterologist","swordmaster","apprentice","assassin-in-training","enchantress-in-training","summoner-in-training","witch-in-training","necromancer-in-training","prophet-in-training","sorceror-in-training","ogre","dragon","centaur","charlatan","vampire","genie","troll","dale elf","deep elf","dwarf","goblin","half elf","high elf","human","suhk","wildren","alchemist","artificer","bard","cleric","druid","fighter","paladin","ranger","rogue","runesmith","wizard","coalescer","excavator","harvester","logger","skinner","farmer","hunter","lumberjack","miner","panner","butcher","carpenter","gemcutter","glassmaker","papermaker","smelter","tanner","weaver","architect","blacksmith","brewer","chef","glassblower","lapidary","leatherworker","tailor","trapmaker","woodworker","appraiser","laborer","mender","eccentric candyman","retail employee","werewolf","feral child","snake-oil salesman","influencer","cowboy","pirate","rat","child psychologist","ghost hunter","archivist","creature","demolitions expert","goose","duelist","dog","construct","landlord","celebrity chef","village idiot","old guy","old lady","tax-evader","draft dodger","pyrotechnician","arsonist","professional arsonist","retired assassin","goth","clown","doctor","lawyer","con artist","grifter","lad in a fancy suit","hot girl","hot guy","hot person","malewife","entity","absent father","war criminal","shitty wizard","conspiracy theorist","adrenaline junkie","Italian","asshole","deadbeat dad","deadbeat mom","deadbeat parent","deadbeat","Little League coach","mobster","grad student","librarian","researcher","research assistant","entomologist","butch lesbian","dancer","singer","musician","historian","private investigator","detective","comedian","person","pro-wrestler","furry","girl","boy","candyman","retail employee","child","psychologist","guy","lad in a fancy suit","father","mother","dad","mom","parent","lesbian","idiot","raging anti-capitalist","CEO","union buster","dudebro","pharaoh","saber","archer","lancer","caster","rider","assassin","berserker","heroic spirit","chinchilla","goose","pseudo-dragon","toad","lapdog","pheasant","tortoise","cat","rabbit","baby","human baby"
         ],
         plural: [
             "travelers","officials","peasants","people","themselves","children","clerics","mages","martyrs","followers","hostages","slaves","new members","followers of another group","unstable individuals","long-extinct creatures","honest shopkeepers","younger citizens","thousands of ghosts","powerful friends","bribed officials","animals","group of citizens","army","cultists","militia members","government officials","puppet organization","colony of humanoids","group of people","army of undead","magical army","band of mercenaries","thousand tortured souls","squires","adventurers","assassins","fish people","drunken farmers","illusionists","settlers","werewolves","raiders","industrialists","acolytes","vampires","collectors","animals","land surveyors","rogues","elementals","goblin hunters","lowlives","knights","mercenaries","bardic actors","plants","nobles and their retinue","royalty","lepers","kobold trapsmiths","wizards","ancients","bandits","mendicant monks","giants","prisoners","dwarven archaeologists","con artists","alchemists","thieving travelers","villians","slaves","diplomats","doppelgangers","temple monks","rebels","runaways","psychics","tinkers","local spirits","masterless golems","druids","kings","diviners","travelling merchants","mysterious cloaked men","liches","sprites","traitors","monitors","scholars","guards","ousted monarchs","ghosts","militia members","children","orphan children","fairies","holy inquisitors","singers","enchanters","enchantresses","merchants","cavaliers","religious zealots","mummers","bards","dragons","otherwordly beings","dukes","duchesses","undead","slavers","escaped slaves","witches","planar travelers","charity mission workers","chaos worshippers","monks","priests","peasants","common folk","terrorists","defectors","pageboys","spies","foreign diplomats","nuns","nomads","plant creatures","philosophers","sea creatures","pirates","barons","ladies","teenagers","unemployed tradespeople","aristocrats","royals","scientists","necromancers","gnomes","masons","painters","senior villagers","housebreakers","fishermen","vintners","leatherworkers","intelligentsia","craftspersons","convicts","felons","smiths","homunculi","golems","bodysnatchers","vivisectionists","ax murderers","tulip growers","fey creatures","barbarians","scribes","crime bosses","drug lords","brothel keepers","veterans","draftees","deserters","masters","journeymen","home owners","shopkeepers","smugglers","corrupt politicians","mages","hags","violent vigilantes","three possums in a trench coat","another group","the homies","the dead","the law","the elderly","the aristocracy","the church","the militia","the rich","the court","the local crime underground","the masses","the ancients","'the man'","the mighty","another group","circus of clowns","heroic spirits"
@@ -625,82 +608,7 @@ const nouns = {
     },
     thing: {
         singular: [
-            "sword",
-            "shield",
-            "bottle of alcohol",
-            "knife",
-            "dog",
-            "really cool cloak",
-            "really big knife",
-            "potion",
-            "really tiny knife",
-            "jar",
-            "steamy adult romance novel",
-            "cursed magical item",
-            "small horse",
-            "spyglass",
-            "pair of scissors",
-            "magic item",        
-            "enourmous amount of gold",
-            "ancient song",
-            "fleet of warships",
-            "weak spot",
-            "cure",
-            "magical formula",
-            "Archwizard's legendary lost spellbook",
-            "new powerful magic book",
-            "trade war",
-            "trade monopoly",        
-            "big pile of spaghetti",
-            "body",
-            "new divinity",
-            "powerful magic item",
-            "tome of unspeakable truths",
-            "menagerie of creatures",
-            "old rusty chain",
-            "family heirloom weapon",
-            "diadem of control",
-            "powerful magic wand",
-            "plague of locusts",
-            "strange music box",
-            "enchanted quill",
-            "key",
-            "ancient holy symbol",
-            "recently-found artifact",
-            "cursed weapon",
-            "very intricate and detailed masterplan",
-            "astrolabe",
-            "stolen artifact",
-            "ancient arrowhead",
-            "merfolk bridal veil",
-            "soulstone",
-            "new world order",
-            "divine audience",
-            "low profile",
-            "plague",
-            "new ethic",
-            "deal with the fae",
-            "legacy",
-            "rivalry",
-            "war",
-            "race",
-            "new society",
-            "new community",
-            "great wound upon the land",
-            "great wound upon the people",
-            "coup",
-            "truce",
-            "agreement with the archenemy",
-            "civil war",
-            "agreement",
-            "prophecy",
-            "riot",
-            "laissez-faire attitude",
-            "insatiable hunger",
-            "game that is also a test",
-            "meteor",
-            "holy grail",
-            "literal garbage"
+            "sword","shield","bottle of alcohol","knife","dog","really cool cloak","really big knife","potion","really tiny knife","jar","steamy adult romance novel","cursed magical item","small horse","spyglass","pair of scissors","magic item","enourmous amount of gold","ancient song","fleet of warships","weak spot","cure","magical formula","Archwizard's legendary lost spellbook","new powerful magic book","trade war","trade monopoly","big pile of spaghetti","body","new divinity","powerful magic item","tome of unspeakable truths","menagerie of creatures","old rusty chain","family heirloom weapon","diadem of control","powerful magic wand","plague of locusts","strange music box","enchanted quill","key","ancient holy symbol","recently-found artifact","cursed weapon","very intricate and detailed masterplan","astrolabe","stolen artifact","ancient arrowhead","merfolk bridal veil","soulstone","new world order","divine audience","low profile","plague","new ethic","deal with the fae","legacy","rivalry","war","race","new society","new community","great wound upon the land","great wound upon the people","coup","truce","agreement with the archenemy","civil war","agreement","prophecy","riot","laissez-faire attitude","insatiable hunger","game that is also a test","meteor","holy grail","literal garbage","chinchilla","goose","pseudo-dragon","toad","lapdog","pheasant","tortoise","cat","rabbit","baby"
         ],
         plural: [
             "alcohol","arcane murals","contracts","creature hybrids","cursed armor","deceptive documents","diseased blankets","divine regalia","drugs","embalmed corpses","flows of gold","forbidden tomes","forged documents","kittens","lurid colors","magical man-catchers","secret documents","snakes","stolen teeth","public speeches",
@@ -714,8 +622,9 @@ const nouns = {
             "alliances","blatant lies","deep pockets","divine blessings","fake identities","false promises","fame and prestige","little resources left","market manipulations","prices","privileges","public officials and decrees","pure wits","resources","rumors","sensitive divinations","the hopes of the whole village","the real answers",
         ]
     },
-    posessions: [ // literally just nix most of the prepositions here and sort them other places
+    // literally just nix most of the prepositions here and sort them other places
     // add "their" as a wordPrep? or as an option thing 
+    posessions: [ 
         // starts with "their"
         "their lost honor", 
         "their country for personal gain",
@@ -923,6 +832,7 @@ const fragments = {
         "is from the LARP equivalent of Texas",
         "is afraid of the dark",
         "is really passionate about saving the bees",
+        "is wearing an animal onesie",
         // is a
         "is a crank",
         "is a worrywart",
@@ -941,6 +851,7 @@ const fragments = {
         "is a CEO",
         "is a union-buster",
         "is a teenager",
+        "is secretly a war criminal",
         // is on
         "is on holiday",
         "is on official business",
@@ -1037,6 +948,7 @@ const fragments = {
         "thinks your parent of unspecified gender is hot",
         "thinks the earth is shaped like a donut because it's funny",
         "thinks the earth is shaped like a donut because they're kind of hungry right now",
+        "thinks they're a full-sized dragon",
         // believes
         "believes all rumors to be true",
         "believes they are a gretch (they are not a gretch)",
@@ -1093,6 +1005,9 @@ const fragments = {
         "enjoys antiquities",
         "delights in awkward situations",
         "refuses to participate in the economy",
+        "seems to be magical because they're covered in gemstones",
+        "ran afoul of some kids with rhinestones and glue",
+        "judges your spellcasting style",
     ],
     source: [ // rumor source
         "My cousin's friend told him that","My cousin's friend told her that","My cousin told me that","My friend overheard some patrons at the tavern talking about how","I overheard one of the town guard saying that","My friend heard that","I overheard someone saying that","A buddy of mine said that","You didn't hear this from me, but","Rumor has it that","Don't quote me on this, but I heard that","I don't know if this is true or not, but I heard that","I heard through the grapevine that","So get this — apparently","A friend of mine was telling me the other day that","A friend of a friend said that","I read in the newspaper that","The bartender slipped me a note that said that","The bartender gave me a heads up that","Someone gave me a heads up that","The spirits revealed to me that","Just trust me on this one, but","The town busybody said that","This might just be me being nosy, but","I'm usually one to mind my own business, but I heard that"
@@ -1459,145 +1374,12 @@ const fragments = {
     ]
 }
 
-const customFields = {
-    location: [
-        "The Mod Building",
-        "Mod Cabins",
-        "The Corral",
-        "The Stables",
-        "The Basketball Court",
-        "Mod Trail",
-        "King's Road",
-        "The Dancing Dragonfly",
-        "The Pavilion",
-        "The Lower Amphitheater",
-        "The Upper Amphitheater",
-        "Weypoint",
-        "Weyhome",
-        "The Altar Stone",
-        "The Place of Power",
-        "The Crossing",
-        "The Glades",
-        "The Forge",
-        "The Deep Woods",
-        "The Druid Grove",
-        "The Naenya Shrine",
-        "The Iron Mine",
-        "The Adventurer's Guild",
-        "The Town Building",
-        "The Graveyard",
-        "Footbridge",
-        "Northbridge",
-        "Southbridge"
-    ],
-    intensity: [
-        "Non-Combat",
-        "Combat Heavy",
-        "Possible Combat",
-        "Some Combat",
-        "Stealth - Lethal"
-    ],
-    leadership: [
-        "New Cast",
-        "Cast Regular",
-        "Qualified Team Lead",
-        "Narrator",
-        "Junior"
-    ],
-    labels: [ // not doing anything w these
-        "Specialty PhysRep/Costume",
-        "Specific Location Required",
-        "Specific Time Required",
-        "Item Tags Needed",
-        "Monster/Skill Tags Needed",
-        "Facerole",
-        "Guild/House Plot",
-        "Can Run Multiple Times",
-        "Has Follow Up"
-    ],
-    other: [ // not doing anything w these
-        "Requires a PhysRep",
-        "Facerole plot",
-        "Cast Heavy",
-        "Non-Com",
-        "Roleplay",
-        "Combat"
-    ]
-}
-
-const enemies = {
-    monsters: {
-        beasts: [
-            "Cockatrices","Large Generic Beasts","Small Generic Beasts","Giant Cave Spiders","Giant Insects","Tatzlewurm","Venominds"
-        ],
-        constructs: [
-            "A.M.P.s","Basic Sentries","Counter Core Constructs","Panoptes"
-        ],
-        divine: [
-            "Fear Boguns","Joy Boguns"
-        ],
-        elementals: [
-            "Air Elemental Incarnations","Arcane Elemental Incarnations","Earth Elemental Incarnations","Water Elemental Incarnations","Wood Elemental Incarnations","Air Elemental Sparks","Arcane Elemental Sparks","Earth Elemental Sparks","Fire Elemental Sparks","Water Elemental Sparks","Wood Elemental Sparks","Air Elemental Visages","Arcane Elemental Visages","Fire Elemental Visages","Mind Elemental Visages","Water Elemental Visages","Wood Elemental Visages",
-        ],
-        fae: [
-            "Hobs","Lauma","Nutkin Arborists","Nutkin Drones","Nutkin Scouts","Spriggans"
-        ],
-        humanoids: [
-            "Anunagama","Anunagama Gourmands","Hill Gnolls","Hill Gnoll Commanders","Lepids","River Trolls","Sirens","Werewolves"
-        ],
-        plants: [
-            "Basic Truffles","Compost Sprouts","Field Stalkers","Ghostwood Sprouts","Heartwood Sprouts","Ironwood Sprouts","Pitcher Priests","Seedling Sprouts","Stonewood Sprouts"
-        ],
-        undead: [
-            "Animated Corpses","Bog Mummies","Corpse Eaters","Minor Banshees","Minor Zombies","Life Drinker Mummies","Skeletons","Weeping Monks"
-        ]
-    },
-    humanoids: {
-        alchemist: [
-            "Chemist","Grenadier","Poisoner"
-        ],
-        artificer: [
-            "Spell Bastion","Spell Slinger","Thaumaturge"
-        ],
-        bard: [
-            "Agitator","Summoner"
-        ],
-        cleric: [
-            "Elemental Eater","Field Medic","Sanctifier","Scalewalker","Spirit Warden"
-        ],
-        druid: [
-            "Bearzerker","Bestower","Saboteur"
-        ],
-        fighter: [
-            "Brute","Dancer","Legionnaire","Monk","Patient Warrior"
-        ],
-        paladin: [
-            "Martyr","Radiant Knight","Reanimator","Shield-Bearer"
-        ],
-        ranger: [
-            "Arcane Archer","Bounty Hunter","Totem Master","Trapper"
-        ],
-        rogue: [
-            "Juggler","Knave","Sniper","Treasure Hunter"
-        ],
-        runesmith: [
-            "Runeblade","Runic Guard","Sunderer"
-        ],
-        special: [
-            "Bestow Breaker","Bonebreaker","Geld Knight","Gravedigger","Mime","Scavenger"
-        ],
-        wizard: [
-            "Arena Wizard","Elemental Evoker","Mage Hunter","Sandman"
-        ]
-    }
-}
-
 // toss these somewhere else
 const groups = [
     "order","horde","clique","gaggle","mob","collegium ","armed group","squad","cadre","trio","duo","quintet","pack","wandering troupe","crime ring","group","cabal","coven","gang","bunch","fellowship","posse","school class","syndicate","delegation","secret society","guild","extended family","noble house","platoon","caravan","sisterhood","work team","team","association","cartel","club","congregation","gentlemen's club","faction","crew","hidden society","league","converstation club","religious sect","tribe","elite squad","brotherhood","charity organization","support staff","entourage","assembly","noble family","governing body","ensemble","conclave","coterie","organization","citizens","circle","partnership","society","party","cult","group","troop","army","mass","gathering","political faction","inbred family","choir","crowd","splinter faction","band","conspiracy","clan","collegium","patchwork","network","cell","panel","doomsday cult","union","collective","circus"
 ];
 const adjective = [// build this array out
-    "peasant","young","fruit-selling","gentleman","gentlewoman","apprentice","charlatan","vampire","dale elf","deep elf","dwarf","goblin","half elf","high elf","human","suhk","wildren","eccentric","werewolf","feral","influencer","child","celebrity","old","tax-evading","draft-dodging","professional","retired","goth","little","hot","absent","shitty","Italian","asshole","deadbeat","butch","dancing","singing","paramilitary","military","suicidal","fleeing","organized","insatiable","sickened","lusty","maniacal","unorganized","pugilistic","busybody","evil","sociopathic","underground","dying","benevolent","arsonistic","disorganized","convicted","noble","liar","chaotic","malicious","murderous","pugnacious","secret","elderly","violent","unharmonious","devious","surreptitious","quarelling","ideologically split","ragged","cursed","good","enlightened","zealous","heroic","amnesiac","resurrected","fey-touched","elite","lycanthropic","escaped","injured","commissioned","official","random","self-pitying","well-dressed","xenophobic","superstitious","drunk","depressive","morbid","mortally wounded","diseased","contrite","hateful","alcoholic","drug-addicted","fanatical","homeless","confused","artistic","desperate","suspicious","unaccountable","exhausted","vocal","undead","shady","righteous","plaintive","cowardly","insane","unscrupulous","oppressed","conned","fallen","undercover","reluctant","bloodthirsty","otherworldly","celestial","outsider","insectoid","brilliant","greedy","materialistic","unholy","ancient","obsessive","sole","outgrown","renowned","rich","poor","reformed","secretive","paranoid","compulsive","perverse","iconoclastic","nihilistic","former","underappreciated","kindly","unique","teenage","corny","entire"
+    "peasant","young","fruit-selling","gentleman","gentlewoman","apprentice","charlatan","vampire","dale elf","deep elf","dwarf","goblin","half elf","high elf","human","suhk","wildren","eccentric","werewolf","feral","influencer","child","celebrity","old","tax-evading","draft-dodging","professional","retired","goth","little","hot","absent","shitty","Italian","asshole","deadbeat","butch","dancing","singing","paramilitary","military","suicidal","fleeing","organized","insatiable","sickened","lusty","maniacal","unorganized","pugilistic","busybody","evil","sociopathic","underground","dying","benevolent","arsonistic","disorganized","convicted","noble","liar","chaotic","malicious","murderous","pugnacious","secret","elderly","violent","unharmonious","devious","surreptitious","quarelling","ideologically split","ragged","cursed","good","enlightened","zealous","heroic","amnesiac","resurrected","fey-touched","elite","lycanthropic","escaped","injured","commissioned","official","random","self-pitying","well-dressed","xenophobic","superstitious","drunk","depressive","morbid","mortally wounded","diseased","contrite","hateful","alcoholic","drug-addicted","fanatical","homeless","confused","artistic","desperate","suspicious","unaccountable","exhausted","vocal","undead","shady","righteous","plaintive","cowardly","insane","unscrupulous","oppressed","conned","fallen","undercover","reluctant","bloodthirsty","otherworldly","celestial","outsider","insectoid","brilliant","greedy","materialistic","unholy","ancient","obsessive","sole","outgrown","renowned","rich","poor","reformed","secretive","paranoid","compulsive","perverse","iconoclastic","nihilistic","former","underappreciated","kindly","unique","teenage","corny","entire","chainsmoking","passive-aggressive","really fat"
 ];
 
 ///////////////////////////////////////
@@ -1760,33 +1542,33 @@ function Noun() {
 ///////////////////////////////////////////
 //// CHARACTER CREATOR
 ///////////////////////////////////////////
-function Chara() {
+function Chara() { // used in npcGen()
     const charaNoun = randomString(nounPerson.singular);
     const adj = randomString(adjective);
     const trait = randomString(fragments.trait);
     const fname = randomString(characters.fname);
     const lname = randomString(characters.lname);    
-    let fakeRole = fname + " " + lname;
+    let fullName = fname + " " + lname;
+    // add a const for just the first name
 
     this.desc = wordPrep(charaNoun) + "</b> who <b>" + trait;
     this.cat = wordPrep(adj) + " " + charaNoun;
     this.con = this.cat + "</b> who <b>" + trait;
-    this.fake = wordPrep(charaNoun) + "</b> named <b>" + fakeRole + "</b> who <b>" + trait;
+    this.first = wordPrep(charaNoun) + "</b> named <b>" + fname + "</b> who <b>" + trait;
+    this.full = wordPrep(charaNoun) + "</b> named <b>" + fullName + "</b> who <b>" + trait;
 }
 
-function charaSelect() {    
-    const player = randomString(characters.players);
-    const npc = randomString(characters.faceRoles);
+function charaSelect() { // used in rumorGen
     const fname = randomString(characters.fname);
     const lname = randomString(characters.lname);
     const person = randomString(nounPerson.singular);
-    let fakeName = fname + " " + lname;
+    let fullName = fname + " " + lname;
 
     const charaList = {
-        "player character": "<b>" + player + "</b>",
-        "face role": "<b>" + npc + "</b>",
-        "fake role 1": "someone called <b>" + fakeName + "</b>",
-        "fake role 2": "<b>" + wordPrep(person) + "</b> named <b>" + fname + "</b>"
+        "chara 1": "<b>" + fname + "</b>",
+        "chara 2": "<b>" + fullName + "</b>",
+        "chara 3": "someone called <b>" + fullName + "</b>",
+        "chara 4": "<b>" + wordPrep(person) + "</b> named <b>" + fname + "</b>"
     }
 
     const keys = Object.keys(charaList);
@@ -1899,10 +1681,11 @@ function methodSelect(noun, verbGer) {
 ////////////////////////////
 //// PLOT TEMPLATES
 ////////////////////////////
+// there has GOT to be a better naming convention for some of these
 // people consts
-const npcOne = ["one person 1","one person 2","one person 3","one person 4"];
-const npcTwo = ["two people 1","two people 2","two people 3","two people 4"];
-const npcThree = ["three people 1","three people 2","three people 3","three people 4"];
+const npcOne = ["one person 1","one person 2","one person 3","one person 4","one person 5"];
+const npcTwo = ["two people 1","two people 2","two people 3","two people 4","two people 5"];
+const npcThree = ["three people 1","three people 2","three people 3","three people 4","three people 5"];
 const npcParty = npcOne.concat(npcTwo, npcThree);
 
 // plot template consts
@@ -1915,23 +1698,12 @@ const storyType = plotType.concat(questType, adventureType);
 
 // rumor templates
 const rumorType = [
-    "rumor 1","rumor 2","rumor 3","rumor 4","rumor 5","rumor 6","rumor 7","rumor 8","rumor 9","rumor 10","rumor 11","rumor 12"
+    "rumor 1","rumor 2","rumor 3","rumor 4","rumor 5","rumor 6","rumor 7","rumor 8","rumor 9","rumor 10","rumor 11"
 ];
 
 ///////////////////////////////
 //// GENERATOR FUNCTIONS
 ///////////////////////////////
-// Plot Type
-function plotGen() {
-    const tone = randomString(plots.tone);
-    const genre = randomString(plots.genre);
-
-    const keys = Object.keys(plots.type);
-    const type = randomString(keys);
-    const term = plots.type[type];
-    
-    document.querySelector(".output").innerHTML = "<p>This plot is going to be <b>" + wordPrep(tone) + " " + genre + " " + type + ".</b></p>" + "<p>" + term + ".</p>"
-}
 
 // PLOT BUILDER – the big boy :)
 function plotCreate() { 
@@ -1951,10 +1723,6 @@ function plotCreate() {
     
     const tone = randomString(plots.tone);
     const genre = randomString(plots.genre);
-    
-    const keys = Object.keys(plots.type);
-    const type = randomString(keys);
-    const term = plots.type[type];
 
     // nouns – groups one and two
     const nounOne = new Noun();
@@ -1978,18 +1746,14 @@ function plotCreate() {
     const plotMethod = methodSelect(nounTwo.noun, verbTwo.gerund);
     const plotSubject = subjectCheck(actionType, plotPerson, sva, plotAction);
 
-    const plotPlace = randomString(customFields.location);
-    const plotIntense = randomString(customFields.intensity);
-    const plotLeader = randomString(customFields.leadership);
-
     // NEXT: trying to [action thing] to [other people]
     const stories = {
         // Plot 1 - Plot 3
-        "plot 1": "This plot is going to be <b>" + wordPrep(tone) + " " + genre + " " + type,
+        "plot 1": "This plot is going to be <b>" + wordPrep(tone) + " " + genre,
 
         "plot 2": "This is <b>" + wordPrep(tone) + " " + genre + "</b> story in which <b>" + plotSubject + "</b> in order to <b>" + goal + ".</b> The twist is that <b>" + twist,
         
-        "plot 3": "This <b>" + type + "</b> is <b>" + wordPrep(tone) + " " + genre + "</b> story where <b>" + plotSubject + "</b> in order to <b>" + goal,
+        "plot 3": "This is <b>" + wordPrep(tone) + " " + genre + "</b> story where <b>" + plotSubject + "</b> in order to <b>" + goal,
         
         // Quest 1 - Quest 2
         "quest 1": "The party is looking for <b>" + nounOne.noun + "</b> that <b>" + nounOne.condition + ".</b> They are looking for this <b>" + motive + ",</b> but the thing is that <b>" + twist,
@@ -2004,8 +1768,6 @@ function plotCreate() {
         "adventure 3": "In this story, <b>" + plotSubject + ".</b> They are doing this <b> " + motive,
         
         "adventure 4": "This story takes place <b>" + location +",</b> where <b>" + plotSubject + ".</b> Their goal is to <b>" + goal + " " + plotMethod + ".</b></p>" + "<p>They are doing this <b>" + motive + ",</b> but <b>" + twist,
-
-        // from kieran: if they [blank], then they [blank]
     }
 
     for (const plot in stories) {
@@ -2014,14 +1776,7 @@ function plotCreate() {
         }
     }
 
-    if (plotSelect == "plot 1" || plotSelect == "plot 3") {
-        document.querySelector(".output").innerHTML = "<p>" + story + ".</b></p>" + "<hr>" 
-        + "<p>" + "This plot will run at <b>" + plotPlace + "</b> with <b>" + plotIntense + "</b> intensity and <b>" + plotLeader + "</b> leadership." + "</p>" 
-        + "<p>" + term + "</p>";
-    } else {
-        document.querySelector(".output").innerHTML = "<p>" + story + ".</b></p>" + "<hr>"
-        + "<p>" + "This plot will run at <b>" + plotPlace + "</b> with <b>" + plotIntense + "</b> intensity and <b>" + plotLeader + "</b> leadership." + "</p>";
-    }
+    document.querySelector(".output").innerHTML = "<p>" + story + ".</b></p>";
 }
 
 // Fetch Quest
@@ -2033,10 +1788,6 @@ function questGen() {
     const goal = randomString(fragments.goal);
     const motive = randomString(quest.motivation);
     const twist = randomString(quest.twist);
-
-    const plotPlace = randomString(customFields.location);
-    const plotIntense = randomString(customFields.intensity);
-    const plotLeader = randomString(customFields.leadership);
 
     const quests = {
         "quest 1": "The party is looking for <b>" + noun.noun + "</b> that <b>" + noun.condition + ".</b> They are looking for this <b>" + motive + ",</b> but the thing is that <b>" + twist,
@@ -2050,8 +1801,7 @@ function questGen() {
         }
     }
 
-    document.querySelector(".output").innerHTML = "<p>" + storyQuest + ".</b></p>" + "<hr>" 
-    + "<p><b>Location:</b> " + plotPlace + "<br>" + "<b>Intensity:</b> " + plotIntense + "<br>" + "<b>Leadership Required:</b> " + plotLeader + "</p>";
+    document.querySelector(".output").innerHTML = "<p>" + storyQuest + ".</b></p>";
 }
 
 // Adventure Generator
@@ -2086,10 +1836,6 @@ function adventureGen() {
     const agMethod = methodSelect(nounTwo.noun, verbTwo.gerund);
     const agSubject = subjectCheck(actionType, agPerson, sva, agAction);
 
-    const plotPlace = randomString(customFields.location);
-    const plotIntense = randomString(customFields.intensity);
-    const plotLeader = randomString(customFields.leadership);
-
     const adventures = {
         "adventure 1": "In this story, <b>" + agSubject + " " + location  + ".</b></p>" + "<p>Their goal is to <b>" + goal + " " + agMethod + " " + motive + ",</b> but <b>" + twist,
         
@@ -2106,8 +1852,7 @@ function adventureGen() {
         }
     }
 
-    document.querySelector(".output").innerHTML = "<p>" + agPlot + ".</b></p>" + "<hr>" 
-    + "<p><b>Location:</b> " + plotPlace + "<br>" + "<b>Intensity:</b> " + plotIntense + "<br>" + "<b>Leadership Required:</b> " + plotLeader + "</p>";
+    document.querySelector(".output").innerHTML = "<p>" + agPlot + ".</b></p>";
 }
 
 function npcGen() {
@@ -2125,19 +1870,23 @@ function npcGen() {
     const charaThree = new Chara();
 
     // I wonder if I can randomize these like how the name pdf has it
+    // there has GOT to be a better way to do this
     const party = {
         "one person 1": charaOne.desc,
         "one person 2": charaOne.cat,
         "one person 3": charaOne.con,
-        "one person 4": charaOne.fake,
+        "one person 4": charaOne.first,
+        "one person 5": charaOne.full,
         "two people 1": charaOne.desc + add + charaTwo.desc,
         "two people 2": charaOne.cat + add + charaTwo.cat,
         "two people 3": charaOne.con + add + charaTwo.con,
-        "two people 4": charaOne.fake + add + charaTwo.fake,
+        "two people 4": charaOne.first + add + charaTwo.first,
+        "two people 5": charaOne.full + add + charaTwo.full,
         "three people 1": charaOne.desc + ", " + charaTwo.desc + add + charaThree.desc,
         "three people 2": charaOne.cat + ", " + charaTwo.cat + add + charaThree.cat,
         "three people 3": charaOne.con + ", " + charaTwo.con + add + charaThree.con,
-        "three people 4": charaOne.fake + ", " + charaTwo.fake + add + charaThree.fake
+        "three people 4": charaOne.first + ", " + charaTwo.first + add + charaThree.first,
+        "three people 5": charaOne.full + ", " + charaTwo.full + add + charaThree.full
     }
 
     for (const people in party) {
@@ -2150,20 +1899,9 @@ function npcGen() {
 }
 
 // TOWN GOSSIP TEMPLATE
-// Material Property – [material] can do [property]
-// Monster Stat Clue – [monster] can do [thing]
-// NPC Lore – [NPC] is [blank]
-
-var enemyMonster = enemies.monsters;
-
 function rumorGen() {
     let rumorSelect = randomString(rumorType);
     let rumor = "";
-
-    const monsterKeys = Object.keys(enemyMonster);
-    const monsterType = randomString(monsterKeys);
-    const monsterArray = enemyMonster[monsterType];
-    const monster = randomString(monsterArray);
 
     const charOne = charaSelect();
     const charTwo = charaSelect();
@@ -2179,34 +1917,21 @@ function rumorGen() {
     // const accuseType = action.type;
 
     const source = randomString(fragments.source);
-    // const monster = randomString(monsters);
     const trait = randomString(fragments.trait);
 
     // note: figure out subject-verb agreement between item and condition
     const rumors = {
         "rumor 1": charOne + " has <b>" + noun.noun + "</b> that <b>" + noun.condition,
-        
         "rumor 2": charOne + " is looking for <b>" + noun.noun + "</b> that <b>" + noun.condition,
-        
         "rumor 3": charOne + " is looking for <b>" + noun.noun,
-        
         "rumor 4": charOne + " is looking for some help with something",
-        
         "rumor 5": charOne + " is " + accuse,
-        
         "rumor 6": charOne + " was seen " + accuse + "</b> with <b>" + charTwo,
-        
         "rumor 7": charOne + " was asking around for <b>" + wordPrep(nounPers),
-        
         "rumor 8": charOne + " was asking around for someone who <b>" + trait,
-        
         "rumor 9": charOne + " was asking around for <b>" + charTwo,
-        
         "rumor 10": charOne + " <b>" + trait,
-        
         "rumor 11": charOne + " is <b>" + wordPrep(nounPers),
-        
-        "rumor 12": charOne + " said that they may be upping woodland patrols due to a rise in the number of <b>" + monster
     }
 
     for (const gossip in rumors) {

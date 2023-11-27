@@ -15,6 +15,13 @@ const nableD = [
     "cap","chu","cro","cu","da","dan","e","ea","eri","fe","fer","fi","gam","gi","hak","hor","ja","jon","kan","kat","ket","kri","kur","lainn","lei","lin","loz","lux","ma","me","mee","meu","nah","nay","ne","nit","nus","oh","pe","pei","por","py","qui","ri","rim","rope","se","ser","sha","ska","sol","stee","strev","ta","tav","te","tor","tri","tu","uss","van","vas","vri","xes","ya","yu","zah","zee","zi"
 ];
 
+const nableE = [
+    // player misc
+    "dul","il","nym","os","von","za",
+    // player first names
+    "kar","la","en","de","wyn","ur","sa","el","s","gon","win","ver","dic","ba","ra","trax","cove","cer","dus","tall","ian","way","lund","lei","ta","tac","cit","tus","us","sig","rell","ell","mi","gry","gryl","ea","lea","ain","rain","wre","wren","dan","ca","cal","lus","lys","myr","tle","greg","gre","nob","u","ri","na","crit","mon" // got as far as 'crittamon'
+]
+
 const nableX = ["","","",""," "," "," ","-"]
 
 function randomString(arr) {
@@ -54,7 +61,7 @@ function nambleRoll() {
     }
 
     for (i = 0; i < syllCount; i++) {
-        var rollTwo = diceRoll(8);
+        var rollTwo = diceRoll(10);
         var nableJoin = randomString(nableX);        
         if (rollTwo <= 2) {
             nambleName = randomString(nableA);
@@ -64,6 +71,8 @@ function nambleRoll() {
             nambleName = randomString(nableC);
         } else if (rollTwo <= 8) {
             nambleName = randomString(nableD);
+        } else if (rollTwo <= 10) {
+            nambleName = randomString(nableE);
         }
 
         if (i == syllCount - 1) {
