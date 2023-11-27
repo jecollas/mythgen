@@ -1749,7 +1749,7 @@ function plotCreate() {
     // NEXT: trying to [action thing] to [other people]
     const stories = {
         // Plot 1 - Plot 3
-        "plot 1": "This plot is going to be <b>" + wordPrep(tone) + " " + genre,
+        "plot 1": "This is <b>" + wordPrep(tone) + " " + genre + "</b> story",
 
         "plot 2": "This is <b>" + wordPrep(tone) + " " + genre + "</b> story in which <b>" + plotSubject + "</b> in order to <b>" + goal + ".</b> The twist is that <b>" + twist,
         

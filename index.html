@@ -31,22 +31,6 @@
                 <form class="control" name="control_panel">
                     <fieldset id="plotPanel">
                         <legend>Control Panel</legend>
-                        <span class="radio-option" name="npcBuild">
-                            <input type="radio" id="npcParty" name="control_panel" value="npcGen()" onclick="genSet(this)">
-                            <label for="npcParty">NPC Builder</label>
-                            <div class="sub1" id="npcSub">
-                                <input type="checkbox" id="charOne" name="control_panel" value="charOne" disabled>
-                                <label for="charOne">One NPC</label><br>
-                                <input type="checkbox" id="charTwo" name="control_panel" value="charTwo" disabled>
-                                <label for="charTwo">Two NPCs</label><br>
-                                <input type="checkbox" id="charThree" name="control_panel" disabled>
-                                <label for="charThree">Three NPCs</label>
-                            </div>
-                        </span>
-                        <span class="radio-option" name="rumors">
-                            <input type="radio" id="rmRumor" name="control_panel" value="rumorGen()" onclick="genSet(this)">
-                            <label for="rmRumor">Rumors</label>
-                        </span>
                         <span class="radio-option" name="plotBuild">
                             <input type="radio" id="pbPlot" name="control_panel" value="plotCreate()" onclick="genSet(this)">
                             <label for="pbPlot">Plot Builder</label>
@@ -57,6 +41,22 @@
                                 <label for="pbQuest">Fetch Quest</label><br>
                                 <input type="checkbox" id="pbAdventure" name="control_panel" value="pbAdventure" disabled>
                                 <label for="pbAdventure">Adventure</label><br>
+                            </div>
+                        </span>
+                        <span class="radio-option" name="rumors">
+                            <input type="radio" id="rmRumor" name="control_panel" value="rumorGen()" onclick="genSet(this)">
+                            <label for="rmRumor">Rumors</label>
+                        </span>
+                        <span class="radio-option" name="npcBuild">
+                            <input type="radio" id="npcParty" name="control_panel" value="npcGen()" onclick="genSet(this)">
+                            <label for="npcParty">NPC Builder</label>
+                            <div class="sub1" id="npcSub">
+                                <input type="checkbox" id="charOne" name="control_panel" value="charOne" disabled>
+                                <label for="charOne">One NPC</label><br>
+                                <input type="checkbox" id="charTwo" name="control_panel" value="charTwo" disabled>
+                                <label for="charTwo">Two NPCs</label><br>
+                                <input type="checkbox" id="charThree" name="control_panel" disabled>
+                                <label for="charThree">Three NPCs</label>
                             </div>
                         </span>
                         <div class="control-button">
