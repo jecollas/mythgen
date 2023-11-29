@@ -1529,69 +1529,75 @@ var nounPlace = nouns.place;
 var nounThing = nouns.thing;
 var nounConcept = nouns.concept;
 
-function Verb(noun) {
-  this.present = "";
-  if (noun == nounPerson.singular || noun == nounPerson.plural) {
-    this.present = randomString(verbs.person);
-  } else if (noun == nounPlace.singular || noun == nounPlace.plural) {
-    this.present = randomString(verbs.place);
-  } else if (noun == nounThing.singular || noun == nounThing.plural) {
-    this.present = randomString(verbs.thing);
-  } else if (noun == nounConcept.singular || noun == nounConcept.plural) {
-    this.present = randomString(verbs.concept);
-  }
+class Verb {
+  constructor(noun) {
+    this.present = "";
+    if (noun == nounPerson.singular || noun == nounPerson.plural) {
+      this.present = randomString(verbs.person);
+    } else if (noun == nounPlace.singular || noun == nounPlace.plural) {
+      this.present = randomString(verbs.place);
+    } else if (noun == nounThing.singular || noun == nounThing.plural) {
+      this.present = randomString(verbs.thing);
+    } else if (noun == nounConcept.singular || noun == nounConcept.plural) {
+      this.present = randomString(verbs.concept);
+    }
 
-  this.gerund = wordGer(this.present);
+    this.gerund = wordGer(this.present);
+  }
 }
 
-function Noun() {
-  this.noun = "";
-  this.condition = "";
-  
-  const singular = [
-    nounPerson.singular,nounPlace.singular,nounThing.singular,nounConcept.singular
-  ];
-  const plural = [
-    nounPerson.plural, nounPlace.plural, nounThing.plural, nounConcept.plural
-  ];
-  const nouns = [
-    singular, plural
-  ];
+class Noun {
+  constructor() {
+    this.noun = "";
+    this.condition = "";
 
-  const type = randomString(nouns); // singular, plural
-  this.subtype = randomString(type); // person, place, thing, etc
-  const select = randomString(this.subtype); // noun from that array
+    const singular = [
+      nounPerson.singular, nounPlace.singular, nounThing.singular, nounConcept.singular
+    ];
+    const plural = [
+      nounPerson.plural, nounPlace.plural, nounThing.plural, nounConcept.plural
+    ];
+    const nouns = [
+      singular, plural
+    ];
 
-  // selects a random singular or plural noun 
-  // NOTE: singular concept nouns don't get a preposition
-  if (type == plural || this.subtype == nounConcept.plural) {
-    this.noun = select;
-    this.condition = randomString(property.plural);
-  } else if (this.subtype == nounConcept.singular) {
-    this.noun = select;
-    this.condition = randomString(property.singular);
-  } else if (type == singular) {
-    this.noun = wordPrep(select);
-    this.condition = randomString(property.singular);
+    const type = randomString(nouns); // singular, plural
+    this.subtype = randomString(type); // person, place, thing, etc
+    const select = randomString(this.subtype); // noun from that array
+
+    // selects a random singular or plural noun 
+    // NOTE: singular concept nouns don't get a preposition
+    if (type == plural || this.subtype == nounConcept.plural) {
+      this.noun = select;
+      this.condition = randomString(property.plural);
+    } else if (this.subtype == nounConcept.singular) {
+      this.noun = select;
+      this.condition = randomString(property.singular);
+    } else if (type == singular) {
+      this.noun = wordPrep(select);
+      this.condition = randomString(property.singular);
+    }
   }
 }
 
 ///////////////////////////////////////////
 //// CHARACTER CREATOR
 ///////////////////////////////////////////
-function Chara() { // used in npcGen()
-  const charaNoun = randomString(nounPerson.singular);
-  const adj = randomString(adjective);
-  const trait = randomString(fragments.trait);
-  const fname = randomString(characters.fname);
-  const lname = randomString(characters.lname);    
-  let fullName = fname + " " + lname;
+class Chara {
+  constructor() {
+    const charaNoun = randomString(nounPerson.singular);
+    const adj = randomString(adjective);
+    const trait = randomString(fragments.trait);
+    const fname = randomString(characters.fname);
+    const lname = randomString(characters.lname);
+    let fullName = fname + " " + lname;
 
-  this.desc = wordPrep(charaNoun) + "</b> who <b>" + trait;
-  this.cat = wordPrep(adj) + " " + charaNoun;
-  this.con = this.cat + "</b> who <b>" + trait;
-  this.first = wordPrep(charaNoun) + "</b> named <b>" + fname + "</b> who <b>" + trait;
-  this.full = wordPrep(charaNoun) + "</b> named <b>" + fullName + "</b> who <b>" + trait;
+    this.desc = wordPrep(charaNoun) + "</b> who <b>" + trait;
+    this.cat = wordPrep(adj) + " " + charaNoun;
+    this.con = this.cat + "</b> who <b>" + trait;
+    this.first = wordPrep(charaNoun) + "</b> named <b>" + fname + "</b> who <b>" + trait;
+    this.full = wordPrep(charaNoun) + "</b> named <b>" + fullName + "</b> who <b>" + trait;
+  }
 }
 
 function charaSelect() { // used in rumorGen()
