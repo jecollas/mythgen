@@ -1,42 +1,42 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <title>Myth Generators</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="Jackie Collas">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/stylesheet.css">
-    </head>
-    <body>
-        <header>
-            <h1><a href="index.html">Myth Generators</a></h1>
-            <h1><a href="javascript:void(0)" class="icon" onclick="mobileNav()"><span class="fa fa-bars"></span></a></h1>
-            <nav>
-                <div class="navbar" id="navBar">
-                    <ul>
-                        <li><a href="fetch-quest.html">Fetch Quest</a></li>
-                        <li><a class="active" href="adventure-gen.html">Adventure</a></li>
-                        <li><a href="npc-builder.html">NPC Builder</a></li>
-                        <li><a href="rumors.html">Rumors</a></li>
-                        <li><a href="name-gen.html">Names</a></li>
-                        <li><a href="about.html">About</a></li>
-                    </ul>  
-                </div>
-            </nav>
-        </header>
-
-        <div class="row">
-            <div class="content">
-                <p>Based on the <a href="https://docs.google.com/spreadsheets/d/1gaqvIaul5iXTfz3gNfVeOmxDeyU6Lrx_ChLytQqUCFY/edit?usp=sharing" target="_blank" title="Adventure Seed Generator">Adventure Seed Generator</a> by Johnn Four.</p>
-                <p><b>Note to self:</b> This generator can be accessed from the home page and from Plot Builder. DELETE THIS PAGE!</p>
-                <div class="prompt">
-                    <span class="output" id="ag-adventure"><p style="color:grey">Click the button for an adventure!</p></span>
-                </div>
-                <button onclick="adventureGen()">Adventure Awaits!</button>
-            </div>
+  <head>
+    <title>Myth Generators</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Jackie Collas">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+  </head>
+  <body>
+    <header>
+      <h1><a href="index.html">Myth Generators</a></h1>
+      <h1><a href="javascript:void(0)" class="icon" onclick="mobileNav()"><span class="fa fa-bars"></span></a></h1>
+      <nav>
+        <div class="navbar" id="navBar">
+          <ul>
+            <li><a href="fetch-quest.html">Fetch Quest</a></li>
+            <li><a class="active" href="adventure-gen.html">Adventure</a></li>
+            <li><a href="npc-builder.html">NPC Builder</a></li>
+            <li><a href="rumors.html">Rumors</a></li>
+            <li><a href="name-gen.html">Names</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>  
         </div>
-        
-        <script src="js/mythgen.js"></script>
-    </body>
+      </nav>
+    </header>
+
+    <div class="row">
+      <div class="content">
+        <p>Based on the <a href="https://docs.google.com/spreadsheets/d/1gaqvIaul5iXTfz3gNfVeOmxDeyU6Lrx_ChLytQqUCFY/edit?usp=sharing" target="_blank" title="Adventure Seed Generator">Adventure Seed Generator</a> by Johnn Four.</p>
+        <p><b>Note to self:</b> This generator can be accessed from the home page and from Plot Builder. DELETE THIS PAGE!</p>
+        <div class="prompt">
+          <span class="output" id="ag-adventure"><p style="color:grey">Click the button for an adventure!</p></span>
+        </div>
+        <button onclick="adventureGen()">Adventure Awaits!</button>
+      </div>
+    </div>
+    
+    <script src="js/mythgen.js"></script>
+  </body>
 </html>

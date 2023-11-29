@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <title>Myth Generators</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="Jackie Collas">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/stylesheet.css">
-    </head>
-    <body>
-        <header>
-            <h1><a href="index.html">Myth Generators</a></h1>
-            <h1><a href="javascript:void(0)" class="icon" onclick="mobileNav()"><span class="fa fa-bars"></span></a></h1>
-            <nav>
-                <div class="navbar" id="navBar">
-                    <ul>
-                        <li><a href="fetch-quest.html">Fetch Quest</a></li>
-                        <li><a href="adventure-gen.html">Adventure</a></li>
-                        <li><a class="active" href="npc-builder.html">NPC Builder</a></li>
-                        <li><a href="rumors.html">Rumors</a></li>
-                        <li><a href="name-gen.html">Names</a></li>
-                        <li><a href="about.html">About</a></li>
-                    </ul>  
-                </div>
-            </nav>
-        </header>
-
-        <div class="row">
-            <div class="content">
-                <p>Based on Reedsy's <a href="https://blog.reedsy.com/plot-generator/fantasy/" target="_blank" title="Fantasy Plot Generator">Fantasy Plot Generator</a>.</p>
-                <div class="prompt">
-                    <span class="output" id="npc-party"><p style="color:grey">Click the button for an NPC party!</p></span>
-                </div>
-                <button onclick="npcGen()">Build-a-Boy</button>
-            </div>
+  <head>
+    <title>Myth Generators</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Jackie Collas">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+  </head>
+  <body>
+    <header>
+      <h1><a href="index.html">Myth Generators</a></h1>
+      <h1><a href="javascript:void(0)" class="icon" onclick="mobileNav()"><span class="fa fa-bars"></span></a></h1>
+      <nav>
+        <div class="navbar" id="navBar">
+          <ul>
+            <li><a href="fetch-quest.html">Fetch Quest</a></li>
+            <li><a href="adventure-gen.html">Adventure</a></li>
+            <li><a class="active" href="npc-builder.html">NPC Builder</a></li>
+            <li><a href="rumors.html">Rumors</a></li>
+            <li><a href="name-gen.html">Names</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>  
         </div>
+      </nav>
+    </header>
 
-        <script src="js/mythgen.js"></script>
-    </body>
+    <div class="row">
+      <div class="content">
+        <p>Based on Reedsy's <a href="https://blog.reedsy.com/plot-generator/fantasy/" target="_blank" title="Fantasy Plot Generator">Fantasy Plot Generator</a>.</p>
+        <div class="prompt">
+          <span class="output" id="npc-party"><p style="color:grey">Click the button for an NPC party!</p></span>
+        </div>
+        <button onclick="npcGen()">Build-a-Boy</button>
+      </div>
+    </div>
+
+    <script src="js/mythgen.js"></script>
+  </body>
 </html>
