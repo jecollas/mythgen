@@ -1748,6 +1748,28 @@ const rumorType = [
 ///////////////////////////////
 //// GENERATOR FUNCTIONS
 ///////////////////////////////
+
+const compassType = ["compass 1", "compass 2", "compass 3"];
+// compass rose
+function compassGen() {
+  let directionSelect = randomString(compassType);
+  let direction = "";
+
+  const points = {
+    "compass 1": "kokomo",
+    "compass 2": "omokok",
+    "compass 3": "secret third thing",
+  }
+
+  for (const compass in points) {
+    if (compass == directionSelect) {
+      direction = points[compass];
+    }
+  }
+
+  document.querySelector(".output").innerHTML = "<p>" + direction + ".</b></p>";
+}
+
 // PLOT BUILDER – the big boy :)
 function plotCreate() { 
   let story = "";
