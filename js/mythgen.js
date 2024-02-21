@@ -1410,7 +1410,7 @@ const fragments = {
 
 // move this array under a different category
 const groups = [
-  "order","horde","clique","gaggle","mob","collegium ","armed group","squad","cadre","trio","duo","quintet","pack","wandering troupe","crime ring","group","cabal","coven","gang","bunch","fellowship","posse","school class","syndicate","delegation","secret society","guild","extended family","noble house","platoon","caravan","sisterhood","work team","team","association","cartel","club","congregation","gentlemen's club","faction","crew","hidden society","league","converstation club","religious sect","tribe","elite squad","brotherhood","charity organization","support staff","entourage","assembly","noble family","governing body","ensemble","conclave","coterie","organization","citizens","circle","partnership","society","party","cult","group","troop","army","mass","gathering","political faction","inbred family","choir","crowd","splinter faction","band","conspiracy","clan","collegium","patchwork","network","cell","panel","doomsday cult","union","collective","circus"
+  "order","horde","clique","gaggle","mob","collegium ","armed group","squad","cadre","trio","duo","quintet","pack","wandering troupe","crime ring","group","cabal","coven","gang","bunch","fellowship","posse","school class","syndicate","delegation","secret society","guild","extended family","noble house","platoon","caravan","sisterhood","work team","team","association","cartel","club","congregation","gentlemen's club","faction","crew","hidden society","league","converstation club","religious sect","tribe","elite squad","brotherhood","charity organization","support staff","entourage","assembly","noble family","governing body","ensemble","conclave","coterie","organization","circle","partnership","society","party","cult","group","troop","army","mass","gathering","political faction","inbred family","choir","crowd","splinter faction","band","conspiracy","clan","collegium","patchwork","network","cell","panel","doomsday cult","union","collective","circus"
 ];
 
 // IN PROGRESS - build this array out
@@ -1439,6 +1439,15 @@ function wordPrep(word) {
   }
   prep += word;
   return prep;
+}
+
+function checkForPrep(string) {
+  if (string.startsWith("the ")) {
+    string.slice(4);
+  } else if (string.startsWith("another ")) {
+    string.slice(8);
+  }
+  return string;
 }
 
 // adds singular possessive 's to the end of a noun
@@ -1971,7 +1980,7 @@ function compassGen() {
     // "compass 5": "What do we need to watch out for or be careful of? What obstacles stand in our way?",
     
     // A [PERSON 1] is looking for a [THING] that [PROPERTY]. They need this [NOUN] because [REASON]. The [THING] is located in the [LOCATION 1]. The [PERSON 1] must enlist the help of [PERSON 2], who can be found in [LOCATION 3]. But [TWIST].
-    "compass 6": "<b>" + capitalize(plotPersonOne) + " " + svaOne + " looking for <b>" + nounOne.noun + "</b> that <b>" + nounOne.condition + ".</b> They are looking for the <b>" + nounOne.nounSelect + " " + motive + ".</b> The <b>" + nounOne.nounSelect + "</b> " + svaAgree(nounOne.nounType) + " located <b>" + locationOne + ",</b> so the <b>" + plotPersonSelectOne + "</b> must enlist the help of <b>" + plotPersonTwo + " <b>" + locationTwo + "</b> in order to find it. But what the <b>" + plotPersonSelectOne + "</b> doesn't know is that <b>" + twist
+    "compass 6": "<b>" + capitalize(plotPersonOne) + " " + svaOne + " looking for <b>" + nounOne.noun + "</b> that <b>" + nounOne.condition + ".</b> They are looking for the <b>" + checkForPrep(nounOne.nounSelect) + " " + motive + ".</b> The <b>" + checkForPrep(nounOne.nounSelect) + "</b> " + svaAgree(nounOne.nounType) + " located <b>" + locationOne + ",</b> so the <b>" + plotPersonSelectOne + "</b> must enlist the help of <b>" + plotPersonTwo + " <b>" + locationTwo + "</b> in order to find it. But what the <b>" + plotPersonSelectOne + "</b> doesn't know is that <b>" + twist
   }
 
   for (const compass in points) {
