@@ -2024,7 +2024,7 @@ function compassGen() {
     
     "compass 2": "<b>" + capitalize(personOne) + " " + svaOne + " looking for <b>" + nounDescOne + ".</b> The <b>" + nounOne.nounSelect + "</b> " + svaAgree(nounOne.nounType) + " hidden <b>" + locationOne + ",</b> so the <b>" + personSmallOne + "</b> must enlist the help of <b>" + personTwo + ", who " + svaTwo + " located <b>" + locationTwo + ".</b> But what the <b>" + personSmallOne + "</b> " + svaDoes(personTypeOne) + " not know is that <b>" + twist,
 
-    "compass 3": "<b>" + capitalize(personOne) + " " + svaOne + " looking for <b>" + nounDescOne + ".</b> The <b>" + nounOne.nounSelect + "</b> " + svaAgree(nounOne.nounType) + " hidden <b>" + locationOne + ",</b> so the <b>" + personSmallOne + "</b> must enlist the help of <b>" + personTwo + ", who " + svaTwo + ".</b> But what the <b>" + personSmallOne + "</b> " + svaDoes(personTypeOne) + " not know is that <b>" + twist,
+    "compass 3": "<b>" + capitalize(personOne) + " " + svaOne + " looking for <b>" + nounDescOne + ".</b> The <b>" + nounOne.nounSelect + "</b> " + svaAgree(nounOne.nounType) + " hidden <b>" + locationOne + ",</b> so the <b>" + personSmallOne + "</b> must enlist the help of <b>" + personTwo + ".</b> But what the <b>" + personSmallOne + "</b> " + svaDoes(personTypeOne) + " not know is that <b>" + twist,
 
     "compass 4": "<b>" + capitalize(personOne) + " " + svaOne + " looking for <b>" + nounDescOne + " " + motive + ".</b> The <b>" + nounOne.nounSelect + "</b> " + svaAgree(nounOne.nounType) + " hidden <b>" + locationOne + ",</b> so the <b>" + personSmallOne + "</b> must enlist the help of <b>" + personTwo,
 
