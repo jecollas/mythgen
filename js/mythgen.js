@@ -590,14 +590,14 @@ const quest = {
   // NOTE: add a section for titles
 const characters = {
   fname:[
-    "Billy","Bobby","Mary","Barry","Steven","Marlon","Rachel","Shelby","Eliza","Elizabeth","Joseph","Andy","Arietta","Morgan","Taylor","Tristan","Kai","Anabelle","Duke","Esteban","Antonio","Anthony","Tony","Jackie","John","Mike","Michael","Chev","Mandy","Sully","Joel","Roger","Peter","Connor","Brian","Brendan","Emmy","Isaac","Melissa","Jaime","Jesse","Dakota","Jackson","Sawyer","Xavier","Ester","Tien","Logan","James","Mason","Jason","Calvin","Caleb","Ada","Clay","Gerard","Amy","Lydia","Eugenia","Rose","Jade","Jane","Roxy","Dave","David","Alexis","Jake","Dirk","Sarah","Raleigh","Nikolai","Laila","Emerald","Marcus","Marc","Mark","Caroline","Katie","Kaitlin","Bridget","Haley","Jack","Lauren","Reya","Letitia","Axle","Alex","Rae","Fae","Danny","Dani","Hugo","Juan","Johnny","Paul","Dominic","Mia","Michelle","Dwayne","Chris","Antigone","Maria","Mehak","Vishali","Iris","Shane","Sam","Jimmy","Isabella","Wendy","Thomas","Dan","Daniel","Elias","Cris","Norbert","Arya","Cale","Jonathan","Jon","Merla","Sylora","Rhiann","Martin","Sasha","Tim","Timothy","Shirou","Rin","Holly","Ace","Ed","Edward","Corvanna","Allura","Sakura","Shinji","Asuka","Rei","Richardo","Jose","Graham","Scott","Colin","Ester","Baran",
+    "Billy","Bobby","Mary","Barry","Steven","Marlon","Rachel","Shelby","Eliza","Elizabeth","Joseph","Andy","Arietta","Morgan","Taylor","Tristan","Kai","Anabelle","Duke","Esteban","Antonio","Anthony","Tony","Jackie","Jacquelyn","John","Mike","Michael","Chev","Mandy","Sully","Joel","Roger","Peter","Connor","Brian","Brendan","Emmy","Isaac","Melissa","Jaime","Jesse","Dakota","Jackson","Sawyer","Xavier","Ester","Tien","Logan","James","Mason","Jason","Calvin","Caleb","Ada","Clay","Gerard","Amy","Lydia","Eugenia","Rose","Jade","Jane","Roxy","Dave","David","Alexis","Jake","Dirk","Sarah","Raleigh","Nikolai","Laila","Emerald","Marcus","Marc","Mark","Caroline","Katie","Kaitlin","Bridget","Haley","Jack","Lauren","Reya","Letitia","Axle","Alex","Rae","Fae","Danny","Dani","Hugo","Juan","Johnny","Paul","Dominic","Mia","Michelle","Dwayne","Chris","Antigone","Maria","Mehak","Vishali","Iris","Shane","Sam","Jimmy","Isabella","Wendy","Thomas","Dan","Daniel","Cris","Norbert","Arya","Cale","Jonathan","Jon","Merla","Sylora","Rhiann","Martin","Sasha","Tim","Timothy","Shiro","Shirou","Rin","Holly","Ace","Ed","Edward","Corvanna","Allura","Sakura","Shinji","Asuka","Rei","Richardo","Jose","Graham","Scott","Colin","Baran","Axi","Cali","Callie","Calypso","Ryuji","Valren","Abby","Adam","Alice","Ash","Asher","Ashley","Astra","Bunny","Clara","Daisy","Delilah","Donnie","Ember","Finnley","Gale","Grey","Hailey","Husky","Izzie","Jay","Juby","Kade","Kalandra","Kyle","Laika","Lana","Lexie","Link","Lucy","Luka","Luke","Luna","Marv","Marven","Max","May","Micah","Molly","Murphy","Naomi","Nat","Natalie","Nova","Parker","Penelope","Rabbit","River","Robin","Rochelle","Sean","Summer","Synth","Tara","Tyler","Vash","Void","Zoe","Zora","Cowry","Mutt","Winona","Elena","Hannah","Jordan","Fenn","Nari","Pierce","Howl","Patroclus","Owen","Agni","Firouz","Zale","Butch","Osborne","Mogan","Rycheld","Symond","Jayce","Tansa","Levi","Beneger","Avelin","Vesta","Savannah","Claudia","Somerhild","Radolf","Denston","Judithe","Nireus","Sulen","Teukos","Galen","Judith","Wren","Istvan","Chad","Alaren","Mars","Mari","Shadow","Danielle","Kim","Harry","Rebecca","Olivia","Chloe","Elisha","Jamie","Jody","Isabelle","Karver","Charles","Jill","Sandra","Damien","Cassandra","Carlos","Javier","Cynthia","Jayanti","Darwin","Ramiel","Sanna","Denny","Vera","Kenna","Emilia","Nora","Faeryl","Yastra","Lanius","Bain","Oza","Runa","Belagar","Tobor","Aligar","Huk","Prong","Hyloris","Leon","Ethan",
     // player names
     "Karlaen","Delawyn","Ursa","Elias","Agon","Jax","Jaxx","Alwin","Verdic","Baratraxar","Isla","Cove","Cerradus","Tallian","Waylund","Leisa","Tacitus","Jules","Sigmund","Relldar","Elen","Remi","Grylis","Azalea","Norain","Wren","Brandan","Calus","Alyssandra","Aly","Myrtle","Greg","Gregory","Gregor","Gregnobulous","Rina","Crittamon","Whisper","Artharias","Arthur","Theran","Brigid","Cayn","Ekyo","Clay","Fenrisse","Balthazar","Koth","Hilde","Zumlar","Cotter","Gizzet","Yinren","Alistair","Willow","Caleb","Zav","Zavriel","Minyo","Mallazyr","Dexter","Munta","Esther","Melea","Artemis","Esperanza","Lorik","Thordric","Hedrin","Taliesin","Seraphina","Maurmagil","Ezra","Nakoa","Eitri","Lucius","Matias","Ven","Trisrora","Hart","Catanya","Sage","Saige","Xanthion","Vendal","Chessaul","Indy","Vitae","Ajax","Wenek","Magnus","Marlo","Marlonious","Owen","Aishin","Alansar","Victus","Tass","Opulus","Geillia","Amuck",
     // face role names
     "Octavious","Dennis","Zephyr","Hesperides","Emmet","Arianaya","Aria","Euclid","Amaris","Baron","Dworrin","Ali","Paradiddle","Nalfor","Norrin","Geralt","Auranos","Getorix","Oleg","Johann","Amadeo","Dom","Yama"
   ],
   lname: [
-    "Venitzo","Nightlocke","Shelley","Brando","Grey","Stevenson","Andrews","McGrath","Wheeler","Taylor","Brodey","Lee","Han","Collins","LeBeau","Blackwood","Jackson","Stratman","Smith","Filli","Miller","Merlino","Fox","Waldron","Rogers","Adams","de la Cruz","Santiago","Lessio","Belen","Rodriguez","Connors","Parker","Barnes","Price","Sawyer","Wolfe","Mayer","Howlett","Freyason","Foster","Reynolds","Thorne","Owens","Doe","Morse","Paura","Walters","Ivanofski","St. Claire","Shaughnessy","Carson","Fianna","Delarose","Darwin","Red","Green","Perez","Runner","Walker","Toretto","DiArcangelo","Desantos","Tavares","Diamond","Wu","Demehri","Cahill","Brown","Fenton","Rienton","Sims","James","Wolfhide","Blackwood","Black","Stoker","Berry","Night","Caligo","Pereira","Rackham","Teach","Murphy","Ikari","Matou","Langley","Ayanami","Vantas","Captor","Darling","Peters","Lukas","Perotta","Thornton","Fitch","Finch","Rodruiguez","Campbell","Bell","Graham","O'Connor","McMurphy","Becket","Bandyabout","Behrand","Cantor","Crimsonvine","Godley","Oaks","Reed","Shipley","Bet",
+    "Venitzo","Nightlocke","Shelley","Brando","Grey","Stevenson","Andrews","McGrath","Wheeler","Taylor","Brodey","Lee","Han","Collins","LeBeau","Blackwood","Jackson","Stratman","Smith","Filli","Miller","Merlino","Fox","Waldron","Rogers","Adams","de la Cruz","Delacruz","Santiago","Lessio","Belen","Rodriguez","Connors","Parker","Barnes","Price","Sawyer","Wolfe","Mayer","Howlett","Freyason","Foster","Reynolds","Thorne","Owens","Doe","Morse","Paura","Walters","Ivanofski","St.,Claire","Shaughnessy","Carson","Fianna","Delarose","Darwin","Red","Green","Perez","Runner","Walker","Toretto","DiArcangelo","Desantos","Tavares","Diamond","Wu","Demehri","Cahill","Brown","Fenton","Rienton","Sims","James","Wolfhide","Black","Stoker","Berry","Night","Caligo","Pereira","Rackham","Teach","Murphy","Ikari","Matou","Langley","Ayanami","Vantas","Captor","Darling","Peters","Lukas","Perotta","Thornton","Fitch","Finch","Rodruiguez","Campbell","Bell","Graham","O'Connor","McMurphy","Becket","Bandyabout","Behrand","Cantor","Crimsonvine","Godley","Oaks","Reed","Shipley","Bet","Merriweather","D'entopera","Hyde","Murray","Knuckles","Robotnik","Sonic","Tails","DuBois","Kitsuragi","Katsuragi","Whittaker","Whitten","Kane","Bridges","Drake","Mishra","Graves","Dodge","Kraghorn","Rhodenn","Kennedy","Winters",
     // player surnames
     "Sin'del","Liamour","Oak","Athear","Caradin","Malendarr","Bin","Corsica","Pachero","Farwhen","Hopsworth","Greynettle","Grey","Nettle","Marillon","Shallows","Cove","Shallowcove","Gratz","Kilgor","Vadi","Hooker","Bjorvika","Delandrielle","Dubois","Sharp","Sharptongue","Briarwood","Knox","Wulf","Arl","Naegling","Varin","Lamoran","Muckandmire","Frogmagourke","Duskwalker","Luckstryder","Slate","Brightheart","Starling","Stalgrim","Mystralith","Cornwall","Moonbright","Valgon","Caliban","Grimstone","Varnak","Urtgard","Appleheart","Hasselblöd","Teken","Tekentlar","Theynore","Glade","Zata","Tazata","Ovgar","Magestone","Longfellow","Finch","Mehri","Dew","Hawthorne","Grell","Mayax","Elson","Stonebreaker","Sihde","Nymval","L'Rhine","Silias","Ardak","Stillmyst","Anderson","Stormcloud","Trignot","Krane","Grom","Mabrik","Ambrosius",
     // face role surnames
@@ -629,7 +629,7 @@ const nouns = {
       "king","chosen one","princess","empress","constable","mayor","Serpent God","local authority","little bitch","person of authority","lost loved one","cleric","divinity","rival","local noble","vampire","king","forgotten god","knight","monster","forgotten divinity","vampire lord","slayer","dragon","peasant girl","peasant boy","young boy","young girl","lad","lass","fruit-seller","gem merchant","sellsword","nomad","knight","gentleman thief","gentlewoman thief","soldier","monk","sorceror","enchanter","witch","warlock","warrior","mage","outlaw","ruffian","brigand","pickpocket","thief","woodsman","warlord","page","squire","troubadour","empress","emperor","noblewoman","nobleman","lord","lady","prince","princess","diplomat","monsterologist","swordmaster","apprentice","assassin-in-training","enchantress-in-training","summoner-in-training","witch-in-training","necromancer-in-training","prophet-in-training","sorceror-in-training","ogre","dragon","centaur","charlatan","vampire","genie","troll","dale elf","deep elf","dwarf","goblin","half elf","high elf","human","suhk","wildren","alchemist","artificer","bard","cleric","druid","fighter","paladin","ranger","rogue","runesmith","wizard","coalescer","excavator","harvester","logger","skinner","farmer","hunter","lumberjack","miner","panner","butcher","carpenter","gemcutter","glassmaker","papermaker","smelter","tanner","weaver","architect","blacksmith","brewer","chef","glassblower","lapidary","leatherworker","tailor","trapmaker","woodworker","appraiser","laborer","mender","eccentric candyman","retail employee","werewolf","feral child","snake-oil salesman","influencer","cowboy","pirate","rat","child psychologist","ghost hunter","archivist","creature","demolitions expert","goose","duelist","dog","construct","landlord","celebrity chef","village idiot","old guy","old lady","tax-evader","draft dodger","pyrotechnician","arsonist","professional arsonist","retired assassin","goth","clown","doctor","lawyer","con artist","grifter","lad in a fancy suit","hot girl","hot guy","hot person","malewife","entity","absent father","war criminal","shitty wizard","conspiracy theorist","adrenaline junkie","Italian","asshole","deadbeat dad","deadbeat mom","deadbeat parent","deadbeat","Little League coach","mobster","grad student","librarian","researcher","research assistant","entomologist","butch lesbian","dancer","singer","musician","historian","private investigator","detective","comedian","person","pro-wrestler","furry","girl","boy","candyman","retail employee","child","psychologist","guy","lad in a fancy suit","father","mother","dad","mom","parent","lesbian","idiot","raging anti-capitalist","CEO","union buster","dudebro","pharaoh","saber","archer","lancer","caster","rider","assassin","berserker","heroic spirit","chinchilla","goose","pseudo-dragon","toad","lapdog","pheasant","tortoise","cat","rabbit","baby","human baby"
     ],
     plural: [
-      "travelers","officials","peasants","people","themselves","children","clerics","mages","martyrs","followers","hostages","slaves","new members","followers of another group","unstable individuals","long-extinct creatures","honest shopkeepers","younger citizens","thousands of ghosts","powerful friends","bribed officials","animals","group of citizens","army","cultists","militia members","government officials","puppet organization","colony of humanoids","group of people","army of undead","magical army","band of mercenaries","thousand tortured souls","squires","adventurers","assassins","fish people","drunken farmers","illusionists","settlers","werewolves","raiders","industrialists","acolytes","vampires","collectors","animals","land surveyors","rogues","elementals","goblin hunters","lowlives","knights","mercenaries","bardic actors","plants","nobles and their retinue","royalty","lepers","kobold trapsmiths","wizards","ancients","bandits","mendicant monks","giants","prisoners","dwarven archaeologists","con artists","alchemists","thieving travelers","villians","slaves","diplomats","doppelgangers","temple monks","rebels","runaways","psychics","tinkers","local spirits","masterless golems","druids","kings","diviners","travelling merchants","mysterious cloaked men","liches","sprites","traitors","monitors","scholars","guards","ousted monarchs","ghosts","militia members","children","orphan children","fairies","holy inquisitors","singers","enchanters","enchantresses","merchants","cavaliers","religious zealots","mummers","bards","dragons","otherwordly beings","dukes","duchesses","undead","slavers","escaped slaves","witches","planar travelers","charity mission workers","chaos worshippers","monks","priests","peasants","common folk","terrorists","defectors","pageboys","spies","foreign diplomats","nuns","nomads","plant creatures","philosophers","sea creatures","pirates","barons","ladies","teenagers","unemployed tradespeople","aristocrats","royals","scientists","necromancers","gnomes","masons","painters","senior villagers","housebreakers","fishermen","vintners","leatherworkers","intelligentsia","craftspersons","convicts","felons","smiths","homunculi","golems","bodysnatchers","vivisectionists","ax murderers","tulip growers","fey creatures","barbarians","scribes","crime bosses","drug lords","brothel keepers","veterans","draftees","deserters","masters","journeymen","home owners","shopkeepers","smugglers","corrupt politicians","mages","hags","violent vigilantes","three possums in a trench coat","another group","the homies","the dead","the law","the elderly","the aristocracy","the church","the militia","the rich","the court","the local crime underground","the masses","the ancients","'the man'","the mighty","another group","circus of clowns","heroic spirits"
+      "travelers","officials","peasants","people","themselves","children","clerics","mages","martyrs","followers","hostages","slaves","new members","followers of another group","unstable individuals","long-extinct creatures","honest shopkeepers","younger citizens","thousands of ghosts","powerful friends","bribed officials","animals","citizens","army","cultists","militia members","government officials","puppet organization","colony of humanoids","people","army of undead","magical army","band of mercenaries","thousand tortured souls","squires","adventurers","assassins","fish people","drunken farmers","illusionists","settlers","werewolves","raiders","industrialists","acolytes","vampires","collectors","animals","land surveyors","rogues","elementals","goblin hunters","lowlives","knights","mercenaries","bardic actors","plants","nobles and their retinue","royalty","lepers","kobold trapsmiths","wizards","ancients","bandits","mendicant monks","giants","prisoners","dwarven archaeologists","con artists","alchemists","thieving travelers","villians","slaves","diplomats","doppelgangers","temple monks","rebels","runaways","psychics","tinkers","local spirits","masterless golems","druids","kings","diviners","travelling merchants","mysterious cloaked men","liches","sprites","traitors","monitors","scholars","guards","ousted monarchs","ghosts","militia members","children","orphan children","fairies","holy inquisitors","singers","enchanters","enchantresses","merchants","cavaliers","religious zealots","mummers","bards","dragons","otherwordly beings","dukes","duchesses","undead","slavers","escaped slaves","witches","planar travelers","charity mission workers","chaos worshippers","monks","priests","peasants","common folk","terrorists","defectors","pageboys","spies","foreign diplomats","nuns","nomads","plant creatures","philosophers","sea creatures","pirates","barons","ladies","teenagers","unemployed tradespeople","aristocrats","royals","scientists","necromancers","gnomes","masons","painters","senior villagers","housebreakers","fishermen","vintners","leatherworkers","intelligentsia","craftspersons","convicts","felons","smiths","homunculi","golems","bodysnatchers","vivisectionists","ax murderers","tulip growers","fey creatures","barbarians","scribes","crime bosses","drug lords","brothel keepers","veterans","draftees","deserters","masters","journeymen","home owners","shopkeepers","smugglers","corrupt politicians","mages","hags","violent vigilantes","three possums in a trench coat","another group","the homies","the dead","the law","the elderly","the aristocracy","the church","the militia","the rich","the court","the local crime underground","the masses","the ancients","'the man'","the mighty","another group","circus of clowns","heroic spirits"
     ]
   },
   place: {
@@ -1458,6 +1458,11 @@ function svaAgree(sva) {
   return sva;
 }
 
+// capitalizes the first letter of a string
+function capitalize(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 /////////////////
 //// GERUNDS
 /////////////////
@@ -1549,6 +1554,7 @@ class Verb {
 class Noun {
   constructor() {
     this.noun = "";
+    this.nounType = "";
     this.condition = "";
 
     const singular = [
@@ -1564,17 +1570,21 @@ class Noun {
     const type = randomString(nouns); // singular, plural
     this.subtype = randomString(type); // person, place, thing, etc
     const select = randomString(this.subtype); // noun from that array
+    this.nounSelect = select; // stores the noun selection
 
     // selects a random singular or plural noun 
     // NOTE: singular concept nouns don't get a preposition
     if (type == plural || this.subtype == nounConcept.plural) {
       this.noun = select;
+      this.nounType = "plural";
       this.condition = randomString(property.plural);
     } else if (this.subtype == nounConcept.singular) {
       this.noun = select;
+      this.nounType = "singular"
       this.condition = randomString(property.singular);
     } else if (type == singular) {
       this.noun = wordPrep(select);
+      this.nounType = "singular"
       this.condition = randomString(property.singular);
     }
   }
@@ -1648,18 +1658,20 @@ function personSelect() {
   const members = randomString(nounPerson.plural);
   const noun = randomString(nounPerson.singular);
 
+  // I could probably wordPrep this entire thing in the generator function rather than up here. It may make more sense
   const subjects = {
-    "singular 1": wordPrep(noun) + "</b> who <b>" + trait + "</b>",
-    "singular 2": wordPrep(adj) + " " + noun + "</b>",
-    "plural 1": wordPrep(group) + "</b> of <b>" + members + "</b>",
-    "plural 2": wordPrep(adj) + " " + group + "</b> of <b>" + members + "</b>"
+    "singular 1": noun + "</b> who <b>" + trait + "</b>",
+    "singular 2": adj + " " + noun + "</b>",
+    "plural 1": group + "</b> of <b>" + members + "</b>",
+    "plural 2": adj + " " + group + "</b> of <b>" + members + "</b>"
   }
 
   const keys = Object.keys(subjects);
   const type = randomString(keys);
-  const subject = subjects[type];
+  const subject = wordPrep(subjects[type]);
+  const subjectSelect = subjects[type];
   const sva = svaAgree(type);    
-  return {subject, sva};
+  return {subject, subjectSelect, sva};
 }
 
 // action select
@@ -1748,27 +1760,6 @@ const rumorType = [
 ///////////////////////////////
 //// GENERATOR FUNCTIONS
 ///////////////////////////////
-
-const compassType = ["compass 1", "compass 2", "compass 3"];
-// compass rose
-function compassGen() {
-  let directionSelect = randomString(compassType);
-  let direction = "";
-
-  const points = {
-    "compass 1": "kokomo",
-    "compass 2": "omokok",
-    "compass 3": "secret third thing",
-  }
-
-  for (const compass in points) {
-    if (compass == directionSelect) {
-      direction = points[compass];
-    }
-  }
-
-  document.querySelector(".output").innerHTML = "<p>" + direction + ".</b></p>";
-}
 
 // PLOT BUILDER – the big boy :)
 function plotCreate() { 
@@ -1918,6 +1909,78 @@ function adventureGen() {
   }
 
   document.querySelector(".output").innerHTML = "<p>" + agPlot + ".</b></p>";
+}
+
+// Compass Rose
+const compassType = [
+  // "compass 1",
+  // "compass 2",
+  // "compass 3",
+  // "compass 4",
+  // "compass 5",
+  "compass 6"
+];
+
+function compassGen() {
+  let directionSelect = randomString(compassType);
+  let direction = "";
+
+  // const goal = randomString(fragments.goal);
+  const motive = randomString(quest.motivation);
+  const twist = randomString(quest.twist);
+  const locationOne = randomString(quest.place);
+  const locationTwo = randomString(quest.place);
+  
+  // const tone = randomString(plots.tone);
+  // const genre = randomString(plots.genre);
+
+  // nouns – groups one and two
+  const nounOne = new Noun();
+  // const nounTwo = new Noun();
+
+  // verbs – groups one and two
+  // const verbOne = new Verb(nounOne.subtype);
+  // const verbTwo = new Verb(nounTwo.subtype);
+
+  // person select one
+  const subjectOne = personSelect();
+  const plotPersonOne = subjectOne.subject;
+  const plotPersonSelectOne = subjectOne.subjectSelect;
+  const svaOne = subjectOne.sva;
+
+  // person select two
+  const subjectTwo = personSelect();
+  const plotPersonTwo = subjectTwo.subject;
+  // const plotPersonSelectTwo = subjectTwo.subjectSelect;
+  // const svaTwo = subjectTwo.sva;
+
+  // action select
+  // let contVar = true;
+  // const action = actionSelect(contVar, nounOne.noun, verbOne.present, verbOne.gerund);
+  // const plotAction = action.action;
+  // const actionType = action.select;
+  
+  // const plotMethod = methodSelect(nounTwo.noun, verbTwo.gerund);
+  // const plotSubject = subjectCheck(actionType, plotPerson, sva, plotAction);
+
+  const points = {
+    // "compass 1": "What are we looking for? What is its nature? What characteristics does it have?",
+    // "compass 2": "How can this help us? What purpose does it serve?",
+    // "compass 3": "Where is it? What elements surround its location? What landmarks can help guide our journey?",
+    // "compass 4": "Who or what can help us find what we're searching for? Where might we find them?",
+    // "compass 5": "What do we need to watch out for or be careful of? What obstacles stand in our way?",
+    
+    // A [PERSON 1] is looking for a [THING] that [PROPERTY]. They need this [NOUN] because [REASON]. The [THING] is located in the [LOCATION 1]. The [PERSON 1] must enlist the help of [PERSON 2], who can be found in [LOCATION 3]. But [TWIST].
+    "compass 6": "<b>" + capitalize(plotPersonOne) + " " + svaOne + " looking for <b>" + nounOne.noun + "</b> that <b>" + nounOne.condition + ".</b> They are looking for the <b>" + nounOne.nounSelect + " " + motive + ".</b> The <b>" + nounOne.nounSelect + "</b> " + svaAgree(nounOne.nounType) + " located <b>" + locationOne + ",</b> so the <b>" + plotPersonSelectOne + "</b> must enlist the help of <b>" + plotPersonTwo + " <b>" + locationTwo + "</b> in order to find it. But what the <b>" + plotPersonSelectOne + "</b> doesn't know is that <b>" + twist
+  }
+
+  for (const compass in points) {
+    if (compass == directionSelect) {
+      direction = points[compass];
+    }
+  }
+
+  document.querySelector(".output").innerHTML = "<p>" + direction + ".</b></p>";
 }
 
 // NPC Builder
