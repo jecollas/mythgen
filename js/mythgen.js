@@ -1443,9 +1443,9 @@ function wordPrep(word) {
 
 function checkForPrep(string) {
   if (string.startsWith("the ")) {
-    string.slice(4);
+    string = string.slice(4);
   } else if (string.startsWith("another ")) {
-    string.slice(8);
+    string = string.slice(8);
   }
   return string;
 }
