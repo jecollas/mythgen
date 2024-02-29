@@ -587,21 +587,13 @@ const quest = {
 }
 
 // player characters, face roles, and first/last names
-  // NOTE: add a section for titles
+// NOTE: add a section for titles
 const characters = {
   fname:[
-    "Billy","Bobby","Mary","Barry","Steven","Marlon","Rachel","Shelby","Eliza","Elizabeth","Joseph","Andy","Arietta","Morgan","Taylor","Tristan","Kai","Anabelle","Duke","Esteban","Antonio","Anthony","Tony","Jackie","Jacquelyn","John","Mike","Michael","Chev","Mandy","Sully","Joel","Roger","Peter","Connor","Brian","Brendan","Emmy","Isaac","Melissa","Jaime","Jesse","Dakota","Jackson","Sawyer","Xavier","Ester","Tien","Logan","James","Mason","Jason","Calvin","Caleb","Ada","Clay","Gerard","Amy","Lydia","Eugenia","Rose","Jade","Jane","Roxy","Dave","David","Alexis","Jake","Dirk","Sarah","Raleigh","Nikolai","Laila","Emerald","Marcus","Marc","Mark","Caroline","Katie","Kaitlin","Bridget","Haley","Jack","Lauren","Reya","Letitia","Axle","Alex","Rae","Fae","Danny","Dani","Hugo","Juan","Johnny","Paul","Dominic","Mia","Michelle","Dwayne","Chris","Antigone","Maria","Mehak","Vishali","Iris","Shane","Sam","Jimmy","Isabella","Wendy","Thomas","Dan","Daniel","Cris","Norbert","Arya","Cale","Jonathan","Jon","Merla","Sylora","Rhiann","Martin","Sasha","Tim","Timothy","Shiro","Shirou","Rin","Holly","Ace","Ed","Edward","Corvanna","Allura","Sakura","Shinji","Asuka","Rei","Richardo","Jose","Graham","Scott","Colin","Baran","Axi","Cali","Callie","Calypso","Ryuji","Valren","Abby","Adam","Alice","Ash","Asher","Ashley","Astra","Bunny","Clara","Daisy","Delilah","Donnie","Ember","Finnley","Gale","Grey","Hailey","Husky","Izzie","Jay","Juby","Kade","Kalandra","Kyle","Laika","Lana","Lexie","Link","Lucy","Luka","Luke","Luna","Marv","Marven","Max","May","Micah","Molly","Murphy","Naomi","Nat","Natalie","Nova","Parker","Penelope","Rabbit","River","Robin","Rochelle","Sean","Summer","Synth","Tara","Tyler","Vash","Void","Zoe","Zora","Cowry","Mutt","Winona","Elena","Hannah","Jordan","Fenn","Nari","Pierce","Howl","Patroclus","Owen","Agni","Firouz","Zale","Butch","Osborne","Mogan","Rycheld","Symond","Jayce","Tansa","Levi","Beneger","Avelin","Vesta","Savannah","Claudia","Somerhild","Radolf","Denston","Judithe","Nireus","Sulen","Teukos","Galen","Judith","Wren","Istvan","Chad","Alaren","Mars","Mari","Shadow","Danielle","Kim","Harry","Rebecca","Olivia","Chloe","Elisha","Jamie","Jody","Isabelle","Karver","Charles","Jill","Sandra","Damien","Cassandra","Carlos","Javier","Cynthia","Jayanti","Darwin","Ramiel","Sanna","Denny","Vera","Kenna","Emilia","Nora","Faeryl","Yastra","Lanius","Bain","Oza","Runa","Belagar","Tobor","Aligar","Huk","Prong","Hyloris","Leon","Ethan",
-    // player names
-    "Karlaen","Delawyn","Ursa","Elias","Agon","Jax","Jaxx","Alwin","Verdic","Baratraxar","Isla","Cove","Cerradus","Tallian","Waylund","Leisa","Tacitus","Jules","Sigmund","Relldar","Elen","Remi","Grylis","Azalea","Norain","Wren","Brandan","Calus","Alyssandra","Aly","Myrtle","Greg","Gregory","Gregor","Gregnobulous","Rina","Crittamon","Whisper","Artharias","Arthur","Theran","Brigid","Cayn","Ekyo","Clay","Fenrisse","Balthazar","Koth","Hilde","Zumlar","Cotter","Gizzet","Yinren","Alistair","Willow","Caleb","Zav","Zavriel","Minyo","Mallazyr","Dexter","Munta","Esther","Melea","Artemis","Esperanza","Lorik","Thordric","Hedrin","Taliesin","Seraphina","Maurmagil","Ezra","Nakoa","Eitri","Lucius","Matias","Ven","Trisrora","Hart","Catanya","Sage","Saige","Xanthion","Vendal","Chessaul","Indy","Vitae","Ajax","Wenek","Magnus","Marlo","Marlonious","Owen","Aishin","Alansar","Victus","Tass","Opulus","Geillia","Amuck",
-    // face role names
-    "Octavious","Dennis","Zephyr","Hesperides","Emmet","Arianaya","Aria","Euclid","Amaris","Baron","Dworrin","Ali","Paradiddle","Nalfor","Norrin","Geralt","Auranos","Getorix","Oleg","Johann","Amadeo","Dom","Yama"
+    "Abby","Ace","Ada","Adam","Agni","Agon","Aishin","Ajax","Alansar","Alaren","Alex","Alexis","Ali","Alice","Aligar","Alistair","Allura","Alwin","Aly","Alyssandra","Amadeo","Amaris","Amuck","Amy","Anabelle","Andy","Anthony","Antigone","Antonio","Aria","Arianaya","Arietta","Artemis","Artharias","Arthur","Arya","Ash","Asher","Ashley","Aspen","Astra","Asuka","Auranos","Avelin","Axi","Axle","Azalea","Bain","Balthazar","Baran","Baratraxar","Baron","Barry","Belagar","Beneger","Billy","Bobby","Brandan","Brendan","Brian","Bridget","Brigid","Bunny","Butch","Cale","Caleb","Caleb","Cali","Callie","Calus","Calvin","Calypso","Carlos","Caroline","Cassandra","Catanya","Cayn","Cerradus","Chad","Charles","Chessaul","Chev","Chloe","Chris","Clara","Claudia","Clay","Colin","Connor","Corvanna","Cotter","Cove","Cowry","Cris","Crittamon","Cynthia","Daisy","Dakota","Damien","Dan","Dani","Daniel","Danielle","Danny","Darwin","Dave","David","Delawyn","Delilah","Dennis","Denny","Denston","Dexter","Dirk","Dom","Dominic","Donnie","Duke","Dwayne","Dworrin","Ed","Edward","Eitri","Ekyo","Elen","Elena","Elias","Elisha","Eliza","Elizabeth","Ember","Emerald","Emilia","Emmet","Emmy","Esperanza","Esteban","Ester","Esther","Ethan","Euclid","Eugenia","Ezra","Fae","Faeryl","Fenn","Fenrisse","Finnley","Firouz","Gale","Galen","Geillia","Geralt","Gerard","Getorix","Gizzet","Graham","Grayson","Greg","Gregnobulous","Gregor","Gregory","Grey","Grylis","Hailey","Haley","Hannah","Harry","Hart","Hedrin","Hesperides","Hilde","Holly","Howl","Hugo","Huk","Husky","Hyloris","Indy","Iris","Isaac","Isabella","Isabelle","Isla","Istvan","Izzie","Jack","Jackie","Jackson","Jacquelyn","Jade","Jaime","Jake","James","Jamie","Jane","Jason","Javier","Jax","Jaxx","Jay","Jayanti","Jayce","Jesse","Jill","Jimmy","Jody","Joel","Johann","John","Johnny","Jon","Jonathan","Jordan","Jose","Joseph","Juan","Juby","Judith","Judithe","Jules","Kade","Kai","Kaitlin","Kalandra","Karlaen","Karver","Katie","Keith","Kenna","Kevin","Kim","Koth","Kyle","Laika","Laila","Lana","Lance","Lanius","Lark","Lauren","Leisa","Leon","Letitia","Levi","Lexie","Link","Logan","Lorik","Lucius","Lucy","Luka","Luke","Luna","Lydia","Magnus","Mallazyr","Mandy","Marc","Marcus","Mari","Maria","Maris","Mark","Marlo","Marlon","Marlonious","Mars","Martin","Marv","Marven","Mary","Mason","Matias","Maurmagil","Max","May","Mehak","Melea","Melissa","Merla","Mia","Micah","Michael","Michelle","Mike","Minyo","Mogan","Molly","Morgan","Munta","Murphy","Mutt","Myrtle","Nakoa","Nalfor","Nami","Naomi","Nari","Nat","Natalie","Nikolai","Nireus","Nojiko","Nora","Norain","Norbert","Norrin","Nova","Octavious","Oleg","Oliver","Olivia","Opulus","Osborne","Owen","Owen","Oza","Paradiddle","Parker","Patroclus","Paul","Penelope","Peter","Pierce","Prong","Rabbit","Rachel","Radolf","Rae","Raleigh","Ramiel","Rebecca","Rei","Relldar","Remi","Reya","Rhiann","Richardo","Rin","Rina","River","Robin","Rochelle","Roger","Rose","Roxy","Runa","Rycheld","Ryuji","Sabo","Sage","Saige","Sakura","Sam","Sandra","Sanna","Sarah","Sasha","Savannah","Sawyer","Scott","Sean","Seraphina","Shadow","Shane","Shelby","Shinji","Shiro","Shirou","Sigmund","Simon","Somerhild","Steven","Sulen","Sully","Summer","Sylora","Symond","Synth","Tacitus","Taliesin","Tallian","Tansa","Tara","Tass","Taylor","Teukos","Theran","Thomas","Thordric","Tien","Tim","Timothy","Tobor","Tony","Trisrora","Tristan","Tyler","Ursa","Valren","Vash","Ven","Vendal","Vera","Verdic","Vesta","Victus","Vishali","Vitae","Void","Waylund","Wendy","Wenek","Whisper","Willow","Winona","Wren","Wren","Xanthion","Xavier","Yama","Yastra","Yinren","Zale","Zane","Zav","Zavriel","Zephyr","Zoe","Zora","Zoro","Zumlar"
   ],
   lname: [
-    "Venitzo","Nightlocke","Shelley","Brando","Grey","Stevenson","Andrews","McGrath","Wheeler","Taylor","Brodey","Lee","Han","Collins","LeBeau","Blackwood","Jackson","Stratman","Smith","Filli","Miller","Merlino","Fox","Waldron","Rogers","Adams","de la Cruz","Delacruz","Santiago","Lessio","Belen","Rodriguez","Connors","Parker","Barnes","Price","Sawyer","Wolfe","Mayer","Howlett","Freyason","Foster","Reynolds","Thorne","Owens","Doe","Morse","Paura","Walters","Ivanofski","St.,Claire","Shaughnessy","Carson","Fianna","Delarose","Darwin","Red","Green","Perez","Runner","Walker","Toretto","DiArcangelo","Desantos","Tavares","Diamond","Wu","Demehri","Cahill","Brown","Fenton","Rienton","Sims","James","Wolfhide","Black","Stoker","Berry","Night","Caligo","Pereira","Rackham","Teach","Murphy","Ikari","Matou","Langley","Ayanami","Vantas","Captor","Darling","Peters","Lukas","Perotta","Thornton","Fitch","Finch","Rodruiguez","Campbell","Bell","Graham","O'Connor","McMurphy","Becket","Bandyabout","Behrand","Cantor","Crimsonvine","Godley","Oaks","Reed","Shipley","Bet","Merriweather","D'entopera","Hyde","Murray","Knuckles","Robotnik","Sonic","Tails","DuBois","Kitsuragi","Katsuragi","Whittaker","Whitten","Kane","Bridges","Drake","Mishra","Graves","Dodge","Kraghorn","Rhodenn","Kennedy","Winters",
-    // player surnames
-    "Sin'del","Liamour","Oak","Athear","Caradin","Malendarr","Bin","Corsica","Pachero","Farwhen","Hopsworth","Greynettle","Grey","Nettle","Marillon","Shallows","Cove","Shallowcove","Gratz","Kilgor","Vadi","Hooker","Bjorvika","Delandrielle","Dubois","Sharp","Sharptongue","Briarwood","Knox","Wulf","Arl","Naegling","Varin","Lamoran","Muckandmire","Frogmagourke","Duskwalker","Luckstryder","Slate","Brightheart","Starling","Stalgrim","Mystralith","Cornwall","Moonbright","Valgon","Caliban","Grimstone","Varnak","Urtgard","Appleheart","Hasselblöd","Teken","Tekentlar","Theynore","Glade","Zata","Tazata","Ovgar","Magestone","Longfellow","Finch","Mehri","Dew","Hawthorne","Grell","Mayax","Elson","Stonebreaker","Sihde","Nymval","L'Rhine","Silias","Ardak","Stillmyst","Anderson","Stormcloud","Trignot","Krane","Grom","Mabrik","Ambrosius",
-    // face role surnames
-    "Behran","Farmer","Zax","Calhoun","Bell","Dreveaux","Devereux","Fable","Denerethion","Stonethrust","Owlstone","Oddity","Merchant","Morehammer","Radd","Marielle","Ashbridge","Wahl","Hammersong","Roark","Galt","Becket","Zhao","Sourfang"
+    "Adams","Addams","Ambrosius","Anderson","Andrews","Appleheart","Ardak","Arl","Ashbridge","Athear","Ayanami","Bandyabout","Barnes","Becket","Behran","Behrand","Belen","Bell","Berry","Bet","Bin","Bjorvika","Black","Blackwood","Brando","Briarwood","Bridges","Brightheart","Brodey","Brown","Cahill","Calhoun","Caliban","Caligo","Campbell","Cantor","Captor","Caradin","Carson","Claire","Collins","Connors","Cornwall","Corsica","Cove","Crimsonvine","D'entopera","Dappledown","Darling","Darwin","de la Cruz","Delacruz","Delandrielle","Delarose","Demehri","Denerethion","Desantos","Devereux","Dew","Diamond","DiArcangelo","Dodge","Doe","Drake","Dreveaux","DuBois","Duskwalker","Elson","Emiya","Fable","Farmer","Farwhen","Fenton","Fianna","Filli","Finch","Fitch","Foster","Fox","Freyason","Frogmagourke","Galt","Glade","Godley","Graham","Gratz","Grayson","Graves","Green","Grell","Grey","Greynettle","Grimstone","Grom","Hammersong","Han","Hasselblöd","Hawthorne","Hooker","Hopsworth","Howlett","Hyde","Ikari","Ivanofski","Jackson","James","Kane","Katsuragi","Kennedy","Kilgor","Kitsuragi","Knox","Knuckles","Kraghorn","Krane","L'Rhine","Lamoran","Langley","LeBeau","Lee","Lessio","Liamour","Longfellow","Luckstryder","Lukas","Mabrik","Magestone","Malendarr","Marielle","Marillon","Matou","Mayax","Mayer","McGrath","McMurphy","Mehri","Merchant","Merlino","Merriweather","Miller","Mishra","Moonbright","Morehammer","Morse","Muckandmire","Murphy","Murray","Mystralith","Naegling","Nettle","Night","Nightlocke","Nymval","O'Connor","Oak","Oaks","Oddity","Ovgar","Owens","Owlstone","Pachero","Parker","Paura","Pereira","Perez","Perotta","Peters","Price","Rackham","Radd","Red","Reed","Reynolds","Rhodenn","Rienton","Roark","Robotnik","Rodriguez","Rodruiguez","Rogers","Runner","Santiago","Sawyer","Shallowcove","Shallows","Sharp","Sharptongue","Shaughnessy","Shelley","Shipley","Sihde","Silias","Sims","Sin'del","Slate","Smith","Sonic","Sourfang","St. Claire","Stalgrim","Starling","Stevenson","Stillmyst","Stoker","Stonebreaker","Stonethrust","Stormcloud","Stratman","Tails","Tavares","Taylor","Tazata","Teach","Teken","Tekentlar","Theynore","Thorne","Thornton","Todd","Toretto","Trignot","Urtgard","Vadi","Valgon","Vantas","Varin","Varnak","Venitzo","Wahl","Waldron","Walker","Walters","Wheeler","Whittaker","Whitten","Winters","Wolfe","Wolfhide","Wu","Wulf","Zata","Zax","Zhao"
   ]
 };
 
@@ -1642,10 +1634,10 @@ function charaSelect() { // used in rumorGen()
     "chara 4": "<b>" + wordPrep(person) + "</b> named <b>" + fname + "</b>"
   }
 
-  const keys = Object.keys(charaList);
-  const type = randomString(keys);
-  const chara = charaList[type];
-  return chara;
+  const obj = Object.keys(charaList);
+  const key = randomString(obj);
+  const value = charaList[key];
+  return value;
 }
 
 ////////////////////////////////////
@@ -1686,10 +1678,10 @@ function nounSelect(noun, nounType, nounSelect, condition) {
     "noun 4": adj + " " + nounSelect + "</b> that <b>" + condition
   }
 
-  const keys = Object.keys(nouns);
-  const type = randomString(keys);
-  const subject = nouns[type];
-  return subject;
+  const obj = Object.keys(nouns);
+  const key = randomString(obj);
+  const value = nouns[key];
+  return value;
 }
 
 // person select
@@ -1707,20 +1699,21 @@ function personSelect() {
     "plural 2": adj + " " + group + "</b> of <b>" + members + "</b>"
   }
 
-  const keys = Object.keys(subjects);
-  const type = randomString(keys);
-  const subject = wordPrep(subjects[type]); // adds 'a' or 'an' to the subject (default)
-  const subjectSelect = subjects[type]; // does not do that
-  const sva = svaAgree(type);
+  const obj = Object.keys(subjects);
+  const key = randomString(obj);
+  const value = subjects[key];
   
-  let subjectSmall = "";
-  if (type == "singular 1" || type == "singular 2") {
-    subjectSmall = noun;
-  } else if (type == "plural 1" || type == "plural 2") {
-    subjectSmall = members;
+  const valuePrep = wordPrep(value); // adds 'a' or 'an' to the value
+  const sva = svaAgree(key); // subject-verb agreenment for the key
+  
+  let valueNoun = "";
+  if (key == "singular 1" || key == "singular 2") {
+    valueNoun = noun;
+  } else if (key == "plural 1" || key == "plural 2") {
+    valueNoun = members;
   }
 
-  return {subject, subjectSelect, subjectSmall, type, sva};
+  return {value, valuePrep, valueNoun, key, sva};
 }
 
 // action select
@@ -1767,10 +1760,10 @@ function methodSelect(noun, verbGer) {
     "method 6": "</b>" + "by utilizing <b>" + wordPrep(owner) + "'s " + noun + "</b>"
   }
 
-  const keys = Object.keys(methods);
-  const type = randomString(keys);
-  const method = methods[type];
-  return method;
+  const obj = Object.keys(methods);
+  const key = randomString(obj);
+  const value = methods[key];
+  return value;
 }
 
 // subject assist
@@ -1812,8 +1805,8 @@ const rumorType = [
 ///////////////////////////////
 // PLOT BUILDER – the big boy :)
 function plotCreate() { 
-  let story = "";
   let plotSelect = ""; // uses templates from checkboxes
+  let text = "";
   
   // if nothing is checked, default to all
   plotSelect = randomString(checkOptions());
@@ -1840,7 +1833,7 @@ function plotCreate() {
 
   // person select
   const subject = personSelect();
-  const plotPerson = subject.subject;
+  const plotPerson = subject.valuePrep;
   const sva = subject.sva;
 
   // action select
@@ -1876,19 +1869,19 @@ function plotCreate() {
     "adventure 4": "This story takes place <b>" + location +",</b> where <b>" + plotSubject + ".</b> Their goal is to <b>" + goal + " " + plotMethod + ".</b></p>" + "<p>They are doing this <b>" + motive + ",</b> but <b>" + twist,
   }
 
-  for (const plot in stories) {
-    if (plot == plotSelect) {
-      story = stories[plot];
+  for (const key in stories) {
+    if (key == plotSelect) {
+      text = stories[key];
     }
   }
 
-  document.querySelector(".output").innerHTML = "<p>" + story + ".</b></p>";
+  document.querySelector(".output").innerHTML = "<p>" + text + ".</b></p>";
 }
 
 // Fetch Quest
 function questGen() {
   let questSelect = randomString(questType);
-  let storyQuest = "";
+  let text = "";
 
   const noun = new Noun();
   const nounDesc = nounSelect(noun.noun, noun.nounType, noun.nounSelect, noun.condition);
@@ -1902,19 +1895,19 @@ function questGen() {
     "quest 2": "The party is looking for <b>" + nounDesc + "</b> in order to <b>" + goal + ".</b> They want this <b>" + motive + ",</b> but what they haven't realized yet is that <b>" + twist
   }
 
-  for (const story in quests) {
-    if (story == questSelect) {
-      storyQuest = quests[story];
+  for (const key in quests) {
+    if (key == questSelect) {
+      text = quests[key];
     }
   }
 
-  document.querySelector(".output").innerHTML = "<p>" + storyQuest + ".</b></p>";
+  document.querySelector(".output").innerHTML = "<p>" + text + ".</b></p>";
 }
 
 // Adventure Generator
 function adventureGen() {
   let adventureSelect = randomString(adventureType);
-  let agPlot = "";
+  let text = "";
 
   const goal = randomString(fragments.goal);
   const motive = randomString(quest.motivation);
@@ -1931,7 +1924,7 @@ function adventureGen() {
 
   // person select
   const subject = personSelect();
-  const agPerson = subject.subject;
+  const agPerson = subject.valuePrep;
   const sva = subject.sva;
 
   // action select
@@ -1953,13 +1946,13 @@ function adventureGen() {
     "adventure 4": "This story takes place <b>" + location +",</b> where <b>" + agSubject + ".</b> Their goal is to <b>" + goal + " " + agMethod + ".</b></p>" + "<p>They are doing this <b>" + motive + ",</b> but <b>" + twist,
   }
 
-  for (const story in adventures) {
-    if (story == adventureSelect) {
-      agPlot = adventures[story];
+  for (const key in adventures) {
+    if (key == adventureSelect) {
+      text = adventures[key];
     }
   }
 
-  document.querySelector(".output").innerHTML = "<p>" + agPlot + ".</b></p>";
+  document.querySelector(".output").innerHTML = "<p>" + text + ".</b></p>";
 }
 
 // Compass Rose
@@ -1975,7 +1968,7 @@ const compassType = [
 
 function compassGen() {
   let directionSelect = randomString(compassType);
-  let direction = "";
+  let text = "";
 
   // const goal = randomString(fragments.goal);
   const motive = randomString(quest.motivation);
@@ -1997,16 +1990,16 @@ function compassGen() {
 
   // person select one
   const subjectOne = personSelect();
-  const personOne = subjectOne.subject;
-  // const personSelectOne = subjectOne.subjectSelect;
-  const personSmallOne = subjectOne.subjectSmall;
-  const personTypeOne = subjectOne.type;
+  const personOne = subjectOne.valuePrep;
+  // const personSelectOne = subjectOne.value;
+  const personSmallOne = subjectOne.valueNoun;
+  const personTypeOne = subjectOne.key;
   const svaOne = subjectOne.sva;
 
   // person select two
   const subjectTwo = personSelect();
-  const personTwo = subjectTwo.subject;
-  // const plotPersonSelectTwo = subjectTwo.subjectSelect;
+  const personTwo = subjectTwo.valuePrep;
+  // const plotPersonSelectTwo = subjectTwo.value;
   const svaTwo = subjectTwo.sva;
 
   // action select
@@ -2019,7 +2012,7 @@ function compassGen() {
   // const plotSubject = subjectCheck(actionType, plotPerson, sva, plotAction);
 
   // A [PERSON 1] is looking for a [THING] that [PROPERTY]. They need this [NOUN] because [REASON]. The [THING] is located in the [LOCATION 1]. The [PERSON 1] must enlist the help of [PERSON 2], who can be found in [LOCATION 3]. But [TWIST].
-  const points = {
+  const compass = {
     "compass 1": "<b>" + capitalize(personOne) + " " + svaOne + " looking for <b>" + nounDescOne + ".</b> They are looking for the <b>" + nounOne.nounSelect + " " + motive + ".</b> The <b>" + nounOne.nounSelect + "</b> " + svaAgree(nounOne.nounType) + " hidden <b>" + locationOne + ",</b> so the <b>" + personSmallOne + "</b> must enlist the help of <b>" + personTwo + ", who " + svaTwo + " located <b>" + locationTwo + ".</b> But what the <b>" + personSmallOne + "</b> " + svaDoes(personTypeOne) + " not know is that <b>" + twist,
     
     "compass 2": "<b>" + capitalize(personOne) + " " + svaOne + " looking for <b>" + nounDescOne + ".</b> The <b>" + nounOne.nounSelect + "</b> " + svaAgree(nounOne.nounType) + " hidden <b>" + locationOne + ",</b> so the <b>" + personSmallOne + "</b> must enlist the help of <b>" + personTwo + ", who " + svaTwo + " located <b>" + locationTwo + ".</b> But what the <b>" + personSmallOne + "</b> " + svaDoes(personTypeOne) + " not know is that <b>" + twist,
@@ -2041,19 +2034,19 @@ function compassGen() {
   // "card 4": "Who or what can help us find what we're searching for? Where might we find them?",
   // "card 5": "What do we need to watch out for or be careful of? What obstacles stand in our way?",
 
-  for (const compass in points) {
-    if (compass == directionSelect) {
-      direction = points[compass];
+  for (const key in compass) {
+    if (key == directionSelect) {
+      text = compass[key];
     }
   }
 
-  document.querySelector(".output").innerHTML = "<p>" + direction + ".</b></p>";
+  document.querySelector(".output").innerHTML = "<p>" + text + ".</b></p>";
 }
 
 // NPC Builder
 function npcGen() {
   let partySelect = "";
-  let partyBuild = "";
+  let text = "";
   var add = ",</b> and <b>";
 
   partySelect = randomString(checkOptions());
@@ -2085,19 +2078,19 @@ function npcGen() {
     "three people 5": charaOne.full + ", " + charaTwo.full + add + charaThree.full
   }
 
-  for (const people in party) {
-    if (people == partySelect) {
-      partyBuild = party[people];
+  for (const key in party) {
+    if (key == partySelect) {
+      text = party[key];
     }
   }
 
-  document.querySelector(".output").innerHTML = "<p>Our party includes <b>" + partyBuild + ".</b></p>";
+  document.querySelector(".output").innerHTML = "<p>Our party includes <b>" + text + ".</b></p>";
 }
 
 // Rumor Generator
 function rumorGen() {
   let rumorSelect = randomString(rumorType);
-  let rumor = "";
+  let text = "";
 
   const charOne = charaSelect();
   const charTwo = charaSelect();
@@ -2130,13 +2123,13 @@ function rumorGen() {
     "rumor 11": charOne + " is <b>" + wordPrep(nounPers),
   }
 
-  for (const gossip in rumors) {
-    if (gossip == rumorSelect) {
-      rumor = rumors[gossip];
+  for (const key in rumors) {
+    if (key == rumorSelect) {
+      text = rumors[key];
     }
   }
 
-  document.querySelector(".output").innerHTML = "<p>" + source + " " + rumor + ".</b></p>";
+  document.querySelector(".output").innerHTML = "<p>" + source + " " + text + ".</b></p>";
 }
 
 //////////////////////////////

@@ -1,28 +1,47 @@
 // nameGen test thing
-const nableA = [
-  "a","ad","af","ah","ak","al","am","an","anda","ander","ar","arac","arn","at","ate","aur","axis","az","bad","baff","bail","bak","bar","barth","becc","bel","berd","bes","bia","bill","blade","bo","borg","borr","both","bra","bran","cand","cath","chad","chan","chess","chor","cig","cly","co","cook","cor","cruth","dak","dar","de","dee","dell","der","di","dius","do","doh","dom","don","dor","dos","dou","dra","drebb","dros","du","durn","ed","eg","eikos","el","ella","en","ena","endi","er","ers","es","eson","eth","ev","ex","fa","fal","fan","farn","fegg","fen","fer","force","fred","ga","gai","gain","gal","gan","gar","gate"
-];
+const nable = {
+  a: [
+    "a","ab","able","ac","ace","ad","ada","add","ade","adi","ae","aeg","aen","aer","af","ag","age","ah","ai","aige","ain","air","aish","aj","ak","aker","al","alf","ali","alis","all","alls","als","alt","am","ama","amb","ambro","ami","amo","amor","amour","an","and","anda","ande","ander","andri","ane","ang","ani","ann","ano","anos","anza","ao","ap","app","apple","aq","aqu","aqua","ar","ara","arac","ard","ari","ark","arl","arn","arp","arr","art","as","ash","ass","at","ata","ate","ath","ati","ato","att","atu","atz","au","aul","aur","aura","aux","av","aw","ax","axis","ay","aya","ayl","ayn","az","ba"
+  ],
+  b: [
+    "bad","baff","bail","bak","bal","ban","bann","bar","barr","bars","barth","be","bec","becc","beck","beh","bel","bell","berd","bes","bi","bia","bil","bill","bin","bjo","bjor","blade","blo","bloo","blood","bo","bois","boo","borg","borr","both","bra","bran","brea","break","breaker","bri","briar","bridge","brig","bright","brik","bro","brook","bu","bus","by","ca","cal","cali","call","cand","cap","car","carr","cat","cath","catt","cay","cayn","ce","cer","cerr","cet","cett","ch","cha","chad","chan","chant","che","cher","chero","cherr","ches","chess","chop","chopp","chor","chu","ci","cig","cit","cius","cla","clay","clid","cliff","clo","cloud","cly","co","cook","coop"
+  ],
+  c: [
+    "cooper","cor","corn","cot","cott","cov","cove","cra","crane","crit","critt","cro","cruth","cu","cy","da","dak","dal","dall","dan","dar","darr","de","ded","dee","del","dela","dell","den","dene","denn","deo","der","derr","des","dess","dev","dew","dex","di","dic","did","didd","din","dinn","dius","do","doh","dom","domm","don","donn","dor","dorr","dos","doss","dou","dra","dre","dreb","drebb","dri","dric","drin","drinn","dros","dross","du","dul","dull","durn","dus","dusk","dwo","dy","e","ea","ear","eau","eb","ec","ed","ee","ef","eff","eg","egg","eh","ei","eikos","ej","ek","el","ell","ella","elle","els","em","emm","en"
+  ],
+  d: [
+    "ena","end","endi","enn","ent","eo","ep","eq","equ","equa","equi","er","erch","eri","ero","err","ers","es","eson","ess","est","esth","esthe","et","eth","ett","ettle","eu","ev","ew","ex","ey","ez","fa","fab","fable","fal","fall","falls","fan","fang","far","farm","farn","fe","fegg","fel","fell","fen","fenn","fer","ferr","fi","fin","finch","fo","for","force","fred","fro","frog","fu","fy","ga","gai","gain","gal","gale","gall","galt","gam","gamm","gan","gann","gar","gard","garr","gate","gax","ge","gei","geil","geill","gent","ger","get","geto","ghin","gi","gid","gil","giz","gizz","gla","glad","glade","glen","glenn","gli","glom"
+  ],
+  e: [
+    "gnot","go","gon","gonn","gor","gorr","gour","gourke","gr","gra","gram","gray","gre","greg","grell","grey","gri","grim","gro","grom","gry","gryl","gu","gue","gur","gy","ha","hag","hak","ham","hamm","hammer","han","hann","hao","har","harg","harr","hart","has","hass","hassel","haw","he","hea","heart","hed","held","hes","hess","hi","hil","hill","ho","hole","holmes","hoo","hook","hop","hops","hor","houn","hu","hy","i","ia","iam","ian","iar","iat","ib","ic","ica","ick","id","iddle","ide","ider","ides","idge","idle","ie","ieg","ien","ienn","ier","if","ig","ight","ih","ij","ik","ika","il","ili","ilio","ill","illi","illio","illion"
+  ],
+  f: [
+    "illo","illon","ilo","ilon","im","in","inch","ind","ine","ing","inn","io","ion","ip","iq","iqu","ir","ire","iron","irr","is","ise","iss","it","ith","itt","ity","iu","ius","iv","iw","ix","iy","iz","j'","ja","jaw","jax","je","jeff","ji","jo","jon","jor","ju","jy","ka","kal","kall","kan","kand","kar","kat","ke","kee","ken","kent","ker","ket","key","khan","ki","kil","kill","kim","kir","kit","kno","knos","knox","ko","koa","koth","kra","krane","kras","kri","ku","kur","ky","kyo","la","lach","lack","lag","lagg","lain","lainn","lam","lamm","lan","land","lann","lap","lar","larr","lat","latt","le","lee"
+  ],
+  g: [
+    "lea","leaf","leb","lef","leff","leg","legg","lei","len","lenn","les","less","li","lia","liam","lias","lie","lin","ling","linn","lion","lis","lisa","lissa","lith","lli","llia","llo","llon","llow","llows","lo","lom","lon","long","lonn","lor","lorr","loud","low","lows","loz","lu","luck","luff","lund","lus","lux","ly","lys","ma","mab","mad","mag","mage","mal","mall","mam","man","mann","mant","mar","mari","marr","mars","marsh","mas","mason","mass","mau","maur","may","me","mee","meh","mehr","mel","meli","mell","mer","merch","mesh","met","mett","meu","mez","mi","mil","mill","min","mir","mire","mis","miss","mist","mo","mol","mold","moll","mon"
+  ],
+  h: [
+    "moo","moon","mor","moran","more","morr","mott","mour","mu","muck","muk","mul","mull","mum","mun","mund","munn","munt","mus","muss","my","myr","mys","myst","na","nae","naeg","naen","nah","nak","nal","nall","nam","nar","nay","ne","ned","nek","nel","nell","net","nett","ni","nic","nil","nill","nis","nit","nitt","no","noa","nob","nobb","noon","nor","nore","norr","nos","noss","not","nott","nox","nu","nus","ny","nya","nym","o","oa","oak","oar","ob","oc","od","odd","oe","of","off","og","ogma","oh","oi","ois","oj","ok","ol","old","oll","om","on","ond","one","ong","oni","onn","oo","ood","ook","oon","op"
+  ],
+  i: [
+    "opp","oq","oqu","or","ora","oran","ore","orm","orn","orne","oro","orr","orra","orran","orre","orro","os","osa","oss","ot","oth","other","ott","ou","oud","oun","our","ourke","ous","ouse","ouss","ov","ove","ow","owl","ows","ox","oy","oz","pa","pach","pal","pall","pam","pan","pann","par","para","parr","pe","pei","pel","pell","pen","penn","per","pera","perra","phan","phil","phill","phin","phina","phyr","pi","po","por","porr","pos","poy","ppi","pres","press","pu","pul","pull","pus","puss","put","putt","py","qi","qu","qua","quas","que","qui","quill","quo","quy","ra","rad","radd","rag","rain","ral","rall","ralt","ram","ramm"
+  ],
+  j: [
+    "ran","rann","ranno","rano","rat","rate","ratt","ratz","ray","re","rea","reg","rel","rell","rem","ren","renn","reth","rey","rhi","rhin","rhine","rhinn","ri","ria","rial","riall","riar","rias","ric","rick","rid","ridd","ride","rider","ridge","rie","riel","riell","rielle","right","rik","ril","rill","rim","rin","rinn","rios","rious","ris","riss","risse","rit","ritt","rius","rix","ro","roa","roar","roark","rob","rod","rodd","rol","roll","rom","ron","rook","rop","rope","ropp","rora","ros","ross","rot","roth","rott","row","rrin","rrow","ru","rua","rul","rull","rust","rut","ruth","rutt","ry","ryd","ryde","ryder","ryk","s","sa","sag","sage","sagg","sai","saige"
+  ],
+  k: [
+    "sail","sal","sall","sam","san","sann","sar","sarr","saul","say","sca","scan","se","seef","sef","sel","sell","seph","ser","sera","serr","sh","sha","shal","shall","shar","sharp","shin","sho","si","sia","sic","sig","sih","sil","sill","silver","sin","sirk","sit","sitt","sius","ska","sla","slat","slate","so","sol","soll","son","song","sopp","sou","sour","spar","sper","spor","ssaul","sta","stair","stal","star","ste","stee","sti","stil","still","sto","stone","stor","storm","storr","str","stra","strev","stry","su","sun","sur","surr","sy","ta","tac","tae","tal","tall","tan","tar","tars","tas","tass","tav","te","tek","tel","tell","tem","ter","th","tha"
+  ],
+  l: [
+    "thad","tham","than","thann","thar","thari","tharr","thear","theo","ther","therr","they","thi","thia","thio","thion","tho","thon","thor","thorn","thorne","thr","thru","thrust","thur","thy","ti","tie","ties","tle","to","ton","tongue","tonn","tor","torr","tr","tra","trav","trax","tre","tred","tredd","tri","trig","tril","trill","tris","tru","ttle","tu","tue","tus","ty","u","ua","ub","uc","uck","ud","ue","uf","ug","uh","ui","uj","uk","ul","ulf","ull","um","umm","un","undo","unn","uo","up","uq","uqu","ur","urt","us","usk","uss","ust","ut","utt","uv","uw","ux","uy","uz","va","vad","val","vall","vam","van","vann","var"
+  ],
+  m: [
+    "vas","vay","ve","veaux","ven","ver","vi","vic","vik","vil","vill","vit","vo","von","vri","vu","vy","wa","wahl","wal","walk","walker","wall","water","way","we","wen","wenn","when","whis","whisp","wi","wil","will","win","winn","wo","wolf","woo","wood","wor","worr","worth","wre","wren","wu","wul","wulf","wull","wy","wyll","wym","wyn","xa","xan","xe","xes","xi","xo","xu","y","ya","yal","yall","yam","yan","yax","ye","yi","yin","yo","yon","yr","yu","za","zah","zam","zar","zat","zav","zax","ze","zee","zeg","zegy","zep","zeph","zet","zett","zha","zhao","zi","zin","zo","zoa","zom","zu","zum","zy","zyr"
+  ]
+}
 
-const nableB = [
-  "gax","gent","ghin","glen","glom","go","gor","gram","gray","gy","ha","hag","ham","han","harg","held","ho","holmes","i","ia","ick","id","ieg","ien","ier","ig","ik","in","ing","ion","iron","is","ise","it","ius","j'","je","jeff","jo","ka","kall","kar","kee","khan","kim","kir","kit","ko","kra","kras","ku","la","lagg","lam","lap","lat","leaf","lef","les","lis","lo","lu","ly","mad","mal","man","mant","mar","marsh","mas","mel","met","mez","mi","mil","min","mir","mis","mo","mold","mor","mul","mund","mus","na","nar","ned","nel","nic","no","nor","nu","o","o","ob","oc","ol","ol","old","on"
-];
-
-const nableC = [
-  "ond","ora","os","osa","ot","pal","pan","pen","phan","phil","po","pos","poy","pres","pus","quas","que","quill","ra","rag","ralt","ram","ray","re","rem","ren","rick","rin","ris","rius","ro","rod","ron","ros","roth","row","ru","rua","ry","sa","sail","sal","san","sar","say","seef","seph","sho","sia","silver","sirk","sit","spar","spor","ste","ste","sto","stone","storm","sur","tan","tar","tars","tas","ter","tha","thad","tham","than","theo","ther","thon","thor","thy","ties","to","ton","tra","trav","tre","tredd","tue","ul","um","umm","undo","us","vay","ven","ver","vill","wa","will","wolf","yon","zegy","zin","zo","zoa","zom"
-];
-
-const nableD = [
-  "cap","chu","cro","cu","da","dan","e","ea","eri","fe","fer","fi","gam","gi","hak","hor","ja","jon","kan","kat","ket","kri","kur","lainn","lei","lin","loz","lux","ma","me","mee","meu","nah","nay","ne","nit","nus","oh","pe","pei","por","py","qui","ri","rim","rope","se","ser","sha","ska","sol","stee","strev","ta","tav","te","tor","tri","tu","uss","van","vas","vri","xes","ya","yu","zah","zee","zi"
-];
-
-const nableE = [
-  // player misc
-  "dul","il","nym","os","von","za",
-  // player first names
-  "kar","la","en","de","wyn","ur","sa","el","s","gon","win","ver","dic","ba","ra","trax","cove","cer","dus","tall","ian","way","lund","lei","ta","tac","cit","tus","us","sig","rell","ell","mi","gry","gryl","ea","lea","ain","rain","wre","wren","dan","ca","cal","lus","lys","myr","tle","greg","gre","nob","u","ri","na","crit","mon" // got as far as 'crittamon'
-]
-
-const nableX = ["","","",""," "," "," ","-"]
+const nableX = ["","","","",""," "," "," "]
 
 function randomString(arr) {
   const randomIndex = Math.floor(Math.random() * arr.length);
@@ -61,19 +80,13 @@ function nambleRoll() {
   }
 
   for (i = 0; i < syllCount; i++) {
-    var rollTwo = diceRoll(10);
-    var nableJoin = randomString(nableX);        
-    if (rollTwo <= 2) {
-      nambleName = randomString(nableA);
-    } else if (rollTwo <= 4) {
-      nambleName = randomString(nableB);
-    } else if (rollTwo <= 6) {
-      nambleName = randomString(nableC);
-    } else if (rollTwo <= 8) {
-      nambleName = randomString(nableD);
-    } else if (rollTwo <= 10) {
-      nambleName = randomString(nableE);
-    }
+    var obj = Object.keys(nable);
+    var key = randomString(obj);
+    var value = nable[key];
+
+    var nableJoin = randomString(nableX);
+    nambleName = randomString(value);
+    console.log(nableJoin);
 
     if (i == syllCount - 1) {
       namble += nambleName;
