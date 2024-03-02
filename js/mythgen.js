@@ -621,7 +621,7 @@ const nouns = {
       "king","chosen one","princess","empress","constable","mayor","Serpent God","local authority","little bitch","person of authority","lost loved one","cleric","divinity","rival","local noble","vampire","king","forgotten god","knight","monster","forgotten divinity","vampire lord","slayer","dragon","peasant girl","peasant boy","young boy","young girl","lad","lass","fruit-seller","gem merchant","sellsword","nomad","knight","gentleman thief","gentlewoman thief","soldier","monk","sorceror","enchanter","witch","warlock","warrior","mage","outlaw","ruffian","brigand","pickpocket","thief","woodsman","warlord","page","squire","troubadour","empress","emperor","noblewoman","nobleman","lord","lady","prince","princess","diplomat","monsterologist","swordmaster","apprentice","assassin-in-training","enchantress-in-training","summoner-in-training","witch-in-training","necromancer-in-training","prophet-in-training","sorceror-in-training","ogre","dragon","centaur","charlatan","vampire","genie","troll","dale elf","deep elf","dwarf","goblin","half elf","high elf","human","suhk","wildren","alchemist","artificer","bard","cleric","druid","fighter","paladin","ranger","rogue","runesmith","wizard","coalescer","excavator","harvester","logger","skinner","farmer","hunter","lumberjack","miner","panner","butcher","carpenter","gemcutter","glassmaker","papermaker","smelter","tanner","weaver","architect","blacksmith","brewer","chef","glassblower","lapidary","leatherworker","tailor","trapmaker","woodworker","appraiser","laborer","mender","eccentric candyman","retail employee","werewolf","feral child","snake-oil salesman","influencer","cowboy","pirate","rat","child psychologist","ghost hunter","archivist","creature","demolitions expert","goose","duelist","dog","construct","landlord","celebrity chef","village idiot","old guy","old lady","tax-evader","draft dodger","pyrotechnician","arsonist","professional arsonist","retired assassin","goth","clown","doctor","lawyer","con artist","grifter","lad in a fancy suit","hot girl","hot guy","hot person","malewife","entity","absent father","war criminal","shitty wizard","conspiracy theorist","adrenaline junkie","Italian","asshole","deadbeat dad","deadbeat mom","deadbeat parent","deadbeat","Little League coach","mobster","grad student","librarian","researcher","research assistant","entomologist","butch lesbian","dancer","singer","musician","historian","private investigator","detective","comedian","person","pro-wrestler","furry","girl","boy","candyman","retail employee","child","psychologist","guy","lad in a fancy suit","father","mother","dad","mom","parent","lesbian","idiot","raging anti-capitalist","CEO","union buster","dudebro","pharaoh","saber","archer","lancer","caster","rider","assassin","berserker","heroic spirit","chinchilla","goose","pseudo-dragon","toad","lapdog","pheasant","tortoise","cat","rabbit","baby","human baby"
     ],
     plural: [
-      "travelers","officials","peasants","people","themselves","children","clerics","mages","martyrs","followers","hostages","slaves","new members","followers of another group","unstable individuals","long-extinct creatures","honest shopkeepers","younger citizens","thousands of ghosts","powerful friends","bribed officials","animals","citizens","army","cultists","militia members","government officials","puppet organization","colony of humanoids","people","army of undead","magical army","band of mercenaries","thousand tortured souls","squires","adventurers","assassins","fish people","drunken farmers","illusionists","settlers","werewolves","raiders","industrialists","acolytes","vampires","collectors","animals","land surveyors","rogues","elementals","goblin hunters","lowlives","knights","mercenaries","bardic actors","plants","nobles and their retinue","royalty","lepers","kobold trapsmiths","wizards","ancients","bandits","mendicant monks","giants","prisoners","dwarven archaeologists","con artists","alchemists","thieving travelers","villians","slaves","diplomats","doppelgangers","temple monks","rebels","runaways","psychics","tinkers","local spirits","masterless golems","druids","kings","diviners","travelling merchants","mysterious cloaked men","liches","sprites","traitors","monitors","scholars","guards","ousted monarchs","ghosts","militia members","children","orphan children","fairies","holy inquisitors","singers","enchanters","enchantresses","merchants","cavaliers","religious zealots","mummers","bards","dragons","otherwordly beings","dukes","duchesses","undead","slavers","escaped slaves","witches","planar travelers","charity mission workers","chaos worshippers","monks","priests","peasants","common folk","terrorists","defectors","pageboys","spies","foreign diplomats","nuns","nomads","plant creatures","philosophers","sea creatures","pirates","barons","ladies","teenagers","unemployed tradespeople","aristocrats","royals","scientists","necromancers","gnomes","masons","painters","senior villagers","housebreakers","fishermen","vintners","leatherworkers","intelligentsia","craftspersons","convicts","felons","smiths","homunculi","golems","bodysnatchers","vivisectionists","ax murderers","tulip growers","fey creatures","barbarians","scribes","crime bosses","drug lords","brothel keepers","veterans","draftees","deserters","masters","journeymen","home owners","shopkeepers","smugglers","corrupt politicians","mages","hags","violent vigilantes","three possums in a trench coat","the homies","the dead","the law","the elderly","the aristocracy","the church","the militia","the rich","the court","the local crime underground","the masses","the ancients","'the man'","the mighty","circus of clowns","heroic spirits"
+      "travelers","officials","peasants","people","themselves","children","clerics","mages","martyrs","followers","hostages","slaves","new members","followers of another group","unstable individuals","long-extinct creatures","honest shopkeepers","younger citizens","thousands of ghosts","powerful friends","bribed officials","animals","citizens","army","cultists","government officials","colony of humanoids","people","undead","magical army","thousand tortured souls","squires","adventurers","assassins","fish people","drunken farmers","illusionists","settlers","werewolves","raiders","industrialists","acolytes","vampires","collectors","animals","land surveyors","rogues","elementals","goblin hunters","lowlives","knights","mercenaries","bardic actors","plants","nobles and their retinue","royalty","lepers","kobold trapsmiths","wizards","ancients","bandits","mendicant monks","giants","prisoners","dwarven archaeologists","con artists","alchemists","thieving travelers","villians","slaves","diplomats","doppelgangers","temple monks","rebels","runaways","psychics","tinkers","local spirits","masterless golems","druids","kings","diviners","travelling merchants","mysterious cloaked men","liches","sprites","traitors","monitors","scholars","guards","ousted monarchs","ghosts","militia members","children","orphan children","fairies","holy inquisitors","singers","enchanters","enchantresses","merchants","cavaliers","religious zealots","mummers","bards","dragons","otherwordly beings","dukes","duchesses","undead","slavers","escaped slaves","witches","planar travelers","charity mission workers","chaos worshippers","monks","priests","peasants","common folk","terrorists","defectors","pageboys","spies","foreign diplomats","nuns","nomads","plant creatures","philosophers","sea creatures","pirates","barons","ladies","teenagers","unemployed tradespeople","aristocrats","royals","scientists","necromancers","gnomes","masons","painters","senior villagers","housebreakers","fishermen","vintners","leatherworkers","intelligentsia","craftspersons","convicts","felons","smiths","homunculi","golems","bodysnatchers","vivisectionists","ax murderers","tulip growers","fey creatures","barbarians","scribes","crime bosses","drug lords","brothel keepers","veterans","draftees","deserters","masters","journeymen","home owners","shopkeepers","smugglers","corrupt politicians","mages","hags","violent vigilantes","three possums in a trench coat","the homies","the dead","the law","the elderly","the aristocracy","the church","the militia","the rich","the court","the local crime underground","the masses","the ancients","'the man'","the mighty","circus of clowns","heroic spirits"
     ]
   },
   place: {
@@ -1402,7 +1402,7 @@ const fragments = {
 
 // move this array under a different category
 const groups = [
-  "order","horde","clique","gaggle","mob","collegium ","armed group","squad","cadre","trio","duo","quintet","pack","wandering troupe","crime ring","group","cabal","coven","gang","bunch","fellowship","posse","school class","syndicate","delegation","secret society","guild","extended family","noble house","platoon","caravan","sisterhood","work team","team","association","cartel","club","congregation","gentlemen's club","faction","crew","hidden society","league","converstation club","religious sect","tribe","elite squad","brotherhood","charity organization","support staff","entourage","assembly","noble family","governing body","ensemble","conclave","coterie","organization","circle","partnership","society","party","cult","group","troop","army","mass","gathering","political faction","inbred family","choir","crowd","splinter faction","band","conspiracy","clan","collegium","patchwork","network","cell","panel","doomsday cult","union","collective","circus"
+  "order","horde","clique","gaggle","mob","collegium ","armed group","squad","cadre","trio","duo","quintet","pack","wandering troupe","crime ring","group","cabal","coven","gang","bunch","fellowship","posse","school class","syndicate","delegation","secret society","guild","extended family","noble house","platoon","caravan","sisterhood","work team","team","association","cartel","club","congregation","gentlemen's club","faction","crew","hidden society","league","converstation club","religious sect","tribe","elite squad","brotherhood","charity organization","support staff","entourage","assembly","noble family","governing body","ensemble","conclave","coterie","organization","circle","partnership","society","party","cult","group","troop","army","mass","gathering","political faction","inbred family","choir","crowd","splinter faction","band","conspiracy","clan","collegium","patchwork","network","cell","panel","doomsday cult","union","collective","circus","militia","puppet organization",""
 ];
 
 // IN PROGRESS - build this array out
@@ -1782,9 +1782,9 @@ function subjectCheck(select, person, sva, action) {
 // NOTE: there has GOT to be a better naming convention for some of these values. "two people 5"? C'mon, man
 
 // people consts
-const npcOne = ["one person 1","one person 2","one person 3","one person 4","one person 5"];
-const npcTwo = ["two people 1","two people 2","two people 3","two people 4","two people 5"];
-const npcThree = ["three people 1","three people 2","three people 3","three people 4","three people 5"];
+const npcOne = ["one person"];
+const npcTwo = ["two people"];
+const npcThree = ["three people"];
 const npcParty = npcOne.concat(npcTwo, npcThree);
 
 // plot template consts
@@ -1795,9 +1795,13 @@ const adventureType = [
 ];
 const storyType = plotType.concat(questType, adventureType);
 
+const compassType = [
+  "compass 1","compass 2","compass 3","compass 4","compass 5","compass 6","compass 7",
+];
+
 // rumor templates
 const rumorType = [
-  "rumor 1","rumor 2","rumor 3","rumor 4","rumor 5","rumor 6","rumor 7","rumor 8","rumor 9","rumor 10","rumor 11"
+  "rumor 1","rumor 2","rumor 3","rumor 4","rumor 5","rumor 6","rumor 7","rumor 8","rumor 9","rumor 10"
 ];
 
 ///////////////////////////////
@@ -1956,16 +1960,6 @@ function adventureGen() {
 }
 
 // Compass Rose
-const compassType = [
-  "compass 1",
-  "compass 2",
-  "compass 3",
-  "compass 4",
-  "compass 5",
-  "compass 6",
-  "compass 7",
-];
-
 function compassGen() {
   let directionSelect = randomString(compassType);
   let text = "";
@@ -1975,23 +1969,14 @@ function compassGen() {
   const twist = randomString(quest.twist);
   const locationOne = randomString(quest.place);
   const locationTwo = randomString(quest.place);
-  
-  // const tone = randomString(plots.tone);
-  // const genre = randomString(plots.genre);
 
   // nouns – groups one and two
-  const nounOne = new Noun();
-  const nounDescOne = nounSelect(nounOne.noun, nounOne.nounType, nounOne.nounSelect, nounOne.condition);
-  // const nounTwo = new Noun();
-
-  // verbs – groups one and two
-  // const verbOne = new Verb(nounOne.subtype);
-  // const verbTwo = new Verb(nounTwo.subtype);
+  const noun = new Noun();
+  const nounDesc = nounSelect(noun.noun, noun.nounType, noun.nounSelect, noun.condition);
 
   // person select one
   const subjectOne = personSelect();
   const personOne = subjectOne.valuePrep;
-  // const personSelectOne = subjectOne.value;
   const personSmallOne = subjectOne.valueNoun;
   const personTypeOne = subjectOne.key;
   const svaOne = subjectOne.sva;
@@ -1999,33 +1984,23 @@ function compassGen() {
   // person select two
   const subjectTwo = personSelect();
   const personTwo = subjectTwo.valuePrep;
-  // const plotPersonSelectTwo = subjectTwo.value;
   const svaTwo = subjectTwo.sva;
-
-  // action select
-  // let contVar = true;
-  // const action = actionSelect(contVar, nounOne.noun, verbOne.present, verbOne.gerund);
-  // const plotAction = action.action;
-  // const actionType = action.select;
-  
-  // const plotMethod = methodSelect(nounTwo.noun, verbTwo.gerund);
-  // const plotSubject = subjectCheck(actionType, plotPerson, sva, plotAction);
 
   // A [PERSON 1] is looking for a [THING] that [PROPERTY]. They need this [NOUN] because [REASON]. The [THING] is located in the [LOCATION 1]. The [PERSON 1] must enlist the help of [PERSON 2], who can be found in [LOCATION 3]. But [TWIST].
   const compass = {
-    "compass 1": "<b>" + capitalize(personOne) + " " + svaOne + " looking for <b>" + nounDescOne + ".</b> They are looking for the <b>" + nounOne.nounSelect + " " + motive + ".</b> The <b>" + nounOne.nounSelect + "</b> " + svaAgree(nounOne.nounType) + " hidden <b>" + locationOne + ",</b> so the <b>" + personSmallOne + "</b> must enlist the help of <b>" + personTwo + ", who " + svaTwo + " located <b>" + locationTwo + ".</b> But what the <b>" + personSmallOne + "</b> " + svaDoes(personTypeOne) + " not know is that <b>" + twist,
+    "compass 1": "<b>" + capitalize(personOne) + " " + svaOne + " looking for <b>" + nounDesc + ".</b> They are looking for the <b>" + noun.nounSelect + " " + motive + ".</b> The <b>" + noun.nounSelect + "</b> " + svaAgree(noun.nounType) + " hidden <b>" + locationOne + ",</b> so the <b>" + personSmallOne + "</b> must enlist the help of <b>" + personTwo + ", who " + svaTwo + " located <b>" + locationTwo + ".</b> But what the <b>" + personSmallOne + "</b> " + svaDoes(personTypeOne) + " not know is that <b>" + twist,
     
-    "compass 2": "<b>" + capitalize(personOne) + " " + svaOne + " looking for <b>" + nounDescOne + ".</b> The <b>" + nounOne.nounSelect + "</b> " + svaAgree(nounOne.nounType) + " hidden <b>" + locationOne + ",</b> so the <b>" + personSmallOne + "</b> must enlist the help of <b>" + personTwo + ", who " + svaTwo + " located <b>" + locationTwo + ".</b> But what the <b>" + personSmallOne + "</b> " + svaDoes(personTypeOne) + " not know is that <b>" + twist,
+    "compass 2": "<b>" + capitalize(personOne) + " " + svaOne + " looking for <b>" + nounDesc + ".</b> The <b>" + noun.nounSelect + "</b> " + svaAgree(noun.nounType) + " hidden <b>" + locationOne + ",</b> so the <b>" + personSmallOne + "</b> must enlist the help of <b>" + personTwo + ", who " + svaTwo + " located <b>" + locationTwo + ".</b> But what the <b>" + personSmallOne + "</b> " + svaDoes(personTypeOne) + " not know is that <b>" + twist,
 
-    "compass 3": "<b>" + capitalize(personOne) + " " + svaOne + " looking for <b>" + nounDescOne + ".</b> The <b>" + nounOne.nounSelect + "</b> " + svaAgree(nounOne.nounType) + " hidden <b>" + locationOne + ",</b> so the <b>" + personSmallOne + "</b> must enlist the help of <b>" + personTwo + ".</b> But what the <b>" + personSmallOne + "</b> " + svaDoes(personTypeOne) + " not know is that <b>" + twist,
+    "compass 3": "<b>" + capitalize(personOne) + " " + svaOne + " looking for <b>" + nounDesc + ".</b> The <b>" + noun.nounSelect + "</b> " + svaAgree(noun.nounType) + " hidden <b>" + locationOne + ",</b> so the <b>" + personSmallOne + "</b> must enlist the help of <b>" + personTwo + ".</b> But what the <b>" + personSmallOne + "</b> " + svaDoes(personTypeOne) + " not know is that <b>" + twist,
 
-    "compass 4": "<b>" + capitalize(personOne) + " " + svaOne + " looking for <b>" + nounDescOne + " " + motive + ".</b> The <b>" + nounOne.nounSelect + "</b> " + svaAgree(nounOne.nounType) + " hidden <b>" + locationOne + ",</b> so the <b>" + personSmallOne + "</b> must enlist the help of <b>" + personTwo,
+    "compass 4": "<b>" + capitalize(personOne) + " " + svaOne + " looking for <b>" + nounDesc + " " + motive + ".</b> The <b>" + noun.nounSelect + "</b> " + svaAgree(noun.nounType) + " hidden <b>" + locationOne + ",</b> so the <b>" + personSmallOne + "</b> must enlist the help of <b>" + personTwo,
 
-    "compass 5": "<b>" + capitalize(personOne) + " " + svaOne + " looking for <b>" + nounDescOne + ".</b> The <b>" + nounOne.nounSelect + "</b> " + svaAgree(nounOne.nounType) + " hidden <b>" + locationOne + ",</b> so the <b>" + personSmallOne + "</b> must enlist the help of <b>" + personTwo,
+    "compass 5": "<b>" + capitalize(personOne) + " " + svaOne + " looking for <b>" + nounDesc + ".</b> The <b>" + noun.nounSelect + "</b> " + svaAgree(noun.nounType) + " hidden <b>" + locationOne + ",</b> so the <b>" + personSmallOne + "</b> must enlist the help of <b>" + personTwo,
 
-    "compass 6": "<b>" + capitalize(personOne) + " " + svaOne + " looking for <b>" + nounDescOne + ",</b> which is hidden <b>" + locationOne,
+    "compass 6": "<b>" + capitalize(personOne) + " " + svaOne + " looking for <b>" + nounDesc + ",</b> which is hidden <b>" + locationOne,
 
-    "compass 7":  "<b>" + capitalize(personOne) + " " + svaOne + " looking for <b>" + nounDescOne + "</b>"
+    "compass 7":  "<b>" + capitalize(personOne) + " " + svaOne + " looking for <b>" + nounDesc + "</b>"
   }
 
   // "card 1": "What are we looking for? What is its nature? What characteristics does it have?",
@@ -2054,28 +2029,17 @@ function npcGen() {
     partySelect = randomString(npcParty);
   }
 
+  // gets and randomly selects a property from Chara()
+  const val = randomString(Object.getOwnPropertyNames(new Chara())); 
+
   const charaOne = new Chara();
   const charaTwo = new Chara();
   const charaThree = new Chara();
 
-  // I wonder if I can randomize these like how the name pdf has it // (EDIT: which fucking pdf?)
-  // there has GOT to be a better way to do this
   const party = {
-    "one person 1": charaOne.desc,
-    "one person 2": charaOne.cat,
-    "one person 3": charaOne.con,
-    "one person 4": charaOne.first,
-    "one person 5": charaOne.full,
-    "two people 1": charaOne.desc + add + charaTwo.desc,
-    "two people 2": charaOne.cat + add + charaTwo.cat,
-    "two people 3": charaOne.con + add + charaTwo.con,
-    "two people 4": charaOne.first + add + charaTwo.first,
-    "two people 5": charaOne.full + add + charaTwo.full,
-    "three people 1": charaOne.desc + ", " + charaTwo.desc + add + charaThree.desc,
-    "three people 2": charaOne.cat + ", " + charaTwo.cat + add + charaThree.cat,
-    "three people 3": charaOne.con + ", " + charaTwo.con + add + charaThree.con,
-    "three people 4": charaOne.first + ", " + charaTwo.first + add + charaThree.first,
-    "three people 5": charaOne.full + ", " + charaTwo.full + add + charaThree.full
+    "one person": charaOne[val],
+    "two people": charaOne[val] + add + charaTwo[val],
+    "three people": charaOne[val] + ", " + charaTwo[val] + add + charaThree[val]
   }
 
   for (const key in party) {
@@ -2097,6 +2061,8 @@ function rumorGen() {
   const nounPers = randomString(nounPerson.singular);
 
   const noun = new Noun();
+  const nounDesc = nounSelect(noun.noun, noun.nounType, noun.nounSelect, noun.condition);
+  
   const verb = new Verb(noun.subtype);
 
   // action should NOT be "cont present, present, noun"
@@ -2108,19 +2074,17 @@ function rumorGen() {
   const source = randomString(fragments.source);
   const trait = randomString(fragments.trait);
 
-  // note: figure out subject-verb agreement between item and condition
   const rumors = {
-    "rumor 1": charOne + " has <b>" + noun.noun + "</b> that <b>" + noun.condition,
-    "rumor 2": charOne + " is looking for <b>" + noun.noun + "</b> that <b>" + noun.condition,
-    "rumor 3": charOne + " is looking for <b>" + noun.noun,
-    "rumor 4": charOne + " is looking for some help with something",
-    "rumor 5": charOne + " is " + accuse,
-    "rumor 6": charOne + " was seen " + accuse + "</b> with <b>" + charTwo,
-    "rumor 7": charOne + " was asking around for <b>" + wordPrep(nounPers),
-    "rumor 8": charOne + " was asking around for someone who <b>" + trait,
-    "rumor 9": charOne + " was asking around for <b>" + charTwo,
-    "rumor 10": charOne + " <b>" + trait,
-    "rumor 11": charOne + " is <b>" + wordPrep(nounPers),
+    "rumor 1": charOne + " has <b>" + nounDesc,
+    "rumor 2": charOne + " is looking for <b>" + nounDesc,
+    "rumor 3": charOne + " is looking for some help with something",
+    "rumor 4": charOne + " is " + accuse,
+    "rumor 5": charOne + " was seen " + accuse + "</b> with <b>" + charTwo,
+    "rumor 6": charOne + " was asking around for <b>" + wordPrep(nounPers),
+    "rumor 7": charOne + " was asking around for someone who <b>" + trait,
+    "rumor 8": charOne + " was asking around for <b>" + charTwo,
+    "rumor 9": charOne + " <b>" + trait,
+    "rumor 10": charOne + " is <b>" + wordPrep(nounPers),
   }
 
   for (const key in rumors) {
